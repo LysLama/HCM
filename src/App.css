@@ -1,0 +1,37 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* Common section styling */
+section {
+  padding: 4rem 1rem;
+}
+
+section h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+  section {
+    padding: 5rem 2rem;
+  }
+}
