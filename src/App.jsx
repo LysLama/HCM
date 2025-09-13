@@ -1,30 +1,23 @@
 import './App.css'
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Intro from './sections/Intro';
+import Section2 from './sections/Section2';
+import Section3 from './sections/Section3';
+import Section4 from './sections/Section4';
+import Section5 from './sections/Section5';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <main>
+        <Intro />
         <Hero />
-        {/* Các mục nội dung tương ứng với các card */}
-        <section id="dat-van-de" className="content-section">
-          <h2>Đặt Vấn Đề</h2>
-          {/* Nội dung cho phần này */}
-        </section>
-        <section id="ly-thuyet-nen-tang" className="content-section">
-          <h2>Lý Thuyết Nền Tảng</h2>
-          {/* Nội dung cho phần này */}
-        </section>
-        <section id="vai-tro-lich-su" className="content-section">
-          <h2>Vai Trò Lịch Sử</h2>
-          {/* Nội dung cho phần này */}
-        </section>
-        <section id="xa-hoi-tuong-lai" className="content-section">
-          <h2>Xã Hội Tương Lai</h2>
-          {/* Nội dung cho phần này */}
-        </section>
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
       </main>
       {/* <Footer /> */}
     </div>

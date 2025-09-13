@@ -1,4 +1,4 @@
-.section-container {
+.intro-section-container {
     padding: 50px 20px;
     display: flex;
     flex-direction: column;
@@ -7,7 +7,7 @@
     box-sizing: border-box;
   }
   
-  .section-title {
+  .intro-section-title {
     color: #CD5C5C; /* IndianRed - một màu đỏ nhạt */
     font-size: 2.5rem;
     margin-bottom: 30px;
@@ -15,39 +15,41 @@
     max-width: 1000px; /* Giới hạn chiều rộng tối đa */
   }
   
-  .section-content {
+  .intro-section-content {
     display: flex;
-    gap: 20px;
-    flex-direction: column; /* Hiển thị các phần tử theo chiều dọc */
-    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1000px; /* Giới hạn chiều rộng tối đa */
   }
   
-  .content-text {
+  .intro-content-text {
     flex: 1; /* Chiếm 1 phần không gian */
     color: black;
     font-size: 1.1rem;
     line-height: 1.6;
     text-align: justify;
-    max-width: 1000px; /* Giới hạn chiều rộng tối đa */
+    max-width: 1000px; /* Giới hạn chiều rộng để dễ đọc hơn */
   }
   
-  .content-image {
+  .intro-content-image {
     flex: 1; /* Chiếm 1 phần không gian */
     display: flex;
     justify-content: center;
     align-items: center;
   }
   
-  .content-image img {
-    width: 500px;
-    height: 300px;
+  .intro-content-image img {
+    max-width: 100%;
+    height: 450px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
   }
   
   /* Responsive cho màn hình nhỏ hơn */
   @media (max-width: 768px) {
-    .section-content {
+    .intro-section-content {
       flex-direction: column;
     }
   }
