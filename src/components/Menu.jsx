@@ -1,15 +1,8 @@
 import React from 'react';
-import '../styles/Hero.css';
-import { HiOutlineQuestionMarkCircle, HiOutlineBookOpen, HiOutlineScale, HiOutlineForward } from "react-icons/hi2";
-
+import '../styles/Menu.css';
+import {HiOutlineBookOpen, HiOutlineScale, HiOutlineForward,HiOutlineCheckCircle } from "react-icons/hi2";
 
 const sections = [
-    {
-        id: 'dat-van-de',
-        icon: <HiOutlineQuestionMarkCircle />,
-        title: 'Đặt Vấn Đề',
-        description: 'Giới thiệu bối cảnh và câu hỏi trung tâm của chủ đề.',
-    },
     {
         id: 'ly-thuyet-nen-tang',
         icon: <HiOutlineBookOpen />,
@@ -28,9 +21,15 @@ const sections = [
         title: 'Xã Hội Tương Lai',
         description: 'Thảo luận về khả năng và động lực phát triển trong một xã hội không đối kháng.',
     },
+    {
+        id: 'ket-luan',
+        icon: <HiOutlineCheckCircle />,
+        title: 'Kết luận',
+        description: 'Tổng kết những điểm chính và tầm quan trọng của việc hiểu đấu tranh giai cấp.',
+    },
 ];
 
-const Hero = () => {
+const Menu = () => {
     return (
         <section className="hero-section">
             <h1 className="hero-title">Nội dung chính</h1>
@@ -47,4 +46,4 @@ const Hero = () => {
     );
 };
 
-export default Hero;
+export default Menu;

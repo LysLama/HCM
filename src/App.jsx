@@ -1,6 +1,6 @@
 import './App.css'
 import Header from './components/Header';
-import Hero from './components/Hero';
+import Menu from './components/Menu';
 import Intro from './sections/Intro';
 import Section2 from './sections/Section2';
 import Section3 from './sections/Section3';
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <main>
         <Intro />
-        <Hero />
+        <Menu />
         <Section2 />
         <Section3 />
         <Section4 />
