@@ -1,5 +1,6 @@
 import './App.css'
 import Header from './components/Header';
+import Footer from './components/Footer';
 import Menu from './components/Menu';
 import Intro from './sections/Intro';
 import Section2 from './sections/Section2';
@@ -21,7 +22,7 @@ function App() {
         <Section5 />
       </main>
       <ScrollToTopButton />
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
