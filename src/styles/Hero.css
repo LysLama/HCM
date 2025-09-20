@@ -1,0 +1,73 @@
+.main-header {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    /* Bạn có thể thay đổi URL hình ảnh này thành hình ảnh của riêng bạn */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/poster.png');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .header-content {
+    max-width: 900px;
+    padding: 1rem;
+  }
+  
+  .main-header h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  
+  .main-header p {
+    font-size: 1.2rem;
+    opacity: 0.85;
+    font-style: italic;
+  }
+
+  .scroll-down-arrow {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 3rem;
+    animation: bounce 2s infinite;
+    cursor: pointer;
+  }
+  
+  .scroll-down-arrow:hover {
+    color: #f0f8ff;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateX(-50%) translateY(0);
+    }
+    40% {
+      transform: translateX(-50%) translateY(-20px);
+    }
+    60% {
+      transform: translateX(-50%) translateY(-10px);
+    }
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .main-header {
+      height: 50vh;
+    }
+  
+    .main-header h1 {
+      font-size: 2rem;
+    }
+  
+    .main-header p {
+      font-size: 1rem;
+    }
+  }
