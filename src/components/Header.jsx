@@ -3,11 +3,15 @@ import '../styles/Header.css';
 
 const Header = () => {
   return (
-    <header className="main-header">
-      <div className="header-content">
-        <h1>Đấu Tranh Giai Cấp & Tương Lai Lịch Sử Nhân Loại</h1>
-        <p>Nếu không còn đấu tranh giai cấp, lịch sử nhân loại có dừng lại không?</p>
-      </div>
+    <header className="site-header">
+      <nav className="main-nav">
+        <ul>
+          <li><a href="#home">Trang chủ</a></li>
+          <li><a href="#about">Giới thiệu</a></li>
+          <li><a href="#content">Nội dung</a></li>
+          <li><a href="#quiz">Ôn tập</a></li>
+        </ul>
+      </nav>
     </header>
   );
 };
