@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap');
+
 .site-header {
     /* Thay bằng đường dẫn đến ảnh của bạn */
     background-image: url('../assets/img/header.jpg');
@@ -6,6 +8,15 @@
     top: 0;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    /* --- Bắt đầu CSS cho hiệu ứng xuất hiện --- */
+    
+    /* Đặt trạng thái ban đầu: ẩn và bị đẩy lên trên */
+    opacity: 0;
+    transform: translateY(-100%);
+
+    /* Áp dụng animation: tên, thời gian, hiệu ứng, độ trễ, giữ trạng thái cuối */
+    animation: slideDownFadeIn 0.8s ease-out 0.2s forwards;
 }
 
 .main-nav ul {
@@ -18,9 +29,10 @@
 }
 
 .main-nav a {
+    font-family: 'Smooch Sans', sans-serif;
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 500;
     transition: color 0.3s, text-shadow 0.3s;
     padding-bottom: 5px;
@@ -47,4 +59,12 @@
 .main-nav a:hover {
     color: #f0f8ff;
     text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+/* Định nghĩa keyframes cho hiệu ứng */
+@keyframes slideDownFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
