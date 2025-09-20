@@ -11,6 +11,7 @@ import Theory from './template/LyThuyet.jsx';
 import Role from './template/Vaitro.jsx';
 import Future from './template/TuongLai.jsx';
 import Conclusion from './template/KetLuan.jsx';
+import Quiz from './template/Quiz.jsx';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,13 @@ const router = createBrowserRouter([
         path: "/conclusion",
         element: <Conclusion />,
       },
+
+      // Quiz page
+      {
+        path: "/quiz",
+        element: <Quiz />,
+      },
+
 
 
 

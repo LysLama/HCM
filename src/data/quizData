@@ -1,0 +1,62 @@
+export const quizData = [
+    {
+        question: "Mệnh đề mở đầu “Tuyên ngôn của Đảng Cộng sản” nói lịch sử xã hội cho đến nay chủ yếu là lịch sử của…",
+        options: ["Tiến bộ khoa học", "Xung đột tôn giáo", "Đấu tranh giai cấp", "Trao đổi thương mại"],
+        correctAnswer: "Đấu tranh giai cấp",
+        explanation: "Đây là câu mở đầu nổi tiếng trong Tuyên ngôn của Đảng Cộng sản."
+    },
+    {
+        question: "Trong “Lời tựa cho Góp phần phê phán kinh tế chính trị học” (1859), Mác khẳng định khi cơ sở kinh tế thay đổi thì…",
+        options: ["Kiến trúc thượng tầng bất biến", "Toàn bộ kiến trúc thượng tầng đồ sộ cũng bị đảo lộn ít nhiều nhanh chóng", "Nhà nước trung lập hơn", "Mọi mâu thuẫn tự giải quyết"],
+        correctAnswer: "Toàn bộ kiến trúc thượng tầng đồ sộ cũng bị đảo lộn ít nhiều nhanh chóng",
+        explanation: "Mối quan hệ biện chứng giữa cơ sở hạ tầng và kiến trúc thượng tầng là cốt lõi của duy vật lịch sử."
+    },
+    {
+        question: "Theo Mác, cái gì “quyết định” ý thức xã hội ở bình diện cuối cùng?",
+        options: ["Ý chí của lãnh tụ", "Hệ tư tưởng", "Tồn tại xã hội (cơ sở kinh tế)", "Truyền thống dân tộc"],
+        correctAnswer: "Tồn tại xã hội (cơ sở kinh tế)",
+        explanation: "Quan điểm duy vật lịch sử cho rằng tồn tại xã hội quyết định ý thức xã hội."
+    },
+    {
+        question: "“Các tư tưởng thống trị của mỗi thời đại bao giờ cũng chỉ là tư tưởng của…”",
+        options: ["Giới trí thức ưu tú", "Giai cấp thống trị", "Đa số cử tri", "Giáo hội"],
+        correctAnswer: "Giai cấp thống trị",
+        explanation: "Luận điểm này được nêu rõ trong tác phẩm 'Hệ tư tưởng Đức'."
+    },
+    {
+        question: "“Đấu tranh giai cấp” trong học thuyết Mác–Ăngghen KHÔNG chỉ diễn ra ở cấp độ:",
+        options: ["Kinh tế", "Chính trị", "Tư tưởng", "Sinh học – tự nhiên"],
+        correctAnswer: "Sinh học – tự nhiên",
+        explanation: "Đấu tranh giai cấp là một phạm trù xã hội, không phải là sự diễn giải thuyết đấu tranh sinh tồn của Darwin vào xã hội."
+    },
+    {
+        question: "Vì sao giai cấp vô sản được coi là lực lượng cách mạng triệt để trong chủ nghĩa tư bản?",
+        options: ["Sở hữu đất đai lớn", "Lợi ích của họ gắn liền với việc thủ tiêu mọi quan hệ tư hữu", "Trình độ học vấn cao hơn tư sản", "Số lượng ít nên tinh nhuệ"],
+        correctAnswer: "Lợi ích của họ gắn liền với việc thủ tiêu mọi quan hệ tư hữu",
+        explanation: "Đây là lập luận trung tâm trong Tuyên ngôn, vì giai cấp vô sản không có gì để mất ngoài xiềng xích của mình."
+    },
+    {
+        question: "Theo Lênin trong tác phẩm 'Nhà nước và Cách mạng', nhà nước là gì?",
+        options: ["Công cụ hòa giải tuyệt đối", "Một bộ máy đặc biệt để một giai cấp này trấn áp một giai cấp khác", "Tổ chức trung lập giữa các giai cấp", "Câu lạc bộ lợi ích công"],
+        correctAnswer: "Một bộ máy đặc biệt để một giai cấp này trấn áp một giai cấp khác",
+        explanation: "Lênin định nghĩa rõ bản chất giai cấp của nhà nước trong chương 1 của 'Nhà nước và Cách mạng'."
+    },
+    {
+        question: "“Sự tiêu vong của nhà nước” theo Lênin xảy ra khi nào?",
+        options: ["Ngay sau khi cách mạng thành công", "Khi có bầu cử phổ thông đầu phiếu", "Khi xã hội đạt đến giai đoạn cộng sản chủ nghĩa cao, không còn đối kháng giai cấp", "Khi GDP bình quân đầu người đủ cao"],
+        correctAnswer: "Khi xã hội đạt đến giai đoạn cộng sản chủ nghĩa cao, không còn đối kháng giai cấp",
+        explanation: "Nhà nước chỉ 'tự tiêu vong' khi cơ sở tồn tại của nó (đối kháng giai cấp) không còn."
+    },
+    {
+        question: "Mối quan hệ nào sau đây là đúng theo quan điểm của chủ nghĩa duy vật lịch sử?",
+        options: ["Ý thức xã hội quyết định tồn tại xã hội", "Mâu thuẫn giữa LLSX và QHSX là động lực cho sự biến đổi xã hội", "Văn hóa quyết định công nghệ và sản xuất", "Nhà nước quyết định kinh tế"],
+        correctAnswer: "Mâu thuẫn giữa LLSX và QHSX là động lực cho sự biến đổi xã hội",
+        explanation: "Đây là quy luật cơ bản về sự phù hợp của quan hệ sản xuất với trình độ phát triển của lực lượng sản xuất."
+    },
+    {
+        question: "Nếu không còn đối kháng giai cấp, “động lực trực tiếp” của lịch sử (đấu tranh giai cấp) sẽ:",
+        options: ["Vẫn giữ nguyên vai trò chủ đạo", "Không còn là động lực trực tiếp, nhưng lịch sử vẫn phát triển nhờ các động lực khác", "Lịch sử sẽ dừng lại hoàn toàn", "Chỉ còn lại xung đột quân sự giữa các quốc gia"],
+        correctAnswer: "Không còn là động lực trực tiếp, nhưng lịch sử vẫn phát triển nhờ các động lực khác",
+        explanation: "Khi đó, động lực phát triển sẽ là mâu thuẫn giữa con người với tự nhiên, giữa cái mới và cái cũ, v.v."
+    }
+];
