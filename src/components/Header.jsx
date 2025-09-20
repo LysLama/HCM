@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import {Link, NavLink } from 'react-router-dom';
 import '../styles/Header.css';
 
 const Header = () => {
@@ -7,10 +7,10 @@ const Header = () => {
     <header className="site-header">
       <nav className="main-nav">
         <ul>
-        <li><Link to="/#home">Trang chủ</Link></li>
+        <li><NavLink to="/#home">Trang chủ</NavLink></li>
         <li><Link to="/#introduction">Giới thiệu</Link></li>
-        <li><Link to="/content">Nội dung</Link></li>
-        <li><Link to="/quiz">Ôn tập</Link></li>
+        <li><NavLink to="/content">Nội dung</NavLink></li>
+        <li><NavLink to="/quiz">Ôn tập</NavLink></li>
         </ul>
       </nav>
     </header>

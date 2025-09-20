@@ -50,6 +50,7 @@
     transition: all 0.3s ease-in-out;
 }
 
+/* Thêm .main-nav a.active::after vào đây */
 .main-nav a:hover::after,
 .main-nav a.active::after {
     width: 100%;
