@@ -1,0 +1,59 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import '../styles/Content.css';
+
+// Import hình ảnh cho mỗi mục
+import lyThuyetImg from '../assets/img/theory.jpg';
+import vaiTroImg from '../assets/img/role.jpg';
+import xaHoiImg from '../assets/img/future.jpg';
+import ketLuanImg from '../assets/img/conclusion.jpg';
+
+const sections = [
+    {
+        id: 'ly-thuyet-nen-tang',
+        title: 'Lý Thuyết Nền Tảng',
+        description: 'Tìm hiểu về khái niệm giai cấp và đấu tranh giai cấp theo triết học Mác – Lênin.',
+        img: lyThuyetImg,
+    },
+    {
+        id: 'vai-tro-lich-su',
+        title: 'Vai Trò Lịch Sử',
+        description: 'Phân tích vai trò của đấu tranh giai cấp như một động lực phát triển xã hội.',
+        img: vaiTroImg,
+    },
+    {
+        id: 'xa-hoi-tuong-lai',
+        title: 'Xã Hội Tương Lai',
+        description: 'Thảo luận về khả năng và động lực phát triển trong một xã hội không đối kháng.',
+        img: xaHoiImg,
+    },
+    {
+        id: 'ket-luan',
+        title: 'Kết luận',
+        description: 'Tổng kết những điểm chính và tầm quan trọng của việc hiểu đấu tranh giai cấp.',
+        img: ketLuanImg,
+    },
+];
+
+const Content = () => {
+    return (
+        <main id="main-content" className="content-container">
+            <h1 className="content-main-title">Khám Phá Các Chủ Đề</h1>
+            <div className="content-grid">
+                {sections.map((section) => (
+                    <Link to={`/${section.id}`} key={section.id} className="content-card-link">
+                        <div className="content-card">
+                            <div className="content-card-body">
+                                <h3 className="content-card-title">{section.title}</h3>
+                                <p className="content-card-description">{section.description}</p>
+                            </div>
+                            <img src={section.img} alt={section.title} className="content-card-img" />
+                        </div>
+                    </Link>
+                ))}
+            </div>
+        </main>
+    );
+};
+
+export default Content;

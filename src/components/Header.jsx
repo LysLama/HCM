@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../styles/Header.css';
 
 const Header = () => {
@@ -6,10 +7,10 @@ const Header = () => {
     <header className="site-header">
       <nav className="main-nav">
         <ul>
-          <li><a href="#home">Trang chủ</a></li>
-          <li><a href="#about">Giới thiệu</a></li>
-          <li><a href="#content">Nội dung</a></li>
-          <li><a href="#quiz">Ôn tập</a></li>
+        <li><Link to="/#home">Trang chủ</Link></li>
+        <li><Link to="/#introduction">Giới thiệu</Link></li>
+        <li><Link to="/content">Nội dung</Link></li>
+        <li><Link to="/quiz">Ôn tập</Link></li>
         </ul>
       </nav>
     </header>

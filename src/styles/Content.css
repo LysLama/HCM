@@ -1,0 +1,106 @@
+.content-container {
+    padding: 20px 20px;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-main-title {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content-main-title::after {
+    content: '';
+    display: block;
+    width: 100px; /* Chiều rộng của gạch chân */
+    height: 3px; /* Độ dày của gạch chân */
+    background-color: #b10000;
+    margin: 15px auto 0; /* Căn giữa và tạo khoảng cách với tiêu đề */
+}
+
+.content-grid {
+    display: grid;
+    /* Luôn hiển thị 4 cột trên màn hình lớn */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 100px;
+}
+
+.content-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content-card {
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Di chuyển các thẻ card ở vị trí chẵn xuống dưới một chút */
+.content-card-link:nth-child(even) .content-card {
+    transform: translateY(40px);
+}
+
+.content-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Điều chỉnh hiệu ứng hover cho các thẻ đã được di chuyển */
+.content-card-link:nth-child(even) .content-card:hover {
+    transform: translateY(30px); /* 40px (vị trí ban đầu) - 10px (hiệu ứng hover) */
+}
+
+.content-card-img {
+    border-radius: 10px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block; /* Đảm bảo không có khoảng trống thừa bên dưới ảnh */
+}
+
+.content-card-body {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.content-card-title {
+    font-size: 1.5rem;
+    margin: 0 0 15px 0;
+    color: #b10000;
+}
+
+.content-card-description {
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    flex-grow: 1;
+}
+
+/* Responsive cho các màn hình nhỏ hơn */
+@media (max-width: 1024px) {
+    .content-grid {
+        /* Chuyển thành 2 cột trên máy tính bảng */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-grid {
+        /* Chuyển thành 1 cột trên điện thoại */
+        grid-template-columns: 1fr;
+    }
+}

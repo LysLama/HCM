@@ -1,55 +1,72 @@
+/* Sử dụng biến CSS để dễ dàng bảo trì */
+:root {
+  --intro-max-width: 1000px;
+  --primary-text-color: #333;
+  --heading-color: #000000;
+  --section-padding: 50px 20px;
+}
+
 .intro-section-container {
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
+  padding: var(--section-padding);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  gap: 30px; /* Thêm khoảng cách giữa các card */
+}
+
+.intro-section-title {
+  color: #333;
+  font-size: 2.5rem;
+  padding-top: 30px;
+  margin-bottom: 40px; /* Tăng khoảng cách dưới tiêu đề chính */
+  text-align: center;
+}
+
+.intro-section-title::after {
+  content: '';
+  display: block;
+  width: 100px; /* Chiều rộng của gạch chân */
+  height: 3px; /* Độ dày của gạch chân */
+  background-color: #b10000;
+  margin: 15px auto 0; /* Căn giữa và tạo khoảng cách với tiêu đề */
+}
+
+.intro-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: var(--intro-max-width);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển đổi mượt mà */
+}
+
+.intro-card:hover {
+  transform: scale(1.03); /* Phóng to thẻ card lên 3% */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng cường độ bóng để tạo chiều sâu */
+}
+
+.intro-card h2 {
+  font-size: 1.8rem;
+  color: #b10000;
+  margin-top: 0; /* Bỏ margin-top vì đã có padding của card */
+  margin-bottom: 20px;
+  text-align: center; /* Căn giữa tiêu đề phụ */
+}
+
+.intro-section-content {
+  color: var(--primary-text-color);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  text-align: justify;
+  width: 100%; /* Đảm bảo nội dung chiếm đủ chiều rộng của card */
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+  .intro-card h2 {
+    text-align: center; /* Căn giữa tiêu đề phụ trên màn hình nhỏ */
   }
-  
-  .intro-section-title {
-    color: #CD5C5C; /* IndianRed - một màu đỏ nhạt */
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-align: center;
-    max-width: 1000px; /* Giới hạn chiều rộng tối đa */
-  }
-  
-  .intro-section-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    width: 100%;
-    max-width: 1000px; /* Giới hạn chiều rộng tối đa */
-  }
-  
-  .intro-content-text {
-    flex: 1; /* Chiếm 1 phần không gian */
-    color: black;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: justify;
-    max-width: 1000px; /* Giới hạn chiều rộng để dễ đọc hơn */
-  }
-  
-  .intro-content-image {
-    flex: 1; /* Chiếm 1 phần không gian */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .intro-content-image img {
-    max-width: 100%;
-    height: 450px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  /* Responsive cho màn hình nhỏ hơn */
-  @media (max-width: 768px) {
-    .intro-section-content {
-      flex-direction: column;
-    }
-  }
+}

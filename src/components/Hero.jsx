@@ -4,13 +4,26 @@ import { HiChevronDoubleDown } from 'react-icons/hi2';
 
 
 const Hero = () => {
+  const handleScrollDown = (e) => {
+    e.preventDefault(); // Ngăn hành vi mặc định của thẻ <a>
+    const introductionSection = document.getElementById('introduction');
+    if (introductionSection) {
+      introductionSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return (
-    <header className="main-header">
+    <header id='home' className="main-header">
       <div className="header-content">
         <h1>Đấu Tranh Giai Cấp & Tương Lai Lịch Sử Nhân Loại</h1>
         <p>Nếu không còn đấu tranh giai cấp, lịch sử nhân loại có dừng lại không?</p>
       </div>
-      <a href="#dat-van-de" className="scroll-down-arrow" aria-label="Scroll down">
+      <a 
+        href="#introduction" 
+        className="scroll-down-arrow" 
+        aria-label="Scroll down"
+        onClick={handleScrollDown}
+      >
         <HiChevronDoubleDown />
       </a>
     </header>

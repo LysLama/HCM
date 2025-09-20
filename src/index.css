@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: #333;
-  background-color: #ffffff;
+  background-color: #f5f5dc; /* Changed to beige */
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -31,8 +31,12 @@ a:hover {
 
 body {
   margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  background-image: url('/src/assets/img/background.jpg'); /* <-- THAY ĐỔI ĐƯỜNG DẪN TỚI ẢNH CỦA BẠN */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: #f5f5dc; /* Màu nền dự phòng nếu ảnh không tải được */
 }
 
 h1 {

@@ -1,0 +1,55 @@
+#root {
+    width: 100%;
+    margin: 0 auto;
+  }
+  
+  .Home {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  main {
+    flex: 1;
+  }
+  
+  /* Common section styling */
+  section {
+    padding: 4rem 1rem;
+  }
+  
+  section h2 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+  }
+  
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .content-section {
+    padding: 4rem 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+    min-height: 400px; /* Chiều cao tối thiểu để thấy hiệu ứng cuộn */
+    border-bottom: 1px solid #eee;
+  }
+  
+  .content-section:last-of-type {
+    border-bottom: none;
+  }
+  
+  .content-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 768px) {
+    section {
+      padding: 5rem 2rem;
+    }
+  }
