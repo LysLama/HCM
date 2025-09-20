@@ -5,8 +5,9 @@ const Footer = () => {
   return (
     <footer className="site-footer">
       <div className="footer-container">
+        <p>Phát triển bởi Nhóm MoonSpace - Lớp AI1803 - Đại học FPT.</p>
+        <p>Dự án được thực hiện nhằm mục đích hoàn thành bài tập lớn cho môn học MLN111, đồng thời xây dựng một tài nguyên học tập số hữu ích cho cộng đồng.</p>
         <p>© 2025 - Phân Tích Triết Học.</p>
-        <p>Trang web được tạo ra cho mục đích học thuật và thảo luận.</p>
       </div>
     </footer>
   );
