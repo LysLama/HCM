@@ -1,12 +1,43 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import '../styles/Intro.css';
 
 const Intro = () => {
+    // Tạo một ref để giữ container của các card
+    const cardsContainerRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    // Nếu phần tử đang hiển thị trên màn hình
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        // Tùy chọn: Ngừng quan sát sau khi đã hiển thị để tiết kiệm tài nguyên
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                // Bắt đầu kích hoạt khi 20% của phần tử hiển thị
+                threshold: 0.2,
+            }
+        );
+
+        // Lấy tất cả các card và bắt đầu quan sát chúng
+        const cards = Array.from(cardsContainerRef.current.children).filter(child => child.classList.contains('intro-card'));
+        cards.forEach((card) => observer.observe(card));
+
+        // Hàm dọn dẹp: Ngừng quan sát tất cả khi component unmount
+        return () => {
+            cards.forEach((card) => observer.unobserve(card));
+        };
+    }, []); // Mảng rỗng đảm bảo effect này chỉ chạy một lần khi component mount
+
     return (
-        <section id="introduction" className="intro-section-container">
+        <section id="introduction" className="intro-section-container" ref={cardsContainerRef}>
             {/* Tiêu đề phần giới thiệu */}
             <h1 className="intro-section-title">Giới Thiệu Dự Án</h1>
-            
+
             {/* Các đề mục nhỏ trong các card */}
             <div className="intro-card">
                 {/* Tổng quan dự án */}
@@ -51,16 +82,16 @@ const Intro = () => {
                 <h2>Tuyên Bố Về Việc Sử Dụng AI</h2>
                 <div className="intro-section-content">
                     <p>Trong quá trình thực hiện dự án này, chúng tôi đã ứng dụng công nghệ Trí tuệ Nhân tạo như một công cụ hỗ trợ để tối ưu hóa hiệu quả công việc. Chúng tôi cam kết sử dụng AI một cách có trách nhiệm và minh bạch.</p>
-                    <br/>
+                    <br />
                     <p><strong>Mô Hình Ngôn Ngữ Lớn (LLM) Được Sử Dụng:</strong> Chúng tôi đã sử dụng các mô hình ngôn ngữ lớn tiên tiến, bao gồm <strong>Gemini của Google</strong> và các mô hình khác để hỗ trợ trong các khâu khác nhau của dự án.</p>
-                    <br/>
+                    <br />
                     <p><strong>Mục Đích Sử Dụng AI:</strong></p>
                     <ul>
                         <li><strong>Lên ý tưởng và cấu trúc:</strong> AI được dùng để brainstorm các ý tưởng ban đầu, sắp xếp cấu trúc nội dung và đề xuất các hướng tiếp cận cho chủ đề.</li>
                         <li><strong>Tối ưu hóa mã nguồn (Code):</strong> Hỗ trợ viết, gỡ lỗi (debug) và tái cấu trúc (refactor) các đoạn mã cho trang web.</li>
                         <li><strong>Sáng tạo nội dung phụ trợ:</strong> Hỗ trợ viết các nội dung giới thiệu, mô tả và các văn bản không mang tính học thuật cốt lõi.</li>
                     </ul>
-                    <br/>
+                    <br />
                     <p><strong>Nội Dung và Script (Kịch bản):</strong> Chúng tôi xin khẳng định, <strong>toàn bộ nội dung học thuật, các phân tích, luận điểm và kết luận đều do các thành viên trong nhóm tự nghiên cứu</strong> từ các nguồn tài liệu chính thống. AI chỉ đóng vai trò là công cụ hỗ trợ, không can thiệp vào tính chính xác và chiều sâu học thuật của dự án.</p>
                     <p><strong>Tài liệu tham khảo:</strong></p>
                 </div>

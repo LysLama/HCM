@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 /* Sử dụng biến CSS để dễ dàng bảo trì */
 :root {
   --intro-max-width: 1000px;
@@ -17,8 +19,9 @@
 }
 
 .intro-section-title {
+  font-family: 'Lobster', cursive;
+  font-size: 3rem;
   color: #333;
-  font-size: 2.5rem;
   padding-top: 30px;
   margin-bottom: 40px; /* Tăng khoảng cách dưới tiêu đề chính */
   text-align: center;
@@ -29,7 +32,7 @@
   display: block;
   width: 100px; /* Chiều rộng của gạch chân */
   height: 3px; /* Độ dày của gạch chân */
-  background-color: #b10000;
+  background-color: #e53935;
   margin: 15px auto 0; /* Căn giữa và tạo khoảng cách với tiêu đề */
 }
 
@@ -40,7 +43,30 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: var(--intro-max-width);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Thêm hiệu ứng chuyển đổi mượt mà */
+  
+  /* --- Bắt đầu CSS cho hiệu ứng cuộn --- */
+  
+  /* Trạng thái ban đầu: ẩn và bị đẩy ra ngoài */
+  opacity: 0;
+  
+  /* Thêm opacity và transform vào transition */
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Trạng thái ban đầu cho các card ở vị trí lẻ (1, 3, 5...) */
+.intro-card:nth-of-type(odd) {
+  transform: translateX(-100px);
+}
+
+/* Trạng thái ban đầu cho các card ở vị trí chẵn (2, 4, 6...) */
+.intro-card:nth-of-type(even) {
+  transform: translateX(100px);
+}
+
+/* Lớp CSS sẽ được thêm bằng JS khi card hiển thị trên màn hình */
+.intro-card.is-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .intro-card:hover {
@@ -50,7 +76,7 @@
 
 .intro-card h2 {
   font-size: 1.8rem;
-  color: #b10000;
+  color: #c62828;
   margin-top: 0; /* Bỏ margin-top vì đã có padding của card */
   margin-bottom: 20px;
   text-align: center; /* Căn giữa tiêu đề phụ */
