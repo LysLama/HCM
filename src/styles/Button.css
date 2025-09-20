@@ -2,7 +2,10 @@
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background-color: #CD5C5C;
+    width: 50px; /* Thêm chiều rộng cố định */
+    height: 50px; /* Thêm chiều cao cố định */
+    border-radius: 50%; /* Đổi thành 50% để tạo hình tròn hoàn hảo */
+    background-color: #e53935; /* Màu đỏ tươi hơn */
     color: white;
     border: none;
     font-size: 1.3rem;
@@ -18,12 +21,30 @@
     transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
 }
 
+/* Thêm quy tắc này để đảm bảo icon hiển thị đúng */
+.scroll-to-top svg {
+    flex-shrink: 0;
+}
+
 .scroll-to-top.visible {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    /* Áp dụng animation khi nút hiển thị */
+    animation: bounce 2s infinite ease-in-out;
 }
 
 .scroll-to-top:hover {
-    background-color: #e74c3c;
+    background-color: #c62828; /* Màu đỏ đậm hơn khi hover */
+    animation-play-state: paused; /* Tạm dừng animation khi di chuột vào */
 }
+
+/* Định nghĩa animation "tưng" đều hơn */
+@keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
