@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 
 // Import các component của bạn
 import Hero from '../components/Hero';
-import Intro from '../sections/Intro';
+import Intro from '../template/Intro';
 
 const Home = () => {
     const location = useLocation();

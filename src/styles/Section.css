@@ -1,53 +1,73 @@
-.section-container {
-    padding: 50px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    box-sizing: border-box;
+/* --- Kiểu cho Hero Section --- */
+.section-hero {
+  position: relative;
+  height: 60vh; /* Chiều cao bằng 60% chiều cao màn hình */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+/* Lớp phủ tối màu */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Màu đen với độ trong suốt 50% */
+  z-index: 1;
+}
+
+/* Tiêu đề trên Hero */
+.section-hero-title {
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;
+  max-width: 800px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+/* --- Kiểu cho Nội dung chính --- */
+.section-main-content {
+  max-width: 900px;
+  margin: 50px auto; /* Căn giữa và tạo khoảng cách trên dưới */
+  padding: 0 20px;
+}
+
+.content-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+.content-text h3 {
+  font-size: 1.6rem;
+  color: #b10000;
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+
+.content-text p {
+  margin-bottom: 20px;
+}
+
+.content-text a {
+  color: #0056b3;
+  text-decoration: none;
+}
+
+.content-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-hero-title {
+      font-size: 2.2rem;
   }
-  
-  .section-title {
-    color: #CD5C5C; /* IndianRed - một màu đỏ nhạt */
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-    text-align: center;
-    max-width: 1000px; /* Giới hạn chiều rộng tối đa */
-  }
-  
-  .section-content {
-    display: flex;
-    gap: 20px;
-    flex-direction: column; /* Hiển thị các phần tử theo chiều dọc */
-    align-items: center; /* Căn giữa các phần tử theo chiều ngang */
-  }
-  
-  .content-text {
-    flex: 1; /* Chiếm 1 phần không gian */
-    color: black;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    text-align: justify;
-    max-width: 1000px; /* Giới hạn chiều rộng tối đa */
-  }
-  
-  .content-image {
-    flex: 1; /* Chiếm 1 phần không gian */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .content-image img {
-    width: 500px;
-    height: 300px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-  
-  /* Responsive cho màn hình nhỏ hơn */
-  @media (max-width: 768px) {
-    .section-content {
-      flex-direction: column;
-    }
-  }
+}

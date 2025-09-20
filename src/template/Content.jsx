@@ -10,25 +10,25 @@ import ketLuanImg from '../assets/img/conclusion.jpg';
 
 const sections = [
     {
-        id: 'ly-thuyet-nen-tang',
+        id: 'theory',
         title: 'Lý Thuyết Nền Tảng',
         description: 'Tìm hiểu về khái niệm giai cấp và đấu tranh giai cấp theo triết học Mác – Lênin.',
         img: lyThuyetImg,
     },
     {
-        id: 'vai-tro-lich-su',
+        id: 'role',
         title: 'Vai Trò Lịch Sử',
         description: 'Phân tích vai trò của đấu tranh giai cấp như một động lực phát triển xã hội.',
         img: vaiTroImg,
     },
     {
-        id: 'xa-hoi-tuong-lai',
+        id: 'future',
         title: 'Xã Hội Tương Lai',
         description: 'Thảo luận về khả năng và động lực phát triển trong một xã hội không đối kháng.',
         img: xaHoiImg,
     },
     {
-        id: 'ket-luan',
+        id: 'conclusion',
         title: 'Kết luận',
         description: 'Tổng kết những điểm chính và tầm quan trọng của việc hiểu đấu tranh giai cấp.',
         img: ketLuanImg,

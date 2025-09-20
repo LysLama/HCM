@@ -7,6 +7,10 @@ import MainLayout from './layout/MainLayout.jsx';
 import Home from './template/Home.jsx';
 import Content from './template/Content.jsx';
 import ScrollButton from './components/Button.jsx';
+import Theory from './template/LyThuyet.jsx';
+import Role from './template/Vaitro.jsx';
+import Future from './template/TuongLai.jsx';
+import Conclusion from './template/KetLuan.jsx';
 
 const router = createBrowserRouter([
   {
@@ -25,11 +29,34 @@ const router = createBrowserRouter([
         element: <Content />,
       },
 
-      //Quiz pages
-      // {
-      //   path: "/quiz",
-      //   element: <Quiz />,
-      // },
+      //Theory pages
+      {
+        path: "/theory",
+        element: <Theory />,
+      },
+
+      //Role pages
+      {
+        path: "/role",
+        element: <Role />,
+      },
+
+      // Future pages
+      {
+        path: "/future",
+        element: <Future />,
+      },
+
+      // Conclusion pages
+      {
+        path: "/conclusion",
+        element: <Conclusion />,
+      },
+
+
+
+
+
 
 
       // 404 Not Found page
