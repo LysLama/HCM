@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Story+Script&display=swap');
+
 .content-container {
     padding: 20px 20px;
     width: 100%;
@@ -8,7 +12,8 @@
 }
 
 .content-main-title {
-    font-size: 2.5rem;
+    font-family: 'Lobster', cursive;
+    font-size: 3rem;
     color: #333;
     margin-bottom: 20px;
     text-align: center;
@@ -36,6 +41,30 @@
 .content-card-link {
     text-decoration: none;
     color: inherit;
+
+    /* --- Bắt đầu CSS cho hiệu ứng cuộn --- */
+    
+    /* Trạng thái ban đầu: ẩn */
+    opacity: 0;
+    
+    /* Thêm transition cho hiệu ứng mượt mà */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Trạng thái ban đầu cho card lẻ: từ dưới lên */
+.content-card-link:nth-child(odd) {
+    transform: translateY(50px);
+}
+
+/* Trạng thái ban đầu cho card chẵn: từ trên xuống */
+.content-card-link:nth-child(even) {
+    transform: translateY(-50px);
+}
+
+/* Lớp được thêm bằng JS khi card hiển thị */
+.content-card-link.is-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .content-card {
@@ -77,14 +106,17 @@
 }
 
 .content-card-title {
-    font-size: 1.5rem;
+    font-family: 'Story Script', cursive;
+    font-size: 2rem;
     margin: 0 0 15px 0;
     color: #b10000;
 }
 
 .content-card-description {
     color: #333;
-    font-size: 1rem;
+    font-family: "Darker Grotesque", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 400;
     line-height: 1.6;
     margin: 0;
     flex-grow: 1;

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Marck+Script&display=swap');
+
 /* --- Kiểu cho Hero Section --- */
 .section-hero {
   position: relative;
@@ -27,7 +29,8 @@
 .section-hero-title {
   position: relative;
   z-index: 2;
-  font-size: 3rem;
+  font-family: 'Anton', sans-serif;
+  font-size: 3.5rem;
   max-width: 800px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
@@ -53,15 +56,17 @@
 }
 
 .content-text p {
+  font-size: 20px;
   margin-bottom: 20px;
 }
 
 .content-text a {
-  color: #0056b3;
-  text-decoration: none;
+  color: #0065d1;
+  text-decoration: underline;
 }
 
 .content-text a:hover {
+  color: #004a9c;
   text-decoration: underline;
 }
 

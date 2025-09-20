@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Content.css';
 
@@ -36,10 +36,43 @@ const sections = [
 ];
 
 const Content = () => {
+    const gridRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                threshold: 0.1, // Kích hoạt khi 10% của phần tử hiển thị
+            }
+        );
+
+        const cards = Array.from(gridRef.current.children);
+        cards.forEach((card) => {
+            if (card) {
+                observer.observe(card);
+            }
+        });
+
+        return () => {
+            cards.forEach((card) => {
+                if (card) {
+                    observer.unobserve(card);
+                }
+            });
+        };
+    }, []);
+
     return (
         <main id="main-content" className="content-container">
             <h1 className="content-main-title">Khám Phá Các Chủ Đề</h1>
-            <div className="content-grid">
+            <div className="content-grid" ref={gridRef}>
                 {sections.map((section) => (
                     <Link to={`/${section.id}`} key={section.id} className="content-card-link">
                         <div className="content-card">
