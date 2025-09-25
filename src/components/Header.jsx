@@ -10,6 +10,7 @@ const Header = () => {
         <li><NavLink to="/#home">Trang chủ</NavLink></li>
         <li><Link to="/#introduction">Giới thiệu</Link></li>
         <li><NavLink to="/content">Nội dung</NavLink></li>
+        <li><NavLink to="/knowledge">Tri thức & Lịch sử</NavLink></li>
         <li><NavLink to="/quiz">Ôn tập</NavLink></li>
         </ul>
       </nav>

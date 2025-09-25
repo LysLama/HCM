@@ -5,7 +5,17 @@
 
   color-scheme: light dark;
   color: #333;
-  background-color: #f5f5dc; /* Changed to beige */
+  background-color: #fef3c7; /* Vàng nhạt giấy cũ */
+
+  /* Color Palette - Đỏ cờ & Vàng giấy cũ */
+  --primary-red: #dc2626;
+  --primary-red-dark: #b91c1c;
+  --primary-red-light: #ef4444;
+  --secondary-yellow: #fbbf24;
+  --secondary-yellow-light: #fef3c7;
+  --secondary-yellow-dark: #f59e0b;
+  --accent-gold: #d97706;
+  --paper-cream: #fffbeb;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -21,12 +31,12 @@
 
 a {
   font-weight: 500;
-  color: #007bff;
+  color: var(--primary-red);
   text-decoration: inherit;
 }
 
 a:hover {
-  color: #0056b3;
+  color: var(--primary-red-dark);
 }
 
 body {
@@ -36,7 +46,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-color: #f5f5dc; /* Màu nền dự phòng nếu ảnh không tải được */
+  background-color: var(--secondary-yellow-light); /* Màu nền dự phòng nếu ảnh không tải được */
 }
 
 h1 {

@@ -6,7 +6,17 @@ import { testGeminiAPI } from '../utils/testAPI';
 import { findWorkingModel } from '../utils/modelTester';
 
 const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-const GEMINI_API_URL = `https://generativelanguage.googleapis.com/v1/models/gemini-2.5-flash:generateContent?key=${GEMINI_API_KEY}`;
+
+// Danh sách các models để thử nghiệm (ưu tiên từ tốt nhất)
+const GEMINI_MODELS = [
+  'gemini-1.5-flash-latest',
+  'gemini-1.5-flash', 
+  'gemini-1.5-pro',
+  'gemini-pro'
+];
+
+// URL sẽ được xây dựng động dựa trên model
+const getGeminiURL = (model) => `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${GEMINI_API_KEY}`;
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +51,51 @@ const ChatBot = () => {
       setShowSuggestions(true);
     }
   }, [isOpen, messages.length]);
+
+  // Thử kết nối với các model Gemini khác nhau
+  const tryGeminiAPI = async (userMessage, modelIndex = 0) => {
+    if (modelIndex >= GEMINI_MODELS.length) {
+      throw new Error('Tất cả các model Gemini đều không khả dụng');
+    }
+
+    const currentModel = GEMINI_MODELS[modelIndex];
+    const apiUrl = getGeminiURL(currentModel);
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          contents: [{
+            parts: [{
+              text: `Bạn là một chuyên gia triết học Mác-Lênin. Hãy trả lời câu hỏi sau một cách chuyên môn và dễ hiểu: ${userMessage}`
+            }]
+          }]
+        })
+      });
+
+      if (!response.ok) {
+        console.warn(`Model ${currentModel} failed with status ${response.status}, trying next model...`);
+        return await tryGeminiAPI(userMessage, modelIndex + 1);
+      }
+
+      const data = await response.json();
+      
+      if (data.candidates && data.candidates[0] && data.candidates[0].content) {
+        console.log(`✅ Success with model: ${currentModel}`);
+        setApiStatus('online');
+        return data.candidates[0].content.parts[0].text;
+      } else {
+        console.warn(`Model ${currentModel} returned invalid format, trying next model...`);
+        return await tryGeminiAPI(userMessage, modelIndex + 1);
+      }
+    } catch (error) {
+      console.warn(`Model ${currentModel} connection failed:`, error.message);
+      return await tryGeminiAPI(userMessage, modelIndex + 1);
+    }
+  };
 
   // Gửi tin nhắn đến Gemini API
   const sendToGemini = async (userMessage) => {
@@ -94,39 +149,12 @@ Câu hỏi: ${userMessage}
 Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông tin (khoảng 150-250 từ). Nếu câu hỏi liên quan đến nhiều trường phái, hãy so sánh quan điểm của họ.`;
 
     try {
-      console.log('Sending request to Gemini API...');
-      const response = await fetch(GEMINI_API_URL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          contents: [{
-            parts: [{
-              text: prompt
-            }]
-          }]
-        })
-      });
-
-      console.log('Response status:', response.status);
+      console.log('🤖 Đang gửi câu hỏi tới Gemini API...');
+      setApiStatus('testing');
       
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error('API Error Response:', errorText);
-        throw new Error(`HTTP error! status: ${response.status}, message: ${errorText}`);
-      }
-
-      const data = await response.json();
-      console.log('API Success Response:', data);
+      const responseText = await tryGeminiAPI(prompt);
+      return formatPhilosophyResponse(responseText);
       
-      if (data.candidates && data.candidates[0] && data.candidates[0].content) {
-        const responseText = data.candidates[0].content.parts[0].text;
-        return formatPhilosophyResponse(responseText);
-      } else {
-        console.error('Invalid response format:', data);
-        throw new Error('Không nhận được phản hồi hợp lệ từ AI');
-      }
     } catch (error) {
       console.error('Lỗi khi gọi Gemini API:', error);
       setApiStatus('offline'); // Đánh dấu API offline

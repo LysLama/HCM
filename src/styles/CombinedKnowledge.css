@@ -1,0 +1,355 @@
+/* Combined Knowledge Page Styles */
+.combined-hero {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-yellow) 100%);
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 700px;
+    margin: 1rem auto 0;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Knowledge Navigation */
+.knowledge-navigation {
+    background: var(--paper-cream);
+    padding: 2rem 0;
+    border-bottom: 3px solid var(--secondary-yellow-light);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    padding: 0 2rem;
+    justify-content: center;
+}
+
+.nav-tab {
+    background: white;
+    border: 3px solid var(--secondary-yellow-light);
+    border-radius: 20px;
+    padding: 2rem 3rem;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 250px;
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-tab::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transition: left 0.5s;
+}
+
+.nav-tab:hover::before {
+    left: 100%;
+}
+
+.nav-tab:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+    border-color: var(--primary-red);
+}
+
+.nav-tab.active {
+    background: linear-gradient(135deg, var(--primary-red) 0%, var(--secondary-yellow) 100%);
+    color: white;
+    border-color: var(--primary-red);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(220, 38, 38, 0.25);
+}
+
+.tab-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.tab-label {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.tab-description {
+    font-size: 1rem;
+    opacity: 0.8;
+    font-weight: 400;
+    display: block;
+}
+
+/* Content Wrapper */
+.content-wrapper {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+}
+
+.section-content {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-intro {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--paper-cream) 0%, white 100%);
+    border-radius: 20px;
+    border: 2px solid var(--secondary-yellow-light);
+}
+
+.section-intro h2 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.5rem;
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(220, 38, 38, 0.1);
+}
+
+.section-intro p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Quick Links Section */
+.quick-links-section {
+    background: linear-gradient(135deg, var(--secondary-yellow-light) 0%, var(--paper-cream) 100%);
+    padding: 4rem 2rem;
+    margin-top: 3rem;
+}
+
+.quick-links-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.quick-links-container h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: 2.2rem;
+    color: var(--primary-red);
+    margin-bottom: 3rem;
+    text-shadow: 1px 1px 2px rgba(220, 38, 38, 0.1);
+}
+
+.quick-links-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.quick-link-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 3px solid transparent;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.quick-link-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-red) 0%, var(--secondary-yellow) 100%);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.quick-link-card:hover::before {
+    transform: scaleX(1);
+}
+
+.quick-link-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+    border-color: var(--primary-red);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.card-content h4 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-red);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.card-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+/* Specific card colors */
+.quick-link-card.theory:hover {
+    border-color: var(--primary-red);
+    box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15);
+}
+
+.quick-link-card.role:hover {
+    border-color: var(--secondary-yellow-dark);
+    box-shadow: 0 20px 40px rgba(245, 158, 11, 0.15);
+}
+
+.quick-link-card.future:hover {
+    border-color: var(--accent-gold);
+    box-shadow: 0 20px 40px rgba(217, 119, 6, 0.15);
+}
+
+.quick-link-card.conclusion:hover {
+    border-color: var(--primary-red-dark);
+    box-shadow: 0 20px 40px rgba(185, 28, 28, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .nav-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .nav-tab {
+        min-width: 200px;
+        padding: 1.5rem 2rem;
+    }
+    
+    .quick-links-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .combined-hero {
+        min-height: 40vh;
+        padding: 2rem 1rem;
+    }
+    
+    .section-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .knowledge-navigation {
+        padding: 1.5rem 0;
+    }
+    
+    .nav-container {
+        padding: 0 1rem;
+    }
+    
+    .nav-tab {
+        min-width: auto;
+        width: 100%;
+        max-width: 300px;
+        padding: 1.5rem;
+    }
+    
+    .tab-icon {
+        font-size: 2.5rem;
+    }
+    
+    .tab-label {
+        font-size: 1.2rem;
+    }
+    
+    .section-intro {
+        padding: 1.5rem;
+    }
+    
+    .section-intro h2 {
+        font-size: 2rem;
+    }
+    
+    .quick-links-container h3 {
+        font-size: 1.8rem;
+    }
+    
+    .quick-links-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .quick-link-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .combined-hero {
+        min-height: 35vh;
+    }
+    
+    .section-hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .content-wrapper {
+        padding: 2rem 1rem;
+    }
+    
+    .card-icon {
+        font-size: 2.5rem;
+    }
+    
+    .card-content h4 {
+        font-size: 1.2rem;
+    }
+}

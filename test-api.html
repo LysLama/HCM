@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Gemini API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 0;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        .result {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            border-left: 4px solid #007bff;
+        }
+        .error {
+            border-left-color: #dc3545;
+            background: #f8d7da;
+        }
+        .success {
+            border-left-color: #28a745;
+            background: #d4edda;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>🤖 Test Gemini API</h1>
+    
+    <div class="container">
+        <h3>1. Kiểm tra API Key</h3>
+        <p>API Key: <span id="apiKeyStatus">Đang kiểm tra...</span></p>
+        <button onclick="checkApiKey()">Kiểm tra API Key</button>
+        
+        <h3>2. Test API với câu hỏi đơn giản</h3>
+        <input type="text" id="testQuestion" placeholder="Nhập câu hỏi test..." value="Triết học Mác-Lênin là gì?">
+        <button onclick="testSimpleAPI()">Test API đơn giản</button>
+        
+        <h3>3. Test API với các models khác nhau</h3>
+        <button onclick="testDifferentModels()">Test các models</button>
+        
+        <div id="results"></div>
+    </div>
+
+    <script>
+        // API Key từ environment (thay bằng key thực của bạn)
+        const API_KEY = 'AIzaSyA6rpMpd19WMq_4jqJ8C7U4A_vTfpC4_tc';
+        
+        function addResult(content, type = 'result') {
+            const resultsDiv = document.getElementById('results');
+            const div = document.createElement('div');
+            div.className = `result ${type}`;
+            div.innerHTML = content;
+            resultsDiv.appendChild(div);
+        }
+
+        function checkApiKey() {
+            const apiKeyElement = document.getElementById('apiKeyStatus');
+            if (!API_KEY || API_KEY === 'YOUR_API_KEY_HERE') {
+                apiKeyElement.innerHTML = '<span style="color: red;">❌ API Key chưa được cấu hình</span>';
+                addResult('❌ Vui lòng cập nhật API Key trong file này', 'error');
+                return false;
+            } else {
+                apiKeyElement.innerHTML = '<span style="color: green;">✅ API Key đã được cấu hình</span>';
+                addResult('✅ API Key hợp lệ (độ dài: ' + API_KEY.length + ' ký tự)', 'success');
+                return true;
+            }
+        }
+
+        async function testSimpleAPI() {
+            if (!checkApiKey()) return;
+            
+            const question = document.getElementById('testQuestion').value;
+            addResult('🔄 Đang test API với câu hỏi: "' + question + '"...');
+            
+            const models = [
+                'gemini-1.5-flash-latest',
+                'gemini-1.5-flash',
+                'gemini-pro',
+                'gemini-1.5-pro'
+            ];
+
+            for (const model of models) {
+                try {
+                    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${API_KEY}`;
+                    
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            contents: [{
+                                parts: [{
+                                    text: question
+                                }]
+                            }]
+                        })
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        const answer = data.candidates?.[0]?.content?.parts?.[0]?.text || 'Không có phản hồi';
+                        addResult(`✅ <strong>${model}</strong>: HOẠT ĐỘNG<br><em>Phản hồi:</em> ${answer.substring(0, 200)}...`, 'success');
+                        return; // Dừng ở model đầu tiên hoạt động
+                    } else {
+                        const errorText = await response.text();
+                        addResult(`❌ <strong>${model}</strong>: KHÔNG HOẠT ĐỘNG<br>Lỗi: ${response.status} - ${errorText}`, 'error');
+                    }
+                } catch (error) {
+                    addResult(`❌ <strong>${model}</strong>: LỖI KẾT NỐI<br>Chi tiết: ${error.message}`, 'error');
+                }
+            }
+        }
+
+        async function testDifferentModels() {
+            if (!checkApiKey()) return;
+            
+            addResult('🔄 Đang test tất cả các models có sẵn...');
+            
+            const models = [
+                'gemini-1.5-flash-latest',
+                'gemini-1.5-flash',
+                'gemini-1.5-flash-8b',
+                'gemini-1.5-pro',
+                'gemini-1.5-pro-latest',
+                'gemini-pro',
+                'gemini-pro-vision'
+            ];
+
+            for (const model of models) {
+                try {
+                    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${API_KEY}`;
+                    
+                    const response = await fetch(url, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            contents: [{
+                                parts: [{
+                                    text: "Chào bạn, hãy trả lời ngắn gọn: Triết học là gì?"
+                                }]
+                            }]
+                        })
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        addResult(`✅ <strong>${model}</strong>: HOẠT ĐỘNG BÌNH THƯỜNG`, 'success');
+                    } else {
+                        const errorText = await response.text();
+                        addResult(`❌ <strong>${model}</strong>: ${response.status} - ${errorText.substring(0, 100)}`, 'error');
+                    }
+                } catch (error) {
+                    addResult(`⚠️ <strong>${model}</strong>: Lỗi kết nối - ${error.message}`, 'error');
+                }
+                
+                // Delay để tránh rate limit
+                await new Promise(resolve => setTimeout(resolve, 500));
+            }
+        }
+
+        // Chạy kiểm tra API Key khi load trang
+        window.onload = function() {
+            checkApiKey();
+        }
+    </script>
+</body>
+</html>

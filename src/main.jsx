@@ -12,6 +12,10 @@ import Role from './template/Vaitro.jsx';
 import Future from './template/TuongLai.jsx';
 import Conclusion from './template/KetLuan.jsx';
 import Quiz from './template/Quiz.jsx';
+import TimelinePage from './pages/TimelinePage.jsx';
+import KnowledgeMapPage from './pages/KnowledgeMapPage.jsx';
+import CombinedKnowledgePage from './pages/CombinedKnowledgePage.jsx';
+import { ReadingProgressProvider } from './context/ReadingProgressContext.jsx';
 
 const router = createBrowserRouter([
   {
@@ -60,12 +64,11 @@ const router = createBrowserRouter([
         element: <Quiz />,
       },
 
-
-
-
-
-
-
+      // Interactive Features
+      {
+        path: "/knowledge",
+        element: <CombinedKnowledgePage />,
+      },
 
       // 404 Not Found page
       // {
@@ -78,8 +81,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
-    <ScrollButton />
+    <ReadingProgressProvider>
+      <RouterProvider router={router} />
+      <ScrollButton />
+    </ReadingProgressProvider>
   </StrictMode>,
 
 )
