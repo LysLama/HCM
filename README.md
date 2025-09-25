@@ -16,10 +16,10 @@ Website giáo dục về triết học Mác-Lênin với giao diện hiện đ�
 - **Smooth Animations** - Hiệu ứng mượt mà, chuyên nghiệp
 
 ### 📚 **Nội dung Giáo dục**
-- **Lý thuyết cơ bản** - Khái niệm triết học Mác-Lênin
-- **Vai trò & Ứng dụng** - Triết học trong đời sống
-- **Tương lai & Phát triển** - Xu hướng hiện đại
-- **Kết luận & Tổng kết** - Ý nghĩa thực tiễn
+- **Lý Thuyết Nền Tảng** - Tìm hiểu về khái niệm giai cấp và đấu tranh giai cấp theo triết học Mác – Lênin
+- **Vai Trò Lịch Sử** - Phân tích vai trò của đấu tranh giai cấp như một động lực phát triển xã hội
+- **Xã Hội Tương Lai** - Thảo luận về khả năng và giới hạn của một xã hội không còn đối kháng giai cấp
+- **Kết luận** - Tổng kết những điểm chính và tầm quan trọng của việc hiểu đấu tranh giai cấp
 
 ### 🧠 **Tri thức & Lịch sử**
 - **📈 Interactive Timeline** - Dòng thời gian phát triển triết học
