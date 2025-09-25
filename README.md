@@ -1,5 +1,10 @@
 # 🏛️ Philosophy Website - Triết học Mác-Lênin
 
+[![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://philosophy-website-theta.vercel.app/)
+[![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
+[![Vite](https://img.shields.io/badge/Vite-7.1.5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Gemini AI](https://img.shields.io/badge/AI-Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
+
 Website giáo dục về triết học Mác-Lênin với giao diện hiện đại, tích hợp AI chatbot thông minh và các công cụ học tập tương tác.
 
 ## ✨ Tính năng chính
@@ -30,8 +35,15 @@ Website giáo dục về triết học Mác-Lênin với giao diện hiện đ�
 
 ## 🚀 Demo & Live Site
 
+- **🌐 Live Demo:** https://philosophy-website-theta.vercel.app/
+- **📱 QR Code:** Scan để truy cập nhanh trên mobile
 - **GitHub Repository:** [Philosophy_Website](https://github.com/LysLama/Philosophy_Website)
-- **Live Demo:** [Sẽ cập nhật sau khi deploy]
+
+<div align="center">
+  <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://philosophy-website-theta.vercel.app/" alt="QR Code - Philosophy Website" width="200" height="200">
+  
+  *Scan QR code để truy cập website trên điện thoại*
+</div>
 
 ## 🛠️ Công nghệ sử dụng
 
@@ -88,13 +100,16 @@ Truy cập: http://localhost:5173
 
 ## 🌐 Deployment
 
-### Deploy lên Vercel (Khuyến nghị)
+### Deploy lên Vercel ✅ (Đã hoàn thành)
 
-1. **Push code lên GitHub** (đã có .gitignore bảo vệ .env)
-2. **Import vào Vercel** từ GitHub repository
-3. **Cấu hình Environment Variables** trong Vercel Dashboard:
-   - `VITE_GEMINI_API_KEY`: API key thật của bạn
-4. **Deploy** và nhận URL live site
+**🎉 Website đã được deploy thành công tại:** https://philosophy-website-theta.vercel.app/
+
+**Quy trình đã thực hiện:**
+1. ✅ **Push code lên GitHub** (đã có .gitignore bảo vệ .env)
+2. ✅ **Import vào Vercel** từ GitHub repository
+3. ✅ **Cấu hình Environment Variables** trong Vercel Dashboard:
+   - `VITE_GEMINI_API_KEY`: API key đã được cấu hình
+4. ✅ **Deploy thành công** với AI chatbot hoạt động
 
 📋 **Chi tiết deployment:** Xem file `DEPLOYMENT.md`
 
