@@ -72,8 +72,9 @@
     </div>
 
     <script>
-        // API Key từ environment (thay bằng key thực của bạn)
-        const API_KEY = 'AIzaSyA6rpMpd19WMq_4jqJ8C7U4A_vTfpC4_tc';
+    // Lưu ý: Trang này dựa vào Vite dev proxy (/api/gemini/*). Hãy chạy `npm run dev`.
+    // Không cần chèn API key ở client nữa.
+    const API_KEY = null;
         
         function addResult(content, type = 'result') {
             const resultsDiv = document.getElementById('results');
@@ -85,15 +86,9 @@
 
         function checkApiKey() {
             const apiKeyElement = document.getElementById('apiKeyStatus');
-            if (!API_KEY || API_KEY === 'YOUR_API_KEY_HERE') {
-                apiKeyElement.innerHTML = '<span style="color: red;">❌ API Key chưa được cấu hình</span>';
-                addResult('❌ Vui lòng cập nhật API Key trong file này', 'error');
-                return false;
-            } else {
-                apiKeyElement.innerHTML = '<span style="color: green;">✅ API Key đã được cấu hình</span>';
-                addResult('✅ API Key hợp lệ (độ dài: ' + API_KEY.length + ' ký tự)', 'success');
-                return true;
-            }
+            apiKeyElement.innerHTML = '<span style="color: green;">✅ Sử dụng proxy dev (không cần API Key ở client)</span>';
+            addResult('✅ Sử dụng proxy dev: /api/gemini/<model>', 'success');
+            return true;
         }
 
         async function testSimpleAPI() {
@@ -103,15 +98,16 @@
             addResult('🔄 Đang test API với câu hỏi: "' + question + '"...');
             
             const models = [
+                'gemini-2.5-flash',
                 'gemini-1.5-flash-latest',
                 'gemini-1.5-flash',
-                'gemini-pro',
-                'gemini-1.5-pro'
+                'gemini-1.5-pro',
+                'gemini-pro'
             ];
 
             for (const model of models) {
                 try {
-                    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${API_KEY}`;
+                    const url = `/api/gemini/${model}`;
                     
                     const response = await fetch(url, {
                         method: 'POST',
@@ -148,18 +144,18 @@
             addResult('🔄 Đang test tất cả các models có sẵn...');
             
             const models = [
+                'gemini-2.5-flash',
                 'gemini-1.5-flash-latest',
                 'gemini-1.5-flash',
                 'gemini-1.5-flash-8b',
                 'gemini-1.5-pro',
                 'gemini-1.5-pro-latest',
-                'gemini-pro',
-                'gemini-pro-vision'
+                'gemini-pro'
             ];
 
             for (const model of models) {
                 try {
-                    const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${API_KEY}`;
+                    const url = `/api/gemini/${model}`;
                     
                     const response = await fetch(url, {
                         method: 'POST',
@@ -191,9 +187,13 @@
             }
         }
 
-        // Chạy kiểm tra API Key khi load trang
+        // Chạy kiểm tra tự động khi load trang
         window.onload = function() {
             checkApiKey();
+            // Tự động chạy test đơn giản sau khi trang sẵn sàng
+            setTimeout(() => {
+                testSimpleAPI();
+            }, 200);
         }
     </script>
 </body>

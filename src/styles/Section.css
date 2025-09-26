@@ -30,7 +30,7 @@
   position: relative;
   z-index: 2;
   font-family: 'Anton', sans-serif;
-  font-size: 3.5rem;
+  font-size: 4rem; /* Tăng kích thước từ 3.5rem lên 4rem */
   max-width: 800px;
   text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
@@ -43,20 +43,20 @@
 }
 
 .content-text {
-  font-size: 1.1rem;
+  font-size: 1.25rem; /* Tăng từ 1.1rem lên 1.25rem */
   line-height: 1.8;
   color: #333;
 }
 
 .content-text h3 {
-  font-size: 1.6rem;
+  font-size: 2rem; /* Tăng từ 1.6rem lên 2rem */
   color: #b10000;
   margin-top: 40px;
   margin-bottom: 15px;
 }
 
 .content-text p {
-  font-size: 20px;
+  font-size: 22px; /* Tăng từ 20px lên 22px */
   margin-bottom: 20px;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .quote-section blockquote p {
-  font-size: 1.1rem;
+  font-size: 1.25rem; /* Tăng từ 1.1rem lên 1.25rem */
   line-height: 1.6;
   margin-bottom: 15px;
   color: #2c3e50;
@@ -138,7 +138,7 @@
   font-style: italic;
   color: #666;
   margin-top: 15px;
-  font-size: 0.95rem;
+  font-size: 1.1rem; /* Tăng từ 0.95rem lên 1.1rem */
   border-top: 2px solid #e9ecef;
   padding-top: 15px;
 }
@@ -146,7 +146,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .section-hero-title {
-      font-size: 2.2rem;
+      font-size: 2.5rem; /* Tăng từ 2.2rem lên 2.5rem */
   }
   
   .video-container iframe {

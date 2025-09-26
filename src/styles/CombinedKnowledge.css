@@ -11,7 +11,7 @@
 }
 
 .hero-subtitle {
-    font-size: 1.3rem;
+    font-size: 1.5rem; /* Tăng từ 1.3rem lên 1.5rem */
     color: rgba(255, 255, 255, 0.9);
     max-width: 700px;
     margin: 1rem auto 0;
@@ -81,20 +81,20 @@
 }
 
 .tab-icon {
-    font-size: 3rem;
+    font-size: 3.5rem; /* Tăng từ 3rem lên 3.5rem */
     margin-bottom: 1rem;
     display: block;
 }
 
 .tab-label {
-    font-size: 1.4rem;
+    font-size: 1.6rem; /* Tăng từ 1.4rem lên 1.6rem */
     font-weight: 700;
     margin-bottom: 0.5rem;
     display: block;
 }
 
 .tab-description {
-    font-size: 1rem;
+    font-size: 1.15rem; /* Tăng từ 1rem lên 1.15rem */
     opacity: 0.8;
     font-weight: 400;
     display: block;

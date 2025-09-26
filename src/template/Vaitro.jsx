@@ -19,7 +19,7 @@ const Role = () => {
                 <div className="content-text">
                     <h3>1. Động lực phát triển của lịch sử xã hội có giai cấp: </h3>
                     <p>
-                        •	Mác và Ăngghen khẳng định: “Lịch sử của tất cả các xã hội từ trước tới nay là lịch sử đấu tranh giai cấp” (Tuyên ngôn của Đảng Cộng sản, 1848, <a href="https://marxists.org">Marxists.org</a>).
+                        •	Mác và Ăngghen khẳng định: “Lịch sử của tất cả các xã hội từ trước tới nay là lịch sử đấu tranh giai cấp” (Tuyên ngôn của Đảng Cộng sản, 1848, Marxists.org).
                     </p>
                     <p>
                         •	Đấu tranh giai cấp là động lực trực tiếp thúc đẩy sự thay thế các hình thái kinh tế – xã hội. Ví dụ:
@@ -32,17 +32,17 @@ const Role = () => {
                     </p>
                     <h3>2. Tác động hai mặt: </h3>
                     <p>
-                        •	Tích cực: Thúc đẩy tiến bộ xã hội, mở đường cho hình thái kinh tế – xã hội cao hơn (<a href="https://moet.gov.vn/content/vanban/Lists/VBDH/Attachments/2729/GT%20h%E1%BB%8Dc%20ph%E1%BA%A7n%20Tri%E1%BA%BFt%20h%E1%BB%8Dc%20MLN%20(K)%20Tr131-Tr229.pdf">Giáo trình Triết học Mác – Lênin, 2019, tr. 189</a>).
+                        •	Tích cực: Thúc đẩy tiến bộ xã hội, mở đường cho hình thái kinh tế – xã hội cao hơn (Giáo trình Triết học Mác – Lênin, 2019, tr. 189).
                     </p>
                     <p>
                         •	Tiêu cực: gắn liền với xung đột, chiến tranh, sự hy sinh, đau khổ của nhân loại.
                     </p>
                     <h3>3. Tổng quát: </h3>
-                    <p>Trong các xã hội có đối kháng giai cấp, đấu tranh giai cấp là động lực trực tiếp của lịch sử. Tuy nhiên, đó không phải là động lực duy nhất. Bên cạnh nó, còn có sự phát triển của lực lượng sản xuất, tiến bộ khoa học – kỹ thuật và nhu cầu hợp tác, giao lưu xã hội cũng góp phần quan trọng vào sự phát triển lịch sử (<a href="https://moet.gov.vn/content/vanban/Lists/VBDH/Attachments/2729/GT%20h%E1%BB%8Dc%20ph%E1%BA%A7n%20Tri%E1%BA%BFt%20h%E1%BB%8Dc%20MLN%20(K)%20Tr131-Tr229.pdf">Giáo trình Triết học Mác – Lênin, 2019, tr. 190</a>).
+                    <p>Trong các xã hội có đối kháng giai cấp, đấu tranh giai cấp là động lực trực tiếp của lịch sử. Tuy nhiên, đó không phải là động lực duy nhất. Bên cạnh nó, còn có sự phát triển của lực lượng sản xuất, tiến bộ khoa học – kỹ thuật và nhu cầu hợp tác, giao lưu xã hội cũng góp phần quan trọng vào sự phát triển lịch sử (Giáo trình Triết học Mác – Lênin, 2019, tr. 190).
                     </p>
 
                     {/* PHẦN V: TRÍCH DẪN VÀ VÍ DỤ */}
-                    <h3>7. Trích dẫn từ các nhà triết học:</h3>
+                    <h3>4. Trích dẫn từ các nhà triết học:</h3>
                     <div className="quote-section">
                         <blockquote>
                             <p>"Triết học chỉ giải thích thế giới theo những cách khác nhau, vấn đề là phải biến đổi nó."</p>
@@ -65,36 +65,49 @@ const Role = () => {
                         </blockquote>
                     </div>
 
-                    <h3>8. Video học thuật:</h3>
+                    <h3>5. Video học thuật:</h3>
                     <div className="video-section">
                         <div className="video-container">
                             <iframe 
                                 width="560" 
                                 height="315" 
-                                src="https://www.youtube.com/embed/yynYFEp8H6w" 
-                                title="Historical Materialism and Class Struggle" 
+                                src="https://www.youtube.com/embed/uvpJKFsxCmc" 
+                                title="Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 1" 
                                 frameBorder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowFullScreen>
                             </iframe>
-                            <p className="video-caption">Chủ nghĩa duy vật lịch sử và vai trò của đấu tranh giai cấp</p>
+                            <p className="video-caption">Đấu tranh giai cấp như động lực phát triển xã hội</p>
                         </div>
                         
                         <div className="video-container">
                             <iframe 
                                 width="560" 
                                 height="315" 
-                                src="https://www.youtube.com/embed/CWF_0lkBhjY" 
-                                title="The Communist Revolution" 
+                                src="https://www.youtube.com/embed/sv_CMemPvwo" 
+                                title="Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 2" 
                                 frameBorder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowFullScreen>
                             </iframe>
-                            <p className="video-caption">Cách mạng cộng sản và sự thay đổi lịch sử</p>
+                            <p className="video-caption">Biến đổi xã hội thông qua đấu tranh giai cấp</p>
+                        </div>
+                        
+                        <div className="video-container">
+                            <iframe 
+                                width="560" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/OvErzcaDhg0" 
+                                title="Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 3" 
+                                frameBorder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowFullScreen>
+                            </iframe>
+                            <p className="video-caption">Ảnh hưởng của đấu tranh giai cấp đến quá trình lịch sử</p>
                         </div>
                     </div>
 
-                    <h3>9. Ví dụ lịch sử cụ thể:</h3>
+                    <h3>6. Ví dụ lịch sử cụ thể:</h3>
                     <p>
                         •	<strong>Khởi nghĩa nô lệ Spartacus (73-71 TCN):</strong> Cuộc đấu tranh của nô lệ La Mã chống lại chế độ nô lệ, mặc dù thất bại nhưng đã làm rung chuyển nền móng của đế chế La Mã.
                     </p>

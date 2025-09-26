@@ -20,7 +20,7 @@ const Future = () => {
                     {/* PHẦN I: ĐIỀU KIỆN VÀ KHẢ NĂNG */}
                     <h3>1. Điều kiện để xã hội không còn đối kháng giai cấp</h3>
                     <p>
-                        •	<strong>Cơ sở kinh tế:</strong> Theo Mác-Lênin, khi xã hội tiến lên chủ nghĩa cộng sản (giai đoạn đầu là chủ nghĩa xã hội), chế độ tư hữu về tư liệu sản xuất chủ yếu dần bị thủ tiêu. Khi đó, cơ sở kinh tế để phân chia giai cấp đối kháng sẽ không còn (<a href="https://moet.gov.vn/content/vanban/Lists/VBDH/Attachments/2729/GT%20h%E1%BB%8Dc%20ph%E1%BA%A7n%20Tri%E1%BA%BFt%20h%E1%BB%8Dc%20MLN%20(K)%20Tr131-Tr229.pdf">Giáo trình Triết học Mác – Lênin, 2019, tr. 190–191</a>).
+                        •	<strong>Cơ sở kinh tế:</strong> Theo Mác-Lênin, khi xã hội tiến lên chủ nghĩa cộng sản (giai đoạn đầu là chủ nghĩa xã hội), chế độ tư hữu về tư liệu sản xuất chủ yếu dần bị thủ tiêu. Khi đó, cơ sở kinh tế để phân chia giai cấp đối kháng sẽ không còn (<span className="citation"></span>).
                     </p>
                     <p>
                         •	<strong>Quan hệ xã hội mới:</strong> Quan hệ xã hội được xây dựng trên cơ sở hợp tác, bình đẳng, đoàn kết, thay thế quan hệ áp bức, bóc lột.
@@ -108,26 +108,39 @@ const Future = () => {
                             <iframe 
                                 width="560" 
                                 height="315" 
-                                src="https://www.youtube.com/embed/vyl2DeKT-Vs" 
-                                title="What would a Socialist Society Look Like?" 
+                                src="https://www.youtube.com/embed/vEVTFCI59c8" 
+                                title="Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 1" 
                                 frameBorder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowFullScreen>
                             </iframe>
-                            <p className="video-caption">Xã hội xã hội chủ nghĩa sẽ như thế nào?</p>
+                            <p className="video-caption">Khả năng của xã hội không còn đối kháng giai cấp</p>
                         </div>
                         
                         <div className="video-container">
                             <iframe 
                                 width="560" 
                                 height="315" 
-                                src="https://www.youtube.com/embed/rRXvQuE9xO4" 
-                                title="The Withering Away of the State" 
+                                src="https://www.youtube.com/embed/Z9VYY6vxkFA" 
+                                title="Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 2" 
                                 frameBorder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowFullScreen>
                             </iframe>
-                            <p className="video-caption">Sự tiêu vong của nhà nước trong lý thuyết Marx-Lenin</p>
+                            <p className="video-caption">Mô hình xã hội không còn đối kháng giai cấp</p>
+                        </div>
+                        
+                        <div className="video-container">
+                            <iframe 
+                                width="560" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/IdQ-To9Xgm8" 
+                                title="Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 3" 
+                                frameBorder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowFullScreen>
+                            </iframe>
+                            <p className="video-caption">Giới hạn của xã hội không còn đối kháng giai cấp</p>
                         </div>
                     </div>
 
@@ -150,7 +163,7 @@ const Future = () => {
                         +	Hợp tác quốc tế thay thế cạnh tranh thù địch
                     </p>
 
-                    <h3>6. Ví dụ về các nỗ lực xây dựng xã hội mới:</h3>
+                    <h3>10. Ví dụ về các nỗ lực xây dựng xã hội mới:</h3>
                     <p>
                         •	<strong>Liên Xô (1922-1991):</strong> Thí nghiệm đầu tiên xây dựng xã hội xã hội chủ nghĩa trên quy mô lớn, đạt được nhiều thành tựu về công nghiệp hóa và giáo dục.
                     </p>
@@ -163,7 +176,7 @@ const Future = () => {
 
                     {/* NEW: History beyond antagonism */}
                     <section>
-                        <h3>7. Lịch sử sau khi đối kháng giai cấp chấm dứt</h3>
+                        <h3>11. Lịch sử sau khi đối kháng giai cấp chấm dứt</h3>
                         <p>
                             • Đấu tranh giai cấp không phải hiện tượng vĩnh viễn; khi cơ sở kinh tế của đối kháng bị thủ tiêu, lịch sử không dừng lại mà chuyển động bởi các mâu thuẫn <em>không đối kháng</em> (con người–tự nhiên, cái mới–cái cũ, nhu cầu vô hạn–nguồn lực hữu hạn) và bởi sáng tạo hợp tác của cộng đồng.
                         </p>
@@ -174,7 +187,7 @@ const Future = () => {
 
                     {/* NEW: Transition mechanics */}
                     <section>
-                        <h3>8. Cơ chế chuyển tiếp: từ đối kháng → không đối kháng</h3>
+                        <h3>12. Cơ chế chuyển tiếp: từ đối kháng → không đối kháng</h3>
                         <ul>
                             <li>Chuyên chính vô sản như <em>bước quá độ</em> nhằm thủ tiêu cơ sở tái sinh giai cấp bóc lột.</li>
                             <li>Ưu tiên phát triển lực lượng sản xuất và thiết chế dân chủ xã hội chủ nghĩa, nâng cao dân trí.</li>

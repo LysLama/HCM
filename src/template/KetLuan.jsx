@@ -61,37 +61,8 @@ const Conclusion = () => {
                         </blockquote>
                     </div>
 
-                    <h3>4. Video tổng kết:</h3>
-                    <div className="video-section">
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/qOP2V_np2c0" 
-                                title="Marx and the End of History" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Marx và quan niệm về sự kết thúc của lịch sử</p>
-                        </div>
-                        
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/eU-AkeOyiOQ" 
-                                title="The Future of Socialism" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Tương lai của chủ nghĩa xã hội trong thế kỷ 21</p>
-                        </div>
-                    </div>
-
                     {/* PHẦN III: Ý NGHĨA VÀ ỨNG DỤNG */}
-                    <h3>5. Ý nghĩa đương đại:</h3>
+                    <h3>4. Ý nghĩa đương đại:</h3>
                     <p>
                         • <strong>Đối với việc nghiên cứu lịch sử:</strong> Giúp chúng ta hiểu rõ hơn về các quy luật phát triển xã hội và vai trò của các lực lượng xã hội trong quá trình biến đổi.
                     </p>
@@ -102,14 +73,14 @@ const Conclusion = () => {
                         • <strong>Đối với tương lai nhân loại:</strong> Định hướng cho việc xây dựng một xã hội hài hòa, nơi mỗi cá nhân được phát triển toàn diện trong khuôn khổ cộng đồng.
                     </p>
 
-                    <h3>6. Thông điệp cuối cùng:</h3>
+                    <h3>5. Thông điệp cuối cùng:</h3>
                     <p>
                         Nghiên cứu về đấu tranh giai cấp không phải để khuyến khích xung đột, mà để hiểu rõ bản chất của các mâu thuẫn xã hội nhằm tìm ra những giải pháp hài hòa và nhân văn hơn. Mục tiêu cuối cùng là xây dựng một thế giới nơi "sự phát triển tự do của mỗi người là điều kiện cho sự phát triển tự do của tất cả mọi người."
                     </p>
 
                     {/* PHẦN IV: TÍCH HỢP VÀ ÔN TẬP */}
                     <section>
-                        <h3>7. Thông điệp tích hợp: Giai cấp ⟷ Dân tộc ⟷ Tương lai</h3>
+                        <h3>6. Thông điệp tích hợp: Giai cấp ⟷ Dân tộc ⟷ Tương lai</h3>
                         <p>
                             • Đấu tranh giai cấp vừa là đòn bẩy trực tiếp của biến đổi lịch sử, vừa là quá trình giáo dục–tự giáo dục của chính các lực lượng cách mạng. Khi liên hệ với vấn đề dân tộc, các liên minh dựa trên lợi ích căn bản tạo nên sức mạnh tổng hợp cho giải phóng dân tộc và xã hội.
                         </p>
@@ -137,7 +108,7 @@ const Conclusion = () => {
 
                     {/* PHẦN V: TRÍCH DẪN KẾT THÚC */}
                     <section className="quote-section">
-                        <h3>8. Trích dẫn kết thúc</h3>
+                        <h3>7. Trích dẫn kết thúc</h3>
                         <blockquote>
                             <p>"Đấu tranh giai cấp là động lực trực tiếp, quan trọng của lịch sử — nhưng không phải động lực duy nhất."</p>
                             <cite>— Tổng hợp từ giáo trình & văn bản kinh điển</cite>

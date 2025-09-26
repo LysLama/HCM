@@ -20,7 +20,7 @@ const Theory = () => {
                     {/* PHẦN I: KHÁI NIỆM CƠ BẢN */}
                     <h3>1. Khái niệm về giai cấp</h3>
                     <p>
-                        •	Theo Mác – Lênin: giai cấp là những tập đoàn người to lớn trong xã hội, khác nhau về địa vị trong hệ thống sản xuất, về quan hệ đối với tư liệu sản xuất, vai trò trong tổ chức lao động xã hội và phương thức, khối lượng thu nhập mà họ thu được (<a href="https://moet.gov.vn/content/vanban/Lists/VBDH/Attachments/2729/GT%20h%E1%BB%8Dc%20ph%E1%BA%A7n%20Tri%E1%BA%BFt%20h%E1%BB%8Dc%20MLN%20(K)%20Tr131-Tr229.pdf">Giáo trình Triết học Mác – Lênin, 2019, tr. 181</a>).
+                        •	Theo Mác – Lênin: giai cấp là những tập đoàn người to lớn trong xã hội, khác nhau về địa vị trong hệ thống sản xuất, về quan hệ đối với tư liệu sản xuất, vai trò trong tổ chức lao động xã hội và phương thức, khối lượng thu nhập mà họ thu được (Giáo trình Triết học Mác – Lênin, 2019, tr. 181).
                     </p>
                     
                     {/* Trích dẫn định nghĩa chi tiết của Lênin */}
@@ -39,7 +39,7 @@ const Theory = () => {
 
                     <h3>2. Đấu tranh giai cấp - Bản chất và đặc điểm</h3>
                     <p>
-                        •	<strong>Tính tất yếu:</strong> Đấu tranh giai cấp là tất yếu, do sự đối lập về lợi ích căn bản không thể điều hòa được giữa các giai cấp (<a href="https://moet.gov.vn/content/vanban/Lists/VBDH/Attachments/2729/GT%20h%E1%BB%8Dc%20ph%E1%BA%A7n%20Tri%E1%BA%BFt%20h%E1%BB%8Dc%20MLN%20(K)%20Tr131-Tr229.pdf">Giáo trình Triết học Mác – Lênin, 2019, tr. 187</a>).
+                        •	<strong>Tính tất yếu:</strong> Đấu tranh giai cấp là tất yếu, do sự đối lập về lợi ích căn bản không thể điều hòa được giữa các giai cấp (Giáo trình Triết học Mác – Lênin, 2019, tr. 187).
                     </p>
                     <p>
                         •	<strong>Định nghĩa:</strong> Đấu tranh giai cấp là cuộc đấu tranh của các tập đoàn người to lớn có lợi ích căn bản đối lập nhau trong một phương thức sản xuất xã hội nhất định.
@@ -90,38 +90,64 @@ const Theory = () => {
                     </div>
 
                     {/* PHẦN VI: TÀI LIỆU THAM KHẢO */}
-                    <h3>8. Video học thuật:</h3>
+                    <h3>6. Video học thuật:</h3>
                     <div className="video-section">
                         <div className="video-container">
                             <iframe 
                                 width="560" 
                                 height="315" 
-                                src="https://www.youtube.com/embed/fSQgCy_iIcc" 
-                                title="Marx's Theory of Class Struggle" 
+                                src="https://www.youtube.com/embed/GL4o_umfVWM" 
+                                title="Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 1" 
                                 frameBorder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowFullScreen>
                             </iframe>
-                            <p className="video-caption">Giải thích lý thuyết đấu tranh giai cấp của Marx</p>
+                            <p className="video-caption">Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp</p>
                         </div>
                         
                         <div className="video-container">
                             <iframe 
                                 width="560" 
                                 height="315" 
-                                src="https://www.youtube.com/embed/T9Whccunka4" 
-                                title="Understanding Class and Class Struggle" 
+                                src="https://www.youtube.com/embed/v0PE6y-fybA" 
+                                title="Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 2" 
                                 frameBorder="0" 
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                                 allowFullScreen>
                             </iframe>
-                            <p className="video-caption">Hiểu về giai cấp và đấu tranh giai cấp trong xã hội hiện đại</p>
+                            <p className="video-caption">Phân tích khái niệm giai cấp trong triết học Mác-Lênin</p>
+                        </div>
+                        
+                        <div className="video-container">
+                            <iframe 
+                                width="560" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/rMwMJCqCKhc" 
+                                title="Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 3" 
+                                frameBorder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowFullScreen>
+                            </iframe>
+                            <p className="video-caption">Đấu tranh giai cấp trong xã hội hiện đại</p>
+                        </div>
+                        
+                        <div className="video-container">
+                            <iframe 
+                                width="560" 
+                                height="315" 
+                                src="https://www.youtube.com/embed/qVr_qV9nRB8" 
+                                title="Phân tích định nghĩa giai cấp của Lênin" 
+                                frameBorder="0" 
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                allowFullScreen>
+                            </iframe>
+                            <p className="video-caption">Phân tích định nghĩa giai cấp của Lênin và ví dụ minh họa</p>
                         </div>
                     </div>
 
                     {/* PHẦN IV: GIAI CẤP VÀ DÂN TỘC */}
                     <section>
-                        <h3>6. Mối quan hệ giữa giai cấp và dân tộc</h3>
+                        <h3>7. Mối quan hệ giữa giai cấp và dân tộc</h3>
                         <p>
                             •	<strong>Bản chất giai cấp:</strong> Giai cấp là phạm trù kinh tế–xã hội mang tính lịch sử; sự tồn tại của nó gắn với những hệ thống sản xuất dựa trên tư hữu, nhưng không thể giản lược thành thuần kinh tế.
                         </p>
@@ -136,7 +162,7 @@ const Theory = () => {
                     </section>
 
                     {/* PHẦN V: VÍ DỤ LỊCH SỬ */}
-                    <h3>7. Ví dụ thực tiễn trong lịch sử</h3>
+                    <h3>8. Ví dụ thực tiễn trong lịch sử</h3>
                     <p>
                         •	<strong>Cách mạng Pháp 1789:</strong> Cuộc đấu tranh của giai cấp tư sản chống lại quý tộc phong kiến, mở ra kỷ nguyên tư bản chủ nghĩa ở châu Âu.
                     </p>

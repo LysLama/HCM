@@ -1,14 +1,11 @@
-// Test multiple Gemini models để tìm model khả dụng
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-
+// Test multiple Gemini models để tìm model khả dụng (qua Vite proxy)
 const MODELS_TO_TEST = [
+  'gemini-1.5-flash-8b-latest',
+  'gemini-1.5-flash-8b',
   'gemini-1.5-flash-latest',
   'gemini-1.5-flash',
-  'gemini-1.5-pro-latest',
-  'gemini-1.5-pro',
-  'gemini-pro',
-  'gemini-1.0-pro-latest',
-  'gemini-1.0-pro'
+  'gemini-2.5-flash',
+  'gemini-1.5-pro'
 ];
 
 export const findWorkingModel = async () => {
@@ -16,7 +13,7 @@ export const findWorkingModel = async () => {
   
   for (const model of MODELS_TO_TEST) {
     try {
-      const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${GEMINI_API_KEY}`;
+  const url = `/api/gemini/${model}`;
       console.log(`Testing model: ${model}`);
       
       const response = await fetch(url, {
