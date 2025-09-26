@@ -69,3 +69,25 @@
         transform: translateY(0);
     }
 }
+
+/* Language toggle */
+.lang-toggle-wrapper {
+    position: absolute;
+    top: 6px;
+    left: 10px;
+    z-index: 1100;
+}
+
+.lang-toggle-btn {
+    background: rgba(0,0,0,0.55);
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 16px;
+    border: 1px solid rgba(255,255,255,0.25);
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s, transform 0.2s;
+}
+.lang-toggle-btn:hover { background: rgba(0,0,0,0.75); transform: translateY(-1px); }
+.lang-toggle-btn:active { transform: translateY(0); }

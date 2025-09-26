@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import '../styles/InteractiveTimeline.css';
 
-const timelineData = [
+const timelineDataVi = [
     {
         id: 1,
         year: "1818-1883",
@@ -54,9 +55,65 @@ const timelineData = [
     }
 ];
 
+const timelineDataEn = [
+    {
+        id: 1,
+        year: "1818-1883",
+        title: "Karl Marx",
+        description: "Developed the theory of class and class struggle",
+        details: "Marx laid the foundation for modern class theory, analyzing the contradiction between bourgeoisie and proletariat in the Manifesto and Capital.",
+        color: "var(--primary-red)",
+        link: "/theory/en",
+        image: "📚"
+    },
+    {
+        id: 2,
+        year: "1820-1895",
+        title: "Friedrich Engels", 
+        description: "Co-developed Marxism; expanded theory of family origins",
+        details: "Engels added perspectives on the role of economics and analyzed evolution of social formations.",
+        color: "var(--secondary-yellow)",
+        image: "⚡",
+        link: "/theory/en"
+    },
+    {
+        id: 3,
+        year: "1870-1924",
+        title: "Vladimir Lenin",
+        description: "Advanced Marxism in the age of imperialism",
+        details: "Lenin applied and developed Marxist theory in revolutionary practice, shaping Marxism–Leninism.",
+        color: "var(--primary-red-light)",
+        link: "/role/en",
+        image: "🚩"
+    },
+    {
+        id: 4,
+        year: "1818-1968",
+        title: "Revolutionary Movements",
+        description: "Practical application of class struggle theory",
+        details: "Global socialist revolutions demonstrated the explanatory power of class struggle theory.",
+        color: "var(--accent-gold)",
+        link: "/role/en",
+        image: "🌍"
+    },
+    {
+        id: 5,
+        year: "1975–present",
+        title: "Renovation Period",
+        description: "Creative adaptation in new conditions",
+        details: "Vietnam and other socialist countries flexibly apply class theory in integration and development phases.",
+        color: "var(--secondary-yellow-dark)",
+        link: "/future/en",
+        image: "🌱"
+    }
+];
+
 const InteractiveTimeline = () => {
     const [selectedMilestone, setSelectedMilestone] = useState(null);
     const [hoveredMilestone, setHoveredMilestone] = useState(null);
+    const location = useLocation();
+    const isEn = location.pathname.endsWith('/en') || location.pathname.includes('/en/');
+    const data = isEn ? timelineDataEn : timelineDataVi;
 
     const handleMilestoneClick = (milestone) => {
         setSelectedMilestone(milestone.id === selectedMilestone?.id ? null : milestone);
@@ -69,14 +126,14 @@ const InteractiveTimeline = () => {
     return (
         <div className="timeline-container">
             <div className="timeline-header">
-                <h2>Lịch Sử Phát Triển Lý Thuyết Giai Cấp</h2>
-                <p>Khám phá hành trình phát triển tư tưởng triết học từ Marx đến thời đại ngày nay</p>
+                <h2>{isEn ? 'Historical Development of Class Theory' : 'Lịch Sử Phát Triển Lý Thuyết Giai Cấp'}</h2>
+                <p>{isEn ? 'Explore the evolution of philosophical thought from Marx to the present era' : 'Khám phá hành trình phát triển tư tưởng triết học từ Marx đến thời đại ngày nay'}</p>
             </div>
 
             <div className="timeline-wrapper">
                 <div className="timeline-line"></div>
                 
-                {timelineData.map((milestone, index) => (
+                {data.map((milestone, index) => (
                     <div 
                         key={milestone.id}
                         className={`milestone ${index % 2 === 0 ? 'left' : 'right'} ${
@@ -108,9 +165,9 @@ const InteractiveTimeline = () => {
                                                 handleLearnMore(milestone.link);
                                             }}
                                         >
-                                            Tìm hiểu thêm
+                                            {isEn ? 'Learn more' : 'Tìm hiểu thêm'}
                                         </button>
-                                        <button className="action-btn secondary">Chia sẻ</button>
+                                        <button className="action-btn secondary">{isEn ? 'Share' : 'Chia sẻ'}</button>
                                     </div>
                                 </div>
                             )}
@@ -127,7 +184,7 @@ const InteractiveTimeline = () => {
                         )}
 
                         {/* Connection Lines */}
-                        {index < timelineData.length - 1 && (
+                        {index < data.length - 1 && (
                             <div className="milestone-connection">
                                 <svg className="connection-svg" viewBox="0 0 100 50">
                                     <path 
@@ -150,7 +207,7 @@ const InteractiveTimeline = () => {
                     className="control-btn"
                     onClick={() => setSelectedMilestone(null)}
                 >
-                    Reset View
+                    {isEn ? 'Reset View' : 'Reset View'}
                 </button>
                 <div className="timeline-progress">
                     <div className="progress-bar">
@@ -158,7 +215,7 @@ const InteractiveTimeline = () => {
                             className="progress-fill"
                             style={{ 
                                 width: selectedMilestone ? 
-                                    `${((selectedMilestone.id - 1) / (timelineData.length - 1)) * 100}%` : 
+                                    `${((selectedMilestone.id - 1) / (data.length - 1)) * 100}%` : 
                                     '0%' 
                             }}
                         ></div>

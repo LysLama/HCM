@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { HiChatBubbleLeftRight, HiXMark, HiPaperAirplane, HiUser, HiCpuChip, HiSparkles } from 'react-icons/hi2';
 import '../styles/ChatBot.css';
 import { getWelcomeMessages, getSampleQuestions, isPhilosophyRelated, formatPhilosophyResponse } from '../utils/chatUtils';
@@ -36,6 +37,26 @@ const ChatBot = () => {
   const CACHE_TTL_MS = 5 * 60 * 1000; // 5 phút
   const lastUserSubmitRef = useRef(0); // debounce input submissions
   const INPUT_DEBOUNCE_MS = 800; // thời gian tối thiểu giữa 2 lần Enter
+
+  const location = useLocation();
+  const isEn = location.pathname.endsWith('/en') || location.pathname.includes('/en/');
+
+  // Helpers for localization
+  const t = {
+    title: isEn ? 'AI Philosophy Assistant' : 'Trợ lý Triết học AI',
+    clear: isEn ? 'Clear' : 'Xóa',
+    placeholder: isEn ? 'Ask me about philosophy, class struggle...' : 'Hỏi tôi về triết học, đấu tranh giai cấp...',
+    ariaOpen: isEn ? 'Open philosophy chatbot' : 'Mở chatbot triết học',
+    ariaClose: isEn ? 'Close chatbot' : 'Đóng chatbot',
+    suggestions: isEn ? 'Suggested questions:' : 'Câu hỏi gợi ý:',
+    sending: isEn ? 'Sending question to Gemini...' : 'Đang gửi câu hỏi tới Gemini API...',
+    status: {
+      online: isEn ? 'Gemini AI online' : 'AI Gemini đang hoạt động',
+      offline: isEn ? 'Basic mode' : 'Chế độ cơ bản',
+      rate: isEn ? 'Rate limited' : 'Đang bị giới hạn lưu lượng',
+      testing: isEn ? 'Testing...' : 'Đang kiểm tra...'
+    }
+  };
 
   // Cuộn xuống tin nhắn mới nhất
   const scrollToBottom = () => {
@@ -206,7 +227,7 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
       }
       lastRequestTimeRef.current = Date.now();
 
-      console.log('🤖 Đang gửi câu hỏi tới Gemini API...');
+  console.log('🤖', t.sending);
       setApiStatus('testing');
 
       const p = (async () => {
@@ -273,7 +294,7 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
         const hint = retryAfterSec ? `(~${retryAfterSec}s)` : 'trong giây lát';
         return `Xin lỗi, hệ thống đang bị giới hạn lưu lượng và đã thử lại 1 lần. Vui lòng thử lại ${hint}.`;
       }
-      return `Xin lỗi, tôi đang gặp sự cố kỹ thuật: ${error.message}. Vui lòng thử lại sau.`;
+      return isEn ? `Sorry, I encountered a technical issue: ${error.message}. Please try again later.` : `Xin lỗi, tôi đang gặp sự cố kỹ thuật: ${error.message}. Vui lòng thử lại sau.`;
     }
   };
 
@@ -361,7 +382,7 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
         <button 
           className="chatbot-toggle-btn"
           onClick={toggleChat}
-          aria-label="Mở chatbot triết học"
+          aria-label={t.ariaOpen}
         >
           <HiChatBubbleLeftRight className="w-6 h-6" />
           <span className="chatbot-badge">AI</span>
@@ -376,12 +397,12 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
             <div className="chatbot-header-info">
               <HiCpuChip className="w-5 h-5 text-blue-400" />
               <div>
-                <h3>Trợ lý Triết học AI</h3>
+                <h3>{t.title}</h3>
                 <p className="flex items-center gap-2">
                   <span className={`api-status ${apiStatus}`}></span>
-                  {apiStatus === 'online' ? 'AI Gemini đang hoạt động' : 
-                   apiStatus === 'offline' ? 'Chế độ cơ bản' : 
-                   apiStatus === 'rate-limited' ? `Đang bị giới hạn lưu lượng${retryAfterSec ? ` (~${retryAfterSec}s)` : ''}` : 'Đang kiểm tra...'}
+                  {apiStatus === 'online' ? t.status.online : 
+                   apiStatus === 'offline' ? t.status.offline : 
+                   apiStatus === 'rate-limited' ? `${t.status.rate}${retryAfterSec ? ` (~${retryAfterSec}s)` : ''}` : t.status.testing}
                 </p>
               </div>
             </div>
@@ -389,14 +410,14 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
               <button 
                 onClick={clearChat}
                 className="chatbot-clear-btn"
-                title="Xóa cuộc trò chuyện"
+                title={isEn ? 'Clear conversation' : 'Xóa cuộc trò chuyện'}
               >
-                Xóa
+                {t.clear}
               </button>
               <button 
                 onClick={toggleChat}
                 className="chatbot-close-btn"
-                aria-label="Đóng chatbot"
+                aria-label={t.ariaClose}
               >
                 <HiXMark className="w-5 h-5" />
               </button>
@@ -434,7 +455,7 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
               <div className="suggestions-container">
                 <div className="suggestions-header">
                   <HiSparkles className="w-4 h-4" />
-                  <span>Câu hỏi gợi ý:</span>
+                  <span>{t.suggestions}</span>
                 </div>
                 <div className="suggestions-grid">
                   {getSampleQuestions().map((question, index) => (
@@ -475,7 +496,7 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
               value={inputMessage}
               onChange={(e) => setInputMessage(e.target.value)}
               onKeyPress={handleKeyPress}
-              placeholder="Hỏi tôi về triết học, đấu tranh giai cấp..."
+              placeholder={t.placeholder}
               className="chatbot-textarea"
               rows="2"
               disabled={isLoading}

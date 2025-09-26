@@ -1,8 +1,9 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import '../styles/KnowledgeMap.css';
 
-const knowledgeData = {
+const knowledgeDataVi = {
     nodes: [
         {
             id: 'center',
@@ -101,6 +102,33 @@ const knowledgeData = {
     ]
 };
 
+const knowledgeDataEn = {
+    nodes: [
+        { id: 'center', label: 'Class Struggle', type: 'center', x: 400, y: 300, color: 'var(--primary-red)', description: 'Central concept in Marxist–Leninist theory' },
+        { id: 'class', label: 'Class', type: 'main', x: 200, y: 200, color: 'var(--secondary-yellow)', description: 'Group sharing similar socio-economic position' },
+        { id: 'conflict', label: 'Conflict', type: 'main', x: 600, y: 200, color: 'var(--primary-red-light)', description: 'Contradictory interests among classes' },
+        { id: 'history', label: 'History', type: 'main', x: 200, y: 400, color: 'var(--accent-gold)', description: 'Motor of human social development' },
+        { id: 'revolution', label: 'Revolution', type: 'main', x: 600, y: 400, color: 'var(--secondary-yellow-dark)', description: 'Highest form of class struggle' },
+        { id: 'bourgeois', label: 'Bourgeoisie', type: 'sub', x: 100, y: 100, color: '#e74c3c', description: 'Class owning means of production' },
+        { id: 'proletariat', label: 'Proletariat', type: 'sub', x: 300, y: 100, color: '#3498db', description: 'Class selling labour power; owns no means of production' },
+        { id: 'socialism', label: 'Socialism', type: 'sub', x: 500, y: 500, color: '#f39c12', description: 'Society without antagonistic class conflict' },
+        { id: 'communism', label: 'Communism', type: 'sub', x: 700, y: 500, color: '#9b59b6', description: 'Classless society with human emancipation' }
+    ],
+    connections: [
+        { from: 'center', to: 'class' },
+        { from: 'center', to: 'conflict' },
+        { from: 'center', to: 'history' },
+        { from: 'center', to: 'revolution' },
+        { from: 'class', to: 'bourgeois' },
+        { from: 'class', to: 'proletariat' },
+        { from: 'conflict', to: 'bourgeois' },
+        { from: 'conflict', to: 'proletariat' },
+        { from: 'revolution', to: 'socialism' },
+        { from: 'socialism', to: 'communism' },
+        { from: 'history', to: 'revolution' }
+    ]
+};
+
 const KnowledgeMap = () => {
     const [selectedNode, setSelectedNode] = useState(null);
     const [searchTerm, setSearchTerm] = useState('');
@@ -109,22 +137,24 @@ const KnowledgeMap = () => {
     const [isDragging, setIsDragging] = useState(false);
     const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
     const svgRef = useRef(null);
+    const location = useLocation();
+    const isEn = location.pathname.endsWith('/en') || location.pathname.includes('/en/');
+    const knowledgeData = isEn ? knowledgeDataEn : knowledgeDataVi;
 
     // Hàm xử lý navigation khi click "Tìm hiểu thêm"
     const handleLearnMore = (nodeId) => {
         const nodeLinks = {
-            'center': '/theory',
-            'class': '/theory',
-            'conflict': '/role',
-            'history': '/theory',
-            'revolution': '/future',
-            'bourgeois': '/role',
-            'proletariat': '/role',
-            'socialism': '/future',
-            'communism': '/future'
+            'center': isEn ? '/theory/en' : '/theory',
+            'class': isEn ? '/theory/en' : '/theory',
+            'conflict': isEn ? '/role/en' : '/role',
+            'history': isEn ? '/theory/en' : '/theory',
+            'revolution': isEn ? '/future/en' : '/future',
+            'bourgeois': isEn ? '/role/en' : '/role',
+            'proletariat': isEn ? '/role/en' : '/role',
+            'socialism': isEn ? '/future/en' : '/future',
+            'communism': isEn ? '/future/en' : '/future'
         };
-        
-        const targetPath = nodeLinks[nodeId] || '/theory';
+        const targetPath = nodeLinks[nodeId] || (isEn ? '/theory/en' : '/theory');
         window.location.href = targetPath;
     };
 
@@ -188,8 +218,8 @@ const KnowledgeMap = () => {
     return (
         <div className="knowledge-map-container">
             <div className="knowledge-map-header">
-                <h2>Bản Đồ Tri Thức Triết Học</h2>
-                <p>Khám phá mối liên kết giữa các khái niệm trong lý thuyết đấu tranh giai cấp</p>
+                <h2>{isEn ? 'Philosophical Knowledge Map' : 'Bản Đồ Tri Thức Triết Học'}</h2>
+                <p>{isEn ? 'Explore conceptual linkages in class struggle theory' : 'Khám phá mối liên kết giữa các khái niệm trong lý thuyết đấu tranh giai cấp'}</p>
             </div>
 
             {/* Search and Controls */}
@@ -197,7 +227,7 @@ const KnowledgeMap = () => {
                 <div className="search-container">
                     <input
                         type="text"
-                        placeholder="Tìm kiếm khái niệm..."
+                        placeholder={isEn ? 'Search concept...' : 'Tìm kiếm khái niệm...'}
                         value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className="search-input"
@@ -227,7 +257,7 @@ const KnowledgeMap = () => {
                 </div>
 
                 <button className="reset-btn" onClick={resetView}>
-                    Reset View
+                    {isEn ? 'Reset View' : 'Reset View'}
                 </button>
             </div>
 
@@ -400,9 +430,9 @@ const KnowledgeMap = () => {
                                         handleLearnMore(selectedNode.id);
                                     }}
                                 >
-                                    Tìm hiểu thêm
+                                        {isEn ? 'Learn more' : 'Tìm hiểu thêm'}
                                 </button>
-                                <button className="action-btn secondary">Chia sẻ</button>
+                                <button className="action-btn secondary">{isEn ? 'Share' : 'Chia sẻ'}</button>
                             </div>
                         </div>
                     </div>
@@ -411,19 +441,19 @@ const KnowledgeMap = () => {
 
             {/* Legend */}
             <div className="map-legend">
-                <h4>Chú thích:</h4>
+                <h4>{isEn ? 'Legend:' : 'Chú thích:'}</h4>
                 <div className="legend-items">
                     <div className="legend-item">
                         <div className="legend-color center"></div>
-                        <span>Khái niệm trung tâm</span>
+                        <span>{isEn ? 'Central concept' : 'Khái niệm trung tâm'}</span>
                     </div>
                     <div className="legend-item">
                         <div className="legend-color main"></div>
-                        <span>Khái niệm chính</span>
+                        <span>{isEn ? 'Main concept' : 'Khái niệm chính'}</span>
                     </div>
                     <div className="legend-item">
                         <div className="legend-color sub"></div>
-                        <span>Khái niệm phụ</span>
+                        <span>{isEn ? 'Sub concept' : 'Khái niệm phụ'}</span>
                     </div>
                 </div>
             </div>
