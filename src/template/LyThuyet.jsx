@@ -89,7 +89,7 @@ const Theory = () => {
                         </blockquote>
                     </div>
 
-                    {/* PHẦN VI: TÀI LIỆU THAM KHẢO */}
+                    {/* PHẦN IV: TÀI LIỆU THAM KHẢO */}
                     <h3>6. Video học thuật:</h3>
                     <div className="video-section">
                         <div className="video-container">
@@ -145,24 +145,8 @@ const Theory = () => {
                         </div>
                     </div>
 
-                    {/* PHẦN IV: GIAI CẤP VÀ DÂN TỘC */}
-                    <section>
-                        <h3>7. Mối quan hệ giữa giai cấp và dân tộc</h3>
-                        <p>
-                            •	<strong>Bản chất giai cấp:</strong> Giai cấp là phạm trù kinh tế–xã hội mang tính lịch sử; sự tồn tại của nó gắn với những hệ thống sản xuất dựa trên tư hữu, nhưng không thể giản lược thành thuần kinh tế.
-                        </p>
-                        <p>
-                            •	<strong>Mối liên hệ giai cấp–dân tộc:</strong> Trong những thời đoạn lịch sử nhất định, lợi ích căn bản của các giai cấp lao động quyện chặt với lợi ích dân tộc; từ đó hình thành mặt trận thống nhất, liên minh giai cấp dưới ngọn cờ giải phóng dân tộc và xã hội.
-                        </p>
-                        <ul>
-                            <li><strong>Liên minh chiến lược:</strong> Dựa trên lợi ích căn bản thống nhất, có tính lâu dài.</li>
-                            <li><strong>Liên minh sách lược:</strong> Mang tính tạm thời, dựa trên lợi ích trước mắt.</li>
-                            <li><strong>Biện chứng:</strong> Đấu tranh giai cấp và liên minh giai cấp là hai mặt của một quá trình tạo sức mạnh lịch sử.</li>
-                        </ul>
-                    </section>
-
                     {/* PHẦN V: VÍ DỤ LỊCH SỬ */}
-                    <h3>8. Ví dụ thực tiễn trong lịch sử</h3>
+                    <h3>7. Ví dụ thực tiễn trong lịch sử</h3>
                     <p>
                         •	<strong>Cách mạng Pháp 1789:</strong> Cuộc đấu tranh của giai cấp tư sản chống lại quý tộc phong kiến, mở ra kỷ nguyên tư bản chủ nghĩa ở châu Âu.
                     </p>

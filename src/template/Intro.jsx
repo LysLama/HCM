@@ -104,11 +104,11 @@ const Intro = () => {
                     {/* Vui lòng cập nhật tên và vai trò của các thành viên trong nhóm của bạn tại đây */}
                     <ul>
                         <li><strong>Minh Khánh</strong> - Trưởng nhóm, Nghiên cứu nội dung chính</li>
-                        <li><strong>Lý Thanh Lâm</strong> - Thiết kế, Hỗ trợ kỹ thuật</li>
+                        <li><strong>Lý Thanh Lâm</strong> - Lập trình viên Back-end, Quản lý server, Dựng API</li>
                         <li><strong>Ngô Gia Bảo</strong> - Lập trình viên Front-end, Thiết kế giao diện</li>
                         <li><strong>Nguyễn Thị Kim Phụng</strong> - Biên tập nội dung, Thu thập tài liệu</li>
-                        <li><strong>Bùi Gia Huy</strong> - Thiết kế, Hỗ trợ kỹ thuật</li>
-                        <li><strong>Mạnh Hùng</strong> - Lập trình viên Back-end, Quản lý dữ liệu</li>
+                        <li><strong>Bùi Gia Huy</strong> - Hỗ trợ kỹ thuật, Chỉnh sửa thiết kế, nội dung</li>
+                        <li><strong>Mạnh Hùng</strong> - Thiết kế UI, Hỗ trợ lập trình</li>
 
                     </ul>
                 </div>
