@@ -3,24 +3,10 @@ import { useLocation } from 'react-router-dom';
 import { HiChatBubbleLeftRight, HiXMark, HiPaperAirplane, HiUser, HiCpuChip, HiSparkles } from 'react-icons/hi2';
 import '../styles/ChatBot.css';
 import { getWelcomeMessages, getSampleQuestions, isPhilosophyRelated, formatPhilosophyResponse } from '../utils/chatUtils';
-import { testGeminiAPI } from '../utils/testAPI';
-import { findWorkingModel } from '../utils/modelTester';
 
-// Danh sách các models để thử nghiệm (ưu tiên từ nhanh -> mạnh)
-// Ưu tiên model 1.5 Flash 8B để tiết kiệm quota so với các biến thể lớn hơn
-const GEMINI_MODELS = [
-  'gemini-1.5-flash-8b-latest',
-  'gemini-1.5-flash-8b',
-  'gemini-1.5-flash-latest',
-  'gemini-1.5-flash',
-  'gemini-2.5-flash',
-  'gemini-1.5-pro'
-];
-
-const MAX_MODEL_TRIES = 1; // tránh tốn quota: thử 1 model mặc định (có thể tăng lên 2-3 nếu cần)
-const REQUEST_MIN_GAP_MS = 1200; // cách nhau tối thiểu giữa 2 lần gọi
-
-const MAX_BACKOFF_RETRY = 1; // số lần retry tối đa khi gặp 429
+// Cloudflare Workers AI config
+const REQUEST_MIN_GAP_MS = 1000;
+const MAX_BACKOFF_RETRY = 1;
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,9 +35,9 @@ const ChatBot = () => {
     ariaOpen: isEn ? 'Open philosophy chatbot' : 'Mở chatbot triết học',
     ariaClose: isEn ? 'Close chatbot' : 'Đóng chatbot',
     suggestions: isEn ? 'Suggested questions:' : 'Câu hỏi gợi ý:',
-    sending: isEn ? 'Sending question to Gemini...' : 'Đang gửi câu hỏi tới Gemini API...',
+    sending: isEn ? 'Sending question to AI...' : 'Đang gửi câu hỏi tới AI...',
     status: {
-      online: isEn ? 'Gemini AI online' : 'AI Gemini đang hoạt động',
+      online: isEn ? 'AI online' : 'AI đang hoạt động',
       offline: isEn ? 'Basic mode' : 'Chế độ cơ bản',
       rate: isEn ? 'Rate limited' : 'Đang bị giới hạn lưu lượng',
       testing: isEn ? 'Testing...' : 'Đang kiểm tra...'
@@ -83,83 +69,45 @@ const ChatBot = () => {
     }
   }, [isOpen, messages.length]);
 
-  // Thử kết nối với các model Gemini khác nhau
-  const tryGeminiAPI = async (userMessage, modelIndex = 0) => {
-    const limit = Math.min(MAX_MODEL_TRIES, GEMINI_MODELS.length);
-    if (modelIndex >= limit) {
-      throw new Error('Tất cả các model Gemini đều không khả dụng');
-    }
+  // Gọi Cloudflare Workers AI endpoint (/api/ai/chat)
+  const callWorkersAI = async (prompt, setApiStatus, langHint='vi') => {
+    // Build system prompt with dynamic language instruction
+    const sys = langHint === 'en'
+      ? 'You are a knowledgeable philosophy assistant (comparative East-West, classical-modern, Marxist). Respond in clear, concise ENGLISH.'
+      : 'Bạn là trợ lý triết học am hiểu phân tích so sánh (Đông-Tây, cổ điển-hiện đại, Mác-xít). Trả lời bằng TIẾNG VIỆT rõ ràng, súc tích.';
 
-  const currentModel = GEMINI_MODELS[modelIndex];
-  // Use Vite dev server proxy to avoid CORS and keep API key off the client
-  const apiUrl = `/api/gemini/${currentModel}`;
-
+    const payload = { messages: [ { role: 'system', content: sys }, { role: 'user', content: prompt } ] };
+    const response = await fetch('/api/ai/chat', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    let data;
     try {
-      console.log(`[Gemini] -> gửi yêu cầu | model=${currentModel} | index=${modelIndex}`);
-      const response = await fetch(apiUrl, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          contents: [{
-            parts: [{
-              text: `Bạn là một chuyên gia triết học Mác-Lênin. Hãy trả lời câu hỏi sau một cách chuyên môn và dễ hiểu: ${userMessage}`
-            }]
-          }]
-        })
-      });
-
-      if (!response.ok) {
-        const errText = await response.text();
-        console.warn(`[Gemini] <- lỗi | model=${currentModel} | status=${response.status} | body=`, errText);
-        // For key/project-level issues, don't try more models
-        if ([401, 403, 429].includes(response.status)) {
-          if (response.status === 429) {
-            setApiStatus('rate-limited');
-            // Try to parse retry delay from error JSON
-            try {
-              const j = JSON.parse(errText);
-              const details = j?.error?.details;
-              const retryInfo = Array.isArray(details) ? details.find(d => d['@type']?.includes('RetryInfo')) : null;
-              const delay = retryInfo?.retryDelay || retryInfo?.retry_delay || null;
-              // Expect format like "50s"
-              if (typeof delay === 'string' && /^(\d+)s$/.test(delay)) {
-                const sec = parseInt(delay.replace('s',''), 10);
-                if (!Number.isNaN(sec)) setRetryAfterSec(sec);
-              }
-            } catch {}
-          }
-          throw new Error(`${response.status}: ${errText}`);
-        }
-        return await tryGeminiAPI(userMessage, modelIndex + 1);
-      }
-
-      const data = await response.json();
-      
-      if (data?.candidates?.[0]?.content?.parts?.[0]?.text) {
-        console.log(`[Gemini] <- thành công | model=${currentModel}`);
-        setApiStatus('online');
-        return data.candidates[0].content.parts[0].text;
-      } else {
-        console.warn(`[Gemini] định dạng phản hồi không hợp lệ, thử model kế tiếp... | model=${currentModel}`);
-        return await tryGeminiAPI(userMessage, modelIndex + 1);
-      }
-    } catch (error) {
-      console.warn(`[Gemini] lỗi kết nối | model=${currentModel} |`, error.message);
-      return await tryGeminiAPI(userMessage, modelIndex + 1);
+      data = await response.json();
+    } catch (e) {
+      const raw = await response.text();
+      throw new Error(`Invalid JSON from AI: ${raw}`);
     }
+    // If serverless fell back to input/prompt format, shape still similar; extract robustly
+    const answer = data?.result?.response || data?.result?.output || data?.response || data?.output || JSON.stringify(data).slice(0, 600);
+    if (!response.ok) {
+      if (response.status === 429) setApiStatus('rate-limited');
+      throw new Error(`${response.status}: ${answer}`);
+    }
+    setApiStatus('online');
+    return typeof answer === 'string' ? answer : JSON.stringify(answer);
   };
 
-  // Gửi tin nhắn đến Gemini API
-  const sendToGemini = async (userMessage, attempt = 0) => {
+  // Gửi tin nhắn đến AI
+  const sendToAI = async (userMessage, attempt = 0) => {
     const lowerMessage = userMessage.toLowerCase();
 
     // Normalize câu hỏi để cache (trim + lower + bỏ dấu chấm hỏi cuối)
     const normKey = lowerMessage.replace(/\?+$/,'').trim();
     const cached = cacheRef.current.get(normKey);
     if (cached && Date.now() - cached.ts < CACHE_TTL_MS) {
-      console.log('[Gemini] dùng cache hit cho câu hỏi:', normKey);
+      console.log('[AI] dùng cache hit cho câu hỏi:', normKey);
       return cached.answer;
     }
     
@@ -186,8 +134,8 @@ const ChatBot = () => {
       return "Tạm biệt! Hy vọng cuộc trò chuyện về triết học hôm nay hữu ích với bạn. Chúc bạn có một ngày tốt lành và đừng quên tiếp tục khám phá thế giới triết học nhé!";
     }
 
-    // ƯU TIÊN GỌI API GEMINI CHO TẤT CẢ CÂU HỎI TRIẾT HỌC
-  console.log('[Gemini] chuẩn bị gọi API cho câu hỏi:', userMessage);
+    // ƯU TIÊN GỌI API AI CHO TẤT CẢ CÂU HỎI TRIẾT HỌC
+  console.log('[AI] chuẩn bị gọi API cho câu hỏi:', userMessage);
     
     // Tạo prompt cho các câu hỏi triết học
     const prompt = `Bạn là một chuyên gia triết học có kiến thức sâu rộng về nhiều trường phái triết học khác nhau. Hãy trả lời câu hỏi sau một cách:
@@ -213,7 +161,7 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
     try {
       // In-flight dedupe theo nguyên văn câu hỏi
       if (inFlightRef.current.has(userMessage)) {
-        console.log('[Gemini] phát hiện yêu cầu đang xử lý, dùng lại promise sẵn có');
+        console.log('[AI] phát hiện yêu cầu đang xử lý, dùng lại promise sẵn có');
         return inFlightRef.current.get(userMessage);
       }
 
@@ -222,7 +170,7 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
       const gap = now - lastRequestTimeRef.current;
       if (gap < REQUEST_MIN_GAP_MS) {
         const waitMs = REQUEST_MIN_GAP_MS - gap;
-        console.log(`[Gemini] throttle: chờ ${waitMs}ms trước khi gửi`);
+        console.log(`[AI] throttle: chờ ${waitMs}ms trước khi gửi`);
         await new Promise(r => setTimeout(r, waitMs));
       }
       lastRequestTimeRef.current = Date.now();
@@ -230,8 +178,13 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
   console.log('🤖', t.sending);
       setApiStatus('testing');
 
+      // Simple language detection: if message has no Vietnamese diacritics and many English stopwords, switch to English
+      const hasVietnamese = /[àáạảãăằắặẳẵâầấậẩẫèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i.test(userMessage);
+      const englishIndicators = /(what|why|how|explain|compare|philosophy|dialectic|materialism|hegel|marx)/i.test(userMessage);
+      const langHint = hasVietnamese ? 'vi' : (englishIndicators ? 'en' : (isEn ? 'en' : 'vi'));
+
       const p = (async () => {
-        const responseText = await tryGeminiAPI(prompt);
+        const responseText = await callWorkersAI(prompt, setApiStatus, langHint);
         return formatPhilosophyResponse(responseText);
       })();
 
@@ -244,7 +197,7 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
       return result;
 
     } catch (error) {
-      console.error('Lỗi khi gọi Gemini API:', error);
+      console.error('Lỗi khi gọi AI:', error);
       setApiStatus('offline'); // Đánh dấu API offline
       inFlightRef.current.delete(userMessage);
       
@@ -257,11 +210,11 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
           if (match) waitSec = parseInt(match[1], 10);
         }
         if (!waitSec || Number.isNaN(waitSec)) waitSec = 30; // default
-        console.log(`[Gemini] 429: chờ ${waitSec}s rồi retry (attempt ${attempt + 1}/${MAX_BACKOFF_RETRY})`);
+        console.log(`[AI] 429: chờ ${waitSec}s rồi retry (attempt ${attempt + 1}/${MAX_BACKOFF_RETRY})`);
         setApiStatus('rate-limited');
         await new Promise(r => setTimeout(r, waitSec * 1000));
         setApiStatus('testing');
-        return await sendToGemini(userMessage, attempt + 1);
+        return await sendToAI(userMessage, attempt + 1);
       }
       
       // CHỈ sử dụng fallback KHI API THẤT BẠI
@@ -306,7 +259,7 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
     // Debounce kiểm soát spam Enter
     const now = Date.now();
     if (now - lastUserSubmitRef.current < INPUT_DEBOUNCE_MS) {
-      console.log('[Gemini] bị chặn bởi debounce input');
+      console.log('[AI] bị chặn bởi debounce input');
       return;
     }
     lastUserSubmitRef.current = now;
@@ -326,8 +279,8 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
     // Hiển thị trạng thái đang tải
     setIsLoading(true);
 
-    // Gửi đến Gemini và nhận phản hồi
-    const botResponse = await sendToGemini(textToSend);
+    // Gửi đến AI và nhận phản hồi
+  const botResponse = await sendToAI(textToSend);
 
     // Thêm phản hồi của bot
     const botMsg = {

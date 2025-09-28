@@ -7,9 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "debug:gemini": "node ./scripts/debug-gemini.mjs",
-    "list:gemini": "node ./scripts/list-models.mjs"
+  "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.13",

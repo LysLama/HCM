@@ -131,24 +131,62 @@ export const getPhilosophyKeywords = () => {
   ];
 };
 
+// Nới lỏng điều kiện: chỉ chặn các câu hoàn toàn ngoài phạm vi (ví dụ: nấu ăn, bóng đá, giá cổ phiếu) để tránh chặn nhầm.
 export const isPhilosophyRelated = (text) => {
-  const keywords = getPhilosophyKeywords();
-  const lowerText = text.toLowerCase();
-  
-  // Cho phép các câu chào hỏi và giới thiệu cơ bản
-  const greetingKeywords = [
-    'xin chào', 'chào', 'hello', 'hi', 'hey',
-    'bạn là ai', 'bạn có thể', 'giới thiệu',
-    'tên bạn', 'làm gì được', 'giúp gì được',
-    'cảm ơn', 'thank', 'tạm biệt', 'bye',
-    'như thế nào', 'ra sao', 'thế nào'
+  if (!text || !text.trim()) return false;
+  const lower = text.toLowerCase();
+
+  // Normalization: bỏ dấu cơ bản (chỉ cần cho vài phụ âm/nguyên âm chính)
+  const simpleNormalize = (s) => s
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/đ/g, 'd')
+    .replace(/Đ/g, 'd');
+  const norm = simpleNormalize(lower);
+
+  // Rộng hơn: nếu có bất kỳ thuật ngữ triết học hoặc các cặp phổ biến (duy vật, duy tâm...) -> true
+  const coreIndicators = [
+    'triết', 'philo', 'duy vật', 'duy tam', 'dialectical', 'materialism', 'idealism',
+    'hegel', 'marx', 'lenin', 'khong tu', 'lao tu', 'plato', 'aristotle', 'kant', 'nietzsche',
+    'dao duc', 'ton tai', 'chan ly', 'y nghia', 'giai thoat', 'y thuc', 'tu do', 'logic', 'ontology', 'epistemology',
+    'ethics', 'aesthetics', 'metaphysics', 'phenomenology', 'existentialism', 'utilitarianism',
+    'postmodernism', 'structuralism', 'deconstruction', 'critical theory', 'feminism',
+    'buddhism', 'confucianism', 'taoism', 'nho giao', 'dao giao', 'phap gia',
+    'chinh tri', 'chinh phu', 'kinh te', 'van hoa', 'xa hoi', 'giao duc',
+    'socrates', 'plato', 'aristotle', 'descartes', 'spinoza', 'hobbes', 'locke', 'hume',
+    'kant', 'hegel', 'nietzsche', 'wittgenstein', 'husserl', 'heidegger',
+    'sartre', 'camus', 'rawls', 'foucault', 'derrida',
+    'existentialism', 'phenomenology', 'structuralism', 'post-structuralism',
+    'postmodernism', 'critical theory', 'feminist philosophy', 'queer theory',
+    'environmental philosophy', 'philosophy of technology', 'philosophy of mind'
   ];
-  
-  const hasGreeting = greetingKeywords.some(keyword => lowerText.includes(keyword));
-  const hasPhilosophy = keywords.some(keyword => lowerText.includes(keyword));
-  
-  // Cho phép nếu có từ khóa triết học HOẶC là câu chào hỏi
-  return hasPhilosophy || hasGreeting;
+  const matchedCore = coreIndicators.some(k => norm.includes(simpleNormalize(k)));
+
+  // Giữ lại bộ từ khóa chi tiết cũ như 1 lớp bổ sung
+  const hasFromFullList = getPhilosophyKeywords().some(k => lower.includes(k));
+
+  // Bộ nhận diện rõ ràng ngoài phạm vi (một số ví dụ thông dụng)
+  const offTopicPatterns = [
+    /bong(\s|)da/, /bong(\s|)ro/, /bida/, /game\b/, /free fire/, /liên quân/,
+    /nấu ăn/, /công thức.*(món|ăn|nấu)/, /giảm cân/, /thời trang/, /make ?up/,
+    /giá (vàng|usd|bitcoin|btc|eth)/, /chứng khoán/, /tỷ giá/, /kèo bóng/, /soi kèo/,
+    /mã nguồn phần mềm/, /lập trình/, /code this/, /hacker/, /crack/, /bypass/
+  ];
+  const isOffTopic = offTopicPatterns.some(r => r.test(norm));
+
+  // Nếu có dấu hỏi về khái niệm trừu tượng chung chung → ưu tiên trả lời (ví dụ: “khác biệt giữa…”, “ý nghĩa…”)
+  const structuralCue = /(khac biet|khác biệt|la gi|là gì|tai sao|tại sao|so sanh|so sánh|y nghia|ý nghĩa)/.test(norm);
+
+  // Logic quyết định:
+  // 1. Nếu rõ ràng off-topic → false
+  if (isOffTopic) return false;
+  // 2. Nếu khớp core hoặc full list hoặc structural cue → true
+  if (matchedCore || hasFromFullList || structuralCue) return true;
+  // 3. fallback: cho phép các câu chào để AI tự hướng người dùng
+  const greetings = ['xin chao','chao','hello','hi','hey'];
+  if (greetings.some(g => norm.includes(g))) return true;
+  // 4. Mặc định cho true để tránh chặn nhầm (chuyển sang soft filtering ở tầng cao hơn nếu cần)
+  return true;
 };
 
 export const getWelcomeMessages = () => {
