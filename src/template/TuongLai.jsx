@@ -36,14 +36,12 @@ const Future = () => {
 
                     {/* PHẦN II: ĐỘNG LỰC MỚI CỦA LỊCH SỬ */}
                     <h3>3. Động lực phát triển mới trong xã hội không đối kháng</h3>
-                    <p>
-                        •	<strong>Thay đổi động lực:</strong> Đấu tranh giai cấp không còn giữ vai trò động lực trực tiếp, mà lịch sử tiếp tục phát triển nhờ các động lực mới:
-                    </p>
                     <ul>
-                        <li><strong>Phát triển lực lượng sản xuất:</strong> Khoa học-công nghệ trở thành động lực chính.</li>
-                        <li><strong>Mâu thuẫn con người-tự nhiên:</strong> Giải quyết các vấn đề môi trường, tài nguyên.</li>
-                        <li><strong>Mâu thuẫn mới-cũ:</strong> Đổi mới sáng tạo chống lại bảo thủ, lạc hậu.</li>
-                        <li><strong>Mâu thuẫn nhu cầu-khả năng:</strong> Nhu cầu vô hạn với nguồn lực hữu hạn.</li>
+                        <li><strong>Thay đổi động lực:</strong> Đấu tranh giai cấp không còn giữ vai trò động lực trực tiếp; lịch sử tiếp tục phát triển dựa vào các động lực mới bên dưới.</li>
+                        <li><strong>Phát triển lực lượng sản xuất:</strong> Khoa học – công nghệ trở thành động lực chính.</li>
+                        <li><strong>Mâu thuẫn con người – tự nhiên:</strong> Giải quyết các vấn đề môi trường, tài nguyên.</li>
+                        <li><strong>Mâu thuẫn cái mới – cái cũ:</strong> Đổi mới sáng tạo chống lại bảo thủ, lạc hậu.</li>
+                        <li><strong>Mâu thuẫn nhu cầu – khả năng:</strong> Nhu cầu vô hạn với nguồn lực hữu hạn.</li>
                     </ul>
 
                     {/* PHẦN III: CƠ CHẾ CHUYỂN TIẾP */}
