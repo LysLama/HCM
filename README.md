@@ -3,7 +3,7 @@
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://philosophy-website-theta.vercel.app/)
 [![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-7.1.5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-[![Gemini AI](https://img.shields.io/badge/AI-Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)](https://ai.google.dev/)
+![AI](https://img.shields.io/badge/AI-Cloudflare%20Workers%20AI-orange?style=for-the-badge&logo=cloudflare&logoColor=white)
 
 Website giáo dục về triết học Mác-Lênin với giao diện hiện đại, tích hợp AI chatbot thông minh và các công cụ học tập tương tác.
 
@@ -28,7 +28,7 @@ Website giáo dục về triết học Mác-Lênin với giao diện hiện đ�
 - **📖 Quick Links** - Truy cập nhanh đến các chủ đề
 
 ### 🤖 **AI Chatbot**
-- **Gemini AI Integration** - Powered by Google AI
+- **AI Integration** - Powered by Cloudflare Workers AI (@cf/meta/llama-3.1-8b-instruct-fast)
 - **Chuyên môn triết học** - Trả lời câu hỏi chuyên sâu
 - **Đa ngôn ngữ** - Hỗ trợ tiếng Việt tự nhiên
 - **Fallback System** - Hoạt động ổn định khi offline
@@ -58,7 +58,7 @@ Website giáo dục về triết học Mác-Lênin với giao diện hiện đ�
 - **Responsive CSS** - Thiết kế đa thiết bị
 
 ### AI & API Integration
-- **Google Gemini AI** - Chatbot thông minh
+- **Cloudflare Workers AI** - Chatbot thông minh
 - **Environment Variables** - Bảo mật API keys
 - **Error Handling** - Xử lý lỗi robust
 
@@ -86,7 +86,10 @@ npm install
 cp .env.example .env
 
 # Chỉnh sửa .env và thêm API key
-VITE_GEMINI_API_KEY=your_gemini_api_key_here
+# Cloudflare Workers AI (replace Gemini)
+CF_ACCOUNT_ID=your_account_id_here
+CF_AI_TOKEN=your_cloudflare_api_token_here
+CF_MODEL=@cf/meta/llama-3.1-8b-instruct-fast
 ```
 
 **Lấy API key từ:** https://aistudio.google.com/app/apikey
@@ -108,7 +111,7 @@ Truy cập: http://localhost:5173
 1. ✅ **Push code lên GitHub** (đã có .gitignore bảo vệ .env)
 2. ✅ **Import vào Vercel** từ GitHub repository
 3. ✅ **Cấu hình Environment Variables** trong Vercel Dashboard:
-   - `VITE_GEMINI_API_KEY`: API key đã được cấu hình
+  - `CF_ACCOUNT_ID` + `CF_AI_TOKEN`: thông tin truy cập Cloudflare Workers AI
 4. ✅ **Deploy thành công** với AI chatbot hoạt động
 
 📋 **Chi tiết deployment:** Xem file `DEPLOYMENT.md`
@@ -182,7 +185,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 🙏 Acknowledgments
 
-- **Google Gemini AI** - Chatbot technology
+- **Cloudflare Workers AI** - Chatbot technology
 - **React Community** - Framework & tools
 - **Vite Team** - Build tool excellence
 - **Icons:** React Icons library
