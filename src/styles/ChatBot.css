@@ -7,6 +7,16 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 }
 
+/* Prevent background body scroll when chatbot is open */
+body.chatbot-scroll-locked {
+  overflow: hidden; /* Scroll locked via position:fixed inline style in component */
+}
+
+/* Re-enable touch interactions inside the chatbot */
+.chatbot-window, .chatbot-messages, .chatbot-input, .chatbot-textarea {
+  touch-action: auto;
+}
+
 /* Toggle Button */
 .chatbot-toggle-btn {
   position: relative;
@@ -62,16 +72,17 @@
 /* Chat Window */
 .chatbot-window {
   width: 380px;
+  max-width: 88vw;
   height: 500px;
   background: white;
   border-radius: 20px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
+  animation: slideUp 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(10px) saturate(150%);
 }
 
 @keyframes pulse-status {
@@ -196,6 +207,9 @@
     radial-gradient(circle at 25px 25px, rgba(102, 126, 234, 0.1) 2%, transparent 0%), 
     radial-gradient(circle at 75px 75px, rgba(118, 75, 162, 0.1) 2%, transparent 0%);
   background-size: 100px 100px;
+  min-height: 0; /* enable flexbox scrolling */
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
 }
 
 .chatbot-messages::-webkit-scrollbar {
@@ -431,27 +445,17 @@
 }
 
 /* Responsive */
+@media (max-width: 640px) {
+  .chatbot-container { bottom: 16px; left: 14px; }
+  .chatbot-window { width: calc(100vw - 28px); height: min(68vh, 560px); max-height: calc(100vh - 120px); }
+  .message-content { max-width: 82%; }
+}
+
 @media (max-width: 480px) {
-  .chatbot-container {
-    bottom: 10px;
-    right: 10px;
-  }
-  
-  .chatbot-window {
-    width: calc(100vw - 20px);
-    height: calc(100vh - 100px);
-    max-width: 400px;
-    max-height: 600px;
-  }
-  
-  .chatbot-toggle-btn {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .message-content {
-    max-width: 85%;
-  }
+  .chatbot-container { bottom: 12px; left: 12px; }
+  .chatbot-window { width: calc(100vw - 24px); height: min(70vh, 540px); max-height: calc(100vh - 100px); }
+  .chatbot-toggle-btn { width: 54px; height: 54px; }
+  .message-content { max-width: 86%; font-size: 13px; }
 }
 
 @media (max-width: 320px) {

@@ -3,7 +3,7 @@
 [![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://philosophy-website-theta.vercel.app/)
 [![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite](https://img.shields.io/badge/Vite-7.1.5-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
-![AI](https://img.shields.io/badge/AI-Cloudflare%20Workers%20AI-orange?style=for-the-badge&logo=cloudflare&logoColor=white)
+![AI](https://img.shields.io/badge/AI-Integrated%20Chatbot-orange?style=for-the-badge&logo=sparkfun&logoColor=white)
 
 Website giáo dục về triết học Mác-Lênin với giao diện hiện đại, tích hợp AI chatbot thông minh và các công cụ học tập tương tác.
 
@@ -27,11 +27,21 @@ Website giáo dục về triết học Mác-Lênin với giao diện hiện đ�
 - **🔗 Smart Navigation** - Liên kết thông minh giữa các nội dung
 - **📖 Quick Links** - Truy cập nhanh đến các chủ đề
 
-### 🤖 **AI Chatbot**
-- **AI Integration** - Powered by Cloudflare Workers AI (@cf/meta/llama-3.1-8b-instruct-fast)
-- **Chuyên môn triết học** - Trả lời câu hỏi chuyên sâu
-- **Đa ngôn ngữ** - Hỗ trợ tiếng Việt tự nhiên
-- **Fallback System** - Hoạt động ổn định khi offline
+### 🤖 **AI Chatbot / Trợ lý học tập**
+- **Tích hợp xuyên suốt**: Mở ở mọi trang để hỏi nhanh khi đang đọc
+- **Chuyên sâu triết học**: Mác–Lênin, cổ điển Hy Lạp, phương Đông, phương Tây hiện đại, nhận thức luận, đạo đức học
+- **Tự nhận diện ngôn ngữ**: Ưu tiên tiếng Việt, chuyển sang English khi cần
+- **Lọc chủ đề**: Từ chối câu hỏi ngoài phạm vi học thuật định trước
+- **Cache thông minh (TTL 5 phút)**: Trả lời lại nhanh cho câu hỏi trùng
+- **Dedupe yêu cầu**: Tránh gửi trùng khi người dùng nhấn nhiều lần
+- **Chống spam**: Throttle ngắn giữa hai lần gửi
+- **Chế độ dự phòng**: Trả lời rút gọn khi kết nối nền tảng bị gián đoạn
+- **Trạng thái rõ ràng**: online / kiểm tra / giới hạn lưu lượng / ngoại tuyến
+- **Gợi ý khởi động** & tự cuộn cuối cuộc trò chuyện
+- **Tách cuộn độc lập mobile**: Vùng chat cuộn riêng, thân trang giữ nguyên
+- **Thông báo lỗi thân thiện**: Giải thích nguyên nhân & hướng dẫn thử lại
+
+Chi tiết kiến trúc & logic: xem thêm ở `CHATBOT_README.md`.
 
 ## 🚀 Demo & Live Site
 
@@ -58,9 +68,13 @@ Website giáo dục về triết học Mác-Lênin với giao diện hiện đ�
 - **Responsive CSS** - Thiết kế đa thiết bị
 
 ### AI & API Integration
-- **Cloudflare Workers AI** - Chatbot thông minh
-- **Environment Variables** - Bảo mật API keys
-- **Error Handling** - Xử lý lỗi robust
+- **Proxy server-side**: Endpoint `/api/ai/chat` ẩn khóa & chuẩn hóa request
+- **Đa dạng định dạng phản hồi**: Parse an toàn nhiều cấu trúc JSON
+- **Env tách biệt**: Khóa & thông số mô hình giữ ngoài repo
+- **Retry nhẹ**: Thử lại ngắn cho trường hợp bị giới hạn tạm thời
+- **Chuẩn hóa câu hỏi**: Lowercase + bỏ dấu chấm hỏi cuối để cache
+- **Kho dữ liệu dự phòng nhỏ**: Câu trả lời nền cho từ khóa cốt lõi
+- **Pre-filter**: Lọc ngoài phạm vi trước khi gọi mô hình để tiết kiệm tài nguyên
 
 ## 📦 Cài đặt & Chạy
 
@@ -85,14 +99,10 @@ npm install
 # Copy file template
 cp .env.example .env
 
-# Chỉnh sửa .env và thêm API key
-# Cloudflare Workers AI (replace Gemini)
-CF_ACCOUNT_ID=your_account_id_here
-CF_AI_TOKEN=your_cloudflare_api_token_here
-CF_MODEL=@cf/meta/llama-3.1-8b-instruct-fast
+# Thêm khóa & tham số AI (ví dụ)
+AI_API_KEY=your_server_side_key
+AI_MODEL=philosophy-assistant-model
 ```
-
-**Lấy API key từ:** https://aistudio.google.com/app/apikey
 
 ### Bước 4: Chạy development server
 ```bash
@@ -111,7 +121,7 @@ Truy cập: http://localhost:5173
 1. ✅ **Push code lên GitHub** (đã có .gitignore bảo vệ .env)
 2. ✅ **Import vào Vercel** từ GitHub repository
 3. ✅ **Cấu hình Environment Variables** trong Vercel Dashboard:
-  - `CF_ACCOUNT_ID` + `CF_AI_TOKEN`: thông tin truy cập Cloudflare Workers AI
+  - Khóa & biến môi trường cho chatbot (thiết lập trong dashboard hosting)
 4. ✅ **Deploy thành công** với AI chatbot hoạt động
 
 📋 **Chi tiết deployment:** Xem file `DEPLOYMENT.md`
@@ -185,7 +195,6 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## 🙏 Acknowledgments
 
-- **Cloudflare Workers AI** - Chatbot technology
 - **React Community** - Framework & tools
 - **Vite Team** - Build tool excellence
 - **Icons:** React Icons library

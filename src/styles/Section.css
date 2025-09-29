@@ -335,3 +335,65 @@ section ol li {
     font-size: 1.1rem;
   }
 }
+
+/* === Responsive Table for "Ví dụ theo các hình thái" === */
+.responsive-table {
+  width: 100%;
+  overflow-x: auto; /* Allow horizontal scroll on small screens */
+  -webkit-overflow-scrolling: touch;
+  margin: 2rem 0 1.5rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.responsive-table table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 640px; /* Ensures structure; container scrolls if viewport smaller */
+  font-size: 0.98rem;
+}
+
+.responsive-table thead th {
+  background: linear-gradient(90deg,#b10000,#d52424);
+  color: #fff;
+  text-align: left;
+  padding: 12px 16px;
+  font-weight: 600;
+  letter-spacing: .3px;
+  position: sticky;
+  top: 0; /* In case vertical overflow added later */
+  z-index: 1;
+}
+
+.responsive-table tbody td {
+  padding: 12px 16px;
+  border-top: 1px solid #eee;
+  vertical-align: top;
+  line-height: 1.5;
+}
+
+.responsive-table tbody tr:nth-child(even) {
+  background: #f8f9fa;
+}
+
+.responsive-table tbody tr:hover {
+  background: #f1f5f8;
+  transition: background .25s;
+}
+
+/* Compact adjustments for very small screens */
+@media (max-width: 600px) {
+  .responsive-table table { font-size: 0.85rem; min-width: 520px; }
+  .responsive-table thead th, .responsive-table tbody td { padding: 10px 12px; }
+}
+
+/* Bullet list utility for new sections */
+.bullet-list {
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin: 0 0 1rem;
+}
+
+.bullet-list li { margin-bottom: .5rem; }

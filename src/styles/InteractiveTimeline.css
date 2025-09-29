@@ -394,6 +394,8 @@
     .milestone-dot {
         left: 30px !important;
         transform: none !important;
+        width: 54px;
+        height: 54px;
     }
     
     .milestone:hover .milestone-dot {
@@ -418,4 +420,16 @@
         margin-left: 0;
         max-width: none;
     }
+}
+
+@media (max-width: 560px) {
+    .milestone { padding-left: 70px !important; }
+    .milestone-dot { left: 26px !important; width: 50px; height: 50px; }
+}
+
+@media (max-width: 420px) {
+    .milestone { padding-left: 64px !important; margin: 2.2rem 0; }
+    .milestone-dot { left: 24px !important; width: 46px; height: 46px; }
+    .milestone-content { padding: 1.5rem 1.4rem; }
+    .milestone-title { font-size: 1.25rem; }
 }

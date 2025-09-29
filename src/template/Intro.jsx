@@ -66,13 +66,14 @@ const Intro = () => {
                 <h2>Đặc Điểm Kỹ thuật</h2>
                 <div className="intro-section-content">
                     <p>
-                        Để mang lại một giao diện hiện đại và trải nghiệm người dùng mượt mà, dự án của chúng tôi được xây dựng dựa trên các công nghệ tiên tiến:
+                        Để mang lại một giao diện hiện đại và trải nghiệm người dùng mượt mà, dự án được xây dựng trên nền tảng web tối ưu hiệu năng và có tích hợp trợ lý hỏi đáp học thuật thời gian thực:
                     </p>
                     <ul>
-                        <li><strong>ReactJS + Vite:</strong></li>
-                        <li><strong>JavaScript:</strong> Tăng cường sự chặt chẽ và ổn định cho mã nguồn.</li>
-                        <li><strong>CSS:</strong> Xây dựng giao diện nhanh chóng và linh hoạt.</li>
-                        <li><strong>GSAP (GreenSock Animation Platform):</strong> Tạo ra các hiệu ứng chuyển động tinh tế và sinh động.</li>
+                        <li><strong>React + Vite:</strong> Kết hợp tốc độ phát triển & bundling nhanh.</li>
+                        <li><strong>JavaScript (ESNext):</strong> Logic tương tác & tối ưu state.</li>
+                        <li><strong>CSS thuần + biến màu:</strong> Kiểm soát chi tiết giao diện, responsive.</li>
+                        <li><strong>GSAP:</strong> Hiệu ứng chuyển động tinh tế.</li>
+                        <li><strong>AI Chatbot tích hợp:</strong> Hỗ trợ đặt câu hỏi ngay khi đang đọc nội dung (phạm vi triết học), có cache tạm & chế độ dự phòng.</li>
                     </ul>
                 </div>
             </div>
@@ -81,19 +82,14 @@ const Intro = () => {
             <div className="intro-card">
                 <h2>Tuyên Bố Về Việc Sử Dụng AI</h2>
                 <div className="intro-section-content">
-                    <p>Trong quá trình thực hiện dự án này, chúng tôi đã ứng dụng công nghệ Trí tuệ Nhân tạo như một công cụ hỗ trợ để tối ưu hóa hiệu quả công việc. Chúng tôi cam kết sử dụng AI một cách có trách nhiệm và minh bạch.</p>
-                    <br />
-                    <p><strong>Mô Hình Ngôn Ngữ Lớn (LLM) Được Sử Dụng:</strong> Chúng tôi đã sử dụng các mô hình ngôn ngữ lớn tiên tiến, bao gồm <strong>Gemini của Google</strong> và các mô hình khác để hỗ trợ trong các khâu khác nhau của dự án.</p>
-                    <br />
-                    <p><strong>Mục Đích Sử Dụng AI:</strong></p>
+                    <p>Chúng tôi sử dụng công cụ AI như một phương tiện hỗ trợ sản xuất & tương tác, không thay thế nghiên cứu học thuật.</p>
+                    <p><strong>Phạm vi hỗ trợ AI:</strong></p>
                     <ul>
-                        <li><strong>Lên ý tưởng và cấu trúc:</strong> AI được dùng để brainstorm các ý tưởng ban đầu, sắp xếp cấu trúc nội dung và đề xuất các hướng tiếp cận cho chủ đề.</li>
-                        <li><strong>Tối ưu hóa mã nguồn (Code):</strong> Hỗ trợ viết, gỡ lỗi (debug) và tái cấu trúc (refactor) các đoạn mã cho trang web.</li>
-                        <li><strong>Sáng tạo nội dung phụ trợ:</strong> Hỗ trợ viết các nội dung giới thiệu, mô tả và các văn bản không mang tính học thuật cốt lõi.</li>
+                        <li>Gợi ý cấu trúc & cải thiện diễn đạt không cốt lõi.</li>
+                        <li>Hỗ trợ kiểm tra logic code & tối ưu hiệu năng nhỏ.</li>
+                        <li>Trợ lý hỏi đáp nội dung triết học thời gian thực cho người dùng.</li>
                     </ul>
-                    <br />
-                    <p><strong>Nội Dung và Script (Kịch bản):</strong> Chúng tôi xin khẳng định, <strong>toàn bộ nội dung học thuật, các phân tích, luận điểm và kết luận đều do các thành viên trong nhóm tự nghiên cứu</strong> từ các nguồn tài liệu chính thống. AI chỉ đóng vai trò là công cụ hỗ trợ, không can thiệp vào tính chính xác và chiều sâu học thuật của dự án.</p>
-                    <p><strong>Tài liệu tham khảo:</strong></p>
+                    <p><strong>Tính toàn vẹn học thuật:</strong> Mọi luận điểm, phân tích chuyên sâu và kết luận được xây dựng bởi thành viên nhóm dựa trên nguồn chính thống; AI chỉ cung cấp gợi ý tham khảo.</p>
                 </div>
             </div>
 

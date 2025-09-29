@@ -312,6 +312,39 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
     setIsOpen(!isOpen);
   };
 
+  // Lock body scroll when chat open (mobile friendly) while allowing internal chat scroll
+  useEffect(() => {
+    let scrollY = 0;
+    if (isOpen) {
+      scrollY = window.scrollY;
+      document.body.dataset.chatbotScrollY = String(scrollY);
+      document.body.classList.add('chatbot-scroll-locked');
+      // Prevent layout shift while locking scroll
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.body.style.top = `-${scrollY}px`;
+    } else {
+      if (document.body.classList.contains('chatbot-scroll-locked')) {
+        const y = parseInt(document.body.dataset.chatbotScrollY || '0', 10);
+        document.body.classList.remove('chatbot-scroll-locked');
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        window.scrollTo(0, y);
+      }
+    }
+    return () => {
+      if (document.body.classList.contains('chatbot-scroll-locked')) {
+        const y = parseInt(document.body.dataset.chatbotScrollY || '0', 10);
+        document.body.classList.remove('chatbot-scroll-locked');
+        document.body.style.position = '';
+        document.body.style.width = '';
+        document.body.style.top = '';
+        window.scrollTo(0, y);
+      }
+    };
+  }, [isOpen]);
+
   // Clear chat
   const clearChat = () => {
     setMessages([]);

@@ -1,7 +1,7 @@
 # 🤖 ChatBot Triết Học AI
 
 ## 📝 Mô tả
-ChatBot AI chuyên về triết học được tích hợp vào Philosophy Website, sử dụng Google Gemini API để trả lời các câu hỏi về triết học Mác-Lênin và các chủ đề triết học khác.
+ChatBot AI chuyên sâu về triết học, tích hợp trực tiếp vào mọi trang của website giúp người dùng hỏi nhanh trong lúc đọc. Hệ thống sử dụng một mô hình ngôn ngữ lớn tối ưu cho truy vấn học thuật (được truy cập qua proxy backend bảo mật).
 
 ## ✨ Tính năng chính
 
@@ -24,11 +24,19 @@ ChatBot AI chuyên về triết học được tích hợp vào Philosophy Websi
 - **Auto scroll**: Tự động cuộn đến tin nhắn mới
 
 ### 🔧 **Tính năng kỹ thuật**
-- **API Integration**: Sử dụng Google Gemini Pro
-- **Error handling**: Xử lý lỗi thông minh
-- **Keyword filtering**: Lọc câu hỏi theo từ khóa triết học
-- **Clear chat**: Xóa lịch sử trò chuyện
-- **Accessible**: Tuân thủ accessibility standards
+- **Proxy bảo mật**: Endpoint `/api/ai/chat` ẩn khóa & chuẩn hóa yêu cầu
+- **System prompt động**: Thích ứng ngôn ngữ (VI/EN) theo input
+- **Language detection đơn giản**: Regex dấu tiếng Việt + từ khóa tiếng Anh
+- **Keyword filtering**: Chặn sớm câu hỏi ngoài phạm vi triết học
+- **Caching tạm thời**: TTL 5 phút với key chuẩn hóa
+- **In-flight de‑duplication**: Loại bỏ xử lý trùng khi người dùng bấm nhiều lần
+- **Throttle nhẹ**: Giảm khả năng spam & giới hạn nền tảng
+- **Retry hạn chế**: Thử lại một lần nếu bị giới hạn tạm
+- **Fallback offline**: Trả lời tối giản cho từ khóa chính khi mất kết nối
+- **Đa dạng định dạng phản hồi**: Parse nhiều shape JSON an toàn
+- **Trạng thái trực quan**: online / testing / rate-limited / offline
+- **Cuộn độc lập mobile**: Khóa nền – vùng chat cuộn riêng
+- **Dọn dẹp promise**: Giải phóng map in-flight sau resolve/reject
 
 ## 🛠️ **Cấu trúc Files**
 
@@ -59,18 +67,21 @@ src/
 - **pulse**: Hiệu ứng nút floating
 - **typing**: Hiệu ứng đang gõ
 
-## 🔑 **API Configuration**
+## 🔑 **Cấu hình API (Khái quát)**
 
-```javascript
-// Sử dụng environment variables để bảo mật API key
-const GEMINI_API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
-const GEMINI_API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent';
+Luồng chuẩn:
+1. Frontend gửi danh sách messages (system + user) tới `/api/ai/chat`.
+2. Backend thêm khóa bí mật, forward đến nhà cung cấp mô hình.
+3. Chuẩn hóa response trả về dạng thống nhất `{ result: { response: string } }`.
+
+Biến môi trường điển hình (ví dụ – không public cụ thể):
+```
+AI_API_KEY=your_secret_key
+AI_MODEL=philosophy-assistant-model
+AI_REQUEST_MIN_GAP=1000
 ```
 
-**Lưu ý**: Tạo file `.env` trong thư mục gốc với nội dung:
-```
-VITE_GEMINI_API_KEY=your_actual_api_key_here
-```
+> Giữ khóa ở backend, không expose qua client build.
 
 ## 📱 **Responsive Breakpoints**
 
@@ -78,36 +89,44 @@ VITE_GEMINI_API_KEY=your_actual_api_key_here
 - **Mobile**: ≤ 480px - Optimized layout
 - **Small mobile**: ≤ 320px - Compact view
 
-## 🚀 **Usage**
+## 🚀 **Usage / Cách sử dụng**
 
-ChatBot sẽ tự động hiển thị trên tất cả các trang sau khi được tích hợp vào `MainLayout.jsx`.
+ChatBot được mount trong layout chung nên luôn sẵn sàng.
 
-### **Cách sử dụng:**
-1. Click vào nút floating ở góc phải dưới
-2. Chọn câu hỏi gợi ý hoặc gõ câu hỏi của bạn
-3. Nhận phản hồi từ AI chuyên gia triết học
-4. Tiếp tục cuộc trò chuyện hoặc xóa để bắt đầu mới
+1. Bấm nút nổi (góc dưới) để mở
+2. Chọn câu hỏi gợi ý nếu chưa biết hỏi gì
+3. Gõ câu hỏi triết học (có thể tiếng Việt hoặc English)
+4. Xem trạng thái đèn (online / rate-limited / offline)
+5. Tiếp tục, hoặc bấm Clear để reset về trạng thái gợi ý
 
-## 🎯 **Câu hỏi mẫu**
+## 🎯 **Câu hỏi mẫu (ví dụ mở rộng)**
 - "Đấu tranh giai cấp là gì?"
-- "Vai trò của triết học trong xã hội?"
-- "Chủ nghĩa duy vật biện chứng như thế nào?"
-- "Lịch sử phát triển như thế nào theo Mác?"
-- "Ý thức xã hội được hình thành ra sao?"
+- "So sánh quan điểm Khổng Tử và Lão Tử về đạo đức"
+- "Hegel ảnh hưởng Marx như thế nào?"
+- "Dialectical materialism vs idealism?"
+- "Vai trò của tự do trong triết học hiện đại?"
 
 ## 🔒 **Bảo mật & Giới hạn**
 
-- API key được hardcode (production nên dùng environment variables)
-- Rate limiting theo Google API quotas
-- Chỉ xử lý text, không hỗ trợ file upload
-- Giới hạn độ dài tin nhắn để tối ưu performance
+- Tách key qua ENV (không xuất sang client)
+- Throttle + cache giảm chi phí gọi model
+- Giới hạn độ dài câu hỏi phía client (có thể bổ sung hard cap server)
+- Fallback khi offline tránh “dead UI”
+- Không lưu lịch sử lâu dài (có thể mở rộng localStorage trong tương lai)
 
-## 🎉 **Hoàn thành**
+## 🧪 **Kiểm thử nhanh (Checklist)**
+- Mở đóng nhiều lần không bị kẹt body scroll
+- Gửi nhanh 2 lần → request thứ hai chờ (throttle) hoặc dùng promise cũ
+- Câu hỏi lặp lại trả lời tức thì (cache hit log)
+- Thay đổi mạng (offline) → fallback có biểu tượng cảnh báo
+- Gõ câu hỏi không liên quan → trả lời từ chối bằng tiếng Việt
+- Hỏi tiếng Anh → model trả lời English
 
-ChatBot đã được tích hợp hoàn chỉnh vào Philosophy Website với tất cả tính năng được yêu cầu:
-- ✅ Giao diện bong bóng chat
-- ✅ Tích hợp Gemini API  
-- ✅ Chuyên về triết học
-- ✅ UX/UI mượt mà
-- ✅ Responsive design
-- ✅ Error handling
+## 🎉 Trạng thái
+
+ChatBot hiện hoạt động ổn định:
+- ✅ Giảm lỗi giới hạn lưu lượng nhờ throttle & retry nhẹ
+- ✅ Tối ưu UX mobile (cuộn độc lập)
+- ✅ Hiệu năng: cache + dedupe
+
+> Đề xuất tương lai: lưu lịch sử per-session, highlight thuật ngữ triết học, thêm chế độ “giải thích đơn giản cho người mới bắt đầu”.

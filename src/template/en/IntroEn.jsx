@@ -46,12 +46,13 @@ const IntroEn = () => {
       <div className="intro-card">
         <h2>Technical Stack</h2>
         <div className="intro-section-content">
-          <p>To deliver a modern UI and smooth UX we rely on:</p>
+          <p>A modern performance‑oriented web stack with an embedded academic assistant:</p>
           <ul>
-            <li><strong>React + Vite</strong></li>
-            <li><strong>JavaScript</strong> for interactive logic.</li>
-            <li><strong>CSS</strong> for styling and responsive layout.</li>
-            <li><strong>GSAP</strong> for refined animation effects.</li>
+            <li><strong>React + Vite:</strong> Fast dev & optimized bundling.</li>
+            <li><strong>Modern JavaScript (ESNext):</strong> Interaction & state handling.</li>
+            <li><strong>Pure CSS + variables:</strong> Fine‑grained responsive control.</li>
+            <li><strong>GSAP:</strong> Subtle motion & progressive reveal.</li>
+            <li><strong>Integrated AI Q&A assistant:</strong> Ask contextual philosophy questions while reading (topic‑scoped, cached, fallback‑ready).</li>
           </ul>
         </div>
       </div>
@@ -59,18 +60,14 @@ const IntroEn = () => {
       <div className="intro-card">
         <h2>Statement on AI Usage</h2>
         <div className="intro-section-content">
-          <p>We used AI tools responsibly as support utilities, not as a replacement for academic reasoning.</p>
-          <br />
-          <p><strong>Models used:</strong> Google Gemini and other LLMs for auxiliary tasks.</p>
-          <br />
-          <p><strong>Purposes:</strong></p>
+          <p>AI is employed as a supportive tool—never a substitute for scholarly analysis.</p>
+          <p><strong>Scope of assistance:</strong></p>
           <ul>
-            <li><strong>Idea structuring:</strong> Brainstorming outlines and structural variations.</li>
-            <li><strong>Code optimization:</strong> Refactoring and debugging frontend logic.</li>
-            <li><strong>Auxiliary narrative content:</strong> Writing non‑core descriptive passages.</li>
+            <li>Non-core phrasing refinement & structural suggestion.</li>
+            <li>Light code quality improvements & small performance hints.</li>
+            <li>In-page real‑time Q&A assistant for topic‑restricted philosophy queries.</li>
           </ul>
-          <br />
-          <p><strong>Academic integrity:</strong> All core analytical and theoretical passages were written by team members from primary sources.</p>
+          <p><strong>Academic integrity:</strong> All substantive arguments, interpretations and conclusions are authored by the team using primary / authoritative sources; AI outputs are reviewed and never treated as authoritative.</p>
         </div>
       </div>
 

@@ -2,7 +2,8 @@
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  font-size: 18px; /* Tăng kích thước font mặc định */
+  /* Fluid base size: min 15px, scales with viewport, max ~18px */
+  font-size: clamp(15px, 1.15vw + 0.6rem, 18px);
 
   color-scheme: light dark;
   color: #333;
@@ -49,10 +50,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-color: var(--secondary-yellow-light); /* Màu nền dự phòng nếu ảnh không tải được */
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: clamp(2.1rem, 4vw + 1rem, 3.2rem);
   line-height: 1.1;
 }
 
@@ -85,6 +87,17 @@ button:focus-visible {
 
 main {
   flex: 1;
+}
+
+/* Mobile specific tweaks */
+@media (max-width: 768px) {
+  body { background-attachment: scroll; }
+  a { font-size: 1rem; }
+}
+
+@media (max-width: 480px) {
+  :root { font-size: 15px; }
+  h1 { font-size: clamp(1.8rem, 7vw, 2.4rem); }
 }
 
 @media (prefers-color-scheme: dark) {

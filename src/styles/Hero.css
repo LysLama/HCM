@@ -1,6 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Marck+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 
+.hero-section h1 {
+  font-size: clamp(2.2rem, 5.2vw + 1rem, 4.375rem); /* ~70px max */
+  margin-bottom: 20px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #ffedd5, #fde68a, #ffedd5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.5);
+  letter-spacing: 1px;
+  line-height: 1.08;
+}
+@media (max-width: 880px) {
+  .hero-section { padding: 90px 24px 70px; }
+  .hero-section p { font-size: clamp(15px, 1.9vw + .25rem, 18px); }
+}
+
+@media (max-width: 640px) {
+  .hero-section { padding: 86px 20px 70px; }
+  .hero-section h1 { letter-spacing: .5px; }
+  .hero-section p { font-size: clamp(15px, 2.4vw + .2rem, 17px); }
+}
+
+@media (max-width: 480px) {
+  .hero-section { padding: 78px 18px 64px; }
+  .hero-section h1 { font-size: clamp(2rem, 8vw, 2.75rem); }
+  .hero-section p { font-size: clamp(14px, 3vw + .25rem, 16px); }
+}
+/* (Removed duplicate @import lines that caused PostCSS ordering error) */
+
 .main-header {
   position: relative;
   height: 100vh;
@@ -22,11 +52,11 @@
 
 .main-header h1 {
   font-family: "Anton", sans-serif;
-  font-size: 70px;
+  font-size: clamp(2.4rem, 5.2vw + 1rem, 4.25rem);
   font-weight: 400;
   font-style: normal;
   margin-bottom: 1rem;
-  line-height: 1.2;
+  line-height: 1.15;
 
   /* --- Bắt đầu CSS cho hiệu ứng xuất hiện --- */
   
