@@ -183,18 +183,35 @@ body.chatbot-scroll-locked {
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   color: white;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   border-radius: 6px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s;
+  font-size: 18px; /* Ensure icon size */
 }
 
 .chatbot-close-btn:hover {
   background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* Ensure the icon inside close button is visible */
+.chatbot-close-btn svg {
+  width: 20px;
+  height: 20px;
+  stroke-width: 2;
+  display: block;
+}
+
+/* Style for close button text/icon */
+.chatbot-close-btn {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: bold;
 }
 
 /* Messages */

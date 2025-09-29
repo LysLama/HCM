@@ -405,7 +405,8 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
                 className="chatbot-close-btn"
                 aria-label={t.ariaClose}
               >
-                <HiXMark className="w-5 h-5" />
+                <HiXMark style={{width: '20px', height: '20px'}} />
+                ×
               </button>
             </div>
           </div>
