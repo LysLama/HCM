@@ -21,14 +21,72 @@ export default function TheoryEn() {
               <cite>— V.I. Lenin, <em>Great Initiative</em></cite>
             </blockquote>
           </div>
-          <p>• <strong>Conditions for emergence:</strong> Division of labour and private ownership of essential means of production.</p>
+          {/* New Sections: Conditions / Classification / Alliance */}
+          <h3>2. Conditions / origins of classes</h3>
+          <ul className="bullet-list">
+            <li><strong>Underlying (deep) cause:</strong> Rising labour productivity generates a <strong>surplus product</strong> → possibility of <strong>appropriating</strong> the portion produced by others.</li>
+            <li><strong>Direct cause:</strong> Establishment of <strong>private ownership of the means of production</strong> → divergence of interests and formation of opposed class positions.</li>
+          </ul>
+          <div className="note-block">
+            <blockquote>
+              <p><strong>Note:</strong> The <strong>social division of labour</strong> (especially mental vs. manual) <em>accelerates</em> stratification but is <em>not</em> the decisive cause by itself.</p>
+            </blockquote>
+          </div>
 
-          <h3>2. Nature of class struggle</h3>
+          <h3>3. Classification of classes</h3>
+          <ul className="bullet-list">
+            <li><strong>Basic (fundamental) classes:</strong> Shape the core contradiction of a given <strong>socio‑economic formation</strong>; directly tied to <strong>ownership relations</strong> and <strong>position</strong> in production.</li>
+            <li><strong>Non‑basic / intermediate classes (strata):</strong> Middle layers; do not define the fundamental contradiction yet exert socio‑political influence.</li>
+          </ul>
+          <h4>Examples by formation</h4>
+          <div className="responsive-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Formation</th>
+                  <th><strong>Basic classes</strong></th>
+                  <th><strong>Non‑basic / intermediate</strong> (examples)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Slave-owning</strong></td>
+                  <td><strong>Slave owners ↔ Slaves</strong></td>
+                  <td>Free artisans, merchants</td>
+                </tr>
+                <tr>
+                  <td><strong>Feudal</strong></td>
+                  <td><strong>Landlords / Feudal lords ↔ Serf peasants</strong></td>
+                  <td>Artisans, traders, officials, clergy, scholars</td>
+                </tr>
+                <tr>
+                  <td><strong>Capitalist</strong></td>
+                  <td><strong>Bourgeoisie ↔ Proletariat (wage workers)</strong></td>
+                  <td>Petty bourgeois, peasants, small proprietors, salaried staff, intelligentsia</td>
+                </tr>
+                <tr>
+                  <td><strong>Transition to socialism</strong></td>
+                  <td><strong>Working class ↔ Peasantry</strong> <em>(non‑antagonistic)</em></td>
+                  <td>Intelligentsia and other labouring strata</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>4. Class alliance</h3>
+          <ul className="bullet-list">
+            <li><strong>Concept:</strong> Coordinated action among classes / strata sharing <strong>fundamentally convergent interests</strong> in a historical phase.</li>
+            <li><strong>Purpose:</strong> Concentrate forces to <strong>resolve the fundamental contradiction</strong> (overthrow the old ruling class, build a new order; under socialism: construction & defense).</li>
+            <li><strong>Principles:</strong> Shared strategic goal; respect legitimate interests; <strong>working-class leadership core</strong>; tactical flexibility.</li>
+            <li><strong>Typical example:</strong> <strong>Worker–peasant–intelligentsia alliance</strong> (political foundation of the socialist state); broad national united front in national–democratic revolutions.</li>
+          </ul>
+
+          <h3>5. Nature of class struggle</h3>
           <p>• <strong>Inevitability:</strong> Rooted in irreconcilable interests between exploiting and exploited classes.</p>
           <p>• <strong>Definition:</strong> Struggle among large social groups whose fundamental interests oppose within a given mode of production.</p>
           <p>• <strong>Essence:</strong> The organized resistance of oppressed labouring masses against exploiting classes.</p>
 
-          <h3>3. Main forms</h3>
+          <h3>6. Main forms</h3>
           <ul>
             <li><strong>Economic:</strong> Wages, conditions, ownership and distribution.</li>
             <li><strong>Political:</strong> Seizing and using state power.</li>
@@ -36,7 +94,7 @@ export default function TheoryEn() {
           </ul>
 
           <section>
-            <h3>4. Marx’s three key theses (1852)</h3>
+            <h3>7. Marx’s three key theses (1852)</h3>
             <ol>
               <li><strong>Historical character:</strong> Classes arise and vanish with productive epochs.</li>
               <li><strong>Revolutionary objective:</strong> Struggle tends toward proletarian political rule.</li>
@@ -47,7 +105,7 @@ export default function TheoryEn() {
             </div>
           </section>
 
-          <h3>5. Classic quotations</h3>
+          <h3>8. Classic quotations</h3>
           <div className="quote-section">
             <blockquote>
               <p>"The history of all hitherto existing society is the history of class struggles."</p>
@@ -63,7 +121,7 @@ export default function TheoryEn() {
             </blockquote>
           </div>
 
-          <h3>6. Academic videos</h3>
+          <h3>9. Academic videos</h3>
           <div className="video-section">
             <div className="video-container">
               <iframe width="560" height="315" src="https://www.youtube.com/embed/GL4o_umfVWM" title="Foundational Theory 1" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
@@ -82,19 +140,7 @@ export default function TheoryEn() {
               <p className="video-caption">Lenin’s definition analyzed</p>
             </div>
           </div>
-
-          <section>
-            <h3>7. Class & nation relationship</h3>
-            <p><strong>Class essence:</strong> Historical economic category; not reducible to pure economics.</p>
-            <p><strong>Unity:</strong> At certain stages, labouring classes’ interests fuse with national liberation.</p>
-            <ul>
-              <li><strong>Strategic alliances:</strong> Long-term shared fundamental interests.</li>
-              <li><strong>Tactical alliances:</strong> Temporary, immediate objectives.</li>
-              <li><strong>Dialectic:</strong> Class struggle and alliance-building co-produce historical force.</li>
-            </ul>
-          </section>
-
-          <h3>8. Historical examples</h3>
+          <h3>10. Historical examples</h3>
           <p><strong>French Revolution (1789):</strong> Bourgeoisie vs. feudal aristocracy.</p>
           <p><strong>October Revolution (1917):</strong> Proletariat seizes power, establishing first socialist state.</p>
           <p><strong>19th–20th c. labour movements:</strong> 8‑hour day, social insurance gains.</p>
