@@ -1,8 +1,65 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles/Section.css";
 import section2Image from "../assets/img/theory.jpg";
 
 const Theory = () => {
+    const tableRef = useRef(null);
+
+    // Add touch + pointer drag horizontal scroll support on mobile
+    useEffect(() => {
+        const el = tableRef.current;
+        if (!el) return;
+
+        let isDown = false;
+        let startX = 0;
+        let startY = 0;
+        let scrollLeft = 0;
+
+        const onPointerDown = (e) => {
+            // Only left mouse or primary touch
+            isDown = true;
+            el.classList.add('is-dragging');
+            startX = ('touches' in e ? e.touches[0].pageX : e.pageX);
+            startY = ('touches' in e ? e.touches[0].pageY : e.pageY);
+            scrollLeft = el.scrollLeft;
+        };
+        const onPointerMove = (e) => {
+            if (!isDown) return;
+            const x = ('touches' in e ? e.touches[0].pageX : e.pageX);
+            const y = ('touches' in e ? e.touches[0].pageY : e.pageY);
+            const dx = x - startX;
+            const dy = y - startY;
+            // Only treat as horizontal drag if horizontal intent stronger
+            if (Math.abs(dx) > Math.abs(dy) * 1.15) {
+                e.preventDefault(); // Prevent page gesture
+                el.scrollLeft = scrollLeft - dx;
+            }
+        };
+        const endDrag = () => {
+            isDown = false;
+            el.classList.remove('is-dragging');
+        };
+
+        // Event listeners (pointer + touch fallback for older browsers)
+        el.addEventListener('mousedown', onPointerDown, { passive: true });
+        el.addEventListener('touchstart', onPointerDown, { passive: true });
+        window.addEventListener('mousemove', onPointerMove, { passive: false });
+        window.addEventListener('touchmove', onPointerMove, { passive: false });
+        window.addEventListener('mouseup', endDrag, { passive: true });
+        window.addEventListener('touchend', endDrag, { passive: true });
+        window.addEventListener('touchcancel', endDrag, { passive: true });
+
+        return () => {
+            el.removeEventListener('mousedown', onPointerDown);
+            el.removeEventListener('touchstart', onPointerDown);
+            window.removeEventListener('mousemove', onPointerMove);
+            window.removeEventListener('touchmove', onPointerMove);
+            window.removeEventListener('mouseup', endDrag);
+            window.removeEventListener('touchend', endDrag);
+            window.removeEventListener('touchcancel', endDrag);
+        };
+    }, []);
+
     return (
         <div className="page-container">
             {/* Phần Hero */}
@@ -33,7 +90,6 @@ const Theory = () => {
                         </blockquote>
                     </div>
 
-                    <p>
                         {/* Điều kiện / Nguyên nhân sinh ra giai cấp (thay thế theo yêu cầu) */}
                         <h3>2. Điều kiện/Nguyên nhân sinh ra giai cấp</h3>
                         <ul className="bullet-list">
@@ -53,7 +109,8 @@ const Theory = () => {
                         </ul>
 
                         <h4>Ví dụ theo các hình thái</h4>
-                        <div className="responsive-table">
+                        <div className="table-hint">Kéo ngang bảng để xem đầy đủ →</div>
+                        <div className="responsive-table" ref={tableRef} role="region" aria-label="Bảng ví dụ giai cấp theo các hình thái" tabIndex="0" data-scroll="horizontal">
                             <table>
                                 <thead>
                                     <tr>
@@ -94,7 +151,7 @@ const Theory = () => {
                             <li><strong>Nguyên tắc:</strong> Cùng mục tiêu chung; tôn trọng lợi ích chính đáng của các bên; <strong>hạt nhân lãnh đạo là giai cấp công nhân</strong>; linh hoạt theo từng thời kỳ.</li>
                             <li><strong>Ví dụ tiêu biểu:</strong> <strong>Liên minh công–nông–trí</strong> (nền tảng chính trị của nhà nước xã hội chủ nghĩa); mặt trận dân tộc thống nhất trong cách mạng dân tộc–dân chủ.</li>
                         </ul>
-                    </p>
+                        {/* Kết thúc cụm nội dung mới */}
 
                     <h3>5. Đấu tranh giai cấp - Bản chất và đặc điểm</h3>
                     <p>

@@ -51,6 +51,7 @@ body {
   background-attachment: fixed;
   background-color: var(--secondary-yellow-light); /* Màu nền dự phòng nếu ảnh không tải được */
   -webkit-tap-highlight-color: transparent;
+  overflow-x: hidden; /* Prevent horizontal drag caused by wide inner elements */
 }
 
 h1 {
