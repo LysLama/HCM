@@ -6,11 +6,32 @@ import roleImg from '../../assets/img/role.jpg';
 import futureImg from '../../assets/img/future.jpg';
 import conclusionImg from '../../assets/img/conclusion.jpg';
 
+// Chapter 2 focus (EN)
 const sectionsEn = [
-  { id: 'theory', title: 'Foundational Theory', description: 'Explore the Marxist–Leninist concepts of class and class struggle.', img: theoryImg },
-  { id: 'role', title: 'Historical Role', description: 'Analyze class struggle as a driver of social development.', img: roleImg },
-  { id: 'future', title: 'Future Society', description: 'Discuss possibilities in a society beyond antagonistic classes.', img: futureImg },
-  { id: 'conclusion', title: 'Conclusion', description: 'Synthesize key points and the enduring relevance of the topic.', img: conclusionImg },
+  {
+    id: 'chapter2/money/en',
+    title: '1) Money',
+    description: 'Origins, nature, and functions of money in a commodity economy.',
+    img: theoryImg,
+  },
+  {
+    id: 'chapter2/services/en',
+    title: '2) Services & Exchange Relations',
+    description: 'Services and special exchange relations for factors beyond ordinary goods.',
+    img: roleImg,
+  },
+  {
+    id: 'chapter2/market-concepts/en',
+    title: '3) Market: Concepts & Roles',
+    description: 'Definition, classification, and roles of markets in the economy.',
+    img: futureImg,
+  },
+  {
+    id: 'chapter2/market-economy/en',
+    title: '4) Market Economy',
+    description: 'Core features and key laws of the market economy; role of the state.',
+    img: conclusionImg,
+  },
 ];
 
 export default function ContentEn() {
@@ -33,10 +54,10 @@ export default function ContentEn() {
 
   return (
     <main id="main-content" className="content-container">
-      <h1 className="content-main-title">Explore Topics</h1>
+      <h1 className="content-main-title">Chapter 2: Goods, Money, Services, Markets, and the Market Economy</h1>
       <div className="content-grid" ref={gridRef}>
         {sectionsEn.map(section => (
-          <Link to={`/${section.id}/en`} key={section.id} className="content-card-link">
+          <Link to={`/${section.id}`} key={section.id} className="content-card-link">
             <div className="content-card">
               <div className="content-card-body">
                 <h3 className="content-card-title">{section.title}</h3>

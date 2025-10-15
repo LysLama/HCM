@@ -25,6 +25,16 @@ import TimelinePage from './pages/TimelinePage.jsx';
 import KnowledgeMapPage from './pages/KnowledgeMapPage.jsx';
 import CombinedKnowledgePage from './pages/CombinedKnowledgePage.jsx';
 import { ReadingProgressProvider } from './context/ReadingProgressContext.jsx';
+// Chapter 2 pages
+import Chapter2Money from './pages/Chapter2Money.jsx';
+import Chapter2Services from './pages/Chapter2Services.jsx';
+import Chapter2MarketConcepts from './pages/Chapter2MarketConcepts.jsx';
+import Chapter2MarketEconomy from './pages/Chapter2MarketEconomy.jsx';
+// English pages
+import Chapter2MoneyEn from './pages/en/Chapter2MoneyEn.jsx';
+import Chapter2ServicesEn from './pages/en/Chapter2ServicesEn.jsx';
+import Chapter2MarketConceptsEn from './pages/en/Chapter2MarketConceptsEn.jsx';
+import Chapter2MarketEconomyEn from './pages/en/Chapter2MarketEconomyEn.jsx';
 
 const router = createBrowserRouter([
   {
@@ -111,6 +121,17 @@ const router = createBrowserRouter([
         path: "/knowledge/en",
         element: <CombinedKnowledgePage />,
       },
+
+  // Chapter 2 specific routes
+      { path: "/chapter2/money", element: <Chapter2Money /> },
+      { path: "/chapter2/services", element: <Chapter2Services /> },
+      { path: "/chapter2/market-concepts", element: <Chapter2MarketConcepts /> },
+      { path: "/chapter2/market-economy", element: <Chapter2MarketEconomy /> },
+      // English Chapter 2 routes
+      { path: '/chapter2/money/en', element: <Chapter2MoneyEn /> },
+      { path: '/chapter2/services/en', element: <Chapter2ServicesEn /> },
+      { path: '/chapter2/market-concepts/en', element: <Chapter2MarketConceptsEn /> },
+      { path: '/chapter2/market-economy/en', element: <Chapter2MarketEconomyEn /> },
 
       // 404 Not Found page
       // {

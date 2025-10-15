@@ -10,27 +10,27 @@ import ketLuanImg from '../assets/img/conclusion.jpg';
 
 const sections = [
     {
-        id: 'theory',
-        title: 'Lý Thuyết Nền Tảng',
-        description: 'Tìm hiểu về khái niệm giai cấp và đấu tranh giai cấp theo triết học Mác – Lênin.',
+        id: 'chapter2/money',
+        title: '1) Tiền tệ (Thuyết trình)',
+        description: 'Nguồn gốc, bản chất và các chức năng của tiền trong kinh tế hàng hoá.',
         img: lyThuyetImg,
     },
     {
-        id: 'role',
-        title: 'Vai Trò Lịch Sử',
-        description: 'Phân tích vai trò của đấu tranh giai cấp như một động lực phát triển xã hội.',
+        id: 'chapter2/services',
+        title: '2) Dịch vụ & quan hệ trao đổi',
+        description: 'Dịch vụ và các quan hệ trao đổi với một số yếu tố khác hàng hoá hiện nay.',
         img: vaiTroImg,
     },
     {
-        id: 'future',
-        title: 'Xã Hội Tương Lai',
-        description: 'Thảo luận về khả năng và động lực phát triển trong một xã hội không đối kháng.',
+        id: 'chapter2/market-concepts',
+        title: '3) Thị trường: khái niệm & vai trò',
+        description: 'Khái niệm, phân loại và vai trò của thị trường trong nền kinh tế.',
         img: xaHoiImg,
     },
     {
-        id: 'conclusion',
-        title: 'Kết luận',
-        description: 'Tổng kết những điểm chính và tầm quan trọng của việc hiểu đấu tranh giai cấp.',
+        id: 'chapter2/market-economy',
+        title: '4) Nền kinh tế thị trường',
+        description: 'Đặc trưng và một số quy luật chủ yếu của nền kinh tế thị trường.',
         img: ketLuanImg,
     },
 ];
@@ -71,7 +71,7 @@ const Content = () => {
 
     return (
         <main id="main-content" className="content-container">
-            <h1 className="content-main-title">Khám Phá Các Chủ Đề</h1>
+            <h1 className="content-main-title">Chương 2: Hàng hóa, thị trường và vai trò của các chủ thể</h1>
             <div className="content-grid" ref={gridRef}>
                 {sections.map((section) => (
                     <Link to={`/${section.id}`} key={section.id} className="content-card-link">

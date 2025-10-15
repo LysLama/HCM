@@ -21,24 +21,37 @@ const IntroEn = () => {
 
   return (
     <section id="introduction" className="intro-section-container" ref={cardsContainerRef}>
-      <h1 className="intro-section-title">Project Introduction</h1>
+      <h1 className="intro-section-title">Chapter 2 Overview</h1>
 
       <div className="intro-card">
-        <h2>Project Overview</h2>
+        <h2>Scope & Structure</h2>
         <div className="intro-section-content">
           <p>
-            The project <strong>"Class Struggle & The Future of Human History"</strong> is a knowledge portal designed for learning and research. With the guiding question: <em>"If class struggle ceased, would human history stop?"</em> we aim to create an academic space where learners can explore one of the core categories of Marxist philosophy and social theory.
+            Focus shifted to <strong>Chapter 2: Goods, Markets and Roles of Market Participants</strong>. Part I introduces Marx’s theory of <em>commodity production and the commodity</em>. Part II covers <em>markets and the market economy</em>.
           </p>
         </div>
       </div>
 
       <div className="intro-card">
-        <h2>Project Objectives</h2>
+        <h2>Learning Goals</h2>
         <div className="intro-section-content">
           <ul>
-            <li><strong>Systematize knowledge:</strong> Offer students a structured and in‑depth view of class and class struggle in Marxism–Leninism.</li>
-            <li><strong>Encourage open discussion:</strong> Stimulate critical thinking about the role of class struggle in historical development and humanity's future.</li>
-            <li><strong>Integrate technology:</strong> Use modern web technologies to create a more engaging study experience than traditional static text.</li>
+            <li><strong>Systematize key concepts:</strong> Goods, money, services, and special exchange relations.</li>
+            <li><strong>Discuss market roles:</strong> Signals, allocation, competition, and integration.</li>
+            <li><strong>Bridge theory and practice:</strong> From value and price to financial instruments and policy.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div className="intro-card">
+        <h2>Quick Access</h2>
+        <div className="intro-section-content">
+          <ul>
+            <li><a href="/chapter2/money/en">1) Money</a></li>
+            <li><a href="/chapter2/services/en">2) Services & Exchange Relations</a></li>
+            <li><a href="/chapter2/market-concepts/en">3) Market: Concepts & Roles</a></li>
+            <li><a href="/chapter2/market-economy/en">4) Market Economy</a></li>
+            <li><a href="/knowledge/en">Chapter 2 • Knowledge Hub</a></li>
           </ul>
         </div>
       </div>
@@ -46,13 +59,11 @@ const IntroEn = () => {
       <div className="intro-card">
         <h2>Technical Stack</h2>
         <div className="intro-section-content">
-          <p>A modern performance‑oriented web stack with an embedded academic assistant:</p>
           <ul>
-            <li><strong>React + Vite:</strong> Fast dev & optimized bundling.</li>
-            <li><strong>Modern JavaScript (ESNext):</strong> Interaction & state handling.</li>
-            <li><strong>Pure CSS + variables:</strong> Fine‑grained responsive control.</li>
-            <li><strong>GSAP:</strong> Subtle motion & progressive reveal.</li>
-            <li><strong>Integrated AI Q&A assistant:</strong> Ask contextual philosophy questions while reading (topic‑scoped, cached, fallback‑ready).</li>
+            <li><strong>React + Vite</strong> • Fast iteration and optimized bundling</li>
+            <li><strong>ESNext + CSS</strong> • Interactive UI with fine‑grained styling</li>
+            <li><strong>Optional GSAP</strong> • Subtle motion for progressive reveal</li>
+            <li><strong>Integrated Q&A</strong> • Topic‑scoped academic assistant</li>
           </ul>
         </div>
       </div>
@@ -60,14 +71,14 @@ const IntroEn = () => {
       <div className="intro-card">
         <h2>Statement on AI Usage</h2>
         <div className="intro-section-content">
-          <p>AI is employed as a supportive tool—never a substitute for scholarly analysis.</p>
-          <p><strong>Scope of assistance:</strong></p>
+          <p>We use AI as a supportive tool for drafting and interaction; it does not replace scholarly research or authorship.</p>
+          <p><strong>Scope of AI assistance:</strong></p>
           <ul>
-            <li>Non-core phrasing refinement & structural suggestion.</li>
-            <li>Light code quality improvements & small performance hints.</li>
-            <li>In-page real‑time Q&A assistant for topic‑restricted philosophy queries.</li>
+            <li>Non‑core phrasing and structural suggestions.</li>
+            <li>Light code quality checks and minor performance hints.</li>
+            <li>In‑page Q&A assistant scoped to the project’s topics with caching and fallback.</li>
           </ul>
-          <p><strong>Academic integrity:</strong> All substantive arguments, interpretations and conclusions are authored by the team using primary / authoritative sources; AI outputs are reviewed and never treated as authoritative.</p>
+          <p><strong>Academic integrity:</strong> All substantive arguments, analysis and conclusions are authored by the team using primary and authoritative sources; AI outputs are reviewed and treated as references only.</p>
         </div>
       </div>
 
@@ -76,11 +87,9 @@ const IntroEn = () => {
         <div className="intro-section-content">
           <ul>
             <li><strong>Minh Khanh</strong> – Team lead, primary research</li>
-            <li><strong>Ly Thanh Lam</strong> – Design & technical support</li>
-            <li><strong>Ngo Gia Bao</strong> – Front‑end development & UI design</li>
-            <li><strong>Nguyen Thi Kim Phung</strong> – Content editing & sourcing</li>
-            <li><strong>Bui Gia Huy</strong> – Design & support</li>
-            <li><strong>Manh Hung</strong> – Back‑end & data management</li>
+            <li><strong>Thanh Lam</strong> – Back‑end developer, server ops, API</li>
+            <li><strong>Gia Bao</strong> – Front‑end developer, UI design</li>
+            <li><strong>Song Thien</strong> – Technical support, design/content edits</li>
           </ul>
         </div>
       </div>

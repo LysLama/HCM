@@ -15,8 +15,8 @@ const Hero = () => {
   return (
     <header id='home' className="main-header">
       <div className="header-content">
-        <h1>Đấu Tranh Giai Cấp & Tương Lai Lịch Sử Nhân Loại</h1>
-        <p>Nếu không còn đấu tranh giai cấp, lịch sử nhân loại có dừng lại không?</p>
+        <h1>Chương 2: Hàng hóa, Thị trường và Vai trò Chủ thể</h1>
+        <p>I. Lý luận về sản xuất hàng hóa – II. Thị trường và nền kinh tế thị trường</p>
       </div>
       <a 
         href="#introduction" 

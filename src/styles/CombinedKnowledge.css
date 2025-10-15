@@ -85,6 +85,11 @@
     margin-bottom: 1rem;
     display: block;
 }
+.tab-icon img {
+    width: 3.5rem;
+    height: 3.5rem;
+    vertical-align: middle;
+}
 
 .tab-label {
     font-size: 1.6rem; /* Tăng từ 1.4rem lên 1.6rem */
@@ -214,6 +219,11 @@
     font-size: 3rem;
     margin-bottom: 1.5rem;
     display: block;
+}
+.card-icon img {
+    width: 2.25rem; /* ~36px to match previous 3rem emoji look */
+    height: 2.25rem;
+    vertical-align: middle;
 }
 
 .card-content h4 {

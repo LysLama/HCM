@@ -53,7 +53,7 @@ const Header = () => {
             <li><NavLink onClick={closeMenu} to={buildPath('/') + '#home'}>{t('Trang chủ', 'Home')}</NavLink></li>
             <li><Link onClick={closeMenu} to={buildPath('/') + '#introduction'}>{t('Giới thiệu', 'Introduction')}</Link></li>
             <li><NavLink onClick={closeMenu} to={buildPath('/content')}>{t('Nội dung', 'Content')}</NavLink></li>
-            <li><NavLink onClick={closeMenu} to={buildPath('/knowledge')}>{t('Tri thức & Lịch sử', 'Knowledge & History')}</NavLink></li>
+            <li><NavLink onClick={closeMenu} to={buildPath('/knowledge')}>{t('Tri thức & Thị trường', 'Knowledge & Market')}</NavLink></li>
             <li><NavLink onClick={closeMenu} to={buildPath('/quiz')}>{t('Ôn tập', 'Quiz')}</NavLink></li>
           </ul>
         </nav>

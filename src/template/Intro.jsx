@@ -36,26 +36,26 @@ const Intro = () => {
     return (
         <section id="introduction" className="intro-section-container" ref={cardsContainerRef}>
             {/* Tiêu đề phần giới thiệu */}
-            <h1 className="intro-section-title">Giới Thiệu Dự Án</h1>
+            <h1 className="intro-section-title">Giới Thiệu Chương 2</h1>
 
             {/* Các đề mục nhỏ trong các card */}
             <div className="intro-card">
                 {/* Tổng quan dự án */}
-                <h2>Tổng Quan Dự Án</h2>
+                <h2>Tổng Quan Nội Dung</h2>
                 <div className="intro-section-content">
                     <p>
-                        Dự án <strong>"Đấu Tranh Giai Cấp & Tương Lai Lịch Sử Nhân Loại"</strong> là một nền tảng kiến thức, được phát triển nhằm phục vụ cho mục đích học tập và nghiên cứu. Với câu hỏi trọng tâm: <em>"Nếu không còn đấu tranh giai cấp, lịch sử nhân loại có dừng lại không?"</em>, chúng tôi mong muốn tạo ra một không gian học thuật, nơi mọi người có thể tìm hiểu sâu hơn về một trong những khái niệm cốt lõi của triết học và xã hội học.
+                        Nội dung chuyển trọng tâm sang <strong>Chương 2: Hàng hóa, thị trường và vai trò của các chủ thể tham gia thị trường</strong>. Phần I trình bày lý luận của C. Mác về <em>sản xuất hàng hóa và hàng hóa</em>; Phần II giới thiệu về <em>thị trường và nền kinh tế thị trường</em>.
                     </p>
                 </div>
             </div>
 
             {/* Mục tiêu dự án */}
             <div className="intro-card">
-                <h2>Mục Tiêu Dự Án</h2>
+                <h2>Mục Tiêu Học Tập</h2>
                 <div className="intro-section-content">
                     <ul>
-                        <li><strong>Hệ thống hóa kiến thức:</strong> Giúp người học, đặc biệt là các bạn sinh viên, có cái nhìn tổng quan và sâu sắc về khái niệm đấu tranh giai cấp theo quan điểm của chủ nghĩa Mác - Lênin.</li>
-                        <li><strong>Tạo không gian thảo luận mở:</strong> Khơi gợi tư duy phản biện về vai trò của đấu tranh giai cấp trong sự phát triển của lịch sử và tương lai của xã hội loài người khi không còn giai cấp.</li>
+                        <li><strong>Hệ thống hóa kiến thức:</strong> Trang bị nền tảng về hàng hóa, tiền tệ, dịch vụ và các quan hệ trao đổi.</li>
+                        <li><strong>Tạo không gian thảo luận mở:</strong> Thảo luận về vai trò của thị trường và những quy luật cơ bản của kinh tế thị trường.</li>
                         <li><strong>Ứng dụng công nghệ vào học thuật:</strong> Sử dụng các công nghệ web hiện đại để tạo ra một trải nghiệm học tập, nghiên cứu trực quan và hấp dẫn hơn so với các phương pháp truyền thống.</li>
                     </ul>
                 </div>
@@ -74,6 +74,20 @@ const Intro = () => {
                         <li><strong>CSS thuần + biến màu:</strong> Kiểm soát chi tiết giao diện, responsive.</li>
                         <li><strong>GSAP:</strong> Hiệu ứng chuyển động tinh tế.</li>
                         <li><strong>AI Chatbot tích hợp:</strong> Hỗ trợ đặt câu hỏi ngay khi đang đọc nội dung (phạm vi triết học), có cache tạm & chế độ dự phòng.</li>
+                    </ul>
+                </div>
+            </div>
+
+            {/* Truy cập nhanh Chương 2 */}
+            <div className="intro-card">
+                <h2>Truy Cập Nhanh</h2>
+                <div className="intro-section-content">
+                    <ul>
+                        <li><a href="/chapter2/money">1) Tiền tệ</a></li>
+                        <li><a href="/chapter2/services">2) Dịch vụ & quan hệ trao đổi</a></li>
+                        <li><a href="/chapter2/market-concepts">3) Thị trường: khái niệm & vai trò</a></li>
+                        <li><a href="/chapter2/market-economy">4) Nền kinh tế thị trường</a></li>
+                        <li><a href="/knowledge">Chương 2 • Trung tâm Tri thức</a></li>
                     </ul>
                 </div>
             </div>
@@ -100,11 +114,9 @@ const Intro = () => {
                     {/* Vui lòng cập nhật tên và vai trò của các thành viên trong nhóm của bạn tại đây */}
                     <ul>
                         <li><strong>Minh Khánh</strong> - Trưởng nhóm, Nghiên cứu nội dung chính</li>
-                        <li><strong>Lý Thanh Lâm</strong> - Lập trình viên Back-end, Quản lý server, Dựng API</li>
-                        <li><strong>Ngô Gia Bảo</strong> - Lập trình viên Front-end, Thiết kế giao diện</li>
-                        <li><strong>Nguyễn Thị Kim Phụng</strong> - Biên tập nội dung, Thu thập tài liệu</li>
-                        <li><strong>Bùi Gia Huy</strong> - Hỗ trợ kỹ thuật, Chỉnh sửa thiết kế, nội dung</li>
-                        <li><strong>Mạnh Hùng</strong> - Thiết kế UI, Hỗ trợ lập trình</li>
+                        <li><strong>Thanh Lâm</strong> - Lập trình viên Back-end, Quản lý server, Dựng API</li>
+                        <li><strong>Gia Bảo</strong> - Lập trình viên Front-end, Thiết kế giao diện</li>
+                        <li><strong>Song Thiên</strong> - Hỗ trợ kỹ thuật, Chỉnh sửa thiết kế, nội dung</li>
 
                     </ul>
                 </div>

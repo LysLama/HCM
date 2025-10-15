@@ -1,62 +1,92 @@
 export const quizDataEn = [
   {
-    question: "The opening line of the Communist Manifesto states that the history of all hitherto existing society is the history of…",
-    options: ["Scientific progress", "Religious conflicts", "Class struggles", "Trade exchange"],
-    correctAnswer: "Class struggles",
-    explanation: "This is the famous first thesis of the Manifesto, framing history through class antagonisms."
+    question: "According to Karl Marx, what are the two fundamental attributes of a commodity?",
+    options: ["Price & production cost", "Use-value & value", "Revenue & profit", "Supply & demand"],
+    correctAnswer: "Use-value & value",
+    explanation: "A commodity combines a concrete utility (use-value) and abstract socially necessary labor time (value)."
   },
   {
-    question: "In the 1859 Preface to 'A Contribution to the Critique of Political Economy', Marx argues that when the economic base changes…",
-    options: ["The superstructure remains unchanged", "The entire immense superstructure is more or less rapidly transformed", "The state becomes neutral", "All contradictions vanish"],
-    correctAnswer: "The entire immense superstructure is more or less rapidly transformed",
-    explanation: "Marx emphasizes the dialectical relation between base (forces/relations of production) and superstructure."
+    question: "Which of the following is NOT one of the five classic functions of money?",
+    options: ["Measure of value", "Medium of circulation (exchange)", "Investment vehicle for profit", "Means of payment"],
+    correctAnswer: "Investment vehicle for profit",
+    explanation: "Classical functions: measure of value, medium of circulation, store/hoard of value, means of payment, and world money."
   },
   {
-    question: "According to Marx, what ultimately determines social consciousness?",
-    options: ["Will of leaders", "Ideology", "Social being (economic existence)", "National tradition"],
-    correctAnswer: "Social being (economic existence)",
-    explanation: "Historical materialism: social being determines social consciousness."
+    question: "By M = (P × Q) / V, if P = 120, Q = 800, and V = 40, what is M?",
+    options: ["1,600", "2,400", "3,200", "4,800"],
+    correctAnswer: "2,400",
+    explanation: "M = (120×800)/40 = 96,000/40 = 2,400 (units of money)."
   },
   {
-    question: "'The ruling ideas of each age have ever been the ideas of…'",
-    options: ["The intellectual elite", "The ruling class", "The majority of voters", "The Church"],
-    correctAnswer: "The ruling class",
-    explanation: "Marx & Engels, The German Ideology, on the class character of dominant ideology."
+    question: "Which statement about services is TRUE?",
+    options: [
+      "They can be inventoried like tangible goods",
+      "Production and consumption typically occur simultaneously",
+      "They require no social labor",
+      "Their quality is always homogeneous across deliveries"
+    ],
+    correctAnswer: "Production and consumption typically occur simultaneously",
+    explanation: "Services are intangible, hard to store, and often produced and consumed at the same time."
   },
   {
-    question: "In Marx–Engels theory, 'class struggle' does NOT occur at the level of:",
-    options: ["Economics", "Politics", "Ideology", "Biology / natural evolution"],
-    correctAnswer: "Biology / natural evolution",
-    explanation: "Class struggle is a social category; Darwinian biological struggle is not directly transposed."
+    question: "In land transactions in Vietnam, what is actually exchanged?",
+    options: [
+      "Land itself as a tangible commodity",
+      "Absolute land ownership",
+      "Brokerage services only",
+      "Land-use rights (term, purpose, transferability)"
+    ],
+    correctAnswer: "Land-use rights (term, purpose, transferability)",
+    explanation: "The ‘commodity-like’ element is the transferable right to use land, not the land per se."
   },
   {
-    question: "Why is the proletariat considered a revolutionary class under capitalism?",
-    options: ["It owns vast land", "Its interests align with abolishing all private property relations", "Its education level exceeds the bourgeoisie", "It is numerically small and elite"],
-    correctAnswer: "Its interests align with abolishing all private property relations",
-    explanation: "Central Manifesto argument: the proletariat has 'nothing to lose but its chains'."
+    question: "Which best describes “fictitious capital” in Marx’s analysis?",
+    options: [
+      "Machines and buildings used directly in production",
+      "Durable consumer goods",
+      "Negotiable claims to future income (e.g., stocks, bonds)",
+      "Gold money as the measure of value"
+    ],
+    correctAnswer: "Negotiable claims to future income (e.g., stocks, bonds)",
+    explanation: "These papers represent claims on future returns and do not directly function as productive capital."
   },
   {
-    question: "According to Lenin in 'State and Revolution', the state is:",
-    options: ["A purely neutral mediator", "A special apparatus for one class to suppress another", "An impartial organization above classes", "A public interest club"],
-    correctAnswer: "A special apparatus for one class to suppress another",
-    explanation: "Lenin underscores the class character of the state as an instrument of rule."
+    question: "Which option best captures the definition of a market?",
+    options: [
+      "Only physical places where buying and selling occur (e.g., stores)",
+      "Only supply–demand relations on stock exchanges",
+      "The totality of economic relations of buying and selling where prices and quantities are formed",
+      "Only transactions between countries"
+    ],
+    correctAnswer: "The totality of economic relations of buying and selling where prices and quantities are formed",
+    explanation: "A market exists both concretely (places) and abstractly (relations of supply, demand, price)."
   },
   {
-    question: "'Withering away of the state' (Lenin) occurs when:",
-    options: ["Immediately after revolution", "Universal suffrage exists", "Class antagonisms disappear in a higher communist stage", "GDP per capita is high enough"],
-    correctAnswer: "Class antagonisms disappear in a higher communist stage",
-    explanation: "Without class antagonism the coercive function of the state loses its basis."
+    question: "Which statement reflects a key feature of the modern market economy?",
+    options: [
+      "The state never intervenes in the economy",
+      "Prices are mainly set by administrative orders",
+      "Pluralistic agents and competition drive allocation; the state corrects market failures",
+      "It must be closed to international trade"
+    ],
+    correctAnswer: "Pluralistic agents and competition drive allocation; the state corrects market failures",
+    explanation: "A regulated (mixed) market economy relies on competition and state roles in stability and fairness."
   },
   {
-    question: "Which relation reflects historical materialism?",
-    options: ["Social consciousness determines social being", "Contradiction between productive forces and relations drives change", "Culture solely determines technology", "The state determines the economy"],
-    correctAnswer: "Contradiction between productive forces and relations drives change",
-    explanation: "Core law: relations of production must correspond to development level of productive forces."
+    question: "Under the law of value and intra-industry competition, if a firm lowers its individual value below rivals, the typical outcome is:",
+    options: [
+      "The market value immediately rises",
+      "Short-run extra profits for the firm; over time, market value tends to fall toward the lower cost level",
+      "All firms enjoy extra profits",
+      "Social demand for the good shrinks"
+    ],
+    correctAnswer: "Short-run extra profits for the firm; over time, market value tends to fall toward the lower cost level",
+    explanation: "Cost-reducing innovators gain temporarily; competition then pulls the industry benchmark downward."
   },
   {
-    question: "If class antagonisms vanished, the 'direct motor' of history (class struggle) would:",
-    options: ["Remain the primary driver", "No longer be direct, yet history would proceed via other dynamics", "Stop history entirely", "Be replaced only by military conflict"],
-    correctAnswer: "No longer be direct, yet history would proceed via other dynamics",
-    explanation: "Other contradictions (human–nature, new vs old) would propel development."
+    question: "In the SHORT RUN, if demand for a good jumps while supply has not adjusted, its price will typically:",
+    options: ["Equal its value", "Rise above its value", "Fall below its value", "Remain unchanged"],
+    correctAnswer: "Rise above its value",
+    explanation: "With demand > supply in the short run, market price exceeds value; longer-run supply adjusts."
   }
 ];

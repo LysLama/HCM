@@ -15,8 +15,8 @@ const HeroEn = () => {
   return (
     <header id='home' className="main-header">
       <div className="header-content">
-        <h1>Class Struggle & The Future of Human History</h1>
-        <p>If class struggle ended, would human history stop evolving?</p>
+        <h1>Chapter 2: Goods, Markets and Roles of Market Participants</h1>
+        <p>I. Theory of commodity production — II. Markets and the market economy</p>
       </div>
       <a
         href="#introduction"

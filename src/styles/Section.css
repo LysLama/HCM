@@ -37,7 +37,7 @@
 
 /* --- Kiểu cho Nội dung chính --- */
 .section-main-content {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 50px auto; /* Căn giữa và tạo khoảng cách trên dưới */
   padding: 0 20px;
 }
@@ -141,6 +141,80 @@
   font-size: 1.1rem; /* Tăng từ 0.95rem lên 1.1rem */
   border-top: 2px solid #e9ecef;
   padding-top: 15px;
+}
+
+/* Anchor nav */
+.anchor-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 16px;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0 16px;
+  margin-bottom: 24px;
+}
+.anchor-nav a {
+  color: #b10000; /* primary theme color */
+  text-decoration: none;
+  background: rgba(177, 0, 0, 0.06);
+  border: 1px solid rgba(177, 0, 0, 0.25);
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background .2s, color .2s, border-color .2s;
+}
+.anchor-nav a:hover {
+  background: rgba(177, 0, 0, 0.12);
+  color: #8a0000;
+  border-color: rgba(177, 0, 0, 0.4);
+}
+
+/* Two-column layout */
+.two-col {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 28px;
+}
+.col-main { min-width: 0; }
+.col-side { min-width: 0; }
+
+.side-card {
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 10px;
+  padding: 16px 18px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  margin-bottom: 16px;
+  color: #000; /* Ensure fixed sidebar text is black */
+}
+.side-card h4 { margin: 0 0 8px; color: #b10000; }
+.side-card.muted { opacity: .95; font-size: .95rem; }
+.sticky { position: sticky; top: 90px; }
+
+/* Slightly increase indent for sidebar TOC lists */
+.col-side .side-card ul,
+.col-side .side-card ol {
+  padding-left: 1.3rem;
+}
+
+/* Centered variant for side-cards */
+.side-card.centered {
+  text-align: center;
+}
+.side-card.centered ul,
+.side-card.centered ol {
+  padding-left: 1.1rem; /* keep bullets/numbers visible but closer to center */
+  display: inline-block; /* shrink to content width for better centering */
+  text-align: left; /* keep multi-line items aligned nicely */
+}
+.side-card.centered li { margin-bottom: .35rem; }
+
+.btn-primary {
+  display: inline-block;
+  margin-top: 8px;
+  background: linear-gradient(90deg,#b10000,#d52424);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-decoration: none;
 }
 
 /* Responsive */
@@ -258,11 +332,13 @@
   color: #e65100;
 }
 
-.callout strong {
+/* Only the leading title inside a callout should be block; keep inline <strong> inside paragraphs inline */
+.callout > strong {
   font-weight: 600;
   display: block;
   margin-bottom: 8px;
 }
+.callout p strong { display: inline; margin: 0; }
 
 /* Styling cho sections */
 section {
@@ -290,6 +366,7 @@ section ol li {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  .two-col { grid-template-columns: 1fr; }
   .grid.two-cols {
     grid-template-columns: 1fr;
   }
@@ -353,6 +430,13 @@ section ol li {
   scrollbar-width: thin;
   scrollbar-color: #b10000 #f1f1f1;
   cursor: grab;
+}
+
+/* Print styles: hide sidebar, use serif for main */
+@media print {
+  .anchor-nav, .col-side, .video-section { display: none !important; }
+  .two-col { display: block; }
+  .content-text { font-family: Georgia, 'Times New Roman', serif; font-size: 12pt; }
 }
 
 .responsive-table.is-dragging { cursor: grabbing; }

@@ -4,6 +4,14 @@ import InteractiveTimeline from '../components/InteractiveTimeline';
 import KnowledgeMap from '../components/KnowledgeMap';
 import '../styles/Section.css';
 import '../styles/CombinedKnowledge.css';
+// Icons
+import learningPathIcon from '../assets/icons/learning-path.svg';
+import conceptMapIcon from '../assets/icons/concept-map.svg';
+import moneyIcon from '../assets/icons/money.svg';
+import servicesIcon from '../assets/icons/services.svg';
+import marketIcon from '../assets/icons/market.svg';
+import marketEconomyIcon from '../assets/icons/market-economy.svg';
+import linkIcon from '../assets/icons/link.svg';
 
 const CombinedKnowledgePage = () => {
     const [activeSection, setActiveSection] = useState('timeline');
@@ -17,13 +25,13 @@ const CombinedKnowledgePage = () => {
                                 <div className="hero-overlay"></div>
                                 {isEn ? (
                                     <>
-                                        <h1 className="section-hero-title">Knowledge & Philosophical History</h1>
-                                        <p className="hero-subtitle">Explore historical flow and conceptual connections in class struggle theory</p>
+                                        <h1 className="section-hero-title">Chapter 2 • Knowledge Hub</h1>
+                                        <p className="hero-subtitle">Goods, money, services, markets, and the market economy — overview, learning path, and concept map</p>
                                     </>
                                 ) : (
                                     <>
-                                        <h1 className="section-hero-title">Tri Thức & Lịch Sử Triết Học</h1>
-                                        <p className="hero-subtitle">Khám phá dòng chảy lịch sử và mối liên kết tri thức trong lý thuyết đấu tranh giai cấp</p>
+                                        <h1 className="section-hero-title">Chương 2 • Trung Tâm Tri Thức</h1>
+                                        <p className="hero-subtitle">Hàng hóa, tiền tệ, dịch vụ, thị trường và kinh tế thị trường — tổng quan, lộ trình học và bản đồ khái niệm</p>
                                     </>
                                 )}
                         </header>
@@ -35,18 +43,18 @@ const CombinedKnowledgePage = () => {
                         className={`nav-tab ${activeSection === 'timeline' ? 'active' : ''}`}
                         onClick={() => setActiveSection('timeline')}
                     >
-                        <span className="tab-icon">📜</span>
-                        <span className="tab-label">{isEn ? 'Timeline' : 'Dòng Thời Gian'}</span>
-                        <span className="tab-description">{isEn ? 'Historical development' : 'Lịch sử phát triển'}</span>
+                        <span className="tab-icon"><img src={learningPathIcon} alt="" width={18} height={18} aria-hidden="true" /></span>
+                        <span className="tab-label">{isEn ? 'Learning Path' : 'Lộ Trình Học'}</span>
+                        <span className="tab-description">{isEn ? 'From goods to market economy' : 'Từ hàng hóa đến KTTT'}</span>
                     </button>
                     
                     <button
                         className={`nav-tab ${activeSection === 'knowledge' ? 'active' : ''}`}
                         onClick={() => setActiveSection('knowledge')}
                     >
-                        <span className="tab-icon">🧠</span>
-                        <span className="tab-label">{isEn ? 'Knowledge Map' : 'Bản Đồ Tri Thức'}</span>
-                        <span className="tab-description">{isEn ? 'Conceptual links' : 'Mối liên kết khái niệm'}</span>
+                        <span className="tab-icon"><img src={conceptMapIcon} alt="" width={18} height={18} aria-hidden="true" /></span>
+                        <span className="tab-label">{isEn ? 'Concept Map' : 'Bản Đồ Khái Niệm'}</span>
+                        <span className="tab-description">{isEn ? 'Connections among core ideas' : 'Liên kết giữa các khái niệm'}</span>
                     </button>
                 </div>
             </div>
@@ -58,8 +66,11 @@ const CombinedKnowledgePage = () => {
                     {activeSection === 'timeline' && (
                         <div className="section-content timeline-content">
                             <div className="section-intro">
-                                <h2>{isEn ? '📜 Historical Timeline' : '📜 Dòng Thời Gian Lịch Sử'}</h2>
-                                <p>{isEn ? 'Explore the development of philosophical thought from Marx, Engels, Lenin to the present. Each milestone marks turning points in forming and evolving class struggle theory.' : 'Khám phá hành trình phát triển tư tưởng triết học từ Marx, Engels, Lenin đến thời đại ngày nay. Mỗi mốc thời gian đánh dấu những bước ngoặt quan trọng trong sự hình thành và phát triển lý thuyết đấu tranh giai cấp.'}</p>
+                                <h2>
+                                    <img src={learningPathIcon} alt="" width={22} height={22} aria-hidden="true" style={{ verticalAlign: 'text-bottom', marginRight: 8 }} />
+                                    {isEn ? 'Learning Path' : 'Lộ Trình Học'}
+                                </h2>
+                                <p>{isEn ? 'A quick path through Chapter 2: Goods → Money → Services → Market concepts → Market economy.' : 'Lộ trình nhanh Chương 2: Hàng hóa → Tiền tệ → Dịch vụ → Khái niệm thị trường → Nền kinh tế thị trường.'}</p>
                             </div>
                             <InteractiveTimeline />
                         </div>
@@ -69,8 +80,11 @@ const CombinedKnowledgePage = () => {
                     {activeSection === 'knowledge' && (
                         <div className="section-content knowledge-content">
                             <div className="section-intro">
-                                <h2>{isEn ? '🧠 Knowledge Map' : '🧠 Bản Đồ Tri Thức'}</h2>
-                                <p>{isEn ? 'Explore the conceptual network in Marxist–Leninist philosophy. Interact with nodes to understand relationships and influence among core ideas.' : 'Khám phá mạng lưới khái niệm phức tạp trong lý thuyết triết học Mác-Lênin. Tương tác với từng khái niệm để hiểu rõ mối quan hệ và ảnh hưởng lẫn nhau giữa các ý tưởng cốt lõi.'}</p>
+                                <h2>
+                                    <img src={conceptMapIcon} alt="" width={22} height={22} aria-hidden="true" style={{ verticalAlign: 'text-bottom', marginRight: 8 }} />
+                                    {isEn ? 'Concept Map' : 'Bản Đồ Khái Niệm'}
+                                </h2>
+                                <p>{isEn ? 'See how goods, money, services, market mechanisms, and state roles connect.' : 'Xem cách các khái niệm hàng hóa, tiền tệ, dịch vụ, cơ chế thị trường và vai trò Nhà nước liên kết với nhau.'}</p>
                             </div>
                             <KnowledgeMap />
                         </div>
@@ -81,37 +95,37 @@ const CombinedKnowledgePage = () => {
             {/* Quick Links Section */}
             <section className="quick-links-section">
                 <div className="quick-links-container">
-                    <h3>{isEn ? '🔗 Quick Links to In-Depth Content' : '🔗 Liên Kết Nhanh đến Nội Dung Chuyên Sâu'}</h3>
+                    <h3><img src={linkIcon} alt="" width={18} height={18} aria-hidden="true" style={{ verticalAlign: 'text-bottom', marginRight: 6 }} />{isEn ? 'Quick Links (Chapter 2)' : 'Liên Kết Nhanh (Chương 2)'}</h3>
                     <div className="quick-links-grid">
-                        <a href={isEn ? '/theory/en' : '/theory'} className="quick-link-card theory">
-                            <div className="card-icon">📚</div>
+                        <a href={isEn ? '/chapter2/money/en' : '/chapter2/money'} className="quick-link-card theory">
+                            <div className="card-icon"><img src={moneyIcon} alt="" width={22} height={22} aria-hidden="true" /></div>
                             <div className="card-content">
-                                <h4>{isEn ? 'Foundational Theory' : 'Lý Thuyết Nền Tảng'}</h4>
-                                <p>{isEn ? 'Study class and class struggle concepts in Marxism–Leninism' : 'Tìm hiểu khái niệm giai cấp và đấu tranh giai cấp theo Mác-Lênin'}</p>
+                                <h4>{isEn ? 'Money' : 'Tiền Tệ'}</h4>
+                                <p>{isEn ? 'Origins, nature, functions, and circulation laws' : 'Nguồn gốc, bản chất, chức năng và quy luật lưu thông'}</p>
                             </div>
                         </a>
 
-                        <a href={isEn ? '/role/en' : '/role'} className="quick-link-card role">
-                            <div className="card-icon">⚡</div>
+                        <a href={isEn ? '/chapter2/services/en' : '/chapter2/services'} className="quick-link-card role">
+                            <div className="card-icon"><img src={servicesIcon} alt="" width={22} height={22} aria-hidden="true" /></div>
                             <div className="card-content">
-                                <h4>{isEn ? 'Historical Role' : 'Vai Trò Lịch Sử'}</h4>
-                                <p>{isEn ? 'Analyze the role of class struggle in social development' : 'Phân tích vai trò của đấu tranh giai cấp trong lịch sử phát triển xã hội'}</p>
+                                <h4>{isEn ? 'Services' : 'Dịch Vụ'}</h4>
+                                <p>{isEn ? 'Nature of services and special exchange relations' : 'Bản chất dịch vụ & các quan hệ trao đổi đặc thù'}</p>
                             </div>
                         </a>
 
-                        <a href={isEn ? '/future/en' : '/future'} className="quick-link-card future">
-                            <div className="card-icon">🌅</div>
+                        <a href={isEn ? '/chapter2/market-concepts/en' : '/chapter2/market-concepts'} className="quick-link-card future">
+                            <div className="card-icon"><img src={marketIcon} alt="" width={22} height={22} aria-hidden="true" /></div>
                             <div className="card-content">
-                                <h4>{isEn ? 'Future Society' : 'Tương Lai Xã Hội'}</h4>
-                                <p>{isEn ? 'Explore possibilities of a society beyond class antagonisms' : 'Khám phá khả năng của xã hội không còn đối kháng giai cấp'}</p>
+                                <h4>{isEn ? 'Market Concepts' : 'Khái Niệm Thị Trường'}</h4>
+                                <p>{isEn ? 'Definition, types, and roles of markets' : 'Khái niệm, phân loại và vai trò của thị trường'}</p>
                             </div>
                         </a>
 
-                        <a href={isEn ? '/conclusion/en' : '/conclusion'} className="quick-link-card conclusion">
-                            <div className="card-icon">🎯</div>
+                        <a href={isEn ? '/chapter2/market-economy/en' : '/chapter2/market-economy'} className="quick-link-card conclusion">
+                            <div className="card-icon"><img src={marketEconomyIcon} alt="" width={22} height={22} aria-hidden="true" /></div>
                             <div className="card-content">
-                                <h4>{isEn ? 'Conclusion' : 'Kết Luận'}</h4>
-                                <p>{isEn ? 'Summary and contemporary relevance of class struggle theory' : 'Tổng kết và ý nghĩa đương đại của lý thuyết đấu tranh giai cấp'}</p>
+                                <h4>{isEn ? 'Market Economy' : 'Kinh Tế Thị Trường'}</h4>
+                                <p>{isEn ? 'Core features, key laws, and the role of the state' : 'Đặc trưng, các quy luật chủ yếu & vai trò Nhà nước'}</p>
                             </div>
                         </a>
                     </div>
