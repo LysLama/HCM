@@ -71,13 +71,13 @@ const Chapter2Money = () => {
           <div className="card">
             <h4>Nguyên lý tổng quát</h4>
             <p><code>M = (P × Q) / V</code></p>
-            <p>M: lượng tiền cần cho lưu thông; P: mức giá; Q: khối lượng hàng hóa–dịch vụ; V: số vòng quay tiền.</p>
+            <p><strong>Chú thích</strong>: <strong>M</strong> — lượng tiền cần thiết để lưu thông; <strong>P</strong> — giá cả; <strong>Q</strong> — số lượng hàng hóa; <strong>V</strong> — số vòng lưu thông tiền.</p>
             <p>Hàm ý: M tỉ lệ thuận P×Q và tỉ lệ nghịch V.</p>
           </div>
           <div className="card">
             <h4>Thanh toán không dùng tiền mặt</h4>
             <p><code>M = [P×Q − (G1 + G2) + G3] / V</code></p>
-            <p>G1: hàng bán chịu; G2: hàng khấu trừ; G3: hàng đến kỳ thanh toán.</p>
+            <p><strong>Chú thích</strong>: <strong>P×Q</strong> — Tổng giá trị hàng hóa; <strong>G1</strong> — Tổng giá trị hàng hóa bán chịu; <strong>G2</strong> — Tổng giá trị hàng hóa khấu trừ lẫn nhau; <strong>G3</strong> — Tổng giá trị hàng hóa đến kỳ thanh toán; <strong>V</strong> — số vòng quay trung bình của tiền.</p>
             <p>Phát hành quá mức → mất giá tiền/lạm phát ⇒ cần kỷ luật phát hành.</p>
           </div>
 

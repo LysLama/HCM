@@ -50,16 +50,27 @@ const Chapter2MarketEconomy = () => {
 
             {/* C. Ưu thế & khuyết tật */}
             <section id="proscons">
-              <h3>C. Ưu thế &amp; khuyết tật (rất ngắn)</h3>
+              <h3>C. Ưu thế &amp; khuyết tật</h3>
               <div className="grid two-cols gap-md">
                 <div className="callout success">
                   <strong>Ưu thế</strong>
-                  <p>Kích thích <strong>sáng tạo</strong>, phát huy lợi thế vùng/ngành, nâng <strong>năng suất &amp; hiệu quả</strong>.</p>
+                  <ul>
+                    <li><strong>Khuyến khích sáng tạo</strong>.</li>
+                    <li><strong>Phát huy tiềm năng, lợi thế của từng vùng miền</strong>.</li>
+                    <li><strong>Đáp ứng nhu cầu</strong>: Đa dạng hàng hóa, dịch vụ.</li>
+                  </ul>
                 </div>
                 <div className="callout warning">
                   <strong>Khuyết tật</strong>
-                  <p>Nguy cơ <strong>đầu cơ/gian lận/khủng hoảng</strong>, <strong>suy thoái môi trường</strong>, <strong>phân hóa xã hội</strong>; <strong>không tự khắc phục</strong> nếu thiếu vai trò Nhà nước.</p>
+                  <ul>
+                    <li><strong>Nguy cơ khủng hoảng</strong>: Nếu cung–cầu mất cân đối, kinh tế có thể suy thoái.</li>
+                    <li><strong>Suy thoái môi trường</strong>: Khai thác rừng, xả thải vì lợi nhuận.</li>
+                    <li><strong>Phân hóa giàu nghèo</strong>: Người giỏi, có vốn dễ giàu; người yếu thế dễ nghèo đi, dẫn đến khoảng cách giàu nghèo.</li>
+                  </ul>
                 </div>
+              </div>
+              <div className="callout info" style={{marginTop:'12px'}}>
+                <strong>Giải pháp</strong>: Nhà nước can thiệp bằng <strong>chính sách thuế, trợ cấp</strong> để giảm khuyết điểm, đảm bảo <strong>công bằng</strong> và giữ <strong>ổn định</strong> kinh tế.
               </div>
             </section>
 
@@ -86,7 +97,9 @@ const Chapter2MarketEconomy = () => {
                   <h4>3) Quy luật lưu thông tiền tệ</h4>
                   <p><strong>Nguyên lý</strong>: lượng tiền đưa vào lưu thông phải <strong>ăn khớp</strong> với lưu thông hàng hóa–dịch vụ; lệch pha → <strong>trì trệ</strong> hoặc <strong>lạm phát</strong>.</p>
                   <div><code>M = (P × Q) / V</code></div>
+                  <p className="formula-note">Trong đó: <strong>M</strong> — lượng tiền cần thiết để lưu thông; <strong>P</strong> — giá cả; <strong>Q</strong> — số lượng hàng hóa; <strong>V</strong> — số vòng lưu thông của tiền.</p>
                   <div><code>M = [P×Q − (G1 + G2) + G3] / V</code></div>
+                  <p className="formula-note">Trong đó: <strong>P×Q</strong> — tổng giá trị hàng hóa; <strong>G1</strong> — tổng giá trị hàng hóa bán chịu; <strong>G2</strong> — tổng giá trị hàng hóa khấu trừ lẫn nhau; <strong>G3</strong> — tổng giá trị hàng hóa đến kỳ thanh toán; <strong>V</strong> — số vòng quay trung bình của tiền.</p>
                   <p><strong>Hàm ý</strong>: <strong>phát hành tiền quá mức</strong> làm <strong>mất giá tiền</strong> và <strong>tăng lạm phát</strong> ⇒ cần kỷ luật phát hành.</p>
                 </div>
                 <div className="card">
