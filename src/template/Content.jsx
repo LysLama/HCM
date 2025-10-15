@@ -11,7 +11,7 @@ import ketLuanImg from '../assets/img/conclusion.jpg';
 const sections = [
     {
         id: 'chapter2/money',
-        title: '1) Tiền tệ (Thuyết trình)',
+        title: '1) Tiền tệ',
         description: 'Nguồn gốc, bản chất và các chức năng của tiền trong kinh tế hàng hoá.',
         img: lyThuyetImg,
     },
