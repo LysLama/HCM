@@ -332,13 +332,11 @@
   color: #e65100;
 }
 
-/* Only the leading title inside a callout should be block; keep inline <strong> inside paragraphs inline */
-.callout > strong {
-  font-weight: 600;
-  display: block;
-  margin-bottom: 8px;
-}
-.callout p strong { display: inline; margin: 0; }
+/* Only the leading title inside a callout should be block; keep other <strong> inline */
+/* Default: all strongs inside callout are inline */
+.callout strong { display: inline; font-weight: 600; }
+/* Promote ONLY the first direct strong (used as title) to block */
+.callout > strong:first-child { display: block; margin-bottom: 8px; }
 
 /* Styling cho sections */
 section {
