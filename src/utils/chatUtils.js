@@ -141,6 +141,29 @@ export const getPhilosophyKeywords = () => {
   ];
 };
 
+// Helper: explicit allow for Chapter 2 topics (VN/EN)
+export const isChapter2Topic = (text) => {
+  if (!text) return false;
+  const lower = text.toLowerCase();
+  const simpleNormalize = (s) => s
+    .normalize('NFD')
+    .replace(/\p{Diacritic}/gu, '')
+    .replace(/đ/g, 'd')
+    .replace(/Đ/g, 'd');
+  const norm = simpleNormalize(lower);
+  const patterns = [
+    /\b(hang hoa|hàng hóa)\b/i,
+    /\b(tien te|tiền tệ)\b/i,
+    /\b(dich vu|dịch vụ)\b/i,
+    /\b(thi truong|thị trường)\b/i,
+    /\b(kinh te thi truong|market economy)\b/i,
+    /\b(quan he trao doi|quan hệ trao đổi)\b/i,
+    /\b(money|service|services|market|exchange relations)\b/i,
+    /\b(marx|mac)\b/i
+  ];
+  return patterns.some((re) => re.test(norm) || re.test(lower));
+};
+
 // Nới lỏng điều kiện: chỉ chặn các câu hoàn toàn ngoài phạm vi (ví dụ: nấu ăn, bóng đá, giá cổ phiếu) để tránh chặn nhầm.
 export const isPhilosophyRelated = (text) => {
   if (!text || !text.trim()) return false;
@@ -173,8 +196,7 @@ export const isPhilosophyRelated = (text) => {
   const matchedCore = coreIndicators.some(k => norm.includes(simpleNormalize(k)));
 
   // Chapter 2 allowlist (both accented and normalized variants)
-  const chapter2Allow = /\b(hang hoa|hàng hóa|tien te|tiền tệ|dich vu|dịch vụ|thi truong|thị trường|kinh te thi truong|market economy|quan he trao doi|quan hệ trao đổi|marx|mac)\b/.test(norm) ||
-                        /\b(money|services|service|market|exchange relations)\b/i.test(lower);
+  const chapter2Allow = isChapter2Topic(text);
 
   // Giữ lại bộ từ khóa chi tiết cũ như 1 lớp bổ sung
   const hasFromFullList = getPhilosophyKeywords().some(k => lower.includes(k));
