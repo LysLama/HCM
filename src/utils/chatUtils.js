@@ -126,7 +126,17 @@ export const getPhilosophyKeywords = () => {
     'triết học công nghệ', 'philosophy of technology',
     'triết học giáo dục', 'philosophy of education', 'triết học khoa học', 'philosophy of science',
     'triết học nghệ thuật', 'philosophy of art', 'triết học tôn giáo', 'philosophy of religion',
-    'kinh tế'
+    'kinh tế',
+
+    // Chapter 2 (VN/EN) – explicit allow terms
+    'hàng hóa', 'hang hoa',
+    'tiền tệ', 'tien te',
+    'dịch vụ', 'dich vu',
+    'thị trường', 'thi truong',
+    'kinh tế thị trường', 'market economy',
+    'quan hệ trao đổi', 'quan he trao doi',
+    'giá cả', 'gia ca', 'giá trị', 'gia tri',
+    'marx', 'mac'
 
   ];
 };
@@ -162,6 +172,10 @@ export const isPhilosophyRelated = (text) => {
   ];
   const matchedCore = coreIndicators.some(k => norm.includes(simpleNormalize(k)));
 
+  // Chapter 2 allowlist (both accented and normalized variants)
+  const chapter2Allow = /\b(hang hoa|hàng hóa|tien te|tiền tệ|dich vu|dịch vụ|thi truong|thị trường|kinh te thi truong|market economy|quan he trao doi|quan hệ trao đổi|marx|mac)\b/.test(norm) ||
+                        /\b(money|services|service|market|exchange relations)\b/i.test(lower);
+
   // Giữ lại bộ từ khóa chi tiết cũ như 1 lớp bổ sung
   const hasFromFullList = getPhilosophyKeywords().some(k => lower.includes(k));
 
@@ -180,8 +194,8 @@ export const isPhilosophyRelated = (text) => {
   // Logic quyết định:
   // 1. Nếu rõ ràng off-topic → false
   if (isOffTopic) return false;
-  // 2. Nếu khớp core hoặc full list hoặc structural cue → true
-  if (matchedCore || hasFromFullList || structuralCue) return true;
+  // 2. Nếu khớp core hoặc full list hoặc structural cue hoặc chapter2Allow → true
+  if (matchedCore || hasFromFullList || structuralCue || chapter2Allow) return true;
   // 3. fallback: cho phép các câu chào để AI tự hướng người dùng
   const greetings = ['xin chao','chao','hello','hi','hey'];
   if (greetings.some(g => norm.includes(g))) return true;
