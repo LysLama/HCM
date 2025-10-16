@@ -96,10 +96,16 @@ const Chapter2MarketEconomy = () => {
                 <div className="card">
                   <h4>3) Quy luật lưu thông tiền tệ</h4>
                   <p><strong>Nguyên lý</strong>: lượng tiền đưa vào lưu thông phải <strong>ăn khớp</strong> với lưu thông hàng hóa–dịch vụ; lệch pha → <strong>trì trệ</strong> hoặc <strong>lạm phát</strong>.</p>
-                  <div><code>M = (P × Q) / V</code></div>
-                  <p className="formula-note">Trong đó: <strong>M</strong> — lượng tiền cần thiết để lưu thông; <strong>P</strong> — giá cả; <strong>Q</strong> — số lượng hàng hóa; <strong>V</strong> — số vòng lưu thông của tiền.</p>
-                  <div><code>M = [P×Q − (G1 + G2) + G3] / V</code></div>
-                  <p className="formula-note">Trong đó: <strong>P×Q</strong> — tổng giá trị hàng hóa; <strong>G1</strong> — tổng giá trị hàng hóa bán chịu; <strong>G2</strong> — tổng giá trị hàng hóa khấu trừ lẫn nhau; <strong>G3</strong> — tổng giá trị hàng hóa đến kỳ thanh toán; <strong>V</strong> — số vòng quay trung bình của tiền.</p>
+                  <div className="formula-box">
+                    <span className="formula-title">Công thức cơ bản</span>
+                    <div><code>M = (P × Q) / V</code></div>
+                    <p className="formula-note">Trong đó: <strong>M</strong> — lượng tiền cần thiết để lưu thông; <strong>P</strong> — giá cả; <strong>Q</strong> — số lượng hàng hóa; <strong>V</strong> — số vòng lưu thông của tiền.</p>
+                  </div>
+                  <div className="formula-box">
+                    <span className="formula-title">Khi có thanh toán không dùng tiền mặt</span>
+                    <div><code>M = [P×Q − (G1 + G2) + G3] / V</code></div>
+                    <p className="formula-note">Trong đó: <strong>P×Q</strong> — tổng giá trị hàng hóa; <strong>G1</strong> — tổng giá trị hàng hóa bán chịu; <strong>G2</strong> — tổng giá trị hàng hóa khấu trừ lẫn nhau; <strong>G3</strong> — tổng giá trị hàng hóa đến kỳ thanh toán; <strong>V</strong> — số vòng quay trung bình của tiền.</p>
+                  </div>
                   <p><strong>Hàm ý</strong>: <strong>phát hành tiền quá mức</strong> làm <strong>mất giá tiền</strong> và <strong>tăng lạm phát</strong> ⇒ cần kỷ luật phát hành.</p>
                 </div>
                 <div className="card">

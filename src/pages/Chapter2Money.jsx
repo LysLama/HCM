@@ -13,7 +13,6 @@ const Chapter2Money = () => {
         <nav className="anchor-nav" aria-label="Mục lục trang">
           <a href="#origin">Nguồn gốc & bản chất</a>
           <a href="#functions">Chức năng</a>
-          <a href="#equations">Quy luật tiền tệ</a>
           <a href="#modern">Liên hệ hiện đại</a>
           <a href="#videos">Video</a>
         </nav>
@@ -67,19 +66,7 @@ const Chapter2Money = () => {
             </div>
           </div>
 
-          <h3 id="equations">Quy luật lưu thông tiền tệ (công thức & ý nghĩa)</h3>
-          <div className="card">
-            <h4>Nguyên lý tổng quát</h4>
-            <p><code>M = (P × Q) / V</code></p>
-            <p><strong>Chú thích</strong>: <strong>M</strong> — lượng tiền cần thiết để lưu thông; <strong>P</strong> — giá cả; <strong>Q</strong> — số lượng hàng hóa; <strong>V</strong> — số vòng lưu thông tiền.</p>
-            <p>Hàm ý: M tỉ lệ thuận P×Q và tỉ lệ nghịch V.</p>
-          </div>
-          <div className="card">
-            <h4>Thanh toán không dùng tiền mặt</h4>
-            <p><code>M = [P×Q − (G1 + G2) + G3] / V</code></p>
-            <p><strong>Chú thích</strong>: <strong>P×Q</strong> — Tổng giá trị hàng hóa; <strong>G1</strong> — Tổng giá trị hàng hóa bán chịu; <strong>G2</strong> — Tổng giá trị hàng hóa khấu trừ lẫn nhau; <strong>G3</strong> — Tổng giá trị hàng hóa đến kỳ thanh toán; <strong>V</strong> — số vòng quay trung bình của tiền.</p>
-            <p>Phát hành quá mức → mất giá tiền/lạm phát ⇒ cần kỷ luật phát hành.</p>
-          </div>
+          {/* Quy luật lưu thông tiền tệ: phần công thức đã được chuyển sang mục "Nền kinh tế thị trường" để tập trung một chỗ. */}
 
           <h3 id="modern">Ghi chú nhanh</h3>
           <ul>
@@ -121,8 +108,8 @@ const Chapter2Money = () => {
           <aside className="col-side">
             <div className="side-card sticky">
               <h4>CTA</h4>
-              <p>Xem nhanh công thức & timeline ở bên dưới hoặc in trang (Ctrl+P) để học ngoại tuyến.</p>
-              <a className="btn-primary" href="#equations">Xem công thức</a>
+              <p>Các công thức của <em>Quy luật lưu thông tiền tệ</em> đã được chuyển sang trang <strong>Nền kinh tế thị trường</strong>.</p>
+              <a className="btn-primary" href="/chapter2/market-economy#laws">Xem công thức</a>
             </div>
             <div className="side-card centered">
               <h4>Video nhanh</h4>
