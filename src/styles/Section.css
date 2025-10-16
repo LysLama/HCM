@@ -338,6 +338,31 @@
 /* Promote ONLY the first direct strong (used as title) to block */
 .callout > strong:first-child { display: block; margin-bottom: 8px; }
 
+/* Styling for formula boxes */
+.formula-box {
+  background: #f7fbff; /* light blue-ish for math readability */
+  border: 1px solid #d7e9ff;
+  border-left: 4px solid #1976d2;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin: 12px 0;
+}
+.formula-box .formula-title {
+  display: block;
+  color: #0d47a1;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+.formula-box code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1.05rem;
+  background: transparent;
+}
+.formula-note {
+  margin: 8px 0 0;
+  color: #2c3e50;
+}
+
 /* Styling cho sections */
 section {
   margin: 40px 0;
