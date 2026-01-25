@@ -63,6 +63,12 @@ const Quiz = () => {
         localStorage.setItem('quizAttemptCount', String(attemptCount));
     }, [attemptCount]);
 
+    useEffect(() => {
+        if (quizData.length && currentQuestionIndex >= quizData.length) {
+            setCurrentQuestionIndex(0);
+        }
+    }, [currentQuestionIndex, quizData.length]);
+
     const confettiPieces = useMemo(() => Array.from({ length: 36 }, (_, index) => index), []);
 
     const buildExplanationPrompt = (question, userAnswer) => {
@@ -164,6 +170,14 @@ const Quiz = () => {
 
     const renderQuiz = () => {
         const question = quizData[currentQuestionIndex];
+        if (!question) {
+            return (
+                <div className="quiz-results">
+                    <h2>Đang tải câu hỏi...</h2>
+                    <p>Vui lòng thử lại nếu dữ liệu chưa sẵn sàng.</p>
+                </div>
+            );
+        }
         const userAnswer = userAnswers[currentQuestionIndex];
         const aiExplanation = aiExplanations[currentQuestionIndex];
         const aiIsLoading = aiLoading[currentQuestionIndex];

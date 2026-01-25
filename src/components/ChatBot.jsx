@@ -84,13 +84,16 @@ const ChatBot = () => {
   }, [isOpen, messages.length]);
 
   // Gọi Cloudflare Workers AI endpoint (/api/ai/chat)
-  const callWorkersAI = async (prompt, setApiStatus, langHint='vi') => {
+  const callWorkersAI = async (prompt, setApiStatus, langHint = 'vi', options = {}) => {
     // Build system prompt with dynamic language instruction
     const sys = langHint === 'en'
       ? 'You are a knowledgeable philosophy assistant (comparative East-West, classical-modern, Marxist). Respond in clear, concise ENGLISH.'
       : 'Bạn là trợ lý triết học am hiểu phân tích so sánh (Đông-Tây, cổ điển-hiện đại, Mác-xít). Trả lời bằng TIẾNG VIỆT rõ ràng, súc tích.';
 
-    const payload = { messages: [ { role: 'system', content: sys }, { role: 'user', content: prompt } ] };
+    const payload = {
+      messages: [ { role: 'system', content: sys }, { role: 'user', content: prompt } ],
+      max_tokens: options.max_tokens
+    };
     const response = await fetch('/api/ai/chat', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -152,25 +155,18 @@ const ChatBot = () => {
   console.log('[AI] chuẩn bị gọi API cho câu hỏi:', userMessage);
     
     // Tạo prompt cho các câu hỏi triết học
-    const prompt = `Bạn là một chuyên gia triết học có kiến thức sâu rộng về nhiều trường phái triết học khác nhau. Hãy trả lời câu hỏi sau một cách:
+    const prompt = `Bạn là trợ lý học tập về Tư tưởng Hồ Chí Minh.
+Hãy trả lời đúng trọng tâm, ngắn gọn, dễ hiểu.
 
-- Chính xác và có căn cứ khoa học
-- Dễ hiểu, phù hợp với nhiều đối tượng  
-- Có ví dụ minh họa cụ thể khi cần thiết
-- So sánh giữa các trường phái khi phù hợp
-- Bao gồm cả triết học phương Đông và phương Tây
-- Liên hệ với thực tiễn đời sống khi có thể
-
-Lĩnh vực chuyên môn bao gồm:
-- Triết học cổ điển Hy Lạp (Socrates, Plato, Aristotle)
-- Triết học phương Đông (Khổng Tử, Lão Tử, Phật giáo)
-- Triết học phương Tây hiện đại (Kant, Hegel, Nietzsche)
-- Triết học Mác-Lênin
-- Các ngành triết học: đạo đức học, thẩm mỹ học, nhận thức luận
+YÊU CẦU BẮT BUỘC:
+- Tối đa 90-120 từ.
+- Ưu tiên 3-5 gạch đầu dòng.
+- Không lan man, không thêm phần lịch sử dài.
+- Nếu cần so sánh, chỉ 1 câu ngắn.
 
 Câu hỏi: ${userMessage}
 
-Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông tin (khoảng 150-250 từ). Nếu câu hỏi liên quan đến nhiều trường phái, hãy so sánh quan điểm của họ.`;
+Trả lời bằng tiếng Việt.`;
 
     try {
       // In-flight dedupe theo nguyên văn câu hỏi
@@ -198,7 +194,7 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
       const langHint = hasVietnamese ? 'vi' : (englishIndicators ? 'en' : (isEn ? 'en' : 'vi'));
 
       const p = (async () => {
-        const responseText = await callWorkersAI(prompt, setApiStatus, langHint);
+        const responseText = await callWorkersAI(prompt, setApiStatus, langHint, { max_tokens: 320 });
         return formatPhilosophyResponse(responseText);
       })();
 
