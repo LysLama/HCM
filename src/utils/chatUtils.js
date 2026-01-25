@@ -62,30 +62,42 @@ const normalizeText = (text = '') =>
     .replace(/\s+/g, ' ')
     .trim();
 
-export const isPhilosophyRelated = (message = '') => {
+const greetingKeywords = [
+  'xin chao', 'chao', 'hello', 'hi', 'hey', 'cam on', 'thanks', 'thank you', 'tam biet', 'bye'
+];
+
+const topicKeywords = [
+  // Core philosophy
+  'triet hoc', 'philosophy', 'dao duc', 'ethics', 'nhan thuc', 'epistemology',
+  'ton tai', 'ontology', 'logic', 'luan ly', 'my hoc', 'aesthetics',
+  // Schools & thinkers
+  'socates', 'socrates', 'plato', 'aristotle', 'kant', 'hegel', 'nietzsche',
+  'khong tu', 'lao tu', 'phat giao', 'phat', 'dao', 'nho giao',
+  'marx', 'mác', 'lenin', 'mác lenin', 'engels',
+  // Ho Chi Minh thought theme
+  'ho chi minh', 'hcm', 'dai doan ket', 'doan ket toan dan',
+  'mat tran', 'to quoc', 'dan toc', 'luc luong', 'nen tang', 'phuong phap', 'vai tro',
+  // English keywords for the same theme
+  'great national unity', 'great national solidarity', 'national unity', 'national solidarity',
+  'unity', 'solidarity', 'united front', 'front', 'ho chi minh thought', 'ho chi minh'
+];
+
+export const isGreeting = (message = '') => {
   const normalized = normalizeText(message);
   if (!normalized) return false;
+  const words = normalized.split(' ');
+  return greetingKeywords.some(keyword => words.includes(normalizeText(keyword)));
+};
 
-  const greetingKeywords = [
-    'xin chao', 'chao', 'hello', 'hi', 'hey', 'cam on', 'thanks', 'thank you', 'tam biet', 'bye'
-  ];
+export const isOnTopic = (message = '') => {
+  const normalized = normalizeText(message);
+  if (!normalized) return false;
+  return topicKeywords.some(keyword => normalized.includes(normalizeText(keyword)));
+};
 
-  if (greetingKeywords.some(keyword => normalized.includes(keyword))) {
-    return true;
-  }
-
-  const keywordList = [
-    // Core philosophy
-    'triet hoc', 'philosophy', 'dao duc', 'ethics', 'nhan thuc', 'epistemology',
-    'ton tai', 'ontology', 'logic', 'luan ly', 'my hoc', 'aesthetics',
-    // Schools & thinkers
-    'socates', 'socrates', 'plato', 'aristotle', 'kant', 'hegel', 'nietzsche',
-    'khong tu', 'lao tu', 'phat giao', 'phat', 'dao', 'nho giao',
-    'marx', 'mác', 'lenin', 'mác lenin', 'engels',
-    // Ho Chi Minh thought theme
-    'ho chi minh', 'hcm', 'dai doan ket', 'doan ket toan dan',
-    'mat tran', 'to quoc', 'dan toc', 'luc luong', 'nen tang', 'phuong phap', 'vai tro',
-  ];
-
-  return keywordList.some(keyword => normalized.includes(normalizeText(keyword)));
+export const detectLanguage = (message = '') => {
+  const hasVietnamese = /[àáạảãăằắặẳẵâầấậẩẫèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i.test(message);
+  if (hasVietnamese) return 'vi';
+  const englishIndicators = /(what|why|how|explain|compare|philosophy|dialectic|materialism|hegel|marx|unity|solidarity|apply|today|locality|smart|city)/i.test(message);
+  return englishIndicators ? 'en' : 'vi';
 };

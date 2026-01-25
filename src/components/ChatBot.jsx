@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import { HiChatBubbleLeftRight, HiXMark, HiPaperAirplane, HiUser, HiCpuChip, HiSparkles } from 'react-icons/hi2';
 import '../styles/ChatBot.css';
-import { getWelcomeMessages, getSampleQuestions, isPhilosophyRelated, formatPhilosophyResponse } from '../utils/chatUtils';
+import { getWelcomeMessages, getSampleQuestions, isGreeting, isOnTopic, detectLanguage, formatPhilosophyResponse } from '../utils/chatUtils';
 
 // Cloudflare Workers AI config
 const REQUEST_MIN_GAP_MS = 1000;
@@ -85,11 +85,9 @@ const ChatBot = () => {
 
   // Gọi Cloudflare Workers AI endpoint (/api/ai/chat)
   const callWorkersAI = async (prompt, setApiStatus, langHint = 'vi', options = {}) => {
-    // Build system prompt with dynamic language instruction
     const sys = langHint === 'en'
-      ? 'You are a knowledgeable philosophy assistant (comparative East-West, classical-modern, Marxist). Respond in clear, concise ENGLISH.'
-      : 'Bạn là trợ lý triết học am hiểu phân tích so sánh (Đông-Tây, cổ điển-hiện đại, Mác-xít). Trả lời bằng TIẾNG VIỆT rõ ràng, súc tích.';
-
+      ? 'You are a learning assistant for Ho Chi Minh Thought on great national solidarity. Respond in clear, concise ENGLISH.'
+      : 'Bạn là trợ lý học tập về Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc. Trả lời bằng TIẾNG VIỆT rõ ràng, súc tích.';
     const payload = {
       messages: [ { role: 'system', content: sys }, { role: 'user', content: prompt } ],
       max_tokens: options.max_tokens
@@ -129,33 +127,39 @@ const ChatBot = () => {
     }
     
     // Kiểm tra xem câu hỏi có liên quan đến triết học không
-    if (!isPhilosophyRelated(userMessage)) {
-      return "Xin lỗi, tôi chỉ có thể trả lời các câu hỏi liên quan đến triết học. Hãy hỏi tôi về triết học phương Đông (Khổng Tử, Lão Tử, Phật giáo), triết học phương Tây (Socrates, Kant, Nietzsche), triết học Mác-Lênin, hoặc các chủ đề như đạo đức, tồn tại, chân lý, ý nghĩa cuộc sống!";
+    const langHint = detectLanguage(userMessage);
+
+    if (isGreeting(userMessage)) {
+      return langHint === 'en'
+        ? "Hello! I’m your AI study assistant for Ho Chi Minh Thought on great national solidarity. Ask me about roles, objectives, forces, foundations, or the united front."
+        : "Xin chào! Tôi là trợ lý học tập về tư tưởng Hồ Chí Minh. Bạn muốn hỏi về vai trò, mục tiêu, lực lượng, nền tảng hay mặt trận đại đoàn kết?";
     }
 
-    // Xử lý các câu chào hỏi cơ bản
-    if (lowerMessage.includes('xin chào') || lowerMessage.includes('chào') || 
-        lowerMessage.includes('hello') || lowerMessage.includes('hi')) {
-      return "Xin chào! Tôi là trợ lý AI chuyên về triết học. Tôi có thể thảo luận về triết học phương Đông, phương Tây, Mác-Lênin và nhiều trường phái khác. Bạn có câu hỏi gì muốn thảo luận không?";
-    }
-    
-    if (lowerMessage.includes('bạn là ai') || lowerMessage.includes('giới thiệu')) {
-      return "Tôi là trợ lý AI chuyên về triết học với kiến thức về nhiều trường phái: triết học cổ điển Hy Lạp, triết học phương Đông (Khổng Tử, Lão Tử, Phật giáo), triết học phương Tây hiện đại, và triết học Mác-Lênin. Hãy đặt câu hỏi về bất kỳ chủ đề triết học nào bạn quan tâm!";
-    }
-
-    if (lowerMessage.includes('cảm ơn') || lowerMessage.includes('thank')) {
-      return "Rất vui được giúp đỡ bạn! Nếu bạn có thêm câu hỏi nào về triết học, đừng ngần ngại hỏi tôi nhé. Tôi luôn sẵn sàng thảo luận về các chủ đề triết học thú vị!";
-    }
-
-    if (lowerMessage.includes('tạm biệt') || lowerMessage.includes('bye')) {
-      return "Tạm biệt! Hy vọng cuộc trò chuyện về triết học hôm nay hữu ích với bạn. Chúc bạn có một ngày tốt lành và đừng quên tiếp tục khám phá thế giới triết học nhé!";
+    if (!isOnTopic(userMessage)) {
+      return langHint === 'en'
+        ? "I can help with topics related to Ho Chi Minh Thought on great national solidarity. Please ask about unity, the united front, roles, objectives, forces, or foundations."
+        : "Tôi chỉ hỗ trợ các câu hỏi về tư tưởng Hồ Chí Minh và đại đoàn kết toàn dân tộc. Bạn có thể hỏi về vai trò, mục tiêu, lực lượng, nền tảng hoặc mặt trận.";
     }
 
     // ƯU TIÊN GỌI API AI CHO TẤT CẢ CÂU HỎI TRIẾT HỌC
   console.log('[AI] chuẩn bị gọi API cho câu hỏi:', userMessage);
     
+    // Simple language detection: only answer in English when the user writes English
     // Tạo prompt cho các câu hỏi triết học
-    const prompt = `Bạn là trợ lý học tập về Tư tưởng Hồ Chí Minh.
+    const prompt = langHint === 'en'
+      ? `You are a learning assistant on Ho Chi Minh Thought.
+Answer clearly, concisely, and directly.
+
+REQUIREMENTS:
+- Max 90–120 words.
+- Prefer 3–5 bullet points.
+- Avoid long historical background.
+- If comparison is needed, keep it to one short sentence.
+
+Question: ${userMessage}
+
+Answer in English.`
+      : `Bạn là trợ lý học tập về Tư tưởng Hồ Chí Minh.
 Hãy trả lời đúng trọng tâm, ngắn gọn, dễ hiểu.
 
 YÊU CẦU BẮT BUỘC:
@@ -188,13 +192,8 @@ Trả lời bằng tiếng Việt.`;
   console.log('🤖', t.sending);
       setApiStatus('testing');
 
-      // Simple language detection: if message has no Vietnamese diacritics and many English stopwords, switch to English
-      const hasVietnamese = /[àáạảãăằắặẳẵâầấậẩẫèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i.test(userMessage);
-      const englishIndicators = /(what|why|how|explain|compare|philosophy|dialectic|materialism|hegel|marx)/i.test(userMessage);
-      const langHint = hasVietnamese ? 'vi' : (englishIndicators ? 'en' : (isEn ? 'en' : 'vi'));
-
       const p = (async () => {
-        const responseText = await callWorkersAI(prompt, setApiStatus, langHint, { max_tokens: 320 });
+      const responseText = await callWorkersAI(prompt, setApiStatus, langHint, { max_tokens: 320 });
         return formatPhilosophyResponse(responseText);
       })();
 
@@ -289,19 +288,32 @@ Trả lời bằng tiếng Việt.`;
     // Hiển thị trạng thái đang tải
     setIsLoading(true);
 
-    // Gửi đến AI và nhận phản hồi
-  const botResponse = await sendToAI(textToSend);
+    try {
+      // Gửi đến AI và nhận phản hồi
+      const botResponse = await sendToAI(textToSend);
 
-    // Thêm phản hồi của bot
-    const botMsg = {
-      id: Date.now() + 1,
-      text: botResponse,
-      sender: 'bot',
-      timestamp: new Date()
-    };
+      // Thêm phản hồi của bot
+      const botMsg = {
+        id: Date.now() + 1,
+        text: botResponse,
+        sender: 'bot',
+        timestamp: new Date()
+      };
 
-    setMessages(prev => [...prev, botMsg]);
-    setIsLoading(false);
+      setMessages(prev => [...prev, botMsg]);
+    } catch (error) {
+      const errMsg = isEn
+        ? `Sorry, I ran into a problem. Please try again later. (${error?.message || 'unknown error'})`
+        : `Xin lỗi, tôi gặp lỗi khi xử lý. Vui lòng thử lại sau. (${error?.message || 'lỗi không xác định'})`;
+      setMessages(prev => [...prev, {
+        id: Date.now() + 1,
+        text: errMsg,
+        sender: 'bot',
+        timestamp: new Date()
+      }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   // Xử lý gợi ý câu hỏi
