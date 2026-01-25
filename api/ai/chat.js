@@ -32,7 +32,14 @@ export default async function handler(req, res) {
   // Build prompt first (primary) then fallback to messages if needed.
   const prompt = messages.map(m => `${(m.role||'user').toUpperCase()}: ${m.content}`).join('\n') + '\nASSISTANT:';
 
-  async function callWorkers(body) {
+  const requestedMaxTokens = Number(body?.max_tokens ?? body?.maxTokens);
+  const maxTokens = Number.isFinite(requestedMaxTokens) ? requestedMaxTokens : 768;
+
+  async function callWorkers(payload) {
+    const finalBody = {
+      max_tokens: maxTokens,
+      ...payload
+    };
     return fetch(url, {
       method: 'POST',
       headers: {
@@ -40,7 +47,7 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
         'Accept': 'application/json'
       },
-      body: JSON.stringify(body)
+      body: JSON.stringify(finalBody)
     });
   }
 

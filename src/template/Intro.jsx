@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import '../styles/Intro.css';
 import tuyenNgonDocLapAudio from '../assets/audio/Tuyên Ngôn Độc Lập.mp3';
+import chucMungMauThanAudio from '../assets/audio/HCM_ChucMungNamMoiMauThan1968.mp3';
 import tienQuanCaAudio from '../assets/audio/Tiến quân ca (Văn Cao) - Hợp ca nam nữ - (Quốc ca) (Lời cũ trước năm 1955).mp3';
 import tienQuanCaSheetImg from '../assets/img/600259a92f299aaa0c06b7878df163a4.jpg';
 
@@ -66,7 +67,7 @@ const Intro = () => {
                         </li>
                         <li className="audio-box">
                             <strong>Chúc mừng năm mới Mậu Thân 1968</strong>
-                            <audio controls src="/src/assets/audio/HCM_ChucMungNamMoiMauThan1968.mp3">
+                            <audio controls src={chucMungMauThanAudio}>
                                 Trình duyệt của bạn không hỗ trợ audio.
                             </audio>
                             <div>
