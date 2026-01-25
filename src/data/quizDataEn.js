@@ -1,92 +1,112 @@
 export const quizDataEn = [
   {
-    question: "According to Karl Marx, what are the two fundamental attributes of a commodity?",
-    options: ["Price & production cost", "Use-value & value", "Revenue & profit", "Supply & demand"],
-    correctAnswer: "Use-value & value",
-    explanation: "A commodity combines a concrete utility (use-value) and abstract socially necessary labor time (value)."
-  },
-  {
-    question: "Which of the following is NOT one of the five classic functions of money?",
-    options: ["Measure of value", "Medium of circulation (exchange)", "Investment vehicle for profit", "Means of payment"],
-    correctAnswer: "Investment vehicle for profit",
-    explanation: "Classical functions: measure of value, medium of circulation, store/hoard of value, means of payment, and world money."
-  },
-  {
-    question: "By M = (P × Q) / V, if P = 120, Q = 800, and V = 40, what is M?",
-    options: ["1,600", "2,400", "3,200", "4,800"],
-    correctAnswer: "2,400",
-    explanation: "M = (120×800)/40 = 96,000/40 = 2,400 (units of money)."
-  },
-  {
-    question: "Which statement about services is TRUE?",
+    question: "In Ho Chi Minh’s thought, what is the significance of great national unity to the revolution?",
     options: [
-      "They can be inventoried like tangible goods",
-      "Production and consumption typically occur simultaneously",
-      "They require no social labor",
-      "Their quality is always homogeneous across deliveries"
+      "Only a propaganda slogan",
+      "A long-term, consistent strategy that determines success",
+      "Only important in wartime",
+      "Only for a single social class"
     ],
-    correctAnswer: "Production and consumption typically occur simultaneously",
-    explanation: "Services are intangible, hard to store, and often produced and consumed at the same time."
+    correctAnswer: "A long-term, consistent strategy that determines success",
+    explanation: "Great national unity is emphasized as a decisive strategic factor for revolutionary success or failure."
   },
   {
-    question: "In land transactions in Vietnam, what is actually exchanged?",
+    question: "According to Ho Chi Minh, when does Vietnam gain independence and freedom?",
     options: [
-      "Land itself as a tangible commodity",
-      "Absolute land ownership",
-      "Brokerage services only",
-      "Land-use rights (term, purpose, transferability)"
+      "When the people are united as one",
+      "When the country has abundant resources",
+      "When relying solely on external forces",
+      "When internal competition is strongest"
     ],
-    correctAnswer: "Land-use rights (term, purpose, transferability)",
-    explanation: "The ‘commodity-like’ element is the transferable right to use land, not the land per se."
+    correctAnswer: "When the people are united as one",
+    explanation: "Quote: “When our people are united as one, our country will gain independence and freedom…”."
   },
   {
-    question: "Which best describes “fictitious capital” in Marx’s analysis?",
+    question: "In the statement about the “fundamental point… unity”, what does the “fundamental point” mean?",
     options: [
-      "Machines and buildings used directly in production",
-      "Durable consumer goods",
-      "Negotiable claims to future income (e.g., stocks, bonds)",
-      "Gold money as the measure of value"
+      "A minor, optional detail",
+      "A key factor that generates many good outcomes",
+      "Only applicable to economics",
+      "Only applicable to military affairs"
     ],
-    correctAnswer: "Negotiable claims to future income (e.g., stocks, bonds)",
-    explanation: "These papers represent claims on future returns and do not directly function as productive capital."
+    correctAnswer: "A key factor that generates many good outcomes",
+    explanation: "Ho Chi Minh stresses unity as the fundamental point; doing it well leads to many positive results."
   },
   {
-    question: "Which option best captures the definition of a market?",
+    question: "Ho Chi Minh said the purpose of the Vietnam Workers’ Party can be summed up in eight words. Which is correct?",
     options: [
-      "Only physical places where buying and selling occur (e.g., stores)",
-      "Only supply–demand relations on stock exchanges",
-      "The totality of economic relations of buying and selling where prices and quantities are formed",
-      "Only transactions between countries"
+      "Independence – Freedom – Happiness",
+      "Unity of the entire people, service to the Fatherland",
+      "Prosperous people – strong nation",
+      "Study – work – creativity"
     ],
-    correctAnswer: "The totality of economic relations of buying and selling where prices and quantities are formed",
-    explanation: "A market exists both concretely (places) and abstractly (relations of supply, demand, price)."
+    correctAnswer: "Unity of the entire people, service to the Fatherland",
+    explanation: "He declared: “UNITY OF THE ENTIRE PEOPLE, SERVICE TO THE FATHERLAND.”"
   },
   {
-    question: "Which statement reflects a key feature of the modern market economy?",
+    question: "In Ho Chi Minh’s view, great national unity must be treated as the foremost task of whom?",
     options: [
-      "The state never intervenes in the economy",
-      "Prices are mainly set by administrative orders",
-      "Pluralistic agents and competition drive allocation; the state corrects market failures",
-      "It must be closed to international trade"
+      "Only the state",
+      "Only mass organizations",
+      "The Party, across all areas from guidelines to practice",
+      "Only individual citizens"
     ],
-    correctAnswer: "Pluralistic agents and competition drive allocation; the state corrects market failures",
-    explanation: "A regulated (mixed) market economy relies on competition and state roles in stability and fairness."
+    correctAnswer: "The Party, across all areas from guidelines to practice",
+    explanation: "Since the Party leads the revolution, unity must be implemented throughout all Party activities and policies."
   },
   {
-    question: "Under the law of value and intra-industry competition, if a firm lowers its individual value below rivals, the typical outcome is:",
+    question: "Who are the subjects of the great national unity bloc according to Ho Chi Minh?",
     options: [
-      "The market value immediately rises",
-      "Short-run extra profits for the firm; over time, market value tends to fall toward the lower cost level",
-      "All firms enjoy extra profits",
-      "Social demand for the good shrinks"
+      "Only workers",
+      "Only peasants",
+      "All patriotic Vietnamese across classes, strata, ethnicities, religions, and communities",
+      "Only one political party"
     ],
-    correctAnswer: "Short-run extra profits for the firm; over time, market value tends to fall toward the lower cost level",
-    explanation: "Cost-reducing innovators gain temporarily; competition then pulls the industry benchmark downward."
+    correctAnswer: "All patriotic Vietnamese across classes, strata, ethnicities, religions, and communities",
+    explanation: "The unity bloc includes the entire people without discrimination—inside and outside the country—toward a common goal."
   },
   {
-    question: "In the SHORT RUN, if demand for a good jumps while supply has not adjusted, its price will typically:",
-    options: ["Equal its value", "Rise above its value", "Fall below its value", "Remain unchanged"],
-    correctAnswer: "Rise above its value",
-    explanation: "With demand > supply in the short run, market price exceeds value; longer-run supply adjusts."
+    question: "In the quote “we unite with them”, who does “we” refer to?",
+    options: [
+      "A single individual",
+      "Both the Communist Party of Vietnam in particular and the Vietnamese people as a whole",
+      "Only an economic organization",
+      "Only the top leader"
+    ],
+    correctAnswer: "Both the Communist Party of Vietnam in particular and the Vietnamese people as a whole",
+    explanation: "The source clarifies “we” as the subject: the Party and the Vietnamese people."
+  },
+  {
+    question: "According to Ho Chi Minh, what are the foundational forces of the great national unity bloc?",
+    options: [
+      "Workers – peasants – intelligentsia",
+      "Entrepreneurs only",
+      "Intelligentsia only",
+      "Armed forces only"
+    ],
+    correctAnswer: "Workers – peasants – intelligentsia",
+    explanation: "He identifies workers, peasants, and intelligentsia as the foundation; a stronger foundation supports broader unity."
+  },
+  {
+    question: "In building the unity bloc, what is the “core factor” that must be emphasized?",
+    options: [
+      "Competition among groups",
+      "Unity and solidarity within the Party",
+      "Economic targets only",
+      "Entertainment media"
+    ],
+    correctAnswer: "Unity and solidarity within the Party",
+    explanation: "Unity within the Party is the condition for unity in society at large."
+  },
+  {
+    question: "Complete the line: “Unity, unity, great unity / …”",
+    options: [
+      "Independence, independence, great independence",
+      "Success, success, great success",
+      "Happiness, happiness, great happiness",
+      "Prosperity, prosperity, great prosperity"
+    ],
+    correctAnswer: "Success, success, great success",
+    explanation: "This is Ho Chi Minh’s concise conclusion on unity and victory."
   }
 ];

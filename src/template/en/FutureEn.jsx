@@ -1,67 +1,104 @@
 import React from 'react';
 import '../../styles/Section.css';
-import futureImg from '../../assets/img/future.jpg';
+import sectionImage from '../../assets/img/dai_doan_ket.jpg';
 
-export default function FutureEn() {
+// Forces / subjects of the great unity bloc (EN)
+const ForcesEn = () => {
   return (
     <div className="page-container">
-      <header className="section-hero" style={{ backgroundImage: `url(${futureImg})` }}>
-        <div className="hero-overlay"></div>
-        <h1 className="section-hero-title">Possibility & Limits of a Non‑Antagonistic Society</h1>
+      <header className="section-hero" style={{ backgroundImage: `url(${sectionImage})` }}>
+        <div className="hero-overlay" />
+        <h1 className="section-hero-title">Forces of the great national unity bloc</h1>
       </header>
+
       <main className="section-main-content">
+        <nav className="anchor-nav" aria-label="Page outline">
+          <a href="#subject">Subjects of unity</a>
+          <a href="#people">Meaning of “the people”</a>
+          <a href="#principle">Mobilization principle</a>
+        </nav>
+
         <div className="content-text">
-          <h3>1. Preconditions for transcending antagonistic classes</h3>
-          <p><strong>Economic basis:</strong> Social ownership of key means of production and advanced productive forces undermine class reproduction.</p>
-          <p><strong>New relations:</strong> Cooperation, equality and solidarity replace exploitation.</p>
+          <div className="quote-section">
+            <blockquote>
+              <p>“Unity is a national policy, not a political trick.”</p>
+              <cite>
+                — Ho Chi Minh •{' '}
+                <a
+                  href="https://baochinhphu.vn/ho-chi-minh-voi-tu-tuong-xuyen-suot-ve-doan-ket-102260203.htm"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  baochinhphu.vn
+                </a>
+              </cite>
+            </blockquote>
+          </div>
 
-          <h3>2. Phases of future development</h3>
-          <p><strong>Socialist phase:</strong> "From each according to ability, to each according to work." Distribution still differentiated.</p>
-          <p><strong>Communist phase:</strong> "From each according to ability, to each according to need." Abundance dissolves scarcity constraints.</p>
+          <h2 id="subject">Who constitutes the unity bloc?</h2>
+          <p>
+            According to Ho Chi Minh, the subjects of the great national unity bloc include the entire people—all Vietnamese who love their country—from
+            all social classes, strata, sectors, genders, age groups, ethnicities, religious communities, political parties, and so on, both inside and
+            outside the country.
+          </p>
 
-          <h3>3. New historical motives</h3>
+          <h2 id="people">How is “the people” understood?</h2>
           <ul>
-            <li>Scientific–technological progress</li>
-            <li>Human–nature contradiction (ecology, sustainability)</li>
-            <li>Innovation vs. stagnation</li>
-            <li>Needs vs. finite resources</li>
+            <li><strong>Concrete sense:</strong> specific Vietnamese individuals.</li>
+            <li><strong>Collective sense:</strong> the broad masses as a social community.</li>
           </ul>
 
-          <section>
-            <h3>4. Transition mechanisms</h3>
-            <ul>
-              <li>Proletarian political rule as transitional safeguard.</li>
-              <li>All‑round development of productive forces and civic culture.</li>
-              <li>Continued struggle on economic, political and ideological fronts in adjusted forms.</li>
-            </ul>
-          </section>
+          <div className="quote-section">
+            <blockquote>
+              <p>
+                “Anyone with talent, virtue, ability, and a sincere desire to serve the Fatherland and the people, we unite with them.”
+              </p>
+              <cite>
+                — Ho Chi Minh •{' '}
+                <a
+                  href="https://www.tapchicongsan.org.vn/media-story/-/asset_publisher/V8hhp4dK31Gf/content/dai-doan-ket-toan-dan-toc-coi-nguon-cua-y-chi-niem-tin-suc-manh-de-xay-dung-bao-ve-to-quoc-trong-ky-nguyen-moi"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  tapchicongsan.org.vn
+                </a>
+              </cite>
+            </blockquote>
+          </div>
 
-          <h3>5. Challenges</h3>
-            <p><strong>Long process:</strong> Transformation is gradual and contradictory.</p>
-            <p><strong>Persistent contradictions:</strong> Shift from antagonistic to non‑antagonistic forms.</p>
+          <h2 id="principle">Principle in mobilizing all forces</h2>
+          <p>
+            In building the unity bloc, it is essential to uphold the working-class standpoint and harmoniously resolve relationships between classes and
+            the nation to mobilize all forces. No force should be excluded as long as it is loyal, willing to serve the Fatherland, and does not betray the
+            people’s interests.
+          </p>
 
-          <section>
-            <h3>6. History beyond antagonism</h3>
-            <p>History does not "end"; it reorients toward cooperative creativity and managed contradictions.</p>
-            <div className="callout success"><strong>Perspective:</strong> Pre‑history closes; conscious regulation of conditions opens a more human epoch.</div>
-          </section>
+          <div className="callout">
+            <strong>Next</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              See also: <a href="/foundation/en">Foundation & the “core factor”</a>.
+            </p>
+          </div>
 
-          <section>
-            <h3>7. Classic quotations</h3>
-            <div className="quote-section">
-              <blockquote><p>"In communist society... nobody has one exclusive sphere of activity."</p><cite>— Marx & Engels, German Ideology</cite></blockquote>
-              <blockquote><p>"From each according to his ability, to each according to his needs."</p><cite>— Marx, Critique of the Gotha Programme</cite></blockquote>
-              <blockquote><p>"The state becomes unnecessary."</p><cite>— Engels, Socialism: Utopian and Scientific</cite></blockquote>
-              <blockquote><p>"The proletariat will use its political supremacy to wrest... all capital from the bourgeoisie."</p><cite>— Manifesto (1848)</cite></blockquote>
-            </div>
-          </section>
-
-          <h3>8. Illustrative efforts</h3>
-          <p><strong>USSR:</strong> Early industrial & educational advances.</p>
-          <p><strong>Modern China:</strong> Market socialism hybrid experimentation.</p>
-          <p><strong>Cuba:</strong> Universal health & education achievements under constraint.</p>
+          <h2>Video sources (official pages)</h2>
+          <ul>
+            <li>
+              VTV: “Ngày hội đại đoàn kết tại Thái Bình” —{' '}
+              <a href="https://vtv.vn/video/ngay-hoi-dai-doan-ket-tai-thai-binh-20394.htm" target="_blank" rel="noreferrer">vtv.vn</a>
+            </li>
+            <li>
+              VTV4: “Ngày hội Đại đoàn kết toàn dân tộc Hà Nội” —{' '}
+              <a href="https://vtv4.vtv.vn/video/ban-tin-tieng-viet/-20259.html" target="_blank" rel="noreferrer">vtv4.vtv.vn</a>
+            </li>
+            <li>
+              VTV4: “Già làng chung sức xây dựng khối đại đoàn kết” —{' '}
+              <a href="https://vtv4.vtv.vn/video/ban-tin-tieng-viet/-71512.html" target="_blank" rel="noreferrer">vtv4.vtv.vn</a>
+            </li>
+          </ul>
         </div>
       </main>
     </div>
   );
-}
+};
+
+export default ForcesEn;

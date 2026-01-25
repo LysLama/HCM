@@ -1,0 +1,1828 @@
+type,route,lang,file,line_start,line_end,text
+meta:viewport,(all),en,index.html,6,6,"width=device-width, initial-scale=1.0"
+document.title,(all),vi,index.html,7,7,Đấu Tranh Giai Cấp & Tương Lai Lịch Sử Nhân Loại
+html:text,(global),vi,index.html,7,7,Đấu Tranh Giai Cấp & Tương Lai Lịch Sử Nhân Loại
+attr:aria-label,(global),en,src/components/Button.jsx,38,38,Go to top
+string:literal,(global),en,src/components/Button.jsx,38,38,Go to top
+string:literal,(global),en,src/components/ChatBot.jsx,32,32,AI Philosophy Assistant
+string:literal,(global),vi,src/components/ChatBot.jsx,32,32,Trợ lý Triết học AI
+string:literal,(global),vi,src/components/ChatBot.jsx,33,33,Xóa
+string:literal,(global),vi,src/components/ChatBot.jsx,34,34,"Hỏi tôi về triết học, đấu tranh giai cấp..."
+string:literal,(global),en,src/components/ChatBot.jsx,35,35,Open philosophy chatbot
+string:literal,(global),vi,src/components/ChatBot.jsx,35,35,Mở chatbot triết học
+string:literal,(global),en,src/components/ChatBot.jsx,36,36,Close chatbot
+string:literal,(global),vi,src/components/ChatBot.jsx,36,36,Đóng chatbot
+string:literal,(global),en,src/components/ChatBot.jsx,37,37,Suggested questions:
+string:literal,(global),vi,src/components/ChatBot.jsx,37,37,Câu hỏi gợi ý:
+string:literal,(global),en,src/components/ChatBot.jsx,38,38,Sending question to AI...
+string:literal,(global),vi,src/components/ChatBot.jsx,38,38,Đang gửi câu hỏi tới AI...
+string:literal,(global),en,src/components/ChatBot.jsx,40,40,AI online
+string:literal,(global),vi,src/components/ChatBot.jsx,40,40,AI đang hoạt động
+string:literal,(global),en,src/components/ChatBot.jsx,41,41,Basic mode
+string:literal,(global),vi,src/components/ChatBot.jsx,41,41,Chế độ cơ bản
+string:literal,(global),en,src/components/ChatBot.jsx,42,42,Rate limited
+string:literal,(global),vi,src/components/ChatBot.jsx,42,42,Đang bị giới hạn lưu lượng
+string:literal,(global),en,src/components/ChatBot.jsx,43,43,Testing...
+string:literal,(global),vi,src/components/ChatBot.jsx,43,43,Đang kiểm tra...
+string:literal,(global),en,src/components/ChatBot.jsx,76,76,"You are a knowledgeable philosophy assistant (comparative East-West, classical-modern, Marxist). Respond in clear, concise ENGLISH."
+string:literal,(global),vi,src/components/ChatBot.jsx,77,77,"Bạn là trợ lý triết học am hiểu phân tích so sánh (Đông-Tây, cổ điển-hiện đại, Mác-xít). Trả lời bằng TIẾNG VIỆT rõ ràng, súc tích."
+string:literal,(global),vi,src/components/ChatBot.jsx,110,110,[AI] dùng cache hit cho câu hỏi:
+string:literal,(global),vi,src/components/ChatBot.jsx,116,116,"Xin lỗi, tôi chỉ có thể trả lời các câu hỏi liên quan đến triết học. Hãy hỏi tôi về triết học phương Đông (Khổng Tử, Lão Tử, Phật giáo), triết học phương Tây (Socrates, Kant, Nietzsche), triết học Mác-Lênin, hoặc các chủ đề như đạo đức, tồn tại, chân lý, ý nghĩa cuộc sống!"
+string:literal,(global),vi,src/components/ChatBot.jsx,120,120,xin chào
+string:literal,(global),vi,src/components/ChatBot.jsx,120,120,chào
+string:literal,(global),vi,src/components/ChatBot.jsx,122,122,"Xin chào! Tôi là trợ lý AI chuyên về triết học. Tôi có thể thảo luận về triết học phương Đông, phương Tây, Mác-Lênin và nhiều trường phái khác. Bạn có câu hỏi gì muốn thảo luận không?"
+string:literal,(global),vi,src/components/ChatBot.jsx,125,125,bạn là ai
+string:literal,(global),vi,src/components/ChatBot.jsx,125,125,giới thiệu
+string:literal,(global),vi,src/components/ChatBot.jsx,126,126,"Tôi là trợ lý AI chuyên về triết học với kiến thức về nhiều trường phái: triết học cổ điển Hy Lạp, triết học phương Đông (Khổng Tử, Lão Tử, Phật giáo), triết học phương Tây hiện đại, và triết học Mác-Lênin. Hãy đặt câu hỏi về bất kỳ chủ đề triết học nào bạn quan tâm!"
+string:literal,(global),vi,src/components/ChatBot.jsx,129,129,cảm ơn
+string:literal,(global),vi,src/components/ChatBot.jsx,130,130,"Rất vui được giúp đỡ bạn! Nếu bạn có thêm câu hỏi nào về triết học, đừng ngần ngại hỏi tôi nhé. Tôi luôn sẵn sàng thảo luận về các chủ đề triết học thú vị!"
+string:literal,(global),vi,src/components/ChatBot.jsx,133,133,tạm biệt
+string:literal,(global),vi,src/components/ChatBot.jsx,134,134,Tạm biệt! Hy vọng cuộc trò chuyện về triết học hôm nay hữu ích với bạn. Chúc bạn có một ngày tốt lành và đừng quên tiếp tục khám phá thế giới triết học nhé!
+string:literal,(global),vi,src/components/ChatBot.jsx,138,138,[AI] chuẩn bị gọi API cho câu hỏi:
+string:literal,(global),vi,src/components/ChatBot.jsx,164,164,"[AI] phát hiện yêu cầu đang xử lý, dùng lại promise sẵn có"
+string:literal,(global),vi,src/components/ChatBot.jsx,200,200,Lỗi khi gọi AI:
+string:literal,(global),en,src/components/ChatBot.jsx,209,209,(\d+)s
+string:literal,(global),vi,src/components/ChatBot.jsx,222,222,triết học
+string:literal,(global),vi,src/components/ChatBot.jsx,222,222,"Triết học là ngành học nghiên cứu những vấn đề cơ bản về thực tại, kiến thức, giá trị và ý nghĩa."
+string:literal,(global),vi,src/components/ChatBot.jsx,223,223,"Socrates là triết gia Hy Lạp cổ đại, nổi tiếng với câu ""Tôi chỉ biết rằng tôi không biết gì""."
+string:literal,(global),vi,src/components/ChatBot.jsx,224,224,khổng tử
+string:literal,(global),vi,src/components/ChatBot.jsx,224,224,"Khổng Tử là triết gia Trung Quốc, sáng lập Nho giáo, nhấn mạnh đạo đức."
+string:literal,(global),vi,src/components/ChatBot.jsx,225,225,ý nghĩa
+string:literal,(global),vi,src/components/ChatBot.jsx,225,225,Ý nghĩa cuộc sống là câu hỏi triết học cơ bản mà nhiều triết gia đã tìm cách trả lời.
+string:literal,(global),vi,src/components/ChatBot.jsx,226,226,tự do
+string:literal,(global),vi,src/components/ChatBot.jsx,226,226,Tự do là khả năng tự quyết định và hành động theo ý muốn của mình.
+string:literal,(global),vi,src/components/ChatBot.jsx,238,238,"Xin lỗi, khóa API không có quyền truy cập. Vui lòng kiểm tra cấu hình API."
+string:literal,(global),vi,src/components/ChatBot.jsx,241,241,"Xin lỗi, khóa API không hợp lệ. Vui lòng kiểm tra lại khóa API."
+string:literal,(global),vi,src/components/ChatBot.jsx,244,244,"Xin lỗi, model AI hiện không khả dụng. Tôi đang sử dụng kiến thức cơ bản để trả lời. Vui lòng hỏi về các chủ đề triết học như: Socrates, Khổng Tử, đạo đức học, tồn tại, chân lý, tự do, ý nghĩa cuộc sống."
+string:literal,(global),vi,src/components/ChatBot.jsx,247,247,trong giây lát
+string:literal,(global),vi,src/components/ChatBot.jsx,262,262,[AI] bị chặn bởi debounce input
+string:literal,(global),en,src/components/ChatBot.jsx,321,321,chatbot-scroll-locked
+string:literal,(global),unknown,src/components/ChatBot.jsx,324,324,100%
+string:literal,(global),en,src/components/ChatBot.jsx,327,327,chatbot-scroll-locked
+string:literal,(global),en,src/components/ChatBot.jsx,329,329,chatbot-scroll-locked
+string:literal,(global),en,src/components/ChatBot.jsx,337,337,chatbot-scroll-locked
+string:literal,(global),en,src/components/ChatBot.jsx,339,339,chatbot-scroll-locked
+string:literal,(global),en,src/components/ChatBot.jsx,369,369,chatbot-toggle-btn
+string:literal,(global),en,src/components/ChatBot.jsx,373,373,w-6 h-6
+string:literal,(global),en,src/components/ChatBot.jsx,383,383,chatbot-header-info
+string:literal,(global),en,src/components/ChatBot.jsx,384,384,w-5 h-5 text-blue-400
+string:literal,(global),en,src/components/ChatBot.jsx,387,387,flex items-center gap-2
+string:literal,(global),en,src/components/ChatBot.jsx,395,395,chatbot-header-actions
+string:literal,(global),en,src/components/ChatBot.jsx,399,399,Clear conversation
+string:literal,(global),vi,src/components/ChatBot.jsx,399,399,Xóa cuộc trò chuyện
+string:literal,(global),en,src/components/ChatBot.jsx,423,423,w-4 h-4
+string:literal,(global),en,src/components/ChatBot.jsx,425,425,w-4 h-4
+string:literal,(global),en,src/components/ChatBot.jsx,442,442,suggestions-container
+string:literal,(global),en,src/components/ChatBot.jsx,443,443,suggestions-header
+string:literal,(global),en,src/components/ChatBot.jsx,444,444,w-4 h-4
+string:literal,(global),en,src/components/ChatBot.jsx,463,463,message bot-message
+string:literal,(global),en,src/components/ChatBot.jsx,465,465,w-4 h-4
+attr:aria-label,(global),vi,src/components/ChatBot.jsx,495,495,Gửi tin nhắn
+string:literal,(global),vi,src/components/ChatBot.jsx,495,495,Gửi tin nhắn
+string:literal,(global),en,src/components/ChatBot.jsx,497,497,w-5 h-5
+string:literal,(global),en,src/components/Header.jsx,38,38,#home
+string:literal,(global),vi,src/components/Header.jsx,43,43,Mở điều hướng
+string:literal,(global),en,src/components/Header.jsx,43,43,Toggle navigation
+string:literal,(global),en,src/components/Header.jsx,53,53,#home
+string:literal,(global),vi,src/components/Header.jsx,53,53,Trang chủ
+string:literal,(global),en,src/components/Header.jsx,54,54,#introduction
+string:literal,(global),vi,src/components/Header.jsx,54,54,Giới thiệu
+string:literal,(global),vi,src/components/Header.jsx,55,55,Nội dung
+string:literal,(global),vi,src/components/Header.jsx,56,56,Tri thức & Thị trường
+string:literal,(global),en,src/components/Header.jsx,56,56,Knowledge & Market
+string:literal,(global),vi,src/components/Header.jsx,57,57,Ôn tập
+string:literal,(global),en,src/components/Hero.jsx,22,22,#introduction
+attr:aria-label,(global),en,src/components/Hero.jsx,24,24,Scroll down
+string:literal,(global),en,src/components/Hero.jsx,24,24,Scroll down
+string:literal,(global),en,src/components/HeroEn.jsx,22,22,#introduction
+attr:aria-label,(global),en,src/components/HeroEn.jsx,24,24,Scroll down
+string:literal,(global),en,src/components/HeroEn.jsx,24,24,Scroll down
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,9,9,Karl Marx
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,10,10,Phát triển lý thuyết về giai cấp và đấu tranh giai cấp
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,11,11,"Marx đặt nền móng cho lý thuyết giai cấp hiện đại, phân tích mâu thuẫn giữa tư sản và vô sản trong 'Tuyên ngôn Đảng Cộng sản' và 'Tư bản luận'."
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,19,19,Friedrich Engels
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,20,20,"Đồng sáng lập chủ nghĩa Mác-xít, phát triển lý thuyết về nguồn gốc gia đình"
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,21,21,Engels bổ sung quan điểm về vai trò của kinh tế trong xã hội và phân tích sự tiến hóa của các hình thái xã hội.
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,29,29,Vladimir Lenin
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,30,30,Phát triển lý thuyết Mác-xít trong thời đại đế quốc
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,31,31,"Lenin áp dụng và phát triển lý thuyết Mác-xít vào thực tiễn cách mạng, tạo nên chủ nghĩa Mác-Lênin."
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,39,39,Phong trào Cách mạng
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,40,40,Ứng dụng thực tiễn lý thuyết đấu tranh giai cấp
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,41,41,Các cuộc cách mạng xã hội chủ nghĩa trên thế giới chứng minh tính đúng đắn của lý thuyết đấu tranh giai cấp.
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,49,49,Thời kỳ Đổi mới
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,50,50,Vận dụng sáng tạo trong điều kiện mới
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,51,51,Việt Nam và các nước xã hội chủ nghĩa vận dụng linh hoạt lý thuyết giai cấp trong thời kỳ hội nhập và phát triển.
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,62,62,Karl Marx
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,72,72,Friedrich Engels
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,74,74,Engels added perspectives on the role of economics and analyzed evolution of social formations.
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,82,82,Vladimir Lenin
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,83,83,Advanced Marxism in the age of imperialism
+string:literal,(global),unknown,src/components/InteractiveTimeline.jsx,84,84,"Lenin applied and developed Marxist theory in revolutionary practice, shaping Marxism–Leninism."
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,92,92,Revolutionary Movements
+string:literal,(global),unknown,src/components/InteractiveTimeline.jsx,101,101,1975–present
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,102,102,Renovation Period
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,103,103,Creative adaptation in new conditions
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,127,127,timeline-container
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,129,129,Historical Development of Class Theory
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,129,129,Lịch Sử Phát Triển Lý Thuyết Giai Cấp
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,130,130,Explore the evolution of philosophical thought from Marx to the present era
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,130,130,Khám phá hành trình phát triển tư tưởng triết học từ Marx đến thời đại ngày nay
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,155,155,milestone-description
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,162,162,action-btn primary
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,168,168,Learn more
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,168,168,Tìm hiểu thêm
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,170,170,action-btn secondary
+string:literal,(global),vi,src/components/InteractiveTimeline.jsx,170,170,Chia sẻ
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,179,179,hover-card-content
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,188,188,milestone-connection
+string:literal,(global),unknown,src/components/InteractiveTimeline.jsx,189,189,0 0 100 50
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,191,191,M 10 25 Q 50 10 90 25
+string:literal,(global),en,src/components/InteractiveTimeline.jsx,210,210,Reset View
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,10,10,Đấu Tranh Giai Cấp
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,15,15,Khái niệm trung tâm của lý thuyết Mác-Lênin
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,19,19,Giai Cấp
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,24,24,Nhóm người có vị trí kinh tế - xã hội giống nhau
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,28,28,Xung Đột
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,33,33,Mâu thuẫn lợi ích giữa các giai cấp
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,37,37,Lịch Sử
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,42,42,Động lực phát triển xã hội loài người
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,46,46,Cách Mạng
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,51,51,Hình thức cao nhất của đấu tranh giai cấp
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,55,55,Tư Sản
+string:literal,(global),en,src/components/KnowledgeMap.jsx,59,59,#e74c3c
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,60,60,Giai cấp sở hữu tư liệu sản xuất
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,64,64,Vô Sản
+string:literal,(global),en,src/components/KnowledgeMap.jsx,68,68,#3498db
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,69,69,Giai cấp lao động không sở hữu tư liệu sản xuất
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,73,73,Chủ Nghĩa Xã Hội
+string:literal,(global),en,src/components/KnowledgeMap.jsx,77,77,#f39c12
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,78,78,Xã hội không còn đối kháng giai cấp
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,82,82,Chủ Nghĩa Cộng Sản
+string:literal,(global),en,src/components/KnowledgeMap.jsx,86,86,#9b59b6
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,87,87,Xã hội lý tưởng không có giai cấp
+string:literal,(global),en,src/components/KnowledgeMap.jsx,107,107,Class Struggle
+string:literal,(global),unknown,src/components/KnowledgeMap.jsx,107,107,Central concept in Marxist–Leninist theory
+string:literal,(global),en,src/components/KnowledgeMap.jsx,108,108,Group sharing similar socio-economic position
+string:literal,(global),en,src/components/KnowledgeMap.jsx,109,109,Contradictory interests among classes
+string:literal,(global),en,src/components/KnowledgeMap.jsx,110,110,Motor of human social development
+string:literal,(global),en,src/components/KnowledgeMap.jsx,112,112,#e74c3c
+string:literal,(global),en,src/components/KnowledgeMap.jsx,112,112,Class owning means of production
+string:literal,(global),en,src/components/KnowledgeMap.jsx,113,113,#3498db
+string:literal,(global),en,src/components/KnowledgeMap.jsx,114,114,#f39c12
+string:literal,(global),en,src/components/KnowledgeMap.jsx,115,115,#9b59b6
+string:literal,(global),en,src/components/KnowledgeMap.jsx,115,115,Classless society with human emancipation
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,144,144,Tìm hiểu thêm
+string:literal,(global),en,src/components/KnowledgeMap.jsx,219,219,knowledge-map-container
+string:literal,(global),en,src/components/KnowledgeMap.jsx,220,220,knowledge-map-header
+string:literal,(global),en,src/components/KnowledgeMap.jsx,221,221,Philosophical Knowledge Map
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,221,221,Bản Đồ Tri Thức Triết Học
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,222,222,Khám phá mối liên kết giữa các khái niệm trong lý thuyết đấu tranh giai cấp
+string:literal,(global),en,src/components/KnowledgeMap.jsx,230,230,Search concept...
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,230,230,Tìm kiếm khái niệm...
+string:literal,(global),en,src/components/KnowledgeMap.jsx,260,260,Reset View
+string:literal,(global),unknown,src/components/KnowledgeMap.jsx,269,269,0 0 800 600
+string:literal,(global),unknown,src/components/KnowledgeMap.jsx,283,283,3.5
+string:literal,(global),unknown,src/components/KnowledgeMap.jsx,287,287,"0 0, 10 3.5, 0 7"
+string:literal,(global),unknown,src/components/KnowledgeMap.jsx,288,288,#666
+string:literal,(global),en,src/components/KnowledgeMap.jsx,311,311,#ddd
+string:literal,(global),en,src/components/KnowledgeMap.jsx,343,343,#fff
+string:literal,(global),en,src/components/KnowledgeMap.jsx,367,367,#2c3e50
+string:literal,(global),en,src/components/KnowledgeMap.jsx,390,390,node-details-panel
+string:literal,(global),en,src/components/KnowledgeMap.jsx,433,433,Learn more
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,433,433,Tìm hiểu thêm
+string:literal,(global),en,src/components/KnowledgeMap.jsx,435,435,action-btn secondary
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,435,435,Chia sẻ
+string:literal,(global),en,src/components/KnowledgeMap.jsx,444,444,Legend:
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,444,444,Chú thích:
+string:literal,(global),en,src/components/KnowledgeMap.jsx,447,447,legend-color center
+string:literal,(global),en,src/components/KnowledgeMap.jsx,448,448,Central concept
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,448,448,Khái niệm trung tâm
+string:literal,(global),en,src/components/KnowledgeMap.jsx,451,451,legend-color main
+string:literal,(global),en,src/components/KnowledgeMap.jsx,452,452,Main concept
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,452,452,Khái niệm chính
+string:literal,(global),en,src/components/KnowledgeMap.jsx,455,455,legend-color sub
+string:literal,(global),en,src/components/KnowledgeMap.jsx,456,456,Sub concept
+string:literal,(global),vi,src/components/KnowledgeMap.jsx,456,456,Khái niệm phụ
+string:literal,(global),en,src/components/LanguageToggle.jsx,8,8,lang-toggle-wrapper
+attr:aria-label,(global),en,src/components/LanguageToggle.jsx,9,9,Switch language
+string:literal,(global),en,src/components/LanguageToggle.jsx,9,9,Switch language
+string:literal,(global),vi,src/components/ReadingProgressDashboard.jsx,25,25,Lý Thuyết Nền Tảng
+string:literal,(global),vi,src/components/ReadingProgressDashboard.jsx,26,26,Vai Trò Lịch Sử
+string:literal,(global),vi,src/components/ReadingProgressDashboard.jsx,27,27,Tương Lai Xã Hội
+string:literal,(global),vi,src/components/ReadingProgressDashboard.jsx,28,28,Kết Luận
+string:literal,(global),vi,src/components/ReadingProgressDashboard.jsx,33,33,Tiến trình học tập Triết học Mác-Lênin
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,64,65,", month:"
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,65,66,", year:"
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,66,67,", hour:"
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,67,68,", minute:"
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,155,155,", label:"
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,155,155,", icon:"
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,156,156,", label:"
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,156,156,", icon:"
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,157,157,", label:"
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,157,157,", icon:"
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,158,158,", label:"
+string:literal,(global),en,src/components/ReadingProgressDashboard.jsx,158,158,", icon:"
+string:literal,(global),en,src/context/ReadingProgressContext.jsx,8,8,useReadingProgress must be used within ReadingProgressProvider
+string:literal,(global),en,src/context/ReadingProgressContext.jsx,25,25,philosophyReadingProgress
+string:literal,(global),en,src/context/ReadingProgressContext.jsx,33,33,philosophyReadingProgress
+string:literal,(global),unknown,src/context/ReadingProgressContext.jsx,159,159,1.0
+string:literal,(global),vi,src/data/quizData,3,3,"Theo C. Mác, hàng hóa có hai thuộc tính cơ bản là gì?"
+string:literal,(global),vi,src/data/quizData,4,4,Giá cả & chi phí sản xuất
+string:literal,(global),vi,src/data/quizData,4,4,Giá trị sử dụng & giá trị
+string:literal,(global),vi,src/data/quizData,4,4,Doanh thu & lợi nhuận
+string:literal,(global),vi,src/data/quizData,4,4,Cung & cầu
+string:literal,(global),vi,src/data/quizData,5,5,Giá trị sử dụng & giá trị
+string:literal,(global),vi,src/data/quizData,6,6,"Hàng hóa vừa có công dụng (giá trị sử dụng), vừa kết tinh lao động xã hội (giá trị)."
+string:literal,(global),vi,src/data/quizData,9,9,Chức năng nào dưới đây KHÔNG thuộc 5 chức năng kinh điển của tiền?
+string:literal,(global),vi,src/data/quizData,10,10,Thước đo giá trị
+string:literal,(global),vi,src/data/quizData,10,10,Phương tiện lưu thông
+string:literal,(global),vi,src/data/quizData,10,10,Phương tiện đầu tư sinh lời
+string:literal,(global),vi,src/data/quizData,10,10,Phương tiện thanh toán
+string:literal,(global),vi,src/data/quizData,11,11,Phương tiện đầu tư sinh lời
+string:literal,(global),vi,src/data/quizData,12,12,"5 chức năng: thước đo giá trị, phương tiện lưu thông, cất trữ, thanh toán, tiền tệ thế giới."
+string:literal,(global),unknown,src/data/quizData,16,16,1.600
+string:literal,(global),unknown,src/data/quizData,16,16,2.400
+string:literal,(global),unknown,src/data/quizData,16,16,3.200
+string:literal,(global),unknown,src/data/quizData,16,16,4.800
+string:literal,(global),unknown,src/data/quizData,17,17,2.400
+string:literal,(global),vi,src/data/quizData,21,21,Phát biểu ĐÚNG về dịch vụ là:
+string:literal,(global),vi,src/data/quizData,23,23,Có thể lưu kho như hàng hóa vật thể
+string:literal,(global),vi,src/data/quizData,24,24,Sản xuất và tiêu dùng thường diễn ra đồng thời
+string:literal,(global),vi,src/data/quizData,25,25,Không cần lao động xã hội
+string:literal,(global),vi,src/data/quizData,26,26,Luôn đồng nhất về chất lượng giữa các lần cung ứng
+string:literal,(global),vi,src/data/quizData,28,28,Sản xuất và tiêu dùng thường diễn ra đồng thời
+string:literal,(global),vi,src/data/quizData,32,32,"Trong giao dịch đất đai, thực chất các bên trao đổi điều gì?"
+string:literal,(global),vi,src/data/quizData,34,34,Đất đai như một hàng hóa vật thể
+string:literal,(global),vi,src/data/quizData,35,35,Quyền sở hữu đất tuyệt đối
+string:literal,(global),vi,src/data/quizData,36,36,Dịch vụ môi giới đi kèm
+string:literal,(global),vi,src/data/quizData,37,37,"Quyền sử dụng đất (thời hạn, mục đích, chuyển nhượng…)"
+string:literal,(global),vi,src/data/quizData,39,39,"Quyền sử dụng đất (thời hạn, mục đích, chuyển nhượng…)"
+string:literal,(global),vi,src/data/quizData,40,40,Tính “hàng hóa” nằm ở quyền sử dụng chứ không phải bản thân đất.
+string:literal,(global),vi,src/data/quizData,43,43,"Theo Mác, khái niệm “tư bản giả” mô tả đúng nhất là:"
+string:literal,(global),vi,src/data/quizData,45,45,Máy móc và nhà xưởng dùng trong sản xuất
+string:literal,(global),vi,src/data/quizData,46,46,Hàng hóa tiêu dùng lâu bền
+string:literal,(global),vi,src/data/quizData,47,47,"Giấy tờ có giá biểu thị quyền đòi thu nhập tương lai (cổ phiếu, trái phiếu…)"
+string:literal,(global),vi,src/data/quizData,48,48,Tiền vàng dùng làm thước đo giá trị
+string:literal,(global),vi,src/data/quizData,50,50,"Giấy tờ có giá biểu thị quyền đòi thu nhập tương lai (cổ phiếu, trái phiếu…)"
+string:literal,(global),vi,src/data/quizData,51,51,Chúng không trực tiếp vận động trong sản xuất như tư bản thực.
+string:literal,(global),vi,src/data/quizData,54,54,Định nghĩa thị trường được hiểu đúng nhất là:
+string:literal,(global),vi,src/data/quizData,56,56,"Chỉ nơi mua bán trực tiếp (chợ, siêu thị)"
+string:literal,(global),vi,src/data/quizData,57,57,Chỉ quan hệ cung–cầu trên sàn chứng khoán
+string:literal,(global),vi,src/data/quizData,58,58,Tổng hòa các quan hệ kinh tế mua–bán nơi giá & lượng được hình thành
+string:literal,(global),vi,src/data/quizData,59,59,Chỉ giao dịch giữa các quốc gia
+string:literal,(global),vi,src/data/quizData,61,61,Tổng hòa các quan hệ kinh tế mua–bán nơi giá & lượng được hình thành
+string:literal,(global),vi,src/data/quizData,62,62,"Bao gồm cả cấp độ cụ thể và trừu tượng (cung–cầu, giá cả)."
+string:literal,(global),vi,src/data/quizData,65,65,Phát biểu nào phản ánh ĐÚNG đặc trưng của nền kinh tế thị trường hiện đại?
+string:literal,(global),vi,src/data/quizData,67,67,Nhà nước không can thiệp vào kinh tế
+string:literal,(global),vi,src/data/quizData,68,68,Giá cả chủ yếu do mệnh lệnh hành chính
+string:literal,(global),vi,src/data/quizData,70,70,Đóng cửa với thị trường quốc tế
+string:literal,(global),vi,src/data/quizData,73,73,Kinh tế thị trường có điều tiết (hỗn hợp) để sửa thất bại thị trường và ổn định vĩ mô.
+string:literal,(global),vi,src/data/quizData,76,76,"Theo quy luật giá trị và cạnh tranh nội bộ ngành: khi DN hạ giá trị cá biệt thấp hơn đối thủ, hệ quả điển hình là:"
+string:literal,(global),vi,src/data/quizData,78,78,Giá trị thị trường tăng lên ngay
+string:literal,(global),vi,src/data/quizData,80,80,Tất cả doanh nghiệp đều có siêu lợi nhuận
+string:literal,(global),vi,src/data/quizData,81,81,Cầu xã hội đối với hàng hóa đó giảm
+string:literal,(global),vi,src/data/quizData,84,84,Cải tiến kỹ thuật kéo mặt bằng chi phí và giá trị thị trường xuống.
+string:literal,(global),vi,src/data/quizData,87,87,"Trong NGẮN HẠN, khi cầu một hàng hóa tăng đột ngột (cung chưa kịp điều chỉnh), giá cả thường:"
+string:literal,(global),vi,src/data/quizData,88,88,Bằng đúng giá trị
+string:literal,(global),vi,src/data/quizData,88,88,Vượt lên trên giá trị
+string:literal,(global),vi,src/data/quizData,88,88,Thấp hơn giá trị
+string:literal,(global),vi,src/data/quizData,88,88,Không đổi
+string:literal,(global),vi,src/data/quizData,89,89,Vượt lên trên giá trị
+string:literal,(global),en,src/data/quizDataEn.js,3,3,"According to Karl Marx, what are the two fundamental attributes of a commodity?"
+string:literal,(global),en,src/data/quizDataEn.js,4,4,Price & production cost
+string:literal,(global),en,src/data/quizDataEn.js,4,4,Use-value & value
+string:literal,(global),en,src/data/quizDataEn.js,4,4,Revenue & profit
+string:literal,(global),en,src/data/quizDataEn.js,4,4,Supply & demand
+string:literal,(global),en,src/data/quizDataEn.js,5,5,Use-value & value
+string:literal,(global),en,src/data/quizDataEn.js,6,6,A commodity combines a concrete utility (use-value) and abstract socially necessary labor time (value).
+string:literal,(global),en,src/data/quizDataEn.js,9,9,Which of the following is NOT one of the five classic functions of money?
+string:literal,(global),en,src/data/quizDataEn.js,10,10,Measure of value
+string:literal,(global),en,src/data/quizDataEn.js,10,10,Medium of circulation (exchange)
+string:literal,(global),en,src/data/quizDataEn.js,10,10,Investment vehicle for profit
+string:literal,(global),en,src/data/quizDataEn.js,10,10,Means of payment
+string:literal,(global),en,src/data/quizDataEn.js,11,11,Investment vehicle for profit
+string:literal,(global),en,src/data/quizDataEn.js,12,12,"Classical functions: measure of value, medium of circulation, store/hoard of value, means of payment, and world money."
+string:literal,(global),unknown,src/data/quizDataEn.js,16,16,"1,600"
+string:literal,(global),unknown,src/data/quizDataEn.js,16,16,"2,400"
+string:literal,(global),unknown,src/data/quizDataEn.js,16,16,"3,200"
+string:literal,(global),unknown,src/data/quizDataEn.js,16,16,"4,800"
+string:literal,(global),unknown,src/data/quizDataEn.js,17,17,"2,400"
+string:literal,(global),en,src/data/quizDataEn.js,21,21,Which statement about services is TRUE?
+string:literal,(global),en,src/data/quizDataEn.js,23,23,They can be inventoried like tangible goods
+string:literal,(global),en,src/data/quizDataEn.js,24,24,Production and consumption typically occur simultaneously
+string:literal,(global),en,src/data/quizDataEn.js,25,25,They require no social labor
+string:literal,(global),en,src/data/quizDataEn.js,26,26,Their quality is always homogeneous across deliveries
+string:literal,(global),en,src/data/quizDataEn.js,28,28,Production and consumption typically occur simultaneously
+string:literal,(global),en,src/data/quizDataEn.js,29,29,"Services are intangible, hard to store, and often produced and consumed at the same time."
+string:literal,(global),en,src/data/quizDataEn.js,32,32,"In land transactions in Vietnam, what is actually exchanged?"
+string:literal,(global),en,src/data/quizDataEn.js,34,34,Land itself as a tangible commodity
+string:literal,(global),en,src/data/quizDataEn.js,35,35,Absolute land ownership
+string:literal,(global),en,src/data/quizDataEn.js,36,36,Brokerage services only
+string:literal,(global),en,src/data/quizDataEn.js,37,37,"Land-use rights (term, purpose, transferability)"
+string:literal,(global),en,src/data/quizDataEn.js,39,39,"Land-use rights (term, purpose, transferability)"
+string:literal,(global),unknown,src/data/quizDataEn.js,40,40,"The ‘commodity-like’ element is the transferable right to use land, not the land per se."
+string:literal,(global),unknown,src/data/quizDataEn.js,43,43,Which best describes “fictitious capital” in Marx’s analysis?
+string:literal,(global),en,src/data/quizDataEn.js,45,45,Machines and buildings used directly in production
+string:literal,(global),en,src/data/quizDataEn.js,46,46,Durable consumer goods
+string:literal,(global),en,src/data/quizDataEn.js,47,47,"Negotiable claims to future income (e.g., stocks, bonds)"
+string:literal,(global),en,src/data/quizDataEn.js,48,48,Gold money as the measure of value
+string:literal,(global),en,src/data/quizDataEn.js,50,50,"Negotiable claims to future income (e.g., stocks, bonds)"
+string:literal,(global),en,src/data/quizDataEn.js,54,54,Which option best captures the definition of a market?
+string:literal,(global),en,src/data/quizDataEn.js,56,56,"Only physical places where buying and selling occur (e.g., stores)"
+string:literal,(global),unknown,src/data/quizDataEn.js,57,57,Only supply–demand relations on stock exchanges
+string:literal,(global),en,src/data/quizDataEn.js,58,58,The totality of economic relations of buying and selling where prices and quantities are formed
+string:literal,(global),en,src/data/quizDataEn.js,59,59,Only transactions between countries
+string:literal,(global),en,src/data/quizDataEn.js,61,61,The totality of economic relations of buying and selling where prices and quantities are formed
+string:literal,(global),en,src/data/quizDataEn.js,62,62,"A market exists both concretely (places) and abstractly (relations of supply, demand, price)."
+string:literal,(global),en,src/data/quizDataEn.js,65,65,Which statement reflects a key feature of the modern market economy?
+string:literal,(global),en,src/data/quizDataEn.js,67,67,The state never intervenes in the economy
+string:literal,(global),en,src/data/quizDataEn.js,68,68,Prices are mainly set by administrative orders
+string:literal,(global),en,src/data/quizDataEn.js,70,70,It must be closed to international trade
+string:literal,(global),en,src/data/quizDataEn.js,73,73,A regulated (mixed) market economy relies on competition and state roles in stability and fairness.
+string:literal,(global),en,src/data/quizDataEn.js,76,76,"Under the law of value and intra-industry competition, if a firm lowers its individual value below rivals, the typical outcome is:"
+string:literal,(global),en,src/data/quizDataEn.js,78,78,The market value immediately rises
+string:literal,(global),en,src/data/quizDataEn.js,80,80,All firms enjoy extra profits
+string:literal,(global),en,src/data/quizDataEn.js,81,81,Social demand for the good shrinks
+string:literal,(global),en,src/data/quizDataEn.js,87,87,"In the SHORT RUN, if demand for a good jumps while supply has not adjusted, its price will typically:"
+string:literal,(global),en,src/data/quizDataEn.js,88,88,Equal its value
+string:literal,(global),en,src/data/quizDataEn.js,88,88,Rise above its value
+string:literal,(global),en,src/data/quizDataEn.js,88,88,Fall below its value
+string:literal,(global),en,src/data/quizDataEn.js,88,88,Remain unchanged
+string:literal,(global),en,src/data/quizDataEn.js,89,89,Rise above its value
+text:line,(global),vi,src/data/source_data.txt,1,1,23. Tiền tệ
+text:line,(global),vi,src/data/source_data.txt,2,2,a) Nguồn gốc và bản chất của tiền
+text:line,(global),vi,src/data/source_data.txt,3,3,"Giá trị của hàng hóa là trừu tượng, chúng ta không nhìn thấy"
+text:line,(global),vi,src/data/source_data.txt,4,4,giá trị như nhìn thấy hình dáng hiện vật của hàng hóa; giá trị của
+text:line,(global),vi,src/data/source_data.txt,5,5,hàng hóa chỉ được bộc lộ ra trong quá trình trao đổi thông qua các
+text:line,(global),vi,src/data/source_data.txt,6,6,hình thái biểu hiện của nó. Theo tiến trình lịch sử phát triển của sản
+text:line,(global),vi,src/data/source_data.txt,7,7,"xuất và trao đổi hàng hóa, những hình thái của giá trị cũng trải qua"
+text:line,(global),vi,src/data/source_data.txt,8,8,quá trình phát triển từ thấp tới cao. Quá trình này cũng chính là lịch
+text:line,(global),vi,src/data/source_data.txt,9,9,sử hình thành tiền tệ. Nghiên cứu lịch sử hình thành tiền tệ sẽ giúp
+text:line,(global),vi,src/data/source_data.txt,10,10,lý giải một cách khoa học nguyên nhân vì sao tiền có thể mua được
+text:line,(global),vi,src/data/source_data.txt,11,11,hàng hóa. Cụ thể:
+text:line,(global),vi,src/data/source_data.txt,12,12,- Hình thái giá trị giản đơn hay ngẫu nhiên
+text:line,(global),vi,src/data/source_data.txt,13,13,Đây là hình thái ban đầu của giá trị xuất hiện trong thời kỳ sơ
+text:line,(global),vi,src/data/source_data.txt,14,14,"khai của trao đổi hàng hóa. Khi đó, việc trao đổi giữa các hàng hóa"
+text:line,(global),vi,src/data/source_data.txt,15,15,với nhau mang tính ngẫu nhiên. Người ta trao đổi trực tiếp hàng
+text:line,(global),vi,src/data/source_data.txt,16,16,hóa này lấy hàng hóa khác.
+text:line,(global),vi,src/data/source_data.txt,17,17,"Ví dụ, có phương trình trao đổi như sau: 1A = 2B."
+text:line,(global),vi,src/data/source_data.txt,18,18,"Ở đây, giá trị ẩn chứa trong hàng hóa A được biểu hiện ra ở"
+text:line,(global),vi,src/data/source_data.txt,19,19,"hàng hóa B; với thuộc tính tự nhiên của mình, hàng hóa B trở"
+text:line,(global),vi,src/data/source_data.txt,20,20,thành hiện thân của giá trị của hàng hóa A. Sở dĩ như vậy là vì
+text:line,(global),vi,src/data/source_data.txt,21,21,bản thân hàng hóa B cũng có giá trị. Giá trị sử dụng của hàng hóa
+text:line,(global),vi,src/data/source_data.txt,22,22,A được dùng để biểu hiện giá trị của hàng hóa B được gọi là hình
+text:line,(global),vi,src/data/source_data.txt,23,23,thái vật ngang giá.
+text:line,(global),vi,src/data/source_data.txt,24,24,- Hình thái giá trị đầy đủ hay mở rộng
+text:line,(global),vi,src/data/source_data.txt,25,25,"Khi trình độ phát triển của sản xuất hàng hóa được nâng lên,"
+text:line,(global),vi,src/data/source_data.txt,26,26,"trao đổi trở nên thường xuyên hơn, một hàng hóa có thể được đặt"
+text:line,(global),vi,src/data/source_data.txt,27,27,trong mối quan hệ với nhiều hàng hóa khác. Hình thái giá trị đầy
+text:line,(global),vi,src/data/source_data.txt,28,28,đủ hay mở rộng xuất hiện.
+text:line,(global),vi,src/data/source_data.txt,29,29,Ví dụ: 1A = 2B; hoặc 1A = 3C; hoặc 1A = 5D; ...
+text:line,(global),vi,src/data/source_data.txt,30,30,"Đây là sự mở rộng hình thái giá trị giản đơn; trong đó, giá trị của 1"
+text:line,(global),vi,src/data/source_data.txt,31,31,đơn vị hàng hóa A được biểu hiện ở 2 đơn vị hàng hóa B hoặc 3 đơn vị
+text:line,(global),vi,src/data/source_data.txt,32,32,hàng hóa C; hoặc 5 đơn vị hàng hóa D...
+text:line,(global),vi,src/data/source_data.txt,33,33,Hình thái vật ngang giá đã được mở rộng ra ở nhiều hàng hóa
+text:line,(global),vi,src/data/source_data.txt,34,34,khác nhau. Hạn chế của hình thái này ở chỗ vẫn chỉ là trao đổi trực
+text:line,(global),vi,src/data/source_data.txt,35,35,tiếp với những tỷ lệ chưa cố định.
+text:line,(global),vi,src/data/source_data.txt,36,36,- Hình thái chung của giá trị
+text:line,(global),vi,src/data/source_data.txt,37,37,Việc trao đổi trực tiếp không còn thích hợp khi trình độ sản
+text:line,(global),vi,src/data/source_data.txt,38,38,"xuất hàng hóa phát triển cao hơn, chủng loại hàng hóa càng phong"
+text:line,(global),vi,src/data/source_data.txt,39,39,phú hơn. Trình độ sản xuất này thúc đẩy sự hình thành hình thái
+text:line,(global),vi,src/data/source_data.txt,40,40,chung của giá trị.
+text:line,(global),vi,src/data/source_data.txt,41,41,Ví dụ: 2B; hoặc 3C; hoặc 5D; hoặc ... = 1A.
+text:line,(global),vi,src/data/source_data.txt,42,42,"Ở đây, giá trị của các hàng hóa B, hàng hóa C, hàng hóa D"
+text:line,(global),vi,src/data/source_data.txt,43,43,hoặc nhiều hàng hóa khác đều biểu thị giá trị của chúng ở một
+text:line,(global),vi,src/data/source_data.txt,44,44,"loại hàng hóa làm vật ngang giá chung là hàng hóa A. Tuy vậy,"
+text:line,(global),vi,src/data/source_data.txt,45,45,giữa các vùng lãnh thổ khác nhau trong cùng một quốc gia có
+text:line,(global),vi,src/data/source_data.txt,46,46,thể có những quy ước khác nhau về loại hàng hóa làm vật
+text:line,(global),vi,src/data/source_data.txt,47,47,"ngang giá chung. Khắc phục hạn chế này, hình thái giá trị phát"
+text:line,(global),vi,src/data/source_data.txt,48,48,triển hơn xuất hiện.
+text:line,(global),vi,src/data/source_data.txt,49,49,- Hình thái tiền
+text:line,(global),vi,src/data/source_data.txt,50,50,Khi lực lượng sản xuất và phân công lao động xã hội phát
+text:line,(global),vi,src/data/source_data.txt,51,51,"triển hơn nữa, sản xuất hàng hóa và thị trường ngày càng mở"
+text:line,(global),vi,src/data/source_data.txt,52,52,"rộng, thì tình hình có nhiều vật làm ngang giá chung sẽ gây trở"
+text:line,(global),vi,src/data/source_data.txt,53,53,ngại cho trao đổi giữa các địa phương trong một quốc gia. Do
+text:line,(global),vi,src/data/source_data.txt,54,54,"đó, đòi hỏi khách quan là cần có một loại hàng hóa làm vật"
+text:line,(global),vi,src/data/source_data.txt,55,55,ngang giá chung thống nhất.
+text:line,(global),vi,src/data/source_data.txt,56,56,"Ví dụ: 2B; 3C; 5D;... = 0,1 gr vàng."
+text:line,(global),vi,src/data/source_data.txt,57,57,Vàng trong trường hợp này trở thành vật ngang giá chung cho
+text:line,(global),vi,src/data/source_data.txt,58,58,thế giới hàng hóa. Vàng trở thành hình thái tiền của giá trị. Tiền
+text:line,(global),vi,src/data/source_data.txt,59,59,vàng trong trường hợp này trở thành vật ngang giá chung cho thế
+text:line,(global),vi,src/data/source_data.txt,60,60,giới hàng hóa vì tiền có giá trị. Lượng lao động xã hội đã hao phí
+text:line,(global),vi,src/data/source_data.txt,61,61,trong đơn vị tiền được ngầm hiểu đúng bằng lượng lao động đã hao
+text:line,(global),vi,src/data/source_data.txt,62,62,phí để sản xuất ra các đơn vị hàng hóa tương ứng khi đem đặt trong
+text:line,(global),vi,src/data/source_data.txt,63,63,quan hệ với tiền.
+text:line,(global),vi,src/data/source_data.txt,64,64,"Như vậy, về bản chất, tiền là một loại hàng hóa đặc biệt, là"
+text:line,(global),vi,src/data/source_data.txt,65,65,kết quả của quá trình phát triển của sản xuất và trao đổi hàng
+text:line,(global),vi,src/data/source_data.txt,66,66,"hóa, tiền xuất hiện là yếu tố ngang giá chung cho thế giới hàng"
+text:line,(global),vi,src/data/source_data.txt,67,67,hóa. Tiền là hình thái biểu hiện giá trị của hàng hóa. Tiền phản
+text:line,(global),vi,src/data/source_data.txt,68,68,ánh lao động xã hội và mối quan hệ giữa những người sản xuất
+text:line,(global),vi,src/data/source_data.txt,69,69,và trao đổi hàng hóa. Hình thái giản đơn là mầm mống sơ khai
+text:line,(global),vi,src/data/source_data.txt,70,70,của tiền.
+text:line,(global),vi,src/data/source_data.txt,71,71,Hộp 2.2. Quan niệm về tiền trong kinh tế vi mô
+text:line,(global),vi,src/data/source_data.txt,72,72,Tiền là bất cứ phương tiện nào được thừa nhận chung để thanh
+text:line,(global),vi,src/data/source_data.txt,73,73,toán cho việc giao hàng hoặc để thanh toán nợ. Nó là phương tiện
+text:line,(global),vi,src/data/source_data.txt,74,74,"trao đổi. Những chiếc răng chó ở quần đảo Admiralty, các vỏ sứ ở"
+text:line,(global),vi,src/data/source_data.txt,75,75,"một số vùng châu Phi, vàng thế kỷ XIX đều là các ví dụ về tiền."
+text:line,(global),vi,src/data/source_data.txt,76,76,Điều cần nói không phải hàng hóa vật chất phải sử dụng mà là quy
+text:line,(global),vi,src/data/source_data.txt,77,77,ước xã hội cho rằng nó sẽ được thừa nhận không bàn cãi với tư
+text:line,(global),vi,src/data/source_data.txt,78,78,cách là một phương tiện thanh toán.
+text:line,(global),vi,src/data/source_data.txt,79,79,"Nguồn: David Begg, Stanley Fisher, Rudiger Dornbusch: Kinh tế"
+text:line,(global),vi,src/data/source_data.txt,80,80,"học, Sđd, tr.70."
+text:line,(global),vi,src/data/source_data.txt,81,81,b) Chức năng của tiền
+text:line,(global),vi,src/data/source_data.txt,82,82,- Thước đo giá trị
+text:line,(global),vi,src/data/source_data.txt,83,83,Tiền dùng để đo lường và biểu hiện giá trị của các hàng hóa
+text:line,(global),vi,src/data/source_data.txt,84,84,"khác. Muốn đo lường giá trị của các hàng hóa, bản thân tiền"
+text:line,(global),vi,src/data/source_data.txt,85,85,"phải có giá trị. Để thực hiện chức năng đo lường giá trị, không"
+text:line,(global),vi,src/data/source_data.txt,86,86,nhất thiết phải là tiền mặt mà chỉ cần so sánh với một lượng
+text:line,(global),vi,src/data/source_data.txt,87,87,vàng nhất định một cách tưởng tượng. Sở dĩ có thể thực hiện
+text:line,(global),vi,src/data/source_data.txt,88,88,"được như vậy, vì giữa giá trị của vàng và giá trị của hàng hóa"
+text:line,(global),vi,src/data/source_data.txt,89,89,trong thực tế đã có một tỷ lệ nhất định. Cơ sở của tỷ lệ này là
+text:line,(global),vi,src/data/source_data.txt,90,90,thời gian lao động xã hội cần thiết đã hao phí để sản xuất ra
+text:line,(global),vi,src/data/source_data.txt,91,91,hàng hóa đó.
+text:line,(global),vi,src/data/source_data.txt,92,92,Giá trị hàng hóa được biểu hiện bằng tiền gọi là giá cả hàng
+text:line,(global),vi,src/data/source_data.txt,93,93,hóa.
+text:line,(global),vi,src/data/source_data.txt,94,94,"Như vậy, giá cả hàng hóa là hình thức biểu hiện bằng tiền của"
+text:line,(global),vi,src/data/source_data.txt,95,95,giá trị hàng hóa. Giá trị là cơ sở của giá cả. Trong khi các điều kiện
+text:line,(global),vi,src/data/source_data.txt,96,96,"khác không thay đổi, nếu giá trị của hàng hóa càng lớn thì giá cả"
+text:line,(global),vi,src/data/source_data.txt,97,97,của hàng hóa càng cao và ngược lại. Giá cả của hàng hóa có thể lên
+text:line,(global),vi,src/data/source_data.txt,98,98,"xuống do tác động bởi nhiều yếu tố như: giá trị của hàng hóa, giá"
+text:line,(global),vi,src/data/source_data.txt,99,99,"trị của tiền, ảnh hưởng của quan hệ cung - cầu."
+text:line,(global),vi,src/data/source_data.txt,100,100,- Phương tiện lưu thông
+text:line,(global),vi,src/data/source_data.txt,101,101,"Khi thực hiện chức năng phương tiện lưu thông, tiền được"
+text:line,(global),vi,src/data/source_data.txt,102,102,dùng làm môi giới cho quá trình trao đổi hàng hóa.
+text:line,(global),vi,src/data/source_data.txt,103,103,"Để thực hiện chức năng làm phương tiện lưu thông, yêu cầu"
+text:line,(global),vi,src/data/source_data.txt,104,104,"phải có tiền mặt (tiền đúc bằng kim loại, tiền giấy). Trong thực"
+text:line,(global),vi,src/data/source_data.txt,105,105,"hiện chức năng phương tiện lưu thông, tiền không nhất thiết phải"
+text:line,(global),vi,src/data/source_data.txt,106,106,có đủ giá trị. Đây là cơ sở cho các quốc gia công nhận và phát hành
+text:line,(global),vi,src/data/source_data.txt,107,107,các loại tiền giấy khác nhau. Thực hiện chức năng phương tiện lưu
+text:line,(global),vi,src/data/source_data.txt,108,108,"thông, tiền làm cho quá trình trao đổi, mua bán trở nên thuận lợi;"
+text:line,(global),vi,src/data/source_data.txt,109,109,"đồng thời làm cho hành vi mua, hành vi bán tách rời về không gian"
+text:line,(global),vi,src/data/source_data.txt,110,110,"và thời gian. Do đó, có thể tiềm ẩn khả năng khủng hoảng."
+text:line,(global),vi,src/data/source_data.txt,111,111,- Phương tiện cất trữ
+text:line,(global),vi,src/data/source_data.txt,112,112,"Thực hiện phương tiện cất trữ, tiền rút ra khỏi quá trình lưu"
+text:line,(global),vi,src/data/source_data.txt,113,113,"thông để đi vào cất trữ. Thực hiện phương tiện cất trữ, tiền phải"
+text:line,(global),vi,src/data/source_data.txt,114,114,"có đủ giá trị như tiền vàng, tiền bạc. Tiền cất trữ có tác dụng là"
+text:line,(global),vi,src/data/source_data.txt,115,115,"dự trữ tiền cho lưu thông, sẵn sàng tham gia lưu thông. Khi sản"
+text:line,(global),vi,src/data/source_data.txt,116,116,"xuất hàng hóa phát triển, lượng hàng hóa nhiều hơn, tiền cất trữ"
+text:line,(global),vi,src/data/source_data.txt,117,117,"được đưa vào lưu thông. Ngược lại, nền sản xuất giảm, lượng"
+text:line,(global),vi,src/data/source_data.txt,118,118,"hàng hóa giảm, một phần tiền vàng rút khỏi lưu thông, đi vào cất"
+text:line,(global),vi,src/data/source_data.txt,119,119,trữ.
+text:line,(global),vi,src/data/source_data.txt,120,120,- Phương tiện thanh toán
+text:line,(global),vi,src/data/source_data.txt,121,121,"Trong trường hợp tiền được dùng để trả nợ, trả tiền mua chịu"
+text:line,(global),vi,src/data/source_data.txt,122,122,hàng hóa... thì tiền làm phương tiện thanh toán. Thực hiện chức
+text:line,(global),vi,src/data/source_data.txt,123,123,"năng thanh toán, có nhiều hình thức tiền khác nhau được chấp"
+text:line,(global),vi,src/data/source_data.txt,124,124,nhận. Chức năng phương tiện thanh toán của tiền gắn liền với chế
+text:line,(global),vi,src/data/source_data.txt,125,125,"độ tín dụng thương mại, tức là mua bán thông qua chế độ tín dụng."
+text:line,(global),vi,src/data/source_data.txt,126,126,Ngày nay việc thanh toán không dùng tiền mặt phát triển mạnh
+text:line,(global),vi,src/data/source_data.txt,127,127,"mẽ. Người ta có thể sử dụng tiền ghi sổ, hoặc tiền trong tài khoản"
+text:line,(global),vi,src/data/source_data.txt,128,128,"ngân hàng, tiền điện tử, bitcoin..."
+text:line,(global),vi,src/data/source_data.txt,129,129,- Tiền tệ thế giới
+text:line,(global),vi,src/data/source_data.txt,130,130,"Khi trao đổi hàng hóa mở rộng ra ngoài biên giới quốc gia,"
+text:line,(global),vi,src/data/source_data.txt,131,131,tiền làm chức năng tiền tệ thế giới. Lúc này tiền được dùng làm
+text:line,(global),vi,src/data/source_data.txt,132,132,"phương tiện mua bán, thanh toán quốc tế giữa các nước với nhau."
+text:line,(global),vi,src/data/source_data.txt,133,133,"Để thực hiện chức năng này, tiền phải có đủ giá trị, phải là tiền"
+text:line,(global),vi,src/data/source_data.txt,134,134,vàng hoặc những đồng tiền được công nhận là phương tiện thanh
+text:line,(global),vi,src/data/source_data.txt,135,135,toán quốc tế.
+text:line,(global),vi,src/data/source_data.txt,136,136,4. Dịch vụ và quan hệ trao đổi trong trường hợp một số
+text:line,(global),vi,src/data/source_data.txt,137,137,yếu tố khác hàng hóa thông thường ở điều kiện ngày nay
+text:line,(global),vi,src/data/source_data.txt,138,138,Nội dung trình bày ở mục này thể hiện sự nghiên cứu có tính
+text:line,(global),vi,src/data/source_data.txt,139,139,chất làm rõ thêm một số khía cạnh mà sinh thời C. Mác chưa có
+text:line,(global),vi,src/data/source_data.txt,140,140,điều kiện nêu ra một cách đầy đủ.
+text:line,(global),vi,src/data/source_data.txt,141,141,a) Dịch vụ
+text:line,(global),vi,src/data/source_data.txt,142,142,"Dịch vụ là một loại hàng hóa, nhưng đó là loại hàng hóa vô"
+text:line,(global),vi,src/data/source_data.txt,143,143,hình.
+text:line,(global),vi,src/data/source_data.txt,144,144,"Để có được các loại dịch vụ, người ta cũng phải hao phí sức"
+text:line,(global),vi,src/data/source_data.txt,145,145,lao động và mục đích của việc cung ứng dịch vụ cũng nhằm thỏa
+text:line,(global),vi,src/data/source_data.txt,146,146,mãn nhu cầu của người có nhu cầu về loại hình dịch vụ đó. Giá trị
+text:line,(global),vi,src/data/source_data.txt,147,147,của dịch vụ cũng là lao động xã hội tạo ra dịch vụ. Giá trị sử dụng
+text:line,(global),vi,src/data/source_data.txt,148,148,của dịch vụ không phải là phục vụ trực tiếp người cung ứng dịch
+text:line,(global),vi,src/data/source_data.txt,149,149,vụ.
+text:line,(global),vi,src/data/source_data.txt,150,150,"Thời kỳ C. Mác nghiên cứu, dịch vụ chưa phát triển mạnh mẽ"
+text:line,(global),vi,src/data/source_data.txt,151,151,"như ngày nay. Khi đó, khu vực chiếm ưu thế của nền kinh tế vẫn là"
+text:line,(global),vi,src/data/source_data.txt,152,152,sản xuất hàng hóa vật thể hữu hình. Khu vực dịch vụ chưa trở thành
+text:line,(global),vi,src/data/source_data.txt,153,153,"phổ biến. Vì vậy, trong lý luận của mình, C. Mác chưa có điều kiện để"
+text:line,(global),vi,src/data/source_data.txt,154,154,trình bày về dịch vụ một cách thật sâu sắc. Điều này làm cho nhiều
+text:line,(global),vi,src/data/source_data.txt,155,155,"người ngộ nhận cho rằng, C. Mác chỉ biết tới hàng hóa vật thể. Trái"
+text:line,(global),vi,src/data/source_data.txt,156,156,"lại, theo C. Mác, dịch vụ, nếu đó là dịch vụ cho sản xuất thì thuộc khu"
+text:line,(global),vi,src/data/source_data.txt,157,157,"vực hàng hóa cho sản xuất, còn dịch vụ cho tiêu dùng thì thuộc phạm"
+text:line,(global),vi,src/data/source_data.txt,158,158,"trù hàng hóa cho tiêu dùng. Về tổng quát, dịch vụ, cũng là một kiểu"
+text:line,(global),vi,src/data/source_data.txt,159,159,hàng hóa.
+text:line,(global),vi,src/data/source_data.txt,160,160,"Khác với hàng hóa thông thường, dịch vụ là hàng hóa không"
+text:line,(global),vi,src/data/source_data.txt,161,161,thể cất trữ. Việc sản xuất và tiêu dùng dịch vụ được diễn ra đồng
+text:line,(global),vi,src/data/source_data.txt,162,162,"thời. Trong điều kiện ngày nay, do sự phát triển của phân công lao"
+text:line,(global),vi,src/data/source_data.txt,163,163,"động xã hội dưới tác động của sự phát triển khoa học - công nghệ,"
+text:line,(global),vi,src/data/source_data.txt,164,164,dịch vụ ngày càng có vai trò quan trọng trong việc thỏa mãn nhu
+text:line,(global),vi,src/data/source_data.txt,165,165,cầu văn minh của con người.
+text:line,(global),vi,src/data/source_data.txt,166,166,b) Quan hệ trao đổi trong trường hợp một số yếu tố khác hàng hóa
+text:line,(global),vi,src/data/source_data.txt,167,167,thông thường ở điều kiện ngày nay
+text:line,(global),vi,src/data/source_data.txt,168,168,Nền sản xuất hàng hóa ngày nay hình thành quan hệ mua bán
+text:line,(global),vi,src/data/source_data.txt,169,169,nhiều yếu tố có đặc điểm nhận dạng khác với hàng hóa thông
+text:line,(global),vi,src/data/source_data.txt,170,170,thường như đã nghiên cứu. Sự khác biệt này xét theo nghĩa chúng
+text:line,(global),vi,src/data/source_data.txt,171,171,"có các đặc trưng như: có giá trị sử dụng, có giá cả, có thể trao đổi,"
+text:line,(global),vi,src/data/source_data.txt,172,172,mua bán nhưng lại không do hao phí lao động trực tiếp như cách
+text:line,(global),vi,src/data/source_data.txt,173,173,tạo ra các hàng hóa thông thường khác.
+text:line,(global),vi,src/data/source_data.txt,174,174,"Khi xuất hiện hiện tượng trao đổi, mua bán các hàng hóa đặc"
+text:line,(global),vi,src/data/source_data.txt,175,175,"biệt như vậy, làm cho nhiều người ngộ nhận cho rằng lý luận về"
+text:line,(global),vi,src/data/source_data.txt,176,176,hàng hóa của C. Mác không còn phù hợp. Thực chất do họ chưa
+text:line,(global),vi,src/data/source_data.txt,177,177,phân biệt được hàng hóa và những yếu tố khác hàng hóa thông
+text:line,(global),vi,src/data/source_data.txt,178,178,thường. Sau đây sẽ xem xét quan hệ trao đổi trong trường hợp một
+text:line,(global),vi,src/data/source_data.txt,179,179,số yếu tố điển hình đang có nhiều tranh luận hiện nay:
+text:line,(global),vi,src/data/source_data.txt,180,180,- Quan hệ trong trường hợp trao đổi quyền sử dụng đất
+text:line,(global),vi,src/data/source_data.txt,181,181,"Khi thực hiện mua bán quyền sử dụng đất, nhiều người lầm"
+text:line,(global),vi,src/data/source_data.txt,182,182,"tưởng đó là mua bán đất đai. Trên thực tế, họ trao đổi với nhau"
+text:line,(global),vi,src/data/source_data.txt,183,183,quyền sử dụng đất.
+text:line,(global),vi,src/data/source_data.txt,184,184,"Quyền sử dụng đất có giá trị sử dụng, có giá cả nhưng không"
+text:line,(global),vi,src/data/source_data.txt,185,185,do hao phí lao động tạo ra theo cách như các hàng hóa thông
+text:line,(global),vi,src/data/source_data.txt,186,186,thường. Giá cả của quyền sử dụng đất chịu tác động của nhiều yếu
+text:line,(global),vi,src/data/source_data.txt,187,187,"tố: giá trị của tiền, quan hệ cung cầu, đầu cơ, sự khan hiếm, tốc độ"
+text:line,(global),vi,src/data/source_data.txt,188,188,"đô thị hóa, công nghiệp hóa, gia tăng dân số..."
+text:line,(global),vi,src/data/source_data.txt,189,189,"Trong xã hội hiện đại, xuất hiện hiện tượng một bộ phận xã"
+text:line,(global),vi,src/data/source_data.txt,190,190,hội trở nên có số lượng tiền nhiều (theo quan niệm thông thường là
+text:line,(global),vi,src/data/source_data.txt,191,191,giàu có) do mua bán quyền sử dụng đất. Bản chất của hiện tượng
+text:line,(global),vi,src/data/source_data.txt,192,192,này là gì?
+text:line,(global),vi,src/data/source_data.txt,193,193,"Xét về bản chất, số lượng tiền đó chính là hệ quả của việc tiền"
+text:line,(global),vi,src/data/source_data.txt,194,194,từ túi chủ thể này chuyển sang túi chủ thể khác. Trong trường hợp
+text:line,(global),vi,src/data/source_data.txt,195,195,"như vậy tiền là phương tiện thanh toán, không phải là thước đo giá"
+text:line,(global),vi,src/data/source_data.txt,196,196,"trị. Nhưng do thực tế, có nhiều tiền là có thể mua được các hàng"
+text:line,(global),vi,src/data/source_data.txt,197,197,"hóa khác, nên gây ra sự ngộ nhận rằng có nhiều giá trị. Do vậy,"
+text:line,(global),vi,src/data/source_data.txt,198,198,nhiều người cho rằng đất đai cũng tạo ra giá trị. Thực tế họ chưa
+text:line,(global),vi,src/data/source_data.txt,199,199,phân biệt được giá trị và của cải. Từng cá nhân có thể trở nên giàu
+text:line,(global),vi,src/data/source_data.txt,200,200,"có nhờ trao đổi, mua bán quyền sử dụng đất, do so sánh số tiền mà"
+text:line,(global),vi,src/data/source_data.txt,201,201,họ bỏ ra với số tiền mà họ thu được là có chênh lệch dương. Xét
+text:line,(global),vi,src/data/source_data.txt,202,202,"trên phạm vi toàn xã hội, không thể có một xã hội giàu có nếu chỉ"
+text:line,(global),vi,src/data/source_data.txt,203,203,mua bán quyền sử dụng đất.
+text:line,(global),vi,src/data/source_data.txt,204,204,- Quan hệ trong trao đổi thương hiệu (danh tiếng)
+text:line,(global),vi,src/data/source_data.txt,205,205,"Ngày nay, thương hiệu của một doanh nghiệp cũng có thể"
+text:line,(global),vi,src/data/source_data.txt,206,206,"được trao đổi, mua bán, được định giá, tức là chúng có giá cả, thậm"
+text:line,(global),vi,src/data/source_data.txt,207,207,chí có giá cả cao. Thương hiệu hay danh tiếng là kết quả của sự nỗ
+text:line,(global),vi,src/data/source_data.txt,208,208,"lực của sự hao phí sức lao động của người nắm giữ thương hiệu,"
+text:line,(global),vi,src/data/source_data.txt,209,209,"thậm chí của nhiều người. Do đó, giá cả của thương hiệu, nhất là"
+text:line,(global),vi,src/data/source_data.txt,210,210,"những thương hiệu nổi tiếng thường rất cao. Điểm cần chú ý là,"
+text:line,(global),vi,src/data/source_data.txt,211,211,thương hiệu chỉ có thể được hình thành dựa trên một kiểu sản xuất
+text:line,(global),vi,src/data/source_data.txt,212,212,"hàng hóa, dịch vụ thực mới có giá cả cao."
+text:line,(global),vi,src/data/source_data.txt,213,213,"Bên cạnh đó, ngày nay có hiện tượng, một số ít cầu thủ bóng"
+text:line,(global),vi,src/data/source_data.txt,214,214,đá nổi tiếng cũng được trả giá rất cao khi các câu lạc bộ chuyển
+text:line,(global),vi,src/data/source_data.txt,215,215,"nhượng. Sự thực, các câu lạc bộ mua bán sức lao động để thực hiện"
+text:line,(global),vi,src/data/source_data.txt,216,216,hoạt động đá bóng trên sân cỏ. Nhưng do hoạt động đá bóng đó
+text:line,(global),vi,src/data/source_data.txt,217,217,"gắn với cơ thể sinh học của cầu thủ, nên người ta nhầm tưởng đó là"
+text:line,(global),vi,src/data/source_data.txt,218,218,mua bán danh tiếng của anh ta. Sở dĩ giá cả của các vụ chuyển
+text:line,(global),vi,src/data/source_data.txt,219,219,nhượng các cầu thủ tài năng thường rất cao là vì sự khan hiếm của
+text:line,(global),vi,src/data/source_data.txt,220,220,tài năng và những lợi ích kỳ vọng thu được trong các trận thi đấu
+text:line,(global),vi,src/data/source_data.txt,221,221,có sự tham gia của cầu thủ đó. Giá cả trong các vụ chuyển nhượng
+text:line,(global),vi,src/data/source_data.txt,222,222,"như vậy vừa phản ánh giá trị hoạt động lao động đá bóng, vừa phản"
+text:line,(global),vi,src/data/source_data.txt,223,223,"ánh yếu tố tài năng, vừa phản ánh quan hệ khan hiếm, vừa phản"
+text:line,(global),vi,src/data/source_data.txt,224,224,ánh lợi ích kỳ vọng của câu lạc bộ nhận chuyển nhượng.
+text:line,(global),vi,src/data/source_data.txt,225,225,"- Quan hệ trong trao đổi, mua bán chứng khoán, chứng quyền"
+text:line,(global),vi,src/data/source_data.txt,226,226,và một số giấy tờ có giá
+text:line,(global),vi,src/data/source_data.txt,227,227,"Ngày nay, chứng khoán (cổ phiếu, trái phiếu) do các công ty,"
+text:line,(global),vi,src/data/source_data.txt,228,228,"doanh nghiệp cổ phần phát hành, chứng quyền do các công ty kinh"
+text:line,(global),vi,src/data/source_data.txt,229,229,doanh chứng khoán chứng nhận và một số loại giấy tờ có giá (ngân
+text:line,(global),vi,src/data/source_data.txt,230,230,"phiếu, thương phiếu) cũng có thể mua bán, trao đổi và đem lại"
+text:line,(global),vi,src/data/source_data.txt,231,231,lượng tiền lớn hơn cho người mua bán.
+text:line,(global),vi,src/data/source_data.txt,232,232,"Chứng khoán, chứng quyền, các loại giấy tờ có giá khác cũng"
+text:line,(global),vi,src/data/source_data.txt,233,233,"có một số đặc trưng như hàng hóa, mang lại thu nhập cho người"
+text:line,(global),vi,src/data/source_data.txt,234,234,"mua bán. Sự phát triển của các giao dịch mua bán chứng khoán,"
+text:line,(global),vi,src/data/source_data.txt,235,235,chứng quyền dần thúc đẩy hình thành một loại thị trường yếu tố
+text:line,(global),vi,src/data/source_data.txt,236,236,"có tính hàng hóa phái sinh, phân biệt với thị trường hàng hóa"
+text:line,(global),vi,src/data/source_data.txt,237,237,"(dịch vụ thực) - thị trường chứng khoán, chứng quyền. C. Mác"
+text:line,(global),vi,src/data/source_data.txt,238,238,"gọi những hàng hóa này là tư bản giả, để phân biệt với tư bản"
+text:line,(global),vi,src/data/source_data.txt,239,239,"tham gia quá trình sản xuất, trao đổi hàng hóa thực trong nền kinh"
+text:line,(global),vi,src/data/source_data.txt,240,240,tế.
+text:line,(global),vi,src/data/source_data.txt,241,241,"Để có thể được mua bán các loại chứng khoán, chứng quyền"
+text:line,(global),vi,src/data/source_data.txt,242,242,hoặc giấy tờ có giá đó phải dựa trên cơ sở sự tồn tại của một tổ
+text:line,(global),vi,src/data/source_data.txt,243,243,chức sản xuất kinh doanh có thực. Người ta không mua các loại
+text:line,(global),vi,src/data/source_data.txt,244,244,"chứng khoán, chứng quyền, giấy tờ có giá không gắn với một"
+text:line,(global),vi,src/data/source_data.txt,245,245,"chủ thể sản xuất kinh doanh thực trong nền kinh tế. Do đó,"
+text:line,(global),vi,src/data/source_data.txt,246,246,"chứng khoán, chứng quyền là loại yếu tố phái sinh, nó có tính"
+text:line,(global),vi,src/data/source_data.txt,247,247,"hàng hóa, bản thân chúng không phải là hàng hóa như hàng hóa"
+text:line,(global),vi,src/data/source_data.txt,248,248,thông thường.
+text:line,(global),vi,src/data/source_data.txt,249,249,Sự giàu có của các cá nhân có được do số lượng tiền tăng lên
+text:line,(global),vi,src/data/source_data.txt,250,250,sau mỗi giao dịch cũng thực chất là sự chuyển tiền từ người khác
+text:line,(global),vi,src/data/source_data.txt,251,251,vào trong túi của họ. Trong trường hợp này tiền cũng thực hiện
+text:line,(global),vi,src/data/source_data.txt,252,252,"chức năng thanh toán, không phản ánh giá trị của chứng khoán."
+text:line,(global),vi,src/data/source_data.txt,253,253,Giá cả của chứng khoán phản ánh lợi ích kỳ vọng mà người mua
+text:line,(global),vi,src/data/source_data.txt,254,254,có thể có được. Xã hội cần phải dựa trên một nền sản xuất có thực
+text:line,(global),vi,src/data/source_data.txt,255,255,mới có thể giàu có được. Toàn thể xã hội không thể giàu có được
+text:line,(global),vi,src/data/source_data.txt,256,256,"bằng con đường duy nhất là buôn bán chứng khoán, chứng quyền."
+text:line,(global),vi,src/data/source_data.txt,257,257,"Mặc dù thị trường chứng khoán, chứng quyền là một kênh rất"
+text:line,(global),vi,src/data/source_data.txt,258,258,quan trọng để một số chủ thể làm giàu và thúc đẩy các giao dịch
+text:line,(global),vi,src/data/source_data.txt,259,259,"vốn cho nền kinh tế, song thực tế cũng cho thấy, có nhiều người"
+text:line,(global),vi,src/data/source_data.txt,260,260,"giàu lên, cũng có nhiều người rơi vào tình trạng khánh kiệt khi"
+text:line,(global),vi,src/data/source_data.txt,261,261,chứng khoán không mua bán được.
+text:line,(global),vi,src/data/source_data.txt,262,262,II- THỊ TRƯỜNG VÀ NỀN KINH TẾ THỊ TRƯỜNG
+text:line,(global),vi,src/data/source_data.txt,263,263,"Hàng hóa là một trong những yếu tố thị trường, do vậy, việc"
+text:line,(global),vi,src/data/source_data.txt,264,264,nghiên cứu hàng hóa không thể tách rời việc nghiên cứu về thị
+text:line,(global),vi,src/data/source_data.txt,265,265,"trường. Mặt khác, các loại thị trường là một trong những thực thể"
+text:line,(global),vi,src/data/source_data.txt,266,266,"của nền kinh tế thị trường, nên nghiên cứu về thị trường cũng"
+text:line,(global),vi,src/data/source_data.txt,267,267,không thể tách rời việc nghiên cứu nền kinh tế thị trường.
+text:line,(global),vi,src/data/source_data.txt,268,268,"1. Khái niệm, phân loại và vai trò của thị trường"
+text:line,(global),vi,src/data/source_data.txt,269,269,a) Khái niệm và phân loại thị trường
+text:line,(global),vi,src/data/source_data.txt,270,270,- Khái niệm thị trường
+text:line,(global),vi,src/data/source_data.txt,271,271,"Thị trường là tổng hòa những quan hệ kinh tế, trong đó nhu"
+text:line,(global),vi,src/data/source_data.txt,272,272,"cầu của các chủ thể được đáp ứng thông qua việc trao đổi, mua"
+text:line,(global),vi,src/data/source_data.txt,273,273,"bán với sự xác định giá cả và số lượng hàng hóa, dịch vụ tương"
+text:line,(global),vi,src/data/source_data.txt,274,274,ứng với trình độ phát triển nhất định của nền sản xuất xã hội.
+text:line,(global),vi,src/data/source_data.txt,275,275,"Như vậy, thị trường có thể được nhận diện ở cấp độ cụ thể,"
+text:line,(global),vi,src/data/source_data.txt,276,276,"quan sát được như chợ, cửa hàng, quầy hàng lưu động, phòng giao"
+text:line,(global),vi,src/data/source_data.txt,277,277,"dịch hay siêu thị và nhiều hình thức tổ chức giao dịch, mua bán"
+text:line,(global),vi,src/data/source_data.txt,278,278,khác.
+text:line,(global),vi,src/data/source_data.txt,279,279,"Ở cấp độ trừu tượng hơn, thị trường cũng có thể được nhận"
+text:line,(global),vi,src/data/source_data.txt,280,280,"diện thông qua các mối quan hệ liên quan đến trao đổi, mua bán"
+text:line,(global),vi,src/data/source_data.txt,281,281,"hàng hóa, dịch vụ trong xã hội, được hình thành do những điều"
+text:line,(global),vi,src/data/source_data.txt,282,282,"kiện lịch sử, kinh tế, xã hội nhất định. Theo nghĩa này, thị"
+text:line,(global),vi,src/data/source_data.txt,283,283,"trường là tổng thể các mối quan hệ kinh tế gồm cung, cầu, giá"
+text:line,(global),vi,src/data/source_data.txt,284,284,"cả; quan hệ hàng - tiền; quan hệ giá trị, giá trị sử dụng; quan hệ"
+text:line,(global),vi,src/data/source_data.txt,285,285,"hợp tác, cạnh tranh; quan hệ trong nước, ngoài nước... Đây cũng"
+text:line,(global),vi,src/data/source_data.txt,286,286,là các yếu tố của thị trường.
+text:line,(global),vi,src/data/source_data.txt,287,287,Hộp 2.3. Một quan niệm khác về thị trường
+text:line,(global),vi,src/data/source_data.txt,288,288,Thị trường là sự biểu hiện thu gọn của quá trình mà thông qua
+text:line,(global),vi,src/data/source_data.txt,289,289,đó các quyết định của các gia đình về tiêu dùng các mặt hàng nào;
+text:line,(global),vi,src/data/source_data.txt,290,290,"các quyết định của các công ty về sản xuất cái gì, sản xuất như thế"
+text:line,(global),vi,src/data/source_data.txt,291,291,nào và các quyết định của người công nhân về việc làm bao lâu cho
+text:line,(global),vi,src/data/source_data.txt,292,292,ai đều được dung hòa bằng sự điều chỉnh giá cả.
+text:line,(global),vi,src/data/source_data.txt,293,293,"Nguồn: David Begg, Stanley Fisher, Rudiger Dornbusch: Kinh tế"
+text:line,(global),vi,src/data/source_data.txt,294,294,"học, Sđd, tr.11."
+text:line,(global),vi,src/data/source_data.txt,295,295,- Phân loại thị trường
+text:line,(global),vi,src/data/source_data.txt,296,296,"Căn cứ vào đối tượng trao đổi, mua bán cụ thể, có các loại"
+text:line,(global),vi,src/data/source_data.txt,297,297,"thị trường như: thị trường hàng hóa, thị trường dịch vụ. Trong"
+text:line,(global),vi,src/data/source_data.txt,298,298,mỗi loại thị trường này lại có thể chia cụ thể thành các thị
+text:line,(global),vi,src/data/source_data.txt,299,299,"trường theo các loại hàng hóa, dịch vụ khác nhau."
+text:line,(global),vi,src/data/source_data.txt,300,300,"Căn cứ vào phạm vi các quan hệ, có thị trường trong nước và"
+text:line,(global),vi,src/data/source_data.txt,301,301,thị trường thế giới.
+text:line,(global),vi,src/data/source_data.txt,302,302,"Căn cứ vào vai trò của các yếu tố được trao đổi, mua bán,"
+text:line,(global),vi,src/data/source_data.txt,303,303,có thị trường tư liệu tiêu dùng và thị trường tư liệu sản xuất.
+text:line,(global),vi,src/data/source_data.txt,304,304,"Căn cứ vào tính chất và cơ chế vận hành, có thể chia thành :"
+text:line,(global),vi,src/data/source_data.txt,305,305,"thị trường tự do, thị trường có điều tiết, thị trường cạnh tranh hoàn"
+text:line,(global),vi,src/data/source_data.txt,306,306,hảo và thị trường cạnh tranh không hoàn hảo (độc quyền).
+text:line,(global),vi,src/data/source_data.txt,307,307,"Ngày nay, các nền kinh tế phát triển ngày càng nhanh và phức"
+text:line,(global),vi,src/data/source_data.txt,308,308,"tạp hơn, do đó hệ thống thị trường cũng biến đổi cho phù hợp với"
+text:line,(global),vi,src/data/source_data.txt,309,309,"điều kiện, trình độ phát triển của nền kinh tế. Vì vậy, để tổ chức có"
+text:line,(global),vi,src/data/source_data.txt,310,310,"hiệu quả hoạt động sản xuất kinh doanh, đòi hỏi phải hiểu rõ bản"
+text:line,(global),vi,src/data/source_data.txt,311,311,"chất của hệ thống thị trường, những quy luật kinh tế cơ bản của thị"
+text:line,(global),vi,src/data/source_data.txt,312,312,trường và các vấn đề liên quan khác.
+text:line,(global),vi,src/data/source_data.txt,313,313,b) Vai trò của thị trường
+text:line,(global),vi,src/data/source_data.txt,314,314,Xét trong mối quan hệ với thúc đẩy sản xuất và trao đổi hàng
+text:line,(global),vi,src/data/source_data.txt,315,315,"hóa (dịch vụ) cũng như thúc đẩy tiến bộ xã hội, vai trò chủ yếu của"
+text:line,(global),vi,src/data/source_data.txt,316,316,thị trường có thể được khái quát như sau:
+text:line,(global),vi,src/data/source_data.txt,317,317,"Một là, thị trường thực hiện giá trị hàng hóa, là điều kiện, môi"
+text:line,(global),vi,src/data/source_data.txt,318,318,trường cho sản xuất phát triển.
+text:line,(global),vi,src/data/source_data.txt,319,319,Giá trị hàng hóa được thực hiện thông qua trao đổi. Việc trao
+text:line,(global),vi,src/data/source_data.txt,320,320,đổi phải được diễn ra ở thị trường. Thị trường là môi trường để các
+text:line,(global),vi,src/data/source_data.txt,321,321,chủ thể thực hiện giá trị hàng hóa. Sản xuất hàng hóa càng phát
+text:line,(global),vi,src/data/source_data.txt,322,322,"triển, sản xuất ra càng nhiều hàng hóa, dịch vụ thì càng đòi hỏi thị"
+text:line,(global),vi,src/data/source_data.txt,323,323,trường tiêu thụ phải rộng lớn hơn. Sự mở rộng thị trường đến lượt
+text:line,(global),vi,src/data/source_data.txt,324,324,"nó lại thúc đẩy trở lại sản xuất phát triển. Vì vậy, thị trường là môi"
+text:line,(global),vi,src/data/source_data.txt,325,325,"trường, là điều kiện không thể thiếu của quá trình sản xuất kinh"
+text:line,(global),en,src/data/source_data.txt,326,326,doanh.
+text:line,(global),vi,src/data/source_data.txt,327,327,Thị trường là cầu nối giữa sản xuất với tiêu dùng. Thị trường
+text:line,(global),vi,src/data/source_data.txt,328,328,đặt ra các nhu cầu cho sản xuất cũng như nhu cầu cho tiêu dùng. Vì
+text:line,(global),vi,src/data/source_data.txt,329,329,"vậy, thị trường có vai trò thông tin, định hướng cho mọi nhu cầu"
+text:line,(global),vi,src/data/source_data.txt,330,330,sản xuất kinh doanh.
+text:line,(global),vi,src/data/source_data.txt,331,331,"Hai là, thị trường kích thích sự sáng tạo của mọi thành viên"
+text:line,(global),vi,src/data/source_data.txt,332,332,"trong xã hội, tạo ra cách thức phân bổ nguồn lực hiệu quả trong"
+text:line,(global),vi,src/data/source_data.txt,333,333,nền kinh tế.
+text:line,(global),vi,src/data/source_data.txt,334,334,Thị trường thúc đẩy các quan hệ kinh tế không ngừng phát
+text:line,(global),vi,src/data/source_data.txt,335,335,"triển. Do đó, đòi hỏi các thành viên trong xã hội phải không ngừng"
+text:line,(global),vi,src/data/source_data.txt,336,336,"nỗ lực, sáng tạo để thích ứng với sự phát triển của thị trường. Khi"
+text:line,(global),vi,src/data/source_data.txt,337,337,"sự sáng tạo được thị trường chấp nhận, chủ thể sáng tạo sẽ được"
+text:line,(global),vi,src/data/source_data.txt,338,338,"thụ hưởng lợi ích tương xứng. Khi lợi ích được đáp ứng, động lực"
+text:line,(global),vi,src/data/source_data.txt,339,339,cho sự sáng tạo được thúc đẩy. Cứ như vậy sẽ kích thích sự sáng
+text:line,(global),vi,src/data/source_data.txt,340,340,tạo của mọi thành viên trong xã hội.
+text:line,(global),vi,src/data/source_data.txt,341,341,"Thông qua thị trường, các nguồn lực cho sản xuất được điều"
+text:line,(global),vi,src/data/source_data.txt,342,342,"tiết, phân bổ tới các chủ thể sử dụng hiệu quả, thị trường tạo ra cơ"
+text:line,(global),vi,src/data/source_data.txt,343,343,chế để lựa chọn các chủ thể có năng lực sử dụng nguồn lực hiệu
+text:line,(global),vi,src/data/source_data.txt,344,344,quả trong nền sản xuất.
+text:line,(global),vi,src/data/source_data.txt,345,345,"Ba là, thị trường gắn kết nền kinh tế thành một chỉnh thể, gắn"
+text:line,(global),vi,src/data/source_data.txt,346,346,kết nền kinh tế quốc gia với nền kinh tế thế giới.
+text:line,(global),vi,src/data/source_data.txt,347,347,"Xét trong phạm vi quốc gia, thị trường làm cho các quan hệ sản"
+text:line,(global),vi,src/data/source_data.txt,348,348,"xuất lưu thông, phân phối, tiêu dùng trở thành một thể thống nhất."
+text:line,(global),vi,src/data/source_data.txt,349,349,Thị trường không phụ thuộc vào địa giới hành chính. Thị trường gắn
+text:line,(global),vi,src/data/source_data.txt,350,350,"kết mọi chủ thể giữa các khâu, giữa các vùng, miền vào một chỉnh"
+text:line,(global),vi,src/data/source_data.txt,351,351,thể thống nhất.
+text:line,(global),vi,src/data/source_data.txt,352,352,"Xét trong quan hệ với nền kinh tế thế giới, thị trường tạo ra sự"
+text:line,(global),vi,src/data/source_data.txt,353,353,gắn kết nền kinh tế trong nước với nền kinh tế thế giới. Các quan
+text:line,(global),vi,src/data/source_data.txt,354,354,"hệ sản xuất, lưu thông, phân phối, tiêu dùng không chỉ bó hẹp"
+text:line,(global),vi,src/data/source_data.txt,355,355,"trong phạm vi nội bộ quốc gia, mà thông qua thị trường, các quan"
+text:line,(global),vi,src/data/source_data.txt,356,356,"hệ đó có sự kết nối, liên thông với các quan hệ trên phạm vi thế"
+text:line,(global),vi,src/data/source_data.txt,357,357,"giới. Với vai trò này, thị trường góp phần thúc đẩy sự gắn kết nền"
+text:line,(global),vi,src/data/source_data.txt,358,358,kinh tế quốc gia với nền kinh tế thế giới.
+text:line,(global),vi,src/data/source_data.txt,359,359,Vai trò của thị trường luôn không tách rời với cơ chế thị
+text:line,(global),vi,src/data/source_data.txt,360,360,trường. Thị trường trở nên sống động bởi có sự vận hành của cơ
+text:line,(global),vi,src/data/source_data.txt,361,361,chế thị trường.
+text:line,(global),vi,src/data/source_data.txt,362,362,Cơ chế thị trường là hệ thống các quan hệ mang tính tự điều
+text:line,(global),vi,src/data/source_data.txt,363,363,chỉnh tuân theo yêu cầu của các quy luật kinh tế.
+text:line,(global),vi,src/data/source_data.txt,364,364,Cơ chế thị trường là phương thức cơ bản để phân phối và sử
+text:line,(global),vi,src/data/source_data.txt,365,365,"dụng các nguồn vốn, tài nguyên, công nghệ, sức lao động, thông"
+text:line,(global),vi,src/data/source_data.txt,366,366,"tin, trí tuệ... trong nền kinh tế thị trường. Đây là một kiểu cơ chế"
+text:line,(global),vi,src/data/source_data.txt,367,367,"vận hành nền kinh tế mang tính khách quan, do bản thân nền sản"
+text:line,(global),vi,src/data/source_data.txt,368,368,xuất hàng hóa hình thành. Cơ chế thị trường được A. Smith ví
+text:line,(global),vi,src/data/source_data.txt,369,369,"như là một ""bàn tay vô hình"" có khả năng tự điều chỉnh các quan"
+text:line,(global),vi,src/data/source_data.txt,370,370,hệ kinh tế.
+text:line,(global),vi,src/data/source_data.txt,371,371,2. Nền kinh tế thị trường và một số quy luật chủ yếu của
+text:line,(global),vi,src/data/source_data.txt,372,372,nền kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,373,373,a) Nền kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,374,374,* Khái niệm
+text:line,(global),vi,src/data/source_data.txt,375,375,Nền kinh tế thị trường là nền kinh tế được vận hành theo cơ
+text:line,(global),vi,src/data/source_data.txt,376,376,"chế thị trường. Đó là nền kinh tế hàng hóa phát triển cao, ở đó mọi"
+text:line,(global),vi,src/data/source_data.txt,377,377,"quan hệ sản xuất và trao đổi đều được thông qua thị trường, chịu sự"
+text:line,(global),vi,src/data/source_data.txt,378,378,"tác động, điều tiết của các quy luật thị trường."
+text:line,(global),vi,src/data/source_data.txt,379,379,Sự hình thành kinh tế thị trường là khách quan trong lịch sử: từ
+text:line,(global),vi,src/data/source_data.txt,380,380,"kinh tế tự nhiên, tự túc, kinh tế hàng hóa, rồi từ kinh tế hàng hóa"
+text:line,(global),vi,src/data/source_data.txt,381,381,phát triển thành kinh tế thị trường. Kinh tế thị trường cũng trải qua
+text:line,(global),vi,src/data/source_data.txt,382,382,quá trình phát triển ở các trình độ khác nhau từ kinh tế thị trường sơ
+text:line,(global),vi,src/data/source_data.txt,383,383,khai đến kinh tế thị trường hiện đại như ngày nay. Kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,384,384,là sản phẩm của văn minh nhân loại.
+text:line,(global),vi,src/data/source_data.txt,385,385,* Đặc trưng phổ biến của nền kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,386,386,Kinh tế thị trường đã phát triển qua nhiều giai đoạn với nhiều
+text:line,(global),vi,src/data/source_data.txt,387,387,"mô hình khác nhau, các nền kinh tế thị trường có những đặc trưng"
+text:line,(global),vi,src/data/source_data.txt,388,388,chung bao gồm:
+text:line,(global),vi,src/data/source_data.txt,389,389,"Thứ nhất, có sự đa dạng của các chủ thể kinh tế, nhiều hình"
+text:line,(global),vi,src/data/source_data.txt,390,390,thức sở hữu. Các chủ thể kinh tế bình đẳng trước pháp luật.
+text:line,(global),vi,src/data/source_data.txt,391,391,"Thứ hai, thị trường đóng vai trò quyết định trong việc phân bổ"
+text:line,(global),vi,src/data/source_data.txt,392,392,các nguồn lực xã hội thông qua hoạt động của các thị trường bộ
+text:line,(global),vi,src/data/source_data.txt,393,393,"phận như thị trường hàng hóa, thị trường dịch vụ, thị trường sức"
+text:line,(global),vi,src/data/source_data.txt,394,394,"lao động, thị trường tài chính, thị trường bất động sản, thị trường"
+text:line,(global),vi,src/data/source_data.txt,395,395,khoa học - công nghệ...
+text:line,(global),vi,src/data/source_data.txt,396,396,"Thứ ba, giá cả được hình thành theo nguyên tắc thị trường;"
+text:line,(global),vi,src/data/source_data.txt,397,397,"cạnh tranh vừa là môi trường, vừa là động lực thúc đẩy hoạt động"
+text:line,(global),vi,src/data/source_data.txt,398,398,sản xuất kinh doanh; động lực trực tiếp của các chủ thể sản xuất
+text:line,(global),vi,src/data/source_data.txt,399,399,kinh doanh là lợi nhuận và lợi ích kinh tế - xã hội khác; nhà nước
+text:line,(global),vi,src/data/source_data.txt,400,400,"là chủ thể thực hiện chức năng quản lý, chức năng kinh tế; thực"
+text:line,(global),vi,src/data/source_data.txt,401,401,"hiện khắc phục những khuyết tật của thị trường, thúc đẩy những"
+text:line,(global),vi,src/data/source_data.txt,402,402,"yếu tố tích cực, đảm bảo sự bình đẳng xã hội và sự ổn định của"
+text:line,(global),vi,src/data/source_data.txt,403,403,toàn bộ nền kinh tế.
+text:line,(global),vi,src/data/source_data.txt,404,404,"Thứ tư, là nền kinh tế mở, thị trường trong nước quan hệ mật"
+text:line,(global),vi,src/data/source_data.txt,405,405,thiết với thị trường quốc tế.
+text:line,(global),vi,src/data/source_data.txt,406,406,Các đặc trưng trên mang tính phổ biến của mọi nền kinh tế thị
+text:line,(global),vi,src/data/source_data.txt,407,407,"trường. Tuy nhiên, tùy theo điều kiện lịch sử cụ thể, tùy theo chế"
+text:line,(global),vi,src/data/source_data.txt,408,408,"độ chính trị - xã hội của mỗi quốc gia, ngoài những đặc trưng"
+text:line,(global),vi,src/data/source_data.txt,409,409,"chung, mỗi nền kinh tế thị trường quốc gia có thể có đặc trưng"
+text:line,(global),vi,src/data/source_data.txt,410,410,"riêng, tạo nên tính đặc thù và các mô hình kinh tế thị trường khác"
+text:line,(global),en,src/data/source_data.txt,411,411,nhau.
+text:line,(global),vi,src/data/source_data.txt,412,412,* Ưu thế và khuyết tật của nền kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,413,413,"Nền kinh tế thị trường có nhiều ưu thế, tuy nhiên, cũng có"
+text:line,(global),vi,src/data/source_data.txt,414,414,những khuyết tật. Những ưu thế và khuyết tật đó là:
+text:line,(global),vi,src/data/source_data.txt,415,415,- Ưu thế của nền kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,416,416,"Một là, nền kinh tế thị trường luôn tạo ra động lực cho sự sáng"
+text:line,(global),vi,src/data/source_data.txt,417,417,tạo các chủ thể kinh tế.
+text:line,(global),vi,src/data/source_data.txt,418,418,"Trong nền kinh tế thị trường, các chủ thể luôn có cơ hội để tìm"
+text:line,(global),vi,src/data/source_data.txt,419,419,ra động lực cho sự sáng tạo của mình. Thông qua vai trò của thị
+text:line,(global),vi,src/data/source_data.txt,420,420,trường mà nền kinh tế thị trường trở thành phương thức hữu hiệu
+text:line,(global),vi,src/data/source_data.txt,421,421,"kích thích sự sáng tạo trong hoạt động của các chủ thể kinh tế, tạo"
+text:line,(global),vi,src/data/source_data.txt,422,422,Hộp 2.4. Quan niệm của P. Samuelson
+text:line,(global),vi,src/data/source_data.txt,423,423,về nền kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,424,424,Nền kinh tế thị trường là nền kinh tế trong đó các cá nhân
+text:line,(global),vi,src/data/source_data.txt,425,425,và các hãng tư nhân đưa ra các quyết định chủ yếu về sản xuất
+text:line,(global),vi,src/data/source_data.txt,426,426,và tiêu dùng. Các hãng sản xuất hàng tiêu dùng thu được lợi
+text:line,(global),vi,src/data/source_data.txt,427,427,nhuận cao nhất bằng các kỹ thuật sản xuất có chi phí thấp
+text:line,(global),vi,src/data/source_data.txt,428,428,nhất.
+text:line,(global),vi,src/data/source_data.txt,429,429,"Nguồn: P. Samuelson: Kinh tế học, Nxb. Chính trị quốc gia,"
+text:line,(global),vi,src/data/source_data.txt,430,430,"Hà Nội, 1997, t.1, tr. 35."
+text:line,(global),vi,src/data/source_data.txt,431,431,"điều kiện thuận lợi cho hoạt động tự do của họ, qua đó, thúc đẩy"
+text:line,(global),vi,src/data/source_data.txt,432,432,"tăng năng suất lao động, tăng hiệu quả sản xuất, làm cho nền kinh"
+text:line,(global),vi,src/data/source_data.txt,433,433,"tế hoạt động năng động, hiệu quả. Nền kinh tế thị trường chấp nhận"
+text:line,(global),vi,src/data/source_data.txt,434,434,những ý tưởng sáng tạo mới trong thực hiện sản xuất kinh doanh
+text:line,(global),vi,src/data/source_data.txt,435,435,và quản lý. Nền kinh tế thị trường tạo môi trường rộng mở cho các
+text:line,(global),vi,src/data/source_data.txt,436,436,mô hình kinh doanh mới theo sự phát triển của xã hội.
+text:line,(global),vi,src/data/source_data.txt,437,437,"Hai là, nền kinh tế thị trường luôn phát huy tốt nhất tiềm năng"
+text:line,(global),vi,src/data/source_data.txt,438,438,"của mọi chủ thể, các vùng, miền cũng như lợi thế quốc gia."
+text:line,(global),vi,src/data/source_data.txt,439,439,"Trong nền kinh tế thị trường, mọi tiềm năng, lợi thế đều có thể"
+text:line,(global),vi,src/data/source_data.txt,440,440,"được phát huy, đều có thể trở thành lợi ích đóng góp cho xã hội."
+text:line,(global),vi,src/data/source_data.txt,441,441,Thông qua vai trò gắn kết của thị trường mà nền kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,442,442,"trở thành phương thức hiệu quả hơn hẳn so với nền kinh tế tự cấp,"
+text:line,(global),vi,src/data/source_data.txt,443,443,"tự túc hay nền kinh tế kế hoạch hóa, bởi kinh tế thị trường phát huy"
+text:line,(global),vi,src/data/source_data.txt,444,444,"được tiềm năng, lợi thế của từng thành viên, từng vùng, miền trong"
+text:line,(global),vi,src/data/source_data.txt,445,445,"quốc gia, của từng quốc gia trong quan hệ kinh tế với các nước còn"
+text:line,(global),vi,src/data/source_data.txt,446,446,lại của thế giới.
+text:line,(global),vi,src/data/source_data.txt,447,447,"Ba là, nền kinh tế thị trường luôn tạo ra các phương thức để"
+text:line,(global),vi,src/data/source_data.txt,448,448,"thỏa mãn tối đa nhu cầu của con người, từ đó thúc đẩy sự tiến bộ,"
+text:line,(global),vi,src/data/source_data.txt,449,449,văn minh của xã hội.
+text:line,(global),vi,src/data/source_data.txt,450,450,"Trong nền kinh tế thị trường, các thành viên của xã hội luôn có"
+text:line,(global),vi,src/data/source_data.txt,451,451,thể tìm thấy cơ hội tối đa để thỏa mãn nhu cầu của mình. Với sự
+text:line,(global),vi,src/data/source_data.txt,452,452,tác động của các quy luật thị trường nền kinh tế thị trường luôn tạo
+text:line,(global),vi,src/data/source_data.txt,453,453,"ra sự phù hợp giữa khối lượng, cơ cấu sản xuất với khối lượng, cơ"
+text:line,(global),vi,src/data/source_data.txt,454,454,"cấu nhu cầu tiêu dùng của xã hội. Nhờ đó, nhu cầu tiêu dùng các"
+text:line,(global),vi,src/data/source_data.txt,455,455,"loại hàng hóa, dịch vụ khác nhau được đáp ứng kịp thời; người tiêu"
+text:line,(global),vi,src/data/source_data.txt,456,456,dùng được thỏa mãn nhu cầu cũng như đáp ứng đầy đủ mọi chủng
+text:line,(global),unknown,src/data/source_data.txt,457,457,56
+text:line,(global),unknown,src/data/source_data.txt,458,458,57
+text:line,(global),vi,src/data/source_data.txt,459,459,"loại hàng hóa, dịch vụ. Thông qua đó, nền kinh tế thị trường trở"
+text:line,(global),vi,src/data/source_data.txt,460,460,"thành phương thức để thúc đẩy sự văn minh, tiến bộ của xã hội."
+text:line,(global),vi,src/data/source_data.txt,461,461,- Khuyết tật của nền kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,462,462,"Bên cạnh những ưu thế, kinh tế thị trường cũng có những"
+text:line,(global),vi,src/data/source_data.txt,463,463,"khuyết tật vốn có mà đa số trong số đó tự nó không thể khắc phục,"
+text:line,(global),vi,src/data/source_data.txt,464,464,sửa chữa được. Những khuyết tật chủ yếu của kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,465,465,bao gồm:
+text:line,(global),vi,src/data/source_data.txt,466,466,"Một là, trong nền kinh tế thị trường luôn tiềm ẩn những rủi ro"
+text:line,(global),vi,src/data/source_data.txt,467,467,khủng hoảng.
+text:line,(global),vi,src/data/source_data.txt,468,468,Sự vận động của cơ chế thị trường không phải khi nào cũng
+text:line,(global),vi,src/data/source_data.txt,469,469,"tạo ra được những cân đối, do đó, luôn tiềm ẩn những nguy cơ"
+text:line,(global),vi,src/data/source_data.txt,470,470,khủng hoảng. Khủng hoảng có thể diễn ra cục bộ hoặc trên phạm
+text:line,(global),vi,src/data/source_data.txt,471,471,vi tổng thể. Khủng hoảng có thể xảy ra đối với mọi loại hình thị
+text:line,(global),vi,src/data/source_data.txt,472,472,"trường, với mọi nền kinh tế thị trường. Sự khó khăn đối với các"
+text:line,(global),vi,src/data/source_data.txt,473,473,"nền kinh tế thị trường thể hiện ở chỗ, các quốc gia rất khó dự báo"
+text:line,(global),vi,src/data/source_data.txt,474,474,chính xác thời điểm xảy ra khủng hoảng. Nền kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,475,475,không tự khắc phục được những rủi ro tiềm ẩn này.
+text:line,(global),vi,src/data/source_data.txt,476,476,"Hai là, nền kinh tế thị trường không tự khắc phục được xu"
+text:line,(global),vi,src/data/source_data.txt,477,477,"hướng cạn kiệt tài nguyên không thể tái tạo, suy thoái môi trường"
+text:line,(global),vi,src/data/source_data.txt,478,478,"tự nhiên, môi trường xã hội."
+text:line,(global),vi,src/data/source_data.txt,479,479,Do phần lớn các chủ thể sản xuất kinh doanh trong nền kinh
+text:line,(global),vi,src/data/source_data.txt,480,480,tế thị trường luôn đặt mục tiêu tìm kiếm lợi nhuận tối đa nên
+text:line,(global),vi,src/data/source_data.txt,481,481,"luôn tạo ra ảnh hưởng tiềm ẩn đối với nguồn lực tài nguyên, suy"
+text:line,(global),vi,src/data/source_data.txt,482,482,"thoái môi trường. Cũng vì động cơ lợi nhuận, các chủ thể sản"
+text:line,(global),vi,src/data/source_data.txt,483,483,xuất kinh doanh có thể vi phạm cả nguyên tắc đạo đức để chạy
+text:line,(global),vi,src/data/source_data.txt,484,484,"theo mục tiêu làm giàu, thậm chí phi pháp, góp phần gây ra sự"
+text:line,(global),unknown,src/data/source_data.txt,485,485,58
+text:line,(global),vi,src/data/source_data.txt,486,486,"xói mòn đạo đức kinh doanh, thậm chí cả đạo đức xã hội. Đây là"
+text:line,(global),vi,src/data/source_data.txt,487,487,những mặt trái mang tính khuyết tật của bản thân nền kinh tế thị
+text:line,(global),vi,src/data/source_data.txt,488,488,"trường. Cũng vì mục tiêu lợi nhuận, các chủ thể hoạt động sản"
+text:line,(global),vi,src/data/source_data.txt,489,489,xuất kinh doanh có thể không tham gia vào các lĩnh vực thiết
+text:line,(global),vi,src/data/source_data.txt,490,490,"yếu cho nền kinh tế nhưng có lợi nhuận kỳ vọng thấp, rủi ro cao,"
+text:line,(global),vi,src/data/source_data.txt,491,491,"quy mô đầu tư lớn, thời gian thu hồi vốn dài. Tự bản thân nền"
+text:line,(global),vi,src/data/source_data.txt,492,492,kinh tế thị trường không thể khắc phục được các khuyết tật này.
+text:line,(global),vi,src/data/source_data.txt,493,493,"Ba là, nền kinh tế thị trường không tự khắc phục được hiện"
+text:line,(global),vi,src/data/source_data.txt,494,494,tượng phân hóa sâu sắc trong xã hội.
+text:line,(global),vi,src/data/source_data.txt,495,495,"Trong nền kinh tế thị trường, hiện tượng phân hóa xã hội về"
+text:line,(global),vi,src/data/source_data.txt,496,496,"thu nhập, về cơ hội là tất yếu. Bản thân nền kinh tế thị trường"
+text:line,(global),vi,src/data/source_data.txt,497,497,không thể tự khắc phục được khía cạnh phân hóa có xu hướng sâu
+text:line,(global),vi,src/data/source_data.txt,498,498,sắc. Các quy luật thị trường luôn phân bổ lợi ích theo mức độ và
+text:line,(global),vi,src/data/source_data.txt,499,499,"loại hình hoạt động tham gia thị trường, cộng với tác động của"
+text:line,(global),vi,src/data/source_data.txt,500,500,cạnh tranh mà dẫn đến sự phân hóa như một tất yếu. Đây là khuyết
+text:line,(global),vi,src/data/source_data.txt,501,501,tật của nền kinh tế thị trường cần phải có sự bổ sung và điều tiết
+text:line,(global),vi,src/data/source_data.txt,502,502,bởi vai trò của nhà nước.
+text:line,(global),vi,src/data/source_data.txt,503,503,Do những khuyết tật của kinh tế thị trường nên trong thực tế
+text:line,(global),vi,src/data/source_data.txt,504,504,"không tồn tại một nền kinh tế thị trường thuần túy, mà thường có"
+text:line,(global),vi,src/data/source_data.txt,505,505,sự can thiệp của nhà nước để sửa chữa những thất bại của cơ chế
+text:line,(global),vi,src/data/source_data.txt,506,506,"thị trường. Khi đó, nền kinh tế được gọi là kinh tế thị trường có sự"
+text:line,(global),vi,src/data/source_data.txt,507,507,điều tiết của nhà nước hay nền kinh tế hỗn hợp.
+text:line,(global),vi,src/data/source_data.txt,508,508,b) Một số quy luật kinh tế chủ yếu của nền kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,509,509,Có rất nhiều quy luật kinh tế điều tiết nền kinh tế thị trường.
+text:line,(global),vi,src/data/source_data.txt,510,510,"Là nền kinh tế hàng hóa phát triển ở trình độ cao, các quy luật của"
+text:line,(global),vi,src/data/source_data.txt,511,511,nền kinh tế hàng hóa cũng phát huy tác dụng trong nền kinh tế thị
+text:line,(global),unknown,src/data/source_data.txt,512,512,59
+text:line,(global),vi,src/data/source_data.txt,513,513,trường. Một số quy luật điển hình trong nền kinh tế thị trường là:
+text:line,(global),vi,src/data/source_data.txt,514,514,* Quy luật giá trị
+text:line,(global),vi,src/data/source_data.txt,515,515,Quy luật giá trị là quy luật kinh tế cơ bản của sản xuất hàng
+text:line,(global),vi,src/data/source_data.txt,516,516,hóa. Ở đâu có sản xuất và trao đổi hàng hoá thì ở đó có sự hoạt
+text:line,(global),vi,src/data/source_data.txt,517,517,động của quy luật giá trị.
+text:line,(global),vi,src/data/source_data.txt,518,518,Quy luật giá trị yêu cầu việc sản xuất và trao đổi hàng hóa
+text:line,(global),vi,src/data/source_data.txt,519,519,phải được tiến hành trên cơ sở của hao phí lao động xã hội cần
+text:line,(global),vi,src/data/source_data.txt,520,520,"thiết. Theo yêu cầu của quy luật giá trị, người sản xuất muốn bán"
+text:line,(global),vi,src/data/source_data.txt,521,521,"được hàng hóa trên thị trường, muốn được xã hội thừa nhận sản"
+text:line,(global),vi,src/data/source_data.txt,522,522,phẩm thì lượng giá trị của một hàng hoá cá biệt phải phù hợp với
+text:line,(global),vi,src/data/source_data.txt,523,523,"thời gian lao động xã hội cần thiết. Vì vậy, họ phải luôn luôn tìm"
+text:line,(global),vi,src/data/source_data.txt,524,524,cách hạ thấp hao phí lao động cá biệt xuống nhỏ hơn hoặc bằng
+text:line,(global),vi,src/data/source_data.txt,525,525,"hao phí lao động xã hội cần thiết. Trong lĩnh vực trao đổi, phải tiến"
+text:line,(global),vi,src/data/source_data.txt,526,526,"hành theo nguyên tắc ngang giá, lấy giá trị xã hội làm cơ sở, không"
+text:line,(global),vi,src/data/source_data.txt,527,527,dựa trên giá trị cá biệt.
+text:line,(global),vi,src/data/source_data.txt,528,528,Quy luật giá trị hoạt động và phát huy tác dụng thông qua sự
+text:line,(global),vi,src/data/source_data.txt,529,529,"vận động của giá cả xung quanh giá trị, dưới sự tác động của quan"
+text:line,(global),vi,src/data/source_data.txt,530,530,hệ cung - cầu. Giá cả thị trường lên xuống xoay quanh giá trị hàng
+text:line,(global),vi,src/data/source_data.txt,531,531,hóa trở thành cơ chế tác động của quy luật giá trị. Thông qua sự vận
+text:line,(global),vi,src/data/source_data.txt,532,532,động của giá cả thị trường sẽ thấy được sự hoạt động của quy luật
+text:line,(global),vi,src/data/source_data.txt,533,533,giá trị. Những người sản xuất và trao đổi hàng hóa phải tuân theo
+text:line,(global),vi,src/data/source_data.txt,534,534,"mệnh lệnh của giá cả thị trường. Trong nền kinh tế hàng hóa, quy"
+text:line,(global),vi,src/data/source_data.txt,535,535,luật giá trị có những tác động cơ bản sau:
+text:line,(global),vi,src/data/source_data.txt,536,536,"Thứ nhất, điều tiết sản xuất và lưu thông hàng hóa."
+text:line,(global),vi,src/data/source_data.txt,537,537,"Trong sản xuất, thông qua sự biến động của giá cả, người sản"
+text:line,(global),vi,src/data/source_data.txt,538,538,xuất sẽ biết được tình hình cung - cầu về hàng hóa đó và quyết
+text:line,(global),vi,src/data/source_data.txt,539,539,định phương án sản xuất. Nếu giá cả hàng hóa bằng hoặc lớn hơn
+text:line,(global),unknown,src/data/source_data.txt,540,540,60
+text:line,(global),vi,src/data/source_data.txt,541,541,"giá trị thì việc sản xuất nên được tiếp tục, mở rộng. Tư liệu sản"
+text:line,(global),vi,src/data/source_data.txt,542,542,"xuất, sức lao động sẽ được tự phát dịch chuyển vào ngành đang có"
+text:line,(global),vi,src/data/source_data.txt,543,543,giá cả cao.
+text:line,(global),vi,src/data/source_data.txt,544,544,"Trong lưu thông, quy luật giá trị điều tiết hàng hóa từ nơi có giá"
+text:line,(global),vi,src/data/source_data.txt,545,545,"cả thấp đến nơi có giá cả cao, từ nơi cung lớn hơn cầu đến nơi cung"
+text:line,(global),vi,src/data/source_data.txt,546,546,"nhỏ hơn cầu. Thông qua mệnh lệnh của giá cả thị trường, hàng hoá ở"
+text:line,(global),vi,src/data/source_data.txt,547,547,"nơi có giá cả thấp được thu hút, chảy đến nơi có giá cả cao hơn, góp"
+text:line,(global),vi,src/data/source_data.txt,548,548,"phần làm cho cung - cầu hàng hoá giữa các vùng được cân bằng,"
+text:line,(global),vi,src/data/source_data.txt,549,549,"phân phối lại thu nhập giữa các vùng, miền, điều chỉnh sức mua của"
+text:line,(global),vi,src/data/source_data.txt,550,550,"thị trường (nếu giá cao thì mua ít, giá thấp thì mua nhiều)..."
+text:line,(global),vi,src/data/source_data.txt,551,551,"Thứ hai, kích thích cải tiến kỹ thuật, hợp lý hóa sản xuất"
+text:line,(global),vi,src/data/source_data.txt,552,552,nhằm tăng năng suất lao động.
+text:line,(global),vi,src/data/source_data.txt,553,553,"Trên thị trường, hàng hóa được trao đổi theo giá trị xã hội."
+text:line,(global),vi,src/data/source_data.txt,554,554,"Người sản xuất có giá trị cá biệt nhỏ hơn giá trị xã hội, khi bán"
+text:line,(global),vi,src/data/source_data.txt,555,555,"theo giá trị xã hội sẽ thu được nhiều lợi nhuận hơn. Ngược lại,"
+text:line,(global),vi,src/data/source_data.txt,556,556,người sản xuất có giá trị cá biệt lớn hơn giá trị xã hội sẽ gặp bất lợi
+text:line,(global),vi,src/data/source_data.txt,557,557,hoặc thua lỗ. Để đứng vững trong cạnh tranh và tránh không bị phá
+text:line,(global),vi,src/data/source_data.txt,558,558,"sản, người sản xuất phải luôn tìm cách làm cho giá trị cá biệt hàng"
+text:line,(global),vi,src/data/source_data.txt,559,559,"hóa của mình nhỏ hơn hoặc bằng giá trị xã hội. Muốn vậy, phải cải"
+text:line,(global),vi,src/data/source_data.txt,560,560,"tiến kỹ thuật, áp dụng công nghệ mới, đổi mới phương pháp quản"
+text:line,(global),vi,src/data/source_data.txt,561,561,"lý, thực hiện tiết kiệm... Kết quả, lực lượng sản xuất ngày càng"
+text:line,(global),vi,src/data/source_data.txt,562,562,"phát triển, năng suất lao động xã hội tăng lên, chi phí sản xuất hàng"
+text:line,(global),vi,src/data/source_data.txt,563,563,"hóa giảm xuống. Trong lưu thông, để bán được nhiều hàng hóa,"
+text:line,(global),vi,src/data/source_data.txt,564,564,"người sản xuất phải không ngừng tăng chất lượng phục vụ, quảng"
+text:line,(global),vi,src/data/source_data.txt,565,565,"cáo, tổ chức tốt khâu bán hàng... làm cho quá trình lưu thông được"
+text:line,(global),vi,src/data/source_data.txt,566,566,"hiệu quả cao hơn, nhanh chóng, thuận tiện với chi phí thấp nhất."
+text:line,(global),vi,src/data/source_data.txt,567,567,"Thứ ba, phân hoá những người sản xuất thành những người"
+text:line,(global),vi,src/data/source_data.txt,568,568,"giàu, người nghèo một cách tự nhiên."
+text:line,(global),unknown,src/data/source_data.txt,569,569,61
+text:line,(global),vi,src/data/source_data.txt,570,570,"Trong quá trình cạnh tranh, những người sản xuất nhạy bén với"
+text:line,(global),vi,src/data/source_data.txt,571,571,"thị trường, trình độ năng lực giỏi, sản xuất với hao phí cá biệt thấp"
+text:line,(global),vi,src/data/source_data.txt,572,572,"hơn mức hao phí chung của xã hội sẽ trở nên giàu có. Ngược lại,"
+text:line,(global),vi,src/data/source_data.txt,573,573,"những người do hạn chế về vốn, kinh nghiệm sản xuất thấp kém,"
+text:line,(global),vi,src/data/source_data.txt,574,574,trình độ công nghệ lạc hậu... thì giá trị cá biệt sẽ cao hơn giá trị xã
+text:line,(global),vi,src/data/source_data.txt,575,575,"hội và dễ lâm vào tình trạng thua lỗ, dẫn đến phá sản, thậm chí phải"
+text:line,(global),vi,src/data/source_data.txt,576,576,"đi làm thuê. Trong nền kinh tế thị trường thuần túy, chạy theo lợi ích"
+text:line,(global),vi,src/data/source_data.txt,577,577,"cá nhân, đầu cơ, gian lận, khủng hoảng kinh tế... là những yếu tố có"
+text:line,(global),vi,src/data/source_data.txt,578,578,thể làm tăng thêm tác động phân hóa sản xuất cùng những tiêu cực
+text:line,(global),vi,src/data/source_data.txt,579,579,về kinh tế - xã hội khác.
+text:line,(global),vi,src/data/source_data.txt,580,580,"Tóm lại, quy luật giá trị vừa có tác dụng đào thải cái lạc hậu, lỗi"
+text:line,(global),vi,src/data/source_data.txt,581,581,"thời, kích thích sự tiến bộ, làm cho lực lượng sản xuất phát triển"
+text:line,(global),vi,src/data/source_data.txt,582,582,"mạnh mẽ; vừa có tác dụng lựa chọn, đánh giá người sản xuất, bảo"
+text:line,(global),vi,src/data/source_data.txt,583,583,đảm sự bình đẳng đối với người sản xuất; vừa có cả những tác động
+text:line,(global),vi,src/data/source_data.txt,584,584,tích cực lẫn tiêu cực. Các tác động đó diễn ra một cách khách quan
+text:line,(global),vi,src/data/source_data.txt,585,585,trên thị trường.
+text:line,(global),vi,src/data/source_data.txt,586,586,* Quy luật cung - cầu
+text:line,(global),vi,src/data/source_data.txt,587,587,Quy luật cung - cầu là quy luật kinh tế điều tiết quan hệ
+text:line,(global),vi,src/data/source_data.txt,588,588,giữa cung (bên bán) và cầu (bên mua) hàng hóa trên thị trường.
+text:line,(global),vi,src/data/source_data.txt,589,589,Quy luật này đòi hỏi cung - cầu phải có sự thống nhất.
+text:line,(global),vi,src/data/source_data.txt,590,590,"Trên thị trường, cung - cầu có mối quan hệ hữu cơ với nhau,"
+text:line,(global),vi,src/data/source_data.txt,591,591,thường xuyên tác động lẫn nhau và ảnh hưởng trực tiếp đến giá cả. Nếu
+text:line,(global),vi,src/data/source_data.txt,592,592,"cung lớn hơn cầu thì giá cả thấp hơn giá trị; ngược lại, nếu cung nhỏ"
+text:line,(global),vi,src/data/source_data.txt,593,593,hơn cầu thì giá cả cao hơn giá trị; nếu cung bằng cầu thì giá cả bằng với
+text:line,(global),vi,src/data/source_data.txt,594,594,giá trị. Đây là sự tác động phức tạp theo nhiều hướng và nhiều mức độ
+text:line,(global),vi,src/data/source_data.txt,595,595,khác nhau.
+text:line,(global),vi,src/data/source_data.txt,596,596,Quy luật cung - cầu có tác dụng điều tiết quan hệ giữa sản
+text:line,(global),unknown,src/data/source_data.txt,597,597,62
+text:line,(global),vi,src/data/source_data.txt,598,598,xuất và lưu thông hàng hoá; làm thay đổi cơ cấu và quy mô thị
+text:line,(global),vi,src/data/source_data.txt,599,599,"trường, ảnh hưởng tới giá cả của hàng hóa. Căn cứ vào quan hệ"
+text:line,(global),vi,src/data/source_data.txt,600,600,"cung - cầu, có thể dự đoán xu thế biến động của giá cả. Ở đâu có"
+text:line,(global),vi,src/data/source_data.txt,601,601,thị trường thì ở đó quy luật cung - cầu tồn tại và hoạt động một
+text:line,(global),vi,src/data/source_data.txt,602,602,cách khách quan. Nếu nhận thức được chúng thì có thể vận dụng
+text:line,(global),vi,src/data/source_data.txt,603,603,"để tác động đến hoạt động sản xuất, kinh doanh theo hướng có lợi"
+text:line,(global),vi,src/data/source_data.txt,604,604,cho quá trình sản xuất. Nhà nước có thể vận dụng quy luật cung -
+text:line,(global),vi,src/data/source_data.txt,605,605,"cầu thông qua các chính sách, các biện pháp kinh tế như giá cả,"
+text:line,(global),vi,src/data/source_data.txt,606,606,"lợi nhuận, tín dụng, hợp đồng kinh tế, thuế, thay đổi cơ cấu tiêu"
+text:line,(global),vi,src/data/source_data.txt,607,607,"dùng... để tác động vào các hoạt động kinh tế, duy trì những tỷ lệ"
+text:line,(global),vi,src/data/source_data.txt,608,608,cân đối cung - cầu một cách lành mạnh và hợp lý.
+text:line,(global),vi,src/data/source_data.txt,609,609,* Quy luật lưu thông tiền tệ
+text:line,(global),vi,src/data/source_data.txt,610,610,Quy luật lưu thông tiền tệ yêu cầu việc lưu thông tiền tệ phải
+text:line,(global),vi,src/data/source_data.txt,611,611,căn cứ trên yêu cầu của lưu thông hàng hóa và dịch vụ.
+text:line,(global),vi,src/data/source_data.txt,612,612,"Theo yêu cầu của quy luật, việc đưa số lượng tiền cần thiết"
+text:line,(global),vi,src/data/source_data.txt,613,613,cho lưu thông trong mỗi thời kỳ nhất định phải thống nhất với lưu
+text:line,(global),vi,src/data/source_data.txt,614,614,thông hàng hóa. Việc không ăn khớp giữa lưu thông tiền tệ với lưu
+text:line,(global),vi,src/data/source_data.txt,615,615,thông hàng hóa có thể dẫn tới trì trệ hoặc lạm phát.
+text:line,(global),vi,src/data/source_data.txt,616,616,"Về nguyên lý, số lượng tiền cần thiết cho lưu thông hàng hóa ở"
+text:line,(global),vi,src/data/source_data.txt,617,617,mỗi thời kỳ nhất định được xác định bằng công thức tổng quát sau:
+text:line,(global),en,src/data/source_data.txt,618,618,M =
+text:line,(global),en,src/data/source_data.txt,619,619,P. Q
+text:line,(global),en,src/data/source_data.txt,620,620,V
+text:line,(global),vi,src/data/source_data.txt,621,621,Trong đó:
+text:line,(global),vi,src/data/source_data.txt,622,622,M là số lượng tiền cần thiết cho lưu thông trong một thời gian
+text:line,(global),vi,src/data/source_data.txt,623,623,nhất định;
+text:line,(global),vi,src/data/source_data.txt,624,624,P là mức giá cả;
+text:line,(global),vi,src/data/source_data.txt,625,625,"Q là khối lượng hàng hóa, dịch vụ đưa ra lưu thông;"
+text:line,(global),unknown,src/data/source_data.txt,626,626,63
+text:line,(global),vi,src/data/source_data.txt,627,627,V là số vòng lưu thông của đồng tiền.
+text:line,(global),vi,src/data/source_data.txt,628,628,"Như vậy, khối lượng tiền cần thiết cho lưu thông tỷ lệ thuận với"
+text:line,(global),vi,src/data/source_data.txt,629,629,tổng số giá cả hàng hóa được đưa ra thị trường và tỷ lệ nghịch với
+text:line,(global),vi,src/data/source_data.txt,630,630,tốc độ lưu thông của tiền tệ. Quy luật này có ý nghĩa chung cho các
+text:line,(global),vi,src/data/source_data.txt,631,631,nền sản xuất hàng hóa.
+text:line,(global),vi,src/data/source_data.txt,632,632,"Khi lưu thông hàng hóa phát triển, việc thanh toán không dùng"
+text:line,(global),vi,src/data/source_data.txt,633,633,tiền mặt trở nên phổ biến thì số lượng tiền cần thiết cho lưu thông
+text:line,(global),vi,src/data/source_data.txt,634,634,được xác định như sau:
+text:line,(global),en,src/data/source_data.txt,635,635,M =
+text:line,(global),unknown,src/data/source_data.txt,636,636,P. Q − (G1 + G2) + G3
+text:line,(global),en,src/data/source_data.txt,637,637,V
+text:line,(global),vi,src/data/source_data.txt,638,638,Trong đó:
+text:line,(global),vi,src/data/source_data.txt,639,639,P.Q là tổng giá cả hàng hóa;
+text:line,(global),vi,src/data/source_data.txt,640,640,G1 là tổng giá cả hàng hóa bán chịu;
+text:line,(global),vi,src/data/source_data.txt,641,641,G2 là tổng giá cả hàng hóa khấu trừ cho nhau;
+text:line,(global),vi,src/data/source_data.txt,642,642,G3 là tổng giá cả hàng hóa đến kỳ thanh toán;
+text:line,(global),vi,src/data/source_data.txt,643,643,V là số vòng quay trung bình của tiền tệ.
+text:line,(global),vi,src/data/source_data.txt,644,644,Nội dung nêu trên mang tính nguyên lý: trong điều kiện nền
+text:line,(global),vi,src/data/source_data.txt,645,645,kinh tế thị trường ngày nay việc xác định lượng tiền cần thiết cho
+text:line,(global),vi,src/data/source_data.txt,646,646,lưu thông trở nên phức tạp hơn song không vượt ra ngoài khuôn
+text:line,(global),vi,src/data/source_data.txt,647,647,khổ nguyên lý nêu trên.
+text:line,(global),vi,src/data/source_data.txt,648,648,"Khi tiền giấy ra đời, nếu được phát hành quá nhiều sẽ làm cho"
+text:line,(global),vi,src/data/source_data.txt,649,649,"đồng tiền bị mất giá trị, giá cả hàng hóa tăng lên dẫn đến lạm phát."
+text:line,(global),vi,src/data/source_data.txt,650,650,"Bởi vậy, nhà nước không thể in và phát hành tiền giấy một cách"
+text:line,(global),vi,src/data/source_data.txt,651,651,tùy tiện mà phải tuân theo nguyên lý của quy luật lưu thông tiền tệ.
+text:line,(global),vi,src/data/source_data.txt,652,652,* Quy luật cạnh tranh
+text:line,(global),vi,src/data/source_data.txt,653,653,Quy luật cạnh tranh là quy luật kinh tế điều tiết một cách
+text:line,(global),vi,src/data/source_data.txt,654,654,khách quan mối quan hệ ganh đua kinh tế giữa các chủ thể trong
+text:line,(global),vi,src/data/source_data.txt,655,655,"sản xuất và trao đổi hàng hoá. Quy luật cạnh tranh yêu cầu, khi đã"
+text:line,(global),vi,src/data/source_data.txt,656,656,"tham gia thị trường, các chủ thể sản xuất kinh doanh, bên cạnh sự"
+text:line,(global),vi,src/data/source_data.txt,657,657,"hợp tác, luôn phải chấp nhận cạnh tranh."
+text:line,(global),vi,src/data/source_data.txt,658,658,Cạnh tranh là sự ganh đua giữa những chủ thể kinh tế với nhau
+text:line,(global),vi,src/data/source_data.txt,659,659,nhằm có được những ưu thế về sản xuất cũng như tiêu thụ và thông
+text:line,(global),vi,src/data/source_data.txt,660,660,qua đó thu được lợi ích tối đa.
+text:line,(global),vi,src/data/source_data.txt,661,661,Kinh tế thị trường càng phát triển thì cạnh tranh trên thị
+text:line,(global),vi,src/data/source_data.txt,662,662,"trường càng trở nên thường xuyên, quyết liệt hơn. Trong nền"
+text:line,(global),vi,src/data/source_data.txt,663,663,"kinh tế thị trường, cạnh tranh có thể diễn ra giữa các chủ thể"
+text:line,(global),vi,src/data/source_data.txt,664,664,"trong nội bộ ngành, cũng có thể diễn ra giữa các chủ thể thuộc"
+text:line,(global),vi,src/data/source_data.txt,665,665,các ngành khác nhau.
+text:line,(global),vi,src/data/source_data.txt,666,666,- Cạnh tranh trong nội bộ ngành
+text:line,(global),vi,src/data/source_data.txt,667,667,Cạnh tranh trong nội bộ ngành là cạnh tranh giữa các chủ thể
+text:line,(global),vi,src/data/source_data.txt,668,668,kinh doanh trong cùng một ngành hàng hóa. Đây là một trong
+text:line,(global),vi,src/data/source_data.txt,669,669,những phương thức để thực hiện lợi ích của doanh nghiệp trong
+text:line,(global),vi,src/data/source_data.txt,670,670,cùng một ngành sản xuất.
+text:line,(global),vi,src/data/source_data.txt,671,671,Biện pháp cạnh tranh là các doanh nghiệp ra sức cải tiến kỹ
+text:line,(global),vi,src/data/source_data.txt,672,672,"thuật, đổi mới công nghệ, hợp lý hóa sản xuất, tăng năng suất lao"
+text:line,(global),vi,src/data/source_data.txt,673,673,"động để hạ thấp giá trị cá biệt của hàng hóa, làm cho giá trị hàng"
+text:line,(global),vi,src/data/source_data.txt,674,674,hoá của doanh nghiệp sản xuất ra thấp hơn giá trị xã hội của hàng
+text:line,(global),vi,src/data/source_data.txt,675,675,hoá đó.
+text:line,(global),vi,src/data/source_data.txt,676,676,Kết quả của cạnh tranh trong nội bộ ngành là hình thành giá trị
+text:line,(global),vi,src/data/source_data.txt,677,677,thị trường của từng loại hàng hoá. Cùng một loại hàng hóa được
+text:line,(global),vi,src/data/source_data.txt,678,678,"sản xuất ra trong các doanh nghiệp sản xuất khác nhau, do điều"
+text:line,(global),vi,src/data/source_data.txt,679,679,"kiện sản xuất (điều kiện trang bị kỹ thuật, trình độ tổ chức sản xuất,"
+text:line,(global),vi,src/data/source_data.txt,680,680,"trình độ tay nghề của người lao động...) khác nhau, cho nên hàng"
+text:line,(global),vi,src/data/source_data.txt,681,681,"hoá sản xuất ra có giá trị cá biệt khác nhau, nhưng trên thị trường"
+text:line,(global),unknown,src/data/source_data.txt,682,682,64
+text:line,(global),unknown,src/data/source_data.txt,683,683,65
+text:line,(global),vi,src/data/source_data.txt,684,684,các hàng hoá được trao đổi theo giá trị mà thị trường chấp nhận.
+text:line,(global),vi,src/data/source_data.txt,685,685,"Theo C. Mác, ""Một mặt, phải coi giá trị thị trường là giá trị"
+text:line,(global),vi,src/data/source_data.txt,686,686,trung bình của những hàng hoá được sản xuất ra trong một khu vực
+text:line,(global),vi,src/data/source_data.txt,687,687,"sản xuất nào đó; mặt khác, lại phải coi giá trị thị trường là giá trị cá"
+text:line,(global),vi,src/data/source_data.txt,688,688,biệt của những hàng hoá được sản xuất ra trong những điều kiện
+text:line,(global),vi,src/data/source_data.txt,689,689,trung bình của khu vực đó và chiếm một khối lượng lớn trong tổng
+text:line,(global),vi,src/data/source_data.txt,690,690,"số những sản phẩm của khu vực này""1"
+text:line,(global),vi,src/data/source_data.txt,692,692,- Cạnh tranh giữa các ngành
+text:line,(global),vi,src/data/source_data.txt,693,693,Cạnh tranh giữa các ngành là cạnh tranh giữa các chủ thể sản
+text:line,(global),vi,src/data/source_data.txt,694,694,"xuất kinh doanh giữa các ngành khác nhau. Vì vậy, cạnh tranh giữa"
+text:line,(global),vi,src/data/source_data.txt,695,695,các ngành cũng trở thành phương thức để thực hiện lợi ích của các
+text:line,(global),vi,src/data/source_data.txt,696,696,chủ thể thuộc các ngành sản xuất khác nhau trong điều kiện kinh tế
+text:line,(global),vi,src/data/source_data.txt,697,697,thị trường.
+text:line,(global),vi,src/data/source_data.txt,698,698,Cạnh tranh giữa các ngành là phương thức để các chủ thể sản
+text:line,(global),vi,src/data/source_data.txt,699,699,xuất kinh doanh ở các ngành sản xuất khác nhau tìm kiếm lợi ích
+text:line,(global),vi,src/data/source_data.txt,700,700,của mình. Mục đích của cạnh tranh giữa các ngành là nhằm tìm nơi
+text:line,(global),vi,src/data/source_data.txt,701,701,đầu tư có lợi nhất.
+text:line,(global),vi,src/data/source_data.txt,702,702,Biện pháp cạnh tranh giữa các ngành là các doanh nghiệp tự
+text:line,(global),vi,src/data/source_data.txt,703,703,"do di chuyển nguồn lực của mình từ ngành này sang ngành khác,"
+text:line,(global),vi,src/data/source_data.txt,704,704,vào các ngành sản xuất kinh doanh khác nhau.
+text:line,(global),vi,src/data/source_data.txt,705,705,- Tác động của cạnh tranh trong nền kinh tế thị trường
+text:line,(global),vi,src/data/source_data.txt,706,706,+ Những tác động tích cực của cạnh tranh
+text:line,(global),vi,src/data/source_data.txt,707,707,"Thứ nhất, cạnh tranh thúc đẩy sự phát triển lực lượng sản xuất."
+text:line,(global),vi,src/data/source_data.txt,708,708,"Trong nền kinh tế thị trường, để nâng cao năng lực cạnh tranh,"
+text:line,(global),vi,src/data/source_data.txt,710,710,"1. C. Mác và Ph. Ăngghen: Toàn tập, Sđd, t.25, ph.I, tr.271."
+text:line,(global),vi,src/data/source_data.txt,711,711,các chủ thể sản xuất kinh doanh không ngừng tìm kiếm và ứng
+text:line,(global),vi,src/data/source_data.txt,712,712,"dụng tiến bộ kỹ thuật, công nghệ mới vào sản xuất, từ đó kéo theo"
+text:line,(global),vi,src/data/source_data.txt,713,713,"sự đổi mới về trình độ tay nghề, tri thức của người lao động. Kết"
+text:line,(global),vi,src/data/source_data.txt,714,714,"quả là, cạnh tranh thúc đẩy lực lượng sản xuất xã hội phát triển"
+text:line,(global),vi,src/data/source_data.txt,715,715,nhanh hơn.
+text:line,(global),vi,src/data/source_data.txt,716,716,"Thứ hai, cạnh tranh thúc đẩy sự phát triển nền kinh tế thị"
+text:line,(global),vi,src/data/source_data.txt,717,717,trường.
+text:line,(global),vi,src/data/source_data.txt,718,718,"Trong nền kinh tế thị trường, mọi hành vi của các chủ thể kinh tế"
+text:line,(global),vi,src/data/source_data.txt,719,719,"đều hoạt động trong môi trường cạnh tranh. Hơn nữa, mọi hoạt động"
+text:line,(global),vi,src/data/source_data.txt,720,720,của các chủ thể kinh tế hoạt động trong nền kinh tế thị trường đều
+text:line,(global),vi,src/data/source_data.txt,721,721,"nhằm mục đích thu lợi nhuận tối đa, muốn vậy ngoài việc hợp tác, họ"
+text:line,(global),vi,src/data/source_data.txt,722,722,cũng cạnh tranh với nhau để có được những điều kiện thuận lợi trong
+text:line,(global),vi,src/data/source_data.txt,723,723,"sản xuất và kinh doanh để thu được lợi nhuận cao nhất. Thông qua đó,"
+text:line,(global),vi,src/data/source_data.txt,724,724,nền kinh tế thị trường không ngừng được hoàn thiện hơn.
+text:line,(global),vi,src/data/source_data.txt,725,725,"Thứ ba, cạnh tranh là cơ chế điều chỉnh linh hoạt trong việc"
+text:line,(global),vi,src/data/source_data.txt,726,726,phân bổ các nguồn lực.
+text:line,(global),vi,src/data/source_data.txt,727,727,Nền kinh tế thị trường đòi hỏi việc tiếp cận các nguồn lực phải
+text:line,(global),vi,src/data/source_data.txt,728,728,dựa trên nguyên tắc cạnh tranh để phân bổ vào chủ thể có thể sử
+text:line,(global),vi,src/data/source_data.txt,729,729,"dụng hiệu quả hơn cả. Theo đó, các chủ thể sản xuất kinh doanh"
+text:line,(global),vi,src/data/source_data.txt,730,730,phải thực hiện cạnh tranh để có được cơ hội sử dụng các nguồn lực
+text:line,(global),vi,src/data/source_data.txt,731,731,phục vụ cho sản xuất kinh doanh.
+text:line,(global),vi,src/data/source_data.txt,732,732,"Thứ tư, cạnh tranh thúc đẩy năng lực thỏa mãn nhu cầu của xã"
+text:line,(global),vi,src/data/source_data.txt,733,733,hội.
+text:line,(global),vi,src/data/source_data.txt,734,734,"Trong nền kinh tế thị trường, mục đích của các chủ thể kinh tế là"
+text:line,(global),vi,src/data/source_data.txt,735,735,lợi nhuận tối đa. Chỉ có những sản phẩm hàng hóa và dịch vụ mà người
+text:line,(global),vi,src/data/source_data.txt,736,736,tiêu dùng lựa chọn thì mới bán được và do đó người sản xuất mới có lợi
+text:line,(global),unknown,src/data/source_data.txt,737,737,66
+text:line,(global),unknown,src/data/source_data.txt,738,738,67
+text:line,(global),vi,src/data/source_data.txt,739,739,"nhuận. Vì vậy, những người sản xuất phải tìm mọi cách tạo ra khối"
+text:line,(global),vi,src/data/source_data.txt,740,740,"lượng sản phẩm đa dạng, dồi dào, phong phú, chất lượng tốt, giá thành"
+text:line,(global),vi,src/data/source_data.txt,741,741,"hạ, làm cho nhu cầu của người tiêu dùng và xã hội được đáp ứng."
+text:line,(global),vi,src/data/source_data.txt,742,742,+ Những tác động tiêu cực của cạnh tranh
+text:line,(global),vi,src/data/source_data.txt,743,743,"Khi thực hiện cạnh tranh thiếu lành mạnh, cạnh tranh có thể"
+text:line,(global),vi,src/data/source_data.txt,744,744,dẫn tới các tác động tiêu cực như:
+text:line,(global),vi,src/data/source_data.txt,745,745,"Một là, cạnh tranh không lành mạnh gây tổn hại đến môi"
+text:line,(global),vi,src/data/source_data.txt,746,746,trường kinh doanh.
+text:line,(global),vi,src/data/source_data.txt,747,747,Khi các chủ thể thực hiện các biện pháp cạnh tranh thiếu lành
+text:line,(global),vi,src/data/source_data.txt,748,748,"mạnh, thậm chí các thủ đoạn xấu để tìm kiếm lợi thế sẽ làm xói"
+text:line,(global),vi,src/data/source_data.txt,749,749,"mòn môi trường kinh doanh, thậm chí xói mòn giá trị đạo đức xã"
+text:line,(global),vi,src/data/source_data.txt,750,750,"hội. Do đó, các biện pháp, thủ đoạn cạnh tranh thiếu lành mạnh"
+text:line,(global),vi,src/data/source_data.txt,751,751,cần được loại trừ.
+text:line,(global),vi,src/data/source_data.txt,752,752,"Hai là, cạnh tranh không lành mạnh gây lãng phí nguồn lực xã"
+text:line,(global),vi,src/data/source_data.txt,753,753,hội.
+text:line,(global),vi,src/data/source_data.txt,754,754,"Để giành ưu thế trong cạnh tranh, có thể có chủ thể chiếm giữ"
+text:line,(global),vi,src/data/source_data.txt,755,755,các nguồn lực mà không phát huy vai trò của các nguồn lực đó
+text:line,(global),vi,src/data/source_data.txt,756,756,"trong sản xuất kinh doanh, không đưa vào sản xuất để tạo ra hàng"
+text:line,(global),vi,src/data/source_data.txt,757,757,"hóa, dịch vụ cho xã hội. Trong những trường hợp như vậy, cạnh"
+text:line,(global),vi,src/data/source_data.txt,758,758,Hộp 2.5. Tác động của cạnh tranh
+text:line,(global),vi,src/data/source_data.txt,759,759,trong quan điểm của kinh tế học vi mô
+text:line,(global),vi,src/data/source_data.txt,760,760,"Với các nguồn lực và công nghệ cho trước của xã hội, ngay"
+text:line,(global),vi,src/data/source_data.txt,761,761,cả những nhà lập kế hoạch thành thạo nhất hoặc một chương
+text:line,(global),vi,src/data/source_data.txt,762,762,trình tái tổ chức thông minh nhất cũng không thể tìm ra được
+text:line,(global),vi,src/data/source_data.txt,763,763,một giải pháp tốt hơn so với thị trường cạnh tranh.
+text:line,(global),vi,src/data/source_data.txt,764,764,"Nguồn: P. Samuelson: Kinh tế học, Sđd, t.1, tr. 547."
+text:line,(global),vi,src/data/source_data.txt,765,765,tranh đã làm cho nguồn lực xã hội bị lãng phí.
+text:line,(global),vi,src/data/source_data.txt,766,766,"Ba là, cạnh tranh không lành mạnh sẽ làm tổn hại phúc lợi của"
+text:line,(global),vi,src/data/source_data.txt,767,767,xã hội.
+text:line,(global),vi,src/data/source_data.txt,768,768,"Khi các nguồn lực bị lãng phí, cạnh tranh không lành mạnh đã"
+text:line,(global),vi,src/data/source_data.txt,769,769,khiến cho phúc lợi xã hội bị tổn thất. Thay vì nếu sử dụng hiệu
+text:line,(global),vi,src/data/source_data.txt,770,770,"quả, xã hội sẽ có nhiều cơ hội lựa chọn hơn để thỏa mãn nhu cầu."
+text:line,(global),vi,src/data/source_data.txt,771,771,"Cho nên, khi các chủ thể sử dụng các biện pháp cạnh tranh thiếu"
+text:line,(global),vi,src/data/source_data.txt,772,772,"lành mạnh, phúc lợi xã hội sẽ bị ảnh hưởng"
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,9,9,section-hero-title
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,11,11,section-main-content
+attr:aria-label,/chapter2/market-concepts,vi,src/pages/Chapter2MarketConcepts.jsx,13,13,Mục lục trang
+string:literal,/chapter2/market-concepts,vi,src/pages/Chapter2MarketConcepts.jsx,13,13,Mục lục trang
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,14,14,#concept
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,15,15,#types
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,16,16,#roles
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,17,17,#videos
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,18,18,#markdown
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,23,23,col-main content-text
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,37,37,callout info
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,39,39,6px 0 0
+attr:aria-label,/chapter2/market-concepts,vi,src/pages/Chapter2MarketConcepts.jsx,52,52,Bảng phân loại thị trường
+string:literal,/chapter2/market-concepts,vi,src/pages/Chapter2MarketConcepts.jsx,52,52,Bảng phân loại thị trường
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,94,94,grid two-cols gap-md
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,109,109,callout info
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,111,111,6px 0 0
+attr:title,/chapter2/market-concepts,vi,src/pages/Chapter2MarketConcepts.jsx,130,130,Thị trường & cơ chế thị trường
+string:literal,/chapter2/market-concepts,vi,src/pages/Chapter2MarketConcepts.jsx,130,130,Thị trường & cơ chế thị trường
+attr:title,/chapter2/market-concepts,vi,src/pages/Chapter2MarketConcepts.jsx,134,134,Kinh tế thị trường & đặc trưng
+string:literal,/chapter2/market-concepts,vi,src/pages/Chapter2MarketConcepts.jsx,134,134,Kinh tế thị trường & đặc trưng
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,180,180,side-card sticky
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,183,183,#concept
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,184,184,#types
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,185,185,#roles
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,186,186,#videos
+string:literal,/chapter2/market-concepts,en,src/pages/Chapter2MarketConcepts.jsx,187,187,#markdown
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,9,9,section-hero-title
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,11,11,section-main-content
+attr:aria-label,/chapter2/market-economy,vi,src/pages/Chapter2MarketEconomy.jsx,13,13,Mục lục trang
+string:literal,/chapter2/market-economy,vi,src/pages/Chapter2MarketEconomy.jsx,13,13,Mục lục trang
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,14,14,#concept
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,15,15,#features
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,16,16,#proscons
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,17,17,#laws
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,18,18,#state
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,19,19,#videos
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,20,20,#markdown
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,25,25,col-main content-text
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,54,54,grid two-cols gap-md
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,55,55,callout success
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,63,63,callout warning
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,72,72,callout info
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,80,80,grid gap-md
+attr:title,/chapter2/market-economy,vi,src/pages/Chapter2MarketEconomy.jsx,142,142,Quy luật Giá trị (VN)
+string:literal,/chapter2/market-economy,vi,src/pages/Chapter2MarketEconomy.jsx,142,142,Quy luật Giá trị (VN)
+attr:title,/chapter2/market-economy,vi,src/pages/Chapter2MarketEconomy.jsx,146,146,Cung cầu là gì? (VN)
+string:literal,/chapter2/market-economy,vi,src/pages/Chapter2MarketEconomy.jsx,146,146,Cung cầu là gì? (VN)
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,181,181,side-card sticky
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,184,184,#concept
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,185,185,#features
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,186,186,#proscons
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,187,187,#laws
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,188,188,#state
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,189,189,#videos
+string:literal,/chapter2/market-economy,en,src/pages/Chapter2MarketEconomy.jsx,190,190,#markdown
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,9,9,section-hero-title
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,11,11,section-main-content
+attr:aria-label,/chapter2/money,vi,src/pages/Chapter2Money.jsx,13,13,Mục lục trang
+string:literal,/chapter2/money,vi,src/pages/Chapter2Money.jsx,13,13,Mục lục trang
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,14,14,#origin
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,15,15,#functions
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,16,16,#modern
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,17,17,#videos
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,22,22,col-main content-text
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,47,47,callout info
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,49,49,6px 0 0
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,53,53,6px 0 0
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,57,57,6px 0 0
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,61,61,6px 0 0
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,65,65,6px 0 0
+string:literal,/chapter2/money,vi,src/pages/Chapter2Money.jsx,69,69,Nền kinh tế thị trường
+attr:title,/chapter2/money,en,src/pages/Chapter2Money.jsx,89,89,Fundamentals of Marx: The Commodity
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,89,89,Fundamentals of Marx: The Commodity
+attr:title,/chapter2/money,en,src/pages/Chapter2Money.jsx,93,93,Capital Made Easy (1): Commodities and Money
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,93,93,Capital Made Easy (1): Commodities and Money
+attr:title,/chapter2/money,unknown,src/pages/Chapter2Money.jsx,97,97,Reading Capital Vol I with David Harvey – Class 2
+string:literal,/chapter2/money,unknown,src/pages/Chapter2Money.jsx,97,97,Reading Capital Vol I with David Harvey – Class 2
+attr:title,/chapter2/money,vi,src/pages/Chapter2Money.jsx,101,101,"Nguồn gốc, bản chất, chức năng của tiền tệ (VN)"
+string:literal,/chapter2/money,vi,src/pages/Chapter2Money.jsx,101,101,"Nguồn gốc, bản chất, chức năng của tiền tệ (VN)"
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,109,109,side-card sticky
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,114,114,side-card centered
+string:literal,/chapter2/money,en,src/pages/Chapter2Money.jsx,121,121,side-card centered muted
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,5,5,noopener noreferrer
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,11,11,1.5rem
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,30,30,section-hero-title
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,33,33,section-main-content
+attr:title,(global),en,src/pages/Chapter2Overview.jsx,42,42,Marx Capital Vol. I - Chapter One
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,42,42,Marx Capital Vol. I - Chapter One
+attr:title,(global),en,src/pages/Chapter2Overview.jsx,65,65,Capital Vol. I - Chapter Three
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,65,65,Capital Vol. I - Chapter Three
+attr:title,(global),en,src/pages/Chapter2Overview.jsx,95,95,Invisible Hand - Econlib
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,95,95,Invisible Hand - Econlib
+attr:title,(global),en,src/pages/Chapter2Overview.jsx,120,120,Capital Vol. I - Chapter One
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,120,120,Capital Vol. I - Chapter One
+attr:title,(global),en,src/pages/Chapter2Overview.jsx,147,147,Fundamentals of Marx: The Commodity
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,147,147,Fundamentals of Marx: The Commodity
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,147,147,Fundamentals of Marx: The Commodity (EN)
+attr:title,(global),en,src/pages/Chapter2Overview.jsx,148,148,Capital Made Easy (1): Commodities and Money
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,148,148,Capital Made Easy (1): Commodities and Money
+string:literal,(global),en,src/pages/Chapter2Overview.jsx,148,148,Capital (Marx) Made Easy (1): Commodities and Money (EN)
+attr:title,(global),unknown,src/pages/Chapter2Overview.jsx,149,149,Reading Capital with David Harvey – Class 2
+string:literal,(global),unknown,src/pages/Chapter2Overview.jsx,149,149,Reading Capital with David Harvey – Class 2
+string:literal,(global),unknown,src/pages/Chapter2Overview.jsx,149,149,Reading Capital Vol I with David Harvey – Class 2 (EN)
+attr:title,(global),vi,src/pages/Chapter2Overview.jsx,150,150,"Nguồn gốc, bản chất, chức năng của tiền tệ"
+string:literal,(global),vi,src/pages/Chapter2Overview.jsx,150,150,"Nguồn gốc, bản chất, chức năng của tiền tệ"
+string:literal,(global),vi,src/pages/Chapter2Overview.jsx,150,150,"KTCT Mác–Lênin: Nguồn gốc, bản chất, chức năng của tiền tệ (VN)"
+attr:title,(global),vi,src/pages/Chapter2Overview.jsx,155,155,Quy luật Giá trị
+string:literal,(global),vi,src/pages/Chapter2Overview.jsx,155,155,Quy luật Giá trị
+string:literal,(global),vi,src/pages/Chapter2Overview.jsx,155,155,KTCT Mác–Lênin: Quy luật Giá trị (VN)
+attr:title,(global),vi,src/pages/Chapter2Overview.jsx,156,156,Cung cầu là gì?
+string:literal,(global),vi,src/pages/Chapter2Overview.jsx,156,156,Cung cầu là gì?
+string:literal,(global),vi,src/pages/Chapter2Overview.jsx,156,156,Cung cầu là gì? Quy luật cung cầu & giá cả thị trường (VN)
+attr:title,(global),vi,src/pages/Chapter2Overview.jsx,161,161,Thị trường & cơ chế thị trường
+string:literal,(global),vi,src/pages/Chapter2Overview.jsx,161,161,Thị trường & cơ chế thị trường
+string:literal,(global),vi,src/pages/Chapter2Overview.jsx,161,161,KTCT Mác–Lênin: Thị trường & cơ chế thị trường (VN)
+attr:title,(global),vi,src/pages/Chapter2Overview.jsx,162,162,Kinh tế thị trường & đặc trưng
+string:literal,(global),vi,src/pages/Chapter2Overview.jsx,162,162,Kinh tế thị trường & đặc trưng
+string:literal,(global),vi,src/pages/Chapter2Overview.jsx,162,162,Kinh tế thị trường & đặc trưng cơ bản (VN)
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,9,9,section-hero-title
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,11,11,section-main-content
+attr:aria-label,/chapter2/services,vi,src/pages/Chapter2Services.jsx,13,13,Mục lục trang
+string:literal,/chapter2/services,vi,src/pages/Chapter2Services.jsx,13,13,Mục lục trang
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,14,14,#services
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,15,15,#exchange
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,16,16,#compare
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,17,17,#videos
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,18,18,#sources
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,23,23,col-main content-text
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,38,38,callout info
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,40,40,6px 0 0
+attr:aria-label,/chapter2/services,vi,src/pages/Chapter2Services.jsx,101,101,Bảng so sánh dịch vụ và các yếu tố
+string:literal,/chapter2/services,vi,src/pages/Chapter2Services.jsx,101,101,Bảng so sánh dịch vụ và các yếu tố
+attr:title,/chapter2/services,en,src/pages/Chapter2Services.jsx,153,153,Service marketing characteristics
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,153,153,Service marketing characteristics
+attr:title,/chapter2/services,vi,src/pages/Chapter2Services.jsx,157,157,Quyền Và Nghĩa Vụ Của Người Sử Dụng Đất
+string:literal,/chapter2/services,vi,src/pages/Chapter2Services.jsx,157,157,Quyền Và Nghĩa Vụ Của Người Sử Dụng Đất
+attr:title,/chapter2/services,en,src/pages/Chapter2Services.jsx,161,161,Anti-Capitalist Chronicles: Fictitious Capital
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,161,161,Anti-Capitalist Chronicles: Fictitious Capital
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,198,198,side-card sticky
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,201,201,#compare
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,203,203,side-card centered
+string:literal,/chapter2/services,en,src/pages/Chapter2Services.jsx,210,210,side-card centered muted
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,24,24,section-hero combined-hero
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,28,28,section-hero-title
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,33,33,section-hero-title
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,40,40,knowledge-navigation
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,47,47,Learning Path
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,47,47,Lộ Trình Học
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,48,48,From goods to market economy
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,48,48,Từ hàng hóa đến KTTT
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,56,56,Concept Map
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,56,56,Bản Đồ Khái Niệm
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,57,57,Connections among core ideas
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,57,57,Liên kết giữa các khái niệm
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,63,63,section-main-content
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,67,67,section-content timeline-content
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,71,71,Learning Path
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,71,71,Lộ Trình Học
+string:literal,/knowledge | /knowledge/en,unknown,src/pages/CombinedKnowledgePage.jsx,73,73,A quick path through Chapter 2: Goods → Money → Services → Market concepts → Market economy.
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,73,73,Lộ trình nhanh Chương 2: Hàng hóa → Tiền tệ → Dịch vụ → Khái niệm thị trường → Nền kinh tế thị trường.
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,81,81,section-content knowledge-content
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,85,85,Concept Map
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,85,85,Bản Đồ Khái Niệm
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,87,87,"See how goods, money, services, market mechanisms, and state roles connect."
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,87,87,"Xem cách các khái niệm hàng hóa, tiền tệ, dịch vụ, cơ chế thị trường và vai trò Nhà nước liên kết với nhau."
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,96,96,quick-links-section
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,97,97,quick-links-container
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,98,98,Quick Links (Chapter 2)
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,98,98,Liên Kết Nhanh (Chương 2)
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,100,100,quick-link-card theory
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,103,103,Tiền Tệ
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,104,104,"Origins, nature, functions, and circulation laws"
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,104,104,"Nguồn gốc, bản chất, chức năng và quy luật lưu thông"
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,108,108,quick-link-card role
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,111,111,Dịch Vụ
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,112,112,Nature of services and special exchange relations
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,112,112,Bản chất dịch vụ & các quan hệ trao đổi đặc thù
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,116,116,quick-link-card future
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,119,119,Market Concepts
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,119,119,Khái Niệm Thị Trường
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,120,120,"Definition, types, and roles of markets"
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,120,120,"Khái niệm, phân loại và vai trò của thị trường"
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,124,124,quick-link-card conclusion
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,127,127,Market Economy
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,127,127,Kinh Tế Thị Trường
+string:literal,/knowledge | /knowledge/en,en,src/pages/CombinedKnowledgePage.jsx,128,128,"Core features, key laws, and the role of the state"
+string:literal,/knowledge | /knowledge/en,vi,src/pages/CombinedKnowledgePage.jsx,128,128,"Đặc trưng, các quy luật chủ yếu & vai trò Nhà nước"
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,9,9,section-hero-title
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,11,11,section-main-content
+attr:aria-label,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,13,13,On-page navigation
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,13,13,On-page navigation
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,14,14,#concept
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,15,15,#types
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,16,16,#roles
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,17,17,#videos
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,18,18,#refs
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,22,22,col-main content-text
+attr:aria-label,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,40,40,Market types table
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,40,40,Market types table
+attr:title,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,111,111,Market and price mechanism
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,111,111,Market and price mechanism
+attr:title,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,116,116,Intro to financial markets
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,116,116,Intro to financial markets
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,135,135,side-card sticky
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,138,138,#types
+string:literal,/chapter2/market-concepts/en,en,src/pages/en/Chapter2MarketConceptsEn.jsx,140,140,side-card centered
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,9,9,section-hero-title
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,11,11,section-main-content
+attr:aria-label,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,13,13,On-page navigation
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,13,13,On-page navigation
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,14,14,#principles
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,15,15,#laws
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,16,16,#state
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,17,17,#videos
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,18,18,#refs
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,22,22,col-main content-text
+attr:title,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,83,83,How markets work
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,83,83,How markets work
+attr:title,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,88,88,Market failures explained
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,88,88,Market failures explained
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,107,107,side-card sticky
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,110,110,#laws
+string:literal,/chapter2/market-economy/en,en,src/pages/en/Chapter2MarketEconomyEn.jsx,112,112,side-card centered
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,9,9,section-hero-title
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,11,11,section-main-content
+attr:aria-label,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,13,13,On-page navigation
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,13,13,On-page navigation
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,14,14,#origin
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,15,15,#functions
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,16,16,#equations
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,17,17,#modern
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,18,18,#videos
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,23,23,col-main content-text
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,48,48,callout info
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,50,50,6px 0 0
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,54,54,6px 0 0
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,58,58,6px 0 0
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,62,62,6px 0 0
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,66,66,6px 0 0
+attr:title,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,102,102,Fundamentals of Marx: The Commodity
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,102,102,Fundamentals of Marx: The Commodity
+attr:title,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,106,106,Capital Made Easy (1): Commodities and Money
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,106,106,Capital Made Easy (1): Commodities and Money
+attr:title,/chapter2/money/en,unknown,src/pages/en/Chapter2MoneyEn.jsx,110,110,Reading Capital Vol I with David Harvey – Class 2
+string:literal,/chapter2/money/en,unknown,src/pages/en/Chapter2MoneyEn.jsx,110,110,Reading Capital Vol I with David Harvey – Class 2
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,118,118,side-card sticky
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,121,121,#equations
+string:literal,/chapter2/money/en,en,src/pages/en/Chapter2MoneyEn.jsx,123,123,side-card centered
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,9,9,section-hero-title
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,11,11,section-main-content
+attr:aria-label,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,13,13,On-page navigation
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,13,13,On-page navigation
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,14,14,#services
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,15,15,#exchange
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,16,16,#compare
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,17,17,#videos
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,18,18,#sources
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,22,22,col-main content-text
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,39,39,callout info
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,41,41,6px 0 0
+attr:aria-label,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,96,96,Comparison table
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,96,96,Comparison table
+attr:title,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,148,148,Service marketing characteristics
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,148,148,Service marketing characteristics
+attr:title,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,152,152,Anti-Capitalist Chronicles: Fictitious Capital
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,152,152,Anti-Capitalist Chronicles: Fictitious Capital
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,170,170,side-card sticky
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,173,173,#compare
+string:literal,/chapter2/services/en,en,src/pages/en/Chapter2ServicesEn.jsx,175,175,side-card centered
+string:literal,(global),en,src/pages/KnowledgeMapPage.jsx,10,10,"linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"
+string:literal,(global),en,src/pages/KnowledgeMapPage.jsx,13,13,section-hero-title
+string:literal,(global),en,src/pages/KnowledgeMapPage.jsx,17,17,section-main-content
+string:literal,(global),en,src/pages/ProgressPage.jsx,10,10,"linear-gradient(135deg, #22c55e 0%, #16a085 100%)"
+string:literal,(global),en,src/pages/ProgressPage.jsx,13,13,section-hero-title
+string:literal,(global),en,src/pages/ProgressPage.jsx,17,17,section-main-content
+string:literal,(global),en,src/pages/TimelinePage.jsx,10,10,"linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+string:literal,(global),en,src/pages/TimelinePage.jsx,13,13,section-hero-title
+string:literal,(global),en,src/pages/TimelinePage.jsx,17,17,section-main-content
+string:literal,/content,en,src/template/Content.jsx,13,13,chapter2/money
+string:literal,/content,vi,src/template/Content.jsx,14,14,1) Tiền tệ
+string:literal,/content,vi,src/template/Content.jsx,15,15,"Nguồn gốc, bản chất và các chức năng của tiền trong kinh tế hàng hoá."
+string:literal,/content,en,src/template/Content.jsx,19,19,chapter2/services
+string:literal,/content,vi,src/template/Content.jsx,20,20,2) Dịch vụ & quan hệ trao đổi
+string:literal,/content,vi,src/template/Content.jsx,21,21,Dịch vụ và các quan hệ trao đổi với một số yếu tố khác hàng hoá hiện nay.
+string:literal,/content,en,src/template/Content.jsx,25,25,chapter2/market-concepts
+string:literal,/content,vi,src/template/Content.jsx,26,26,3) Thị trường: khái niệm & vai trò
+string:literal,/content,vi,src/template/Content.jsx,27,27,"Khái niệm, phân loại và vai trò của thị trường trong nền kinh tế."
+string:literal,/content,en,src/template/Content.jsx,31,31,chapter2/market-economy
+string:literal,/content,vi,src/template/Content.jsx,32,32,4) Nền kinh tế thị trường
+string:literal,/content,vi,src/template/Content.jsx,33,33,Đặc trưng và một số quy luật chủ yếu của nền kinh tế thị trường.
+string:literal,/content,en,src/template/Content.jsx,74,74,content-main-title
+string:literal,/content,en,src/template/Content.jsx,80,80,content-card-title
+string:literal,/content,en,src/template/Content.jsx,81,81,content-card-description
+string:literal,/conclusion/en,en,src/template/en/ConclusionEn.jsx,14,14,section-hero-title
+string:literal,/conclusion/en,en,src/template/en/ConclusionEn.jsx,16,16,section-main-content
+string:literal,/conclusion/en,unknown,src/template/en/ConclusionEn.jsx,137,137,Class struggle is a crucial direct motor — but never the only one.
+string:literal,/conclusion/en,en,src/template/en/ConclusionEn.jsx,141,141,The free development of each is the condition for the free development of all.
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,12,12,chapter2/money/en
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,13,13,1) Money
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,14,14,"Origins, nature, and functions of money in a commodity economy."
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,18,18,chapter2/services/en
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,19,19,2) Services & Exchange Relations
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,20,20,Services and special exchange relations for factors beyond ordinary goods.
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,24,24,chapter2/market-concepts/en
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,25,25,3) Market: Concepts & Roles
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,26,26,"Definition, classification, and roles of markets in the economy."
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,30,30,chapter2/market-economy/en
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,31,31,4) Market Economy
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,57,57,content-main-title
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,63,63,content-card-title
+string:literal,/content/en,en,src/template/en/ContentEn.jsx,64,64,content-card-description
+string:literal,/future/en,en,src/template/en/FutureEn.jsx,10,10,section-hero-title
+string:literal,/future/en,en,src/template/en/FutureEn.jsx,12,12,section-main-content
+string:literal,/future/en,en,src/template/en/FutureEn.jsx,19,19,"From each according to ability, to each according to work."
+string:literal,/future/en,en,src/template/en/FutureEn.jsx,20,20,"From each according to ability, to each according to need."
+string:literal,/future/en,en,src/template/en/FutureEn.jsx,46,46,callout success
+string:literal,/future/en,en,src/template/en/FutureEn.jsx,52,52,In communist society... nobody has one exclusive sphere of activity.
+string:literal,/future/en,en,src/template/en/FutureEn.jsx,53,53,"From each according to his ability, to each according to his needs."
+string:literal,/future/en,en,src/template/en/FutureEn.jsx,54,54,The state becomes unnecessary.
+string:literal,/future/en,en,src/template/en/FutureEn.jsx,55,55,The proletariat will use its political supremacy to wrest... all capital from the bourgeoisie.
+string:literal,(global),en,src/template/en/IntroEn.jsx,23,23,intro-section-container
+string:literal,(global),en,src/template/en/IntroEn.jsx,24,24,intro-section-title
+string:literal,(global),en,src/template/en/IntroEn.jsx,28,28,intro-section-content
+string:literal,(global),en,src/template/en/IntroEn.jsx,37,37,intro-section-content
+string:literal,(global),en,src/template/en/IntroEn.jsx,48,48,intro-section-content
+string:literal,(global),en,src/template/en/IntroEn.jsx,61,61,intro-section-content
+string:literal,(global),en,src/template/en/IntroEn.jsx,73,73,intro-section-content
+string:literal,(global),en,src/template/en/IntroEn.jsx,87,87,intro-section-content
+string:literal,/quiz/en,en,src/template/en/QuizEn.jsx,26,26,quiz-button start-button
+string:literal,/quiz/en,en,src/template/en/QuizEn.jsx,49,49,quiz-question-header
+string:literal,/role/en,en,src/template/en/RoleEn.jsx,10,10,section-hero-title
+string:literal,/role/en,en,src/template/en/RoleEn.jsx,12,12,section-main-content
+string:literal,/role/en,en,src/template/en/RoleEn.jsx,27,27,Philosophers have only interpreted the world... the point is to change it.
+string:literal,/role/en,en,src/template/en/RoleEn.jsx,28,28,"It is not the consciousness of men that determines their being, but their social being..."
+string:literal,/role/en,en,src/template/en/RoleEn.jsx,29,29,Revolution is the festival of the oppressed.
+string:literal,/role/en,en,src/template/en/RoleEn.jsx,30,30,Force is the midwife of every old society pregnant with a new one.
+attr:title,/role/en,en,src/template/en/RoleEn.jsx,36,36,Historical Role 1
+string:literal,/role/en,en,src/template/en/RoleEn.jsx,36,36,Historical Role 1
+attr:title,/role/en,en,src/template/en/RoleEn.jsx,40,40,Historical Role 2
+string:literal,/role/en,en,src/template/en/RoleEn.jsx,40,40,Historical Role 2
+attr:title,/role/en,en,src/template/en/RoleEn.jsx,44,44,Historical Role 3
+string:literal,/role/en,en,src/template/en/RoleEn.jsx,44,44,Historical Role 3
+string:literal,/theory/en,en,src/template/en/TheoryEn.jsx,10,10,section-hero-title
+string:literal,/theory/en,en,src/template/en/TheoryEn.jsx,12,12,section-main-content
+string:literal,/theory/en,en,src/template/en/TheoryEn.jsx,20,20,Classes are large groups of people differing by their place in a historically determined system of social production... and therefore differing by the share of social wealth they obtain.
+string:literal,/theory/en,en,src/template/en/TheoryEn.jsx,103,103,callout info
+string:literal,/theory/en,en,src/template/en/TheoryEn.jsx,115,115,Workers of the world have nothing to lose but their chains.
+attr:title,/theory/en,en,src/template/en/TheoryEn.jsx,127,127,Foundational Theory 1
+string:literal,/theory/en,en,src/template/en/TheoryEn.jsx,127,127,Foundational Theory 1
+attr:title,/theory/en,en,src/template/en/TheoryEn.jsx,131,131,Foundational Theory 2
+string:literal,/theory/en,en,src/template/en/TheoryEn.jsx,131,131,Foundational Theory 2
+attr:title,/theory/en,en,src/template/en/TheoryEn.jsx,135,135,Foundational Theory 3
+string:literal,/theory/en,en,src/template/en/TheoryEn.jsx,135,135,Foundational Theory 3
+attr:title,/theory/en,en,src/template/en/TheoryEn.jsx,139,139,Lenin Definition
+string:literal,/theory/en,en,src/template/en/TheoryEn.jsx,139,139,Lenin Definition
+string:literal,(global),en,src/template/Intro.jsx,37,37,intro-section-container
+string:literal,(global),en,src/template/Intro.jsx,39,39,intro-section-title
+string:literal,(global),en,src/template/Intro.jsx,45,45,intro-section-content
+string:literal,(global),en,src/template/Intro.jsx,55,55,intro-section-content
+string:literal,(global),en,src/template/Intro.jsx,67,67,intro-section-content
+string:literal,(global),en,src/template/Intro.jsx,84,84,intro-section-content
+string:literal,(global),en,src/template/Intro.jsx,98,98,intro-section-content
+string:literal,(global),en,src/template/Intro.jsx,113,113,intro-section-content
+string:literal,/conclusion,en,src/template/KetLuan.jsx,14,14,section-hero-title
+string:literal,/conclusion,en,src/template/KetLuan.jsx,16,16,section-main-content
+string:literal,/conclusion,vi,src/template/KetLuan.jsx,196,197,"Đấu tranh giai cấp là động lực trực tiếp, quan trọng của lịch sử — nhưng không phải động lực duy nhất."
+string:literal,/conclusion,vi,src/template/KetLuan.jsx,203,204,Sự phát triển tự do của mỗi người là điều kiện cho sự phát triển tự do của tất cả mọi người.
+string:literal,/theory,en,src/template/LyThuyet.jsx,71,71,section-hero-title
+string:literal,/theory,en,src/template/LyThuyet.jsx,75,75,section-main-content
+string:literal,/theory,vi,src/template/LyThuyet.jsx,87,87,"Được gọi là giai cấp, là những tập đoàn người to lớn, khác nhau về địa vị của họ trong một hệ thống sản xuất xã hội nhất định..., về quan hệ của họ đối với những tư liệu sản xuất, về vai trò của họ trong tổ chức lao động xã hội, và do đó khác nhau về cách thức hưởng thụ phần của cải xã hội..."
+attr:aria-label,/theory,vi,src/template/LyThuyet.jsx,113,113,Bảng ví dụ giai cấp theo các hình thái
+string:literal,/theory,vi,src/template/LyThuyet.jsx,113,113,Bảng ví dụ giai cấp theo các hình thái
+string:literal,/theory,en,src/template/LyThuyet.jsx,184,184,callout info
+string:literal,/theory,vi,src/template/LyThuyet.jsx,193,193,Lịch sử của tất cả các xã hội hiện có cho đến nay là lịch sử của cuộc đấu tranh giai cấp.
+string:literal,/theory,vi,src/template/LyThuyet.jsx,198,198,Giai cấp vô sản không có gì để mất ngoài xiềng xích của mình. Họ có cả một thế giới để giành lấy.
+string:literal,/theory,vi,src/template/LyThuyet.jsx,203,203,"Nhà nước là một bộ máy đặc biệt để trấn áp, là bộ máy để một giai cấp này trấn áp giai cấp khác."
+attr:title,/theory,vi,src/template/LyThuyet.jsx,216,216,Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 1
+string:literal,/theory,vi,src/template/LyThuyet.jsx,216,216,Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 1
+attr:title,/theory,vi,src/template/LyThuyet.jsx,229,229,Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 2
+string:literal,/theory,vi,src/template/LyThuyet.jsx,229,229,Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 2
+attr:title,/theory,vi,src/template/LyThuyet.jsx,242,242,Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 3
+string:literal,/theory,vi,src/template/LyThuyet.jsx,242,242,Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 3
+attr:title,/theory,vi,src/template/LyThuyet.jsx,255,255,Phân tích định nghĩa giai cấp của Lênin
+string:literal,/theory,vi,src/template/LyThuyet.jsx,255,255,Phân tích định nghĩa giai cấp của Lênin
+string:literal,/quiz,en,src/template/Quiz.jsx,48,48,quiz-button start-button
+string:literal,/quiz,en,src/template/Quiz.jsx,72,72,quiz-question-header
+string:literal,/quiz,vi,src/template/Quiz.jsx,108,108,Xem kết quả
+string:literal,/quiz,vi,src/template/Quiz.jsx,108,108,Câu tiếp
+string:literal,/future,en,src/template/TuongLai.jsx,14,14,section-hero-title
+string:literal,/future,en,src/template/TuongLai.jsx,18,18,section-main-content
+string:literal,/future,vi,src/template/TuongLai.jsx,31,31,"Từ mỗi người theo khả năng, cho mỗi người theo lao động"
+string:literal,/future,vi,src/template/TuongLai.jsx,34,34,"Từ mỗi người theo khả năng, cho mỗi người theo nhu cầu"
+string:literal,/future,en,src/template/TuongLai.jsx,71,71,callout success
+string:literal,/future,vi,src/template/TuongLai.jsx,72,72,thời tiền sử
+string:literal,/future,vi,src/template/TuongLai.jsx,83,83,"Trong xã hội cộng sản, nơi không ai có một lĩnh vực hoạt động riêng biệt mà ai cũng có thể hoàn thiện mình trong bất cứ ngành nào mình muốn."
+string:literal,/future,vi,src/template/TuongLai.jsx,88,88,"Từ mỗi người theo khả năng của mình, cho mỗi người theo nhu cầu của mình."
+string:literal,/future,vi,src/template/TuongLai.jsx,93,93,"Khi nhà nước cuối cùng thực sự trở thành đại diện của toàn xã hội, thì chính việc đó làm cho nhà nước trở thành thừa thãi."
+string:literal,/future,vi,src/template/TuongLai.jsx,98,98,Giai cấp vô sản sẽ sử dụng quyền thống trị chính trị của mình để dần dần tước đoạt tất cả tư bản khỏi tầng lớp tư sản.
+attr:title,/future,vi,src/template/TuongLai.jsx,110,110,Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 1
+string:literal,/future,vi,src/template/TuongLai.jsx,110,110,Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 1
+attr:title,/future,vi,src/template/TuongLai.jsx,123,123,Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 2
+string:literal,/future,vi,src/template/TuongLai.jsx,123,123,Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 2
+attr:title,/future,vi,src/template/TuongLai.jsx,136,136,Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 3
+string:literal,/future,vi,src/template/TuongLai.jsx,136,136,Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 3
+string:literal,/future,vi,src/template/TuongLai.jsx,147,147,"Từ mỗi người theo khả năng, cho mỗi người theo lao động"
+string:literal,/future,vi,src/template/TuongLai.jsx,150,150,"Từ mỗi người theo khả năng, cho mỗi người theo nhu cầu"
+string:literal,/future,vi,src/template/TuongLai.jsx,169,169,xã hội chủ nghĩa thị trường
+string:literal,/future,en,src/template/TuongLai.jsx,181,181,callout success
+string:literal,/future,vi,src/template/TuongLai.jsx,182,182,thời tiền sử
+string:literal,/role,en,src/template/Vaitro.jsx,14,14,section-hero-title
+string:literal,/role,en,src/template/Vaitro.jsx,18,18,section-main-content
+string:literal,/role,vi,src/template/Vaitro.jsx,48,48,"Triết học chỉ giải thích thế giới theo những cách khác nhau, vấn đề là phải biến đổi nó."
+string:literal,/role,vi,src/template/Vaitro.jsx,53,53,"Không phải ý thức của con người quyết định sự tồn tại của họ, trái lại, chính sự tồn tại xã hội của họ quyết định ý thức của họ."
+string:literal,/role,vi,src/template/Vaitro.jsx,58,58,Cách mạng là lễ hội của người bị áp bức và bị bóc lột.
+string:literal,/role,vi,src/template/Vaitro.jsx,63,63,Bạo lực là người đỡ đẻ của mọi xã hội cũ khi mang thai một xã hội mới.
+attr:title,/role,vi,src/template/Vaitro.jsx,75,75,Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 1
+string:literal,/role,vi,src/template/Vaitro.jsx,75,75,Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 1
+attr:title,/role,vi,src/template/Vaitro.jsx,88,88,Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 2
+string:literal,/role,vi,src/template/Vaitro.jsx,88,88,Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 2
+attr:title,/role,vi,src/template/Vaitro.jsx,101,101,Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 3
+string:literal,/role,vi,src/template/Vaitro.jsx,101,101,Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 3
+string:literal,(global),en,src/utils/apiConfig.js,7,7,gemini-1.5-flash-8b-latest
+string:literal,(global),en,src/utils/apiConfig.js,8,8,gemini-1.5-flash-8b
+string:literal,(global),en,src/utils/apiConfig.js,9,9,gemini-1.5-flash-latest
+string:literal,(global),en,src/utils/apiConfig.js,10,10,gemini-1.5-flash
+string:literal,(global),en,src/utils/apiConfig.js,11,11,gemini-2.5-flash
+string:literal,(global),en,src/utils/apiConfig.js,12,12,gemini-1.5-pro
+string:literal,(global),en,src/utils/chatUtils.js,6,6,<strong>$1</strong>
+string:literal,(global),en,src/utils/chatUtils.js,7,7,<em>$1</em>
+string:literal,(global),vi,src/utils/chatUtils.js,14,14,triết học
+string:literal,(global),vi,src/utils/chatUtils.js,14,14,tư tưởng
+string:literal,(global),vi,src/utils/chatUtils.js,14,14,lý thuyết
+string:literal,(global),vi,src/utils/chatUtils.js,14,14,học thuyết
+string:literal,(global),vi,src/utils/chatUtils.js,15,15,thế giới quan
+string:literal,(global),vi,src/utils/chatUtils.js,15,15,nhân sinh quan
+string:literal,(global),vi,src/utils/chatUtils.js,15,15,phương pháp luận
+string:literal,(global),vi,src/utils/chatUtils.js,16,16,siêu hình học
+string:literal,(global),vi,src/utils/chatUtils.js,16,16,nhận thức luận
+string:literal,(global),vi,src/utils/chatUtils.js,17,17,đạo đức học
+string:literal,(global),vi,src/utils/chatUtils.js,17,17,mỹ học
+string:literal,(global),vi,src/utils/chatUtils.js,18,18,triết học chính trị
+string:literal,(global),en,src/utils/chatUtils.js,18,18,philosophy of science
+string:literal,(global),en,src/utils/chatUtils.js,18,18,philosophy of mind
+string:literal,(global),en,src/utils/chatUtils.js,19,19,philosophy of language
+string:literal,(global),en,src/utils/chatUtils.js,19,19,philosophy of technology
+string:literal,(global),vi,src/utils/chatUtils.js,20,20,thí nghiệm tưởng tượng
+string:literal,(global),en,src/utils/chatUtils.js,20,20,thought experiment
+string:literal,(global),en,src/utils/chatUtils.js,20,20,principle of charity
+string:literal,(global),vi,src/utils/chatUtils.js,24,24,mác-lênin
+string:literal,(global),vi,src/utils/chatUtils.js,25,25,chủ nghĩa duy vật lịch sử
+string:literal,(global),en,src/utils/chatUtils.js,25,25,dialectical materialism
+string:literal,(global),en,src/utils/chatUtils.js,25,25,historical materialism
+string:literal,(global),vi,src/utils/chatUtils.js,26,26,đấu tranh giai cấp
+string:literal,(global),vi,src/utils/chatUtils.js,26,26,giá trị thặng dư
+string:literal,(global),vi,src/utils/chatUtils.js,26,26,tư liệu sản xuất
+string:literal,(global),vi,src/utils/chatUtils.js,27,27,lực lượng sản xuất
+string:literal,(global),vi,src/utils/chatUtils.js,27,27,quan hệ sản xuất
+string:literal,(global),vi,src/utils/chatUtils.js,27,27,tha hoá
+string:literal,(global),vi,src/utils/chatUtils.js,28,28,cơ sở hạ tầng
+string:literal,(global),vi,src/utils/chatUtils.js,28,28,thượng tầng kiến trúc
+string:literal,(global),vi,src/utils/chatUtils.js,28,28,chuyên chính vô sản
+string:literal,(global),vi,src/utils/chatUtils.js,29,29,chủ nghĩa xã hội khoa học
+string:literal,(global),vi,src/utils/chatUtils.js,29,29,chủ nghĩa cộng sản
+string:literal,(global),vi,src/utils/chatUtils.js,30,30,cách mạng vô sản
+string:literal,(global),en,src/utils/chatUtils.js,30,30,proletarian revolution
+string:literal,(global),vi,src/utils/chatUtils.js,30,30,chủ nghĩa tư bản
+string:literal,(global),vi,src/utils/chatUtils.js,31,31,chủ nghĩa phong kiến
+string:literal,(global),vi,src/utils/chatUtils.js,31,31,chủ nghĩa nô lệ
+string:literal,(global),en,src/utils/chatUtils.js,40,40,post-structuralism
+string:literal,(global),en,src/utils/chatUtils.js,41,41,logical positivism
+string:literal,(global),en,src/utils/chatUtils.js,41,41,analytic philosophy
+string:literal,(global),en,src/utils/chatUtils.js,41,41,continental philosophy
+string:literal,(global),en,src/utils/chatUtils.js,42,42,critical theory
+string:literal,(global),vi,src/utils/chatUtils.js,45,45,khổng tử
+string:literal,(global),vi,src/utils/chatUtils.js,45,45,mạnh tử
+string:literal,(global),vi,src/utils/chatUtils.js,45,45,tuân tử
+string:literal,(global),vi,src/utils/chatUtils.js,45,45,lão tử
+string:literal,(global),vi,src/utils/chatUtils.js,45,45,trang tử
+string:literal,(global),vi,src/utils/chatUtils.js,45,45,mặc tử
+string:literal,(global),vi,src/utils/chatUtils.js,45,45,hàn phi tử
+string:literal,(global),vi,src/utils/chatUtils.js,46,46,nho giáo
+string:literal,(global),vi,src/utils/chatUtils.js,46,46,đạo giáo
+string:literal,(global),vi,src/utils/chatUtils.js,46,46,pháp gia
+string:literal,(global),vi,src/utils/chatUtils.js,46,46,tân nho giáo
+string:literal,(global),vi,src/utils/chatUtils.js,47,47,phật giáo
+string:literal,(global),vi,src/utils/chatUtils.js,47,47,thiền
+string:literal,(global),en,src/utils/chatUtils.js,47,47,yin yang
+string:literal,(global),vi,src/utils/chatUtils.js,47,47,đạo đức kinh
+string:literal,(global),vi,src/utils/chatUtils.js,47,47,luận ngữ
+string:literal,(global),en,src/utils/chatUtils.js,47,47,trung dung
+string:literal,(global),vi,src/utils/chatUtils.js,47,47,đại học
+string:literal,(global),vi,src/utils/chatUtils.js,53,53,đạo đức học
+string:literal,(global),vi,src/utils/chatUtils.js,53,53,thẩm mỹ học
+string:literal,(global),vi,src/utils/chatUtils.js,54,54,nhận thức luận
+string:literal,(global),vi,src/utils/chatUtils.js,54,54,bản thể luận
+string:literal,(global),vi,src/utils/chatUtils.js,55,55,triết học chính trị
+string:literal,(global),vi,src/utils/chatUtils.js,55,55,triết học giáo dục
+string:literal,(global),vi,src/utils/chatUtils.js,55,55,triết học khoa học
+string:literal,(global),vi,src/utils/chatUtils.js,56,56,triết học tôn giáo
+string:literal,(global),vi,src/utils/chatUtils.js,56,56,triết học ngôn ngữ
+string:literal,(global),vi,src/utils/chatUtils.js,56,56,triết học tâm trí
+string:literal,(global),en,src/utils/chatUtils.js,57,57,ibn sina
+string:literal,(global),en,src/utils/chatUtils.js,57,57,ibn rushd
+string:literal,(global),en,src/utils/chatUtils.js,61,61,free will
+string:literal,(global),en,src/utils/chatUtils.js,62,62,virtue ethics
+string:literal,(global),en,src/utils/chatUtils.js,65,65,post-structuralism
+string:literal,(global),en,src/utils/chatUtils.js,66,66,critical theory
+string:literal,(global),en,src/utils/chatUtils.js,66,66,feminist philosophy
+string:literal,(global),en,src/utils/chatUtils.js,66,66,queer theory
+string:literal,(global),en,src/utils/chatUtils.js,67,67,environmental philosophy
+string:literal,(global),en,src/utils/chatUtils.js,67,67,philosophy of technology
+string:literal,(global),en,src/utils/chatUtils.js,67,67,philosophy of mind
+string:literal,(global),en,src/utils/chatUtils.js,68,68,artificial intelligence
+string:literal,(global),en,src/utils/chatUtils.js,68,68,mind-body problem
+string:literal,(global),en,src/utils/chatUtils.js,69,69,simulation hypothesis
+string:literal,(global),vi,src/utils/chatUtils.js,72,72,thần học
+string:literal,(global),vi,src/utils/chatUtils.js,72,72,triết học tôn giáo
+string:literal,(global),en,src/utils/chatUtils.js,72,72,philosophy of religion
+string:literal,(global),en,src/utils/chatUtils.js,73,73,existence of god
+string:literal,(global),en,src/utils/chatUtils.js,73,73,problem of evil
+string:literal,(global),en,src/utils/chatUtils.js,73,73,faith and reason
+string:literal,(global),en,src/utils/chatUtils.js,74,74,divine command theory
+string:literal,(global),en,src/utils/chatUtils.js,74,74,natural theology
+string:literal,(global),en,src/utils/chatUtils.js,76,76,propositional logic
+string:literal,(global),en,src/utils/chatUtils.js,76,76,predicate logic
+string:literal,(global),en,src/utils/chatUtils.js,76,76,modal logic
+string:literal,(global),en,src/utils/chatUtils.js,76,76,temporal logic
+string:literal,(global),en,src/utils/chatUtils.js,77,77,deontic logic
+string:literal,(global),en,src/utils/chatUtils.js,77,77,fuzzy logic
+string:literal,(global),en,src/utils/chatUtils.js,77,77,intuitionistic logic
+string:literal,(global),en,src/utils/chatUtils.js,77,77,many-valued logic
+string:literal,(global),en,src/utils/chatUtils.js,78,78,modus ponens
+string:literal,(global),en,src/utils/chatUtils.js,78,78,modus tollens
+string:literal,(global),en,src/utils/chatUtils.js,79,79,logical fallacies
+string:literal,(global),en,src/utils/chatUtils.js,82,82,justified true belief
+string:literal,(global),en,src/utils/chatUtils.js,84,84,a priori
+string:literal,(global),en,src/utils/chatUtils.js,84,84,a posteriori
+string:literal,(global),en,src/utils/chatUtils.js,87,87,virtue epistemology
+string:literal,(global),en,src/utils/chatUtils.js,90,90,ad hominem
+string:literal,(global),en,src/utils/chatUtils.js,90,90,straw man
+string:literal,(global),en,src/utils/chatUtils.js,90,90,slippery slope
+string:literal,(global),en,src/utils/chatUtils.js,90,90,appeal to authority
+string:literal,(global),en,src/utils/chatUtils.js,91,91,red herring
+string:literal,(global),en,src/utils/chatUtils.js,91,91,hasty generalization
+string:literal,(global),en,src/utils/chatUtils.js,91,91,begging the question
+string:literal,(global),en,src/utils/chatUtils.js,91,91,false dilemma
+string:literal,(global),en,src/utils/chatUtils.js,92,92,post hoc
+string:literal,(global),en,src/utils/chatUtils.js,92,92,non sequitur
+string:literal,(global),en,src/utils/chatUtils.js,92,92,tu quoque
+string:literal,(global),vi,src/utils/chatUtils.js,95,95,tồn tại
+string:literal,(global),vi,src/utils/chatUtils.js,95,95,thực tại
+string:literal,(global),vi,src/utils/chatUtils.js,95,95,chân lý
+string:literal,(global),vi,src/utils/chatUtils.js,96,96,giá trị
+string:literal,(global),vi,src/utils/chatUtils.js,96,96,ý nghĩa
+string:literal,(global),vi,src/utils/chatUtils.js,96,96,tự do
+string:literal,(global),vi,src/utils/chatUtils.js,97,97,công lý
+string:literal,(global),vi,src/utils/chatUtils.js,97,97,hạnh phúc
+string:literal,(global),vi,src/utils/chatUtils.js,97,97,đức hạnh
+string:literal,(global),vi,src/utils/chatUtils.js,98,98,linh hồn
+string:literal,(global),vi,src/utils/chatUtils.js,98,98,tâm trí
+string:literal,(global),vi,src/utils/chatUtils.js,98,98,ý thức
+string:literal,(global),vi,src/utils/chatUtils.js,99,99,vô thức
+string:literal,(global),vi,src/utils/chatUtils.js,99,99,lý tính
+string:literal,(global),vi,src/utils/chatUtils.js,99,99,cảm tính
+string:literal,(global),vi,src/utils/chatUtils.js,102,102,hồ chí minh
+string:literal,(global),vi,src/utils/chatUtils.js,102,102,tư tưởng hồ chí minh
+string:literal,(global),vi,src/utils/chatUtils.js,102,102,nguyễn trãi
+string:literal,(global),vi,src/utils/chatUtils.js,102,102,trần nhân tông
+string:literal,(global),vi,src/utils/chatUtils.js,103,103,thiền trúc lâm
+string:literal,(global),vi,src/utils/chatUtils.js,103,103,trúc lâm yên tử
+string:literal,(global),vi,src/utils/chatUtils.js,103,103,lê quý đôn
+string:literal,(global),vi,src/utils/chatUtils.js,103,103,phan bội châu
+string:literal,(global),en,src/utils/chatUtils.js,104,104,phan chu trinh
+string:literal,(global),vi,src/utils/chatUtils.js,104,104,trần đức thảo
+string:literal,(global),vi,src/utils/chatUtils.js,104,104,trần văn giàu
+string:literal,(global),vi,src/utils/chatUtils.js,104,104,nho học việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,105,105,văn hóa việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,105,105,tuyên ngôn độc lập
+string:literal,(global),vi,src/utils/chatUtils.js,105,105,bản tuyên ngôn độc lập
+string:literal,(global),vi,src/utils/chatUtils.js,106,106,đạo đức cách mạng
+string:literal,(global),vi,src/utils/chatUtils.js,106,106,chủ nghĩa yêu nước
+string:literal,(global),vi,src/utils/chatUtils.js,106,106,chủ nghĩa xã hội ở việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,107,107,triết học phương đông
+string:literal,(global),vi,src/utils/chatUtils.js,107,107,triết học phương tây
+string:literal,(global),vi,src/utils/chatUtils.js,107,107,triết học hiện đại
+string:literal,(global),vi,src/utils/chatUtils.js,107,107,đảng cộng sản việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,108,108,chủ nghĩa mác-lênin ở việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,108,108,đấu tranh giai cấp ở việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,109,109,cách mạng việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,109,109,xã hội việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,109,109,lịch sử việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,110,110,văn hóa việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,110,110,giáo dục việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,110,110,kinh tế việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,111,111,chính trị việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,111,111,xã hội học việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,111,111,triết học việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,112,112,nguyễn ái quốc
+string:literal,(global),vi,src/utils/chatUtils.js,112,112,hồ chí minh và triết học mác-lênin
+string:literal,(global),vi,src/utils/chatUtils.js,113,113,hồ chí minh và chủ nghĩa mác-lênin
+string:literal,(global),vi,src/utils/chatUtils.js,113,113,hồ chí minh và đấu tranh giai cấp
+string:literal,(global),vi,src/utils/chatUtils.js,114,114,hồ chí minh và cách mạng việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,114,114,hồ chí minh và xã hội việt nam
+string:literal,(global),vi,src/utils/chatUtils.js,115,115,đảng cộng sản
+string:literal,(global),vi,src/utils/chatUtils.js,118,118,tồn tại
+string:literal,(global),vi,src/utils/chatUtils.js,118,118,thực tại
+string:literal,(global),vi,src/utils/chatUtils.js,118,118,chân lý
+string:literal,(global),vi,src/utils/chatUtils.js,119,119,giá trị
+string:literal,(global),vi,src/utils/chatUtils.js,119,119,ý nghĩa
+string:literal,(global),vi,src/utils/chatUtils.js,119,119,tự do
+string:literal,(global),vi,src/utils/chatUtils.js,120,120,công lý
+string:literal,(global),vi,src/utils/chatUtils.js,120,120,hạnh phúc
+string:literal,(global),vi,src/utils/chatUtils.js,120,120,đức hạnh
+string:literal,(global),vi,src/utils/chatUtils.js,121,121,linh hồn
+string:literal,(global),vi,src/utils/chatUtils.js,121,121,tâm trí
+string:literal,(global),vi,src/utils/chatUtils.js,121,121,ý thức
+string:literal,(global),vi,src/utils/chatUtils.js,122,122,vô thức
+string:literal,(global),vi,src/utils/chatUtils.js,122,122,lý tính
+string:literal,(global),vi,src/utils/chatUtils.js,122,122,cảm tính
+string:literal,(global),vi,src/utils/chatUtils.js,123,123,kinh tế chính trị
+string:literal,(global),en,src/utils/chatUtils.js,123,123,political economy
+string:literal,(global),vi,src/utils/chatUtils.js,123,123,lịch sử triết học
+string:literal,(global),en,src/utils/chatUtils.js,123,123,history of philosophy
+string:literal,(global),vi,src/utils/chatUtils.js,124,124,triết học pháp luật
+string:literal,(global),en,src/utils/chatUtils.js,124,124,philosophy of law
+string:literal,(global),vi,src/utils/chatUtils.js,124,124,triết học lịch sử
+string:literal,(global),en,src/utils/chatUtils.js,124,124,philosophy of history
+string:literal,(global),vi,src/utils/chatUtils.js,125,125,triết học ngôn ngữ
+string:literal,(global),en,src/utils/chatUtils.js,125,125,philosophy of language
+string:literal,(global),vi,src/utils/chatUtils.js,125,125,triết học tâm trí
+string:literal,(global),en,src/utils/chatUtils.js,125,125,philosophy of mind
+string:literal,(global),vi,src/utils/chatUtils.js,126,126,triết học công nghệ
+string:literal,(global),en,src/utils/chatUtils.js,126,126,philosophy of technology
+string:literal,(global),vi,src/utils/chatUtils.js,127,127,triết học giáo dục
+string:literal,(global),en,src/utils/chatUtils.js,127,127,philosophy of education
+string:literal,(global),vi,src/utils/chatUtils.js,127,127,triết học khoa học
+string:literal,(global),en,src/utils/chatUtils.js,127,127,philosophy of science
+string:literal,(global),vi,src/utils/chatUtils.js,128,128,triết học nghệ thuật
+string:literal,(global),en,src/utils/chatUtils.js,128,128,philosophy of art
+string:literal,(global),vi,src/utils/chatUtils.js,128,128,triết học tôn giáo
+string:literal,(global),en,src/utils/chatUtils.js,128,128,philosophy of religion
+string:literal,(global),vi,src/utils/chatUtils.js,129,129,kinh tế
+string:literal,(global),vi,src/utils/chatUtils.js,132,132,hàng hóa
+string:literal,(global),en,src/utils/chatUtils.js,132,132,hang hoa
+string:literal,(global),vi,src/utils/chatUtils.js,133,133,tiền tệ
+string:literal,(global),en,src/utils/chatUtils.js,133,133,tien te
+string:literal,(global),vi,src/utils/chatUtils.js,134,134,dịch vụ
+string:literal,(global),en,src/utils/chatUtils.js,134,134,dich vu
+string:literal,(global),vi,src/utils/chatUtils.js,135,135,thị trường
+string:literal,(global),en,src/utils/chatUtils.js,135,135,thi truong
+string:literal,(global),vi,src/utils/chatUtils.js,136,136,kinh tế thị trường
+string:literal,(global),en,src/utils/chatUtils.js,136,136,market economy
+string:literal,(global),vi,src/utils/chatUtils.js,137,137,quan hệ trao đổi
+string:literal,(global),en,src/utils/chatUtils.js,137,137,quan he trao doi
+string:literal,(global),vi,src/utils/chatUtils.js,138,138,giá cả
+string:literal,(global),en,src/utils/chatUtils.js,138,138,gia ca
+string:literal,(global),vi,src/utils/chatUtils.js,138,138,giá trị
+string:literal,(global),en,src/utils/chatUtils.js,138,138,gia tri
+string:literal,(global),vi,src/utils/chatUtils.js,182,182,triết
+string:literal,(global),vi,src/utils/chatUtils.js,182,182,duy vật
+string:literal,(global),en,src/utils/chatUtils.js,182,182,duy tam
+string:literal,(global),en,src/utils/chatUtils.js,183,183,khong tu
+string:literal,(global),en,src/utils/chatUtils.js,183,183,lao tu
+string:literal,(global),en,src/utils/chatUtils.js,184,184,dao duc
+string:literal,(global),en,src/utils/chatUtils.js,184,184,ton tai
+string:literal,(global),en,src/utils/chatUtils.js,184,184,chan ly
+string:literal,(global),en,src/utils/chatUtils.js,184,184,y nghia
+string:literal,(global),en,src/utils/chatUtils.js,184,184,giai thoat
+string:literal,(global),en,src/utils/chatUtils.js,184,184,y thuc
+string:literal,(global),en,src/utils/chatUtils.js,184,184,tu do
+string:literal,(global),en,src/utils/chatUtils.js,186,186,critical theory
+string:literal,(global),en,src/utils/chatUtils.js,187,187,nho giao
+string:literal,(global),en,src/utils/chatUtils.js,187,187,dao giao
+string:literal,(global),en,src/utils/chatUtils.js,187,187,phap gia
+string:literal,(global),en,src/utils/chatUtils.js,188,188,chinh tri
+string:literal,(global),en,src/utils/chatUtils.js,188,188,chinh phu
+string:literal,(global),en,src/utils/chatUtils.js,188,188,kinh te
+string:literal,(global),en,src/utils/chatUtils.js,188,188,van hoa
+string:literal,(global),en,src/utils/chatUtils.js,188,188,xa hoi
+string:literal,(global),en,src/utils/chatUtils.js,188,188,giao duc
+string:literal,(global),en,src/utils/chatUtils.js,192,192,post-structuralism
+string:literal,(global),en,src/utils/chatUtils.js,193,193,critical theory
+string:literal,(global),en,src/utils/chatUtils.js,193,193,feminist philosophy
+string:literal,(global),en,src/utils/chatUtils.js,193,193,queer theory
+string:literal,(global),en,src/utils/chatUtils.js,194,194,environmental philosophy
+string:literal,(global),en,src/utils/chatUtils.js,194,194,philosophy of technology
+string:literal,(global),en,src/utils/chatUtils.js,194,194,philosophy of mind
+string:literal,(global),en,src/utils/chatUtils.js,222,222,xin chao
+string:literal,(global),vi,src/utils/chatUtils.js,230,230,"Xin chào! Tôi là trợ lý AI chuyên về triết học. Tôi có thể thảo luận về triết học phương Đông, phương Tây, Mác-Lênin và nhiều trường phái khác. Bạn muốn khám phá chủ đề triết học nào?"
+string:literal,(global),vi,src/utils/chatUtils.js,231,231,"Chào bạn! Tôi ở đây để giúp bạn tìm hiểu về thế giới triết học rộng lớn - từ Socrates, Khổng Tử đến các triết gia hiện đại. Hãy đặt câu hỏi về bất kỳ chủ đề triết học nào!"
+string:literal,(global),vi,src/utils/chatUtils.js,232,232,"Hello! Chào mừng đến với cuộc hành trình khám phá triết học! Tôi có thể thảo luận về đạo đức, tồn tại, chân lý, và nhiều vấn đề triết học khác. Bạn quan tâm đến điều gì?"
+string:literal,(global),vi,src/utils/chatUtils.js,239,239,Triết học là gì?
+string:literal,(global),vi,src/utils/chatUtils.js,240,240,Đạo đức học nghiên cứu về gì?
+string:literal,(global),vi,src/utils/chatUtils.js,241,241,Khác biệt giữa duy vật và duy tâm?
+string:literal,(global),vi,src/utils/chatUtils.js,242,242,Tư tưởng Khổng Tử về đạo đức?
+string:literal,(global),vi,src/utils/chatUtils.js,243,243,Ý nghĩa của cuộc sống?
+string:literal,(global),vi,src/utils/chatUtils.js,244,244,Chân lý tuyệt đối hay tương đối?
+string:literal,(global),vi,src/utils/chatUtils.js,245,245,Tự do ý chí có tồn tại không?
+string:literal,(global),en,src/utils/modelTester.js,2,2,modelTester.js is deprecated and will be removed soon.
+string:literal,(global),en,src/utils/modelTester.js,3,3,Deprecated - Gemini removed
+string:literal,(global),en,src/utils/sourceData.js,7,8,", servicesStart:"
+string:literal,(global),en,src/utils/sourceData.js,8,9,", iiMarketStart:"
+string:literal,(global),en,src/utils/sourceData.js,9,10,", marketConceptsStart:"
+string:literal,(global),en,src/utils/sourceData.js,10,11,", marketEconomyStart:"
+string:literal,(global),en,src/utils/testAPI.js,2,2,testAPI.js deprecated - Gemini removed.

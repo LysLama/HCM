@@ -6,35 +6,31 @@ import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import MainLayout from './layout/MainLayout.jsx';
 import Home from './template/Home.jsx';
 import Content from './template/Content.jsx';
+import StrategicRole from './template/LyThuyet.jsx';
+import PrimaryTask from './template/Vaitro.jsx';
+import Forces from './template/TuongLai.jsx';
+import Foundation from './template/KetLuan.jsx';
+import Methods from './template/Methods.jsx';
+import Applications from './template/Applications.jsx';
+import Front from './template/Front.jsx';
+import Resources from './template/Resources.jsx';
+
 // English versions
 import HomeEn from './template/en/HomeEn.jsx';
 import ContentEn from './template/en/ContentEn.jsx';
-import TheoryEn from './template/en/TheoryEn.jsx';
-import RoleEn from './template/en/RoleEn.jsx';
-import FutureEn from './template/en/FutureEn.jsx';
-import ConclusionEn from './template/en/ConclusionEn.jsx';
+import StrategicRoleEn from './template/en/TheoryEn.jsx';
+import PrimaryTaskEn from './template/en/RoleEn.jsx';
+import ForcesEn from './template/en/FutureEn.jsx';
+import FoundationEn from './template/en/ConclusionEn.jsx';
+import MethodsEn from './template/en/MethodsEn.jsx';
+import ApplicationsEn from './template/en/ApplicationsEn.jsx';
+import FrontEn from './template/en/FrontEn.jsx';
+import ResourcesEn from './template/en/ResourcesEn.jsx';
 import QuizEn from './template/en/QuizEn.jsx';
 import ScrollButton from './components/Button.jsx';
-import Theory from './template/LyThuyet.jsx';
-import Role from './template/Vaitro.jsx';
-import Future from './template/TuongLai.jsx';
-import Conclusion from './template/KetLuan.jsx';
 import Quiz from './template/Quiz.jsx';
 import LanguageToggle from './components/LanguageToggle.jsx';
-import TimelinePage from './pages/TimelinePage.jsx';
-import KnowledgeMapPage from './pages/KnowledgeMapPage.jsx';
-import CombinedKnowledgePage from './pages/CombinedKnowledgePage.jsx';
 import { ReadingProgressProvider } from './context/ReadingProgressContext.jsx';
-// Chapter 2 pages
-import Chapter2Money from './pages/Chapter2Money.jsx';
-import Chapter2Services from './pages/Chapter2Services.jsx';
-import Chapter2MarketConcepts from './pages/Chapter2MarketConcepts.jsx';
-import Chapter2MarketEconomy from './pages/Chapter2MarketEconomy.jsx';
-// English pages
-import Chapter2MoneyEn from './pages/en/Chapter2MoneyEn.jsx';
-import Chapter2ServicesEn from './pages/en/Chapter2ServicesEn.jsx';
-import Chapter2MarketConceptsEn from './pages/en/Chapter2MarketConceptsEn.jsx';
-import Chapter2MarketEconomyEn from './pages/en/Chapter2MarketEconomyEn.jsx';
 
 const router = createBrowserRouter([
   {
@@ -47,55 +43,35 @@ const router = createBrowserRouter([
         element: <Home />,
       },
 
-      //Content pages
-      {
-        path: "/content",
-        element: <Content />,
-      },
-      {
-        path: "/content/en",
-        element: <ContentEn />,
-      },
+      // Overview hub
+      { path: "/overview", element: <Content /> },
+      { path: "/overview/en", element: <ContentEn /> },
 
-      //Theory pages
-      {
-        path: "/theory",
-        element: <Theory />,
-      },
-      {
-        path: "/theory/en",
-        element: <TheoryEn />,
-      },
+      // Core content (Ho Chi Minh Thought on Great National Unity)
+      { path: "/strategic-role", element: <StrategicRole /> },
+      { path: "/strategic-role/en", element: <StrategicRoleEn /> },
 
-      //Role pages
-      {
-        path: "/role",
-        element: <Role />,
-      },
-      {
-        path: "/role/en",
-        element: <RoleEn />,
-      },
+      { path: "/primary-task", element: <PrimaryTask /> },
+      { path: "/primary-task/en", element: <PrimaryTaskEn /> },
 
-      // Future pages
-      {
-        path: "/future",
-        element: <Future />,
-      },
-      {
-        path: "/future/en",
-        element: <FutureEn />,
-      },
+      { path: "/forces", element: <Forces /> },
+      { path: "/forces/en", element: <ForcesEn /> },
 
-      // Conclusion pages
-      {
-        path: "/conclusion",
-        element: <Conclusion />,
-      },
-      {
-        path: "/conclusion/en",
-        element: <ConclusionEn />,
-      },
+      { path: "/foundation", element: <Foundation /> },
+      { path: "/foundation/en", element: <FoundationEn /> },
+
+      // Extended sections
+      { path: "/methods", element: <Methods /> },
+      { path: "/methods/en", element: <MethodsEn /> },
+
+      { path: "/applications", element: <Applications /> },
+      { path: "/applications/en", element: <ApplicationsEn /> },
+
+      { path: "/front", element: <Front /> },
+      { path: "/front/en", element: <FrontEn /> },
+
+      { path: "/resources", element: <Resources /> },
+      { path: "/resources/en", element: <ResourcesEn /> },
 
       // Quiz page
       {
@@ -111,27 +87,6 @@ const router = createBrowserRouter([
         path: "/en",
         element: <HomeEn />,
       },
-
-      // Interactive Features
-      {
-        path: "/knowledge",
-        element: <CombinedKnowledgePage />,
-      },
-      {
-        path: "/knowledge/en",
-        element: <CombinedKnowledgePage />,
-      },
-
-  // Chapter 2 specific routes
-      { path: "/chapter2/money", element: <Chapter2Money /> },
-      { path: "/chapter2/services", element: <Chapter2Services /> },
-      { path: "/chapter2/market-concepts", element: <Chapter2MarketConcepts /> },
-      { path: "/chapter2/market-economy", element: <Chapter2MarketEconomy /> },
-      // English Chapter 2 routes
-      { path: '/chapter2/money/en', element: <Chapter2MoneyEn /> },
-      { path: '/chapter2/services/en', element: <Chapter2ServicesEn /> },
-      { path: '/chapter2/market-concepts/en', element: <Chapter2MarketConceptsEn /> },
-      { path: '/chapter2/market-economy/en', element: <Chapter2MarketEconomyEn /> },
 
       // 404 Not Found page
       // {

@@ -26,8 +26,10 @@ git push origin main
 2. Chọn **Environment Variables**
 3. Thêm variable:
    - **Name:** `VITE_GEMINI_API_KEY`
-   - **Value:** `AIzaSyA6rpMpd19WMq_4jqJ8C7U4A_vTfpC4_tc` (API key thực của bạn)
+   - **Value:** `YOUR_GEMINI_API_KEY_HERE` (không commit / không chia sẻ công khai)
    - **Environments:** Chọn tất cả (Production, Preview, Development)
+
+> Lưu ý bảo mật: Nếu bạn từng dán API key thật vào repo hoặc tài liệu, hãy **rotate/revoke key ngay** trong Google Cloud/AI Studio, rồi cập nhật lại trên Vercel.
 
 ## Bước 4: Deploy
 

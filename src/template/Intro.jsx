@@ -1,5 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import '../styles/Intro.css';
+import tuyenNgonDocLapAudio from '../assets/audio/Tuyên Ngôn Độc Lập.mp3';
+import tienQuanCaAudio from '../assets/audio/Tiến quân ca (Văn Cao) - Hợp ca nam nữ - (Quốc ca) (Lời cũ trước năm 1955).mp3';
+import tienQuanCaSheetImg from '../assets/img/600259a92f299aaa0c06b7878df163a4.jpg';
 
 const Intro = () => {
     // Tạo một ref để giữ container của các card
@@ -36,7 +39,7 @@ const Intro = () => {
     return (
         <section id="introduction" className="intro-section-container" ref={cardsContainerRef}>
             {/* Tiêu đề phần giới thiệu */}
-            <h1 className="intro-section-title">Giới Thiệu Chương 2</h1>
+            <h1 className="intro-section-title">Giới thiệu chủ đề</h1>
 
             {/* Các đề mục nhỏ trong các card */}
             <div className="intro-card">
@@ -44,8 +47,62 @@ const Intro = () => {
                 <h2>Tổng Quan Nội Dung</h2>
                 <div className="intro-section-content">
                     <p>
-                        Nội dung chuyển trọng tâm sang <strong>Chương 2: Hàng hóa, thị trường và vai trò của các chủ thể tham gia thị trường</strong>. Phần I trình bày lý luận của C. Mác về <em>sản xuất hàng hóa và hàng hóa</em>; Phần II giới thiệu về <em>thị trường và nền kinh tế thị trường</em>.
+                        Nội dung tập trung vào <strong>Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc</strong>, gồm hai trục chính:
+                        <strong> (1) Vai trò</strong> và <strong>(2) Lực lượng – nền tảng</strong> của khối đại đoàn kết.
                     </p>
+                    <h3>Tư liệu âm thanh</h3>
+                    <ul>
+                        <li className="audio-box">
+                            <strong>Tuyên Ngôn Độc Lập (02/09/1945)</strong>
+                            <audio controls src={tuyenNgonDocLapAudio}>
+                                Trình duyệt của bạn không hỗ trợ audio.
+                            </audio>
+                            <div>
+                                Nguồn:{' '}
+                                <a href="https://hochiminh.vn/audio/ho-chi-minh-chu-tich-lam-thoi-nuoc-viet-nam-dan-chu-cong-hoa-doc-ban-tuyen-ngon-doc-lap-ngay-2-9-1945-tai-quang-truong-1" target="_blank" rel="noreferrer">
+                                    hochiminh.vn
+                                </a>
+                            </div>
+                        </li>
+                        <li className="audio-box">
+                            <strong>Chúc mừng năm mới Mậu Thân 1968</strong>
+                            <audio controls src="/src/assets/audio/HCM_ChucMungNamMoiMauThan1968.mp3">
+                                Trình duyệt của bạn không hỗ trợ audio.
+                            </audio>
+                            <div>
+                                Nguồn:{' '}
+                                <a href="https://hochiminh.vn/audio/bac-ho-chuc-mung-nam-moi-mau-than-1968-108" target="_blank" rel="noreferrer">
+                                    hochiminh.vn
+                                </a>
+                            </div>
+                        </li>
+                        <li className="audio-box">
+                            <strong>Tiến quân ca (lời cũ trước 1955)</strong>
+                            <audio controls src={tienQuanCaAudio}>
+                                Trình duyệt của bạn không hỗ trợ audio.
+                            </audio>
+                            <div>
+                                Nguồn:{' '}
+                                <a href="https://bcdcnt.net/bai-hat/tien-quan-ca-9133.html" target="_blank" rel="noreferrer">
+                                    bcdcnt.net
+                                </a>
+                            </div>
+                            <figure className="audio-figure">
+                                <img src={tienQuanCaSheetImg} alt="Bản tờ giấy lời cũ Tiến quân ca năm 1945" />
+                                <figcaption>
+                                    Bản tờ giấy lời cũ Tiến quân ca năm 1945 do người Mỹ sao chép, ảnh lấy từ 1 diễn đàn trên mạng.
+                                </figcaption>
+                            </figure>
+                        </li>
+                    </ul>
+                    <div className="quote-section">
+                        <blockquote>
+                            <p>
+                                “Sử dạy cho ta bài học này: Lúc nào dân ta đoàn kết muôn người như một thì nước ta độc lập, tự do. Trái lại lúc nào dân ta không đoàn kết thì bị nước ngoài xâm lấn”.
+                            </p>
+                            <cite>— Hồ Chí Minh</cite>
+                        </blockquote>
+                    </div>
                 </div>
             </div>
 
@@ -54,9 +111,9 @@ const Intro = () => {
                 <h2>Mục Tiêu Học Tập</h2>
                 <div className="intro-section-content">
                     <ul>
-                        <li><strong>Hệ thống hóa kiến thức:</strong> Trang bị nền tảng về hàng hóa, tiền tệ, dịch vụ và các quan hệ trao đổi.</li>
-                        <li><strong>Tạo không gian thảo luận mở:</strong> Thảo luận về vai trò của thị trường và những quy luật cơ bản của kinh tế thị trường.</li>
-                        <li><strong>Ứng dụng công nghệ vào học thuật:</strong> Sử dụng các công nghệ web hiện đại để tạo ra một trải nghiệm học tập, nghiên cứu trực quan và hấp dẫn hơn so với các phương pháp truyền thống.</li>
+                        <li><strong>Hiểu đúng luận điểm cốt lõi:</strong> Đại đoàn kết là chiến lược lâu dài, quyết định thành công của cách mạng.</li>
+                        <li><strong>Nắm chắc cấu trúc nội dung:</strong> Vai trò → mục tiêu/nhiệm vụ → lực lượng → nền tảng & “hạt nhân”.</li>
+                        <li><strong>Liên hệ thực tiễn:</strong> Nhận diện cách củng cố đồng thuận xã hội và phát huy sức mạnh toàn dân trong bối cảnh hiện nay.</li>
                     </ul>
                 </div>
             </div>
@@ -73,21 +130,21 @@ const Intro = () => {
                         <li><strong>JavaScript (ESNext):</strong> Logic tương tác & tối ưu state.</li>
                         <li><strong>CSS thuần + biến màu:</strong> Kiểm soát chi tiết giao diện, responsive.</li>
                         <li><strong>GSAP:</strong> Hiệu ứng chuyển động tinh tế.</li>
-                        <li><strong>AI Chatbot tích hợp:</strong> Hỗ trợ đặt câu hỏi ngay khi đang đọc nội dung (phạm vi triết học), có cache tạm & chế độ dự phòng.</li>
+                        <li><strong>AI Chatbot tích hợp:</strong> Hỗ trợ đặt câu hỏi ngay khi đang đọc nội dung, có cache tạm & chế độ dự phòng.</li>
                     </ul>
                 </div>
             </div>
 
-            {/* Truy cập nhanh Chương 2 */}
+            {/* Truy cập nhanh */}
             <div className="intro-card">
                 <h2>Truy Cập Nhanh</h2>
                 <div className="intro-section-content">
                     <ul>
-                        <li><a href="/chapter2/money">1) Tiền tệ</a></li>
-                        <li><a href="/chapter2/services">2) Dịch vụ & quan hệ trao đổi</a></li>
-                        <li><a href="/chapter2/market-concepts">3) Thị trường: khái niệm & vai trò</a></li>
-                        <li><a href="/chapter2/market-economy">4) Nền kinh tế thị trường</a></li>
-                        <li><a href="/knowledge">Chương 2 • Trung tâm Tri thức</a></li>
+                        <li><a href="/overview">Tổng quan nội dung</a></li>
+                        <li><a href="/methods">Phương pháp</a></li>
+                        <li><a href="/front">Mặt trận</a></li>
+                        <li><a href="/resources">Tài liệu</a></li>
+                        <li><a href="/quiz">Ôn tập</a></li>
                     </ul>
                 </div>
             </div>
@@ -115,8 +172,8 @@ const Intro = () => {
                     <ul>
                         <li><strong>Minh Khánh</strong> - Trưởng nhóm, Nghiên cứu nội dung chính</li>
                         <li><strong>Thanh Lâm</strong> - Lập trình viên Back-end, Quản lý server, Dựng API</li>
-                        <li><strong>Gia Bảo</strong> - Lập trình viên Front-end, Thiết kế giao diện</li>
-                        <li><strong>Song Thiên</strong> - Hỗ trợ kỹ thuật, Chỉnh sửa thiết kế, nội dung</li>
+                        <li><strong>Mai Nguyễn</strong> - Lập trình viên Front-end, Thiết kế giao diện</li>
+                        <li><strong>Hành Phúc</strong> - Hỗ trợ kỹ thuật, Chỉnh sửa thiết kế, nội dung</li>
 
                     </ul>
                 </div>

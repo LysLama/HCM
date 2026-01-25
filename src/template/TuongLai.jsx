@@ -1,201 +1,106 @@
-import React from "react";
-import "../styles/Section.css";
-import section4Image from "../assets/img/future.jpg";
+import React from 'react';
+import '../styles/Section.css';
+import sectionImage from '../assets/img/dai_doan_ket.jpg';
 
-const Future = () => {
-    return (
-        <div className="page-container">
-            {/* Phần Hero */}
-            <header 
-                className="section-hero" 
-                style={{ backgroundImage: `url(${section4Image})` }}
-            >
-                <div className="hero-overlay"></div>
-                <h1 className="section-hero-title">Khả năng và giới hạn của một xã hội không còn đối kháng giai cấp</h1>
-            </header>
+// Forces / subjects of the great unity bloc (VI)
+const Forces = () => {
+  return (
+    <div className="page-container">
+      <header className="section-hero" style={{ backgroundImage: `url(${sectionImage})` }}>
+        <div className="hero-overlay" />
+        <h1 className="section-hero-title">Lực lượng của khối đại đoàn kết toàn dân tộc</h1>
+      </header>
 
-            {/* Phần nội dung chính của trang */}
-            <main className="section-main-content">
-                <div className="content-text">
-                    {/* PHẦN I: ĐIỀU KIỆN VÀ KHẢ NĂNG */}
-                    <h3>1. Điều kiện để xã hội không còn đối kháng giai cấp</h3>
-                    <p>
-                        •	<strong>Cơ sở kinh tế:</strong> Theo Mác-Lênin, khi xã hội tiến lên chủ nghĩa cộng sản (giai đoạn đầu là chủ nghĩa xã hội), chế độ tư hữu về tư liệu sản xuất chủ yếu dần bị thủ tiêu. Khi đó, cơ sở kinh tế để phân chia giai cấp đối kháng sẽ không còn (<span className="citation"></span>).
-                    </p>
-                    <p>
-                        •	<strong>Quan hệ xã hội mới:</strong> Quan hệ xã hội được xây dựng trên cơ sở hợp tác, bình đẳng, đoàn kết, thay thế quan hệ áp bức, bóc lột.
-                    </p>
+      <main className="section-main-content">
+        <nav className="anchor-nav" aria-label="Mục lục trang">
+          <a href="#subject">Chủ thể đại đoàn kết</a>
+          <a href="#who">Bao gồm những ai?</a>
+          <a href="#principle">Nguyên tắc tập hợp</a>
+        </nav>
 
-                    <h3>2. Các mô hình xã hội tương lai</h3>
-                    <p>
-                        •	<strong>Giai đoạn xã hội chủ nghĩa:</strong> "Từ mỗi người theo khả năng, cho mỗi người theo lao động" - Còn tồn tại sự khác biệt về thu nhập dựa trên năng suất lao động.
-                    </p>
-                    <p>
-                        •	<strong>Giai đoạn cộng sản chủ nghĩa:</strong> "Từ mỗi người theo khả năng, cho mỗi người theo nhu cầu" - Sản xuất phong phú, mọi người được đáp ứng đầy đủ nhu cầu vật chất và tinh thần.
-                    </p>
+        <div className="content-text">
+          <div className="quote-section">
+            <blockquote>
+              <p>“Đoàn kết là một chính sách dân tộc, không phải là một thủ đoạn chính trị”.</p>
+              <cite>
+                — Hồ Chí Minh •{' '}
+                <a
+                  href="https://baochinhphu.vn/ho-chi-minh-voi-tu-tuong-xuyen-suot-ve-doan-ket-102260203.htm"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  baochinhphu.vn
+                </a>
+              </cite>
+            </blockquote>
+          </div>
 
-                    {/* PHẦN II: ĐỘNG LỰC MỚI CỦA LỊCH SỬ */}
-                    <h3>3. Động lực phát triển mới trong xã hội không đối kháng</h3>
-                    <ul>
-                        <li><strong>Thay đổi động lực:</strong> Đấu tranh giai cấp không còn giữ vai trò động lực trực tiếp; lịch sử tiếp tục phát triển dựa vào các động lực mới bên dưới.</li>
-                        <li><strong>Phát triển lực lượng sản xuất:</strong> Khoa học – công nghệ trở thành động lực chính.</li>
-                        <li><strong>Mâu thuẫn con người – tự nhiên:</strong> Giải quyết các vấn đề môi trường, tài nguyên.</li>
-                        <li><strong>Mâu thuẫn cái mới – cái cũ:</strong> Đổi mới sáng tạo chống lại bảo thủ, lạc hậu.</li>
-                        <li><strong>Mâu thuẫn nhu cầu – khả năng:</strong> Nhu cầu vô hạn với nguồn lực hữu hạn.</li>
-                    </ul>
+          <h2 id="subject">Chủ thể của khối đại đoàn kết</h2>
+          <p>
+            Theo Hồ Chí Minh, chủ thể của khối đại đoàn kết toàn dân tộc là <strong>toàn thể nhân dân</strong> — tất cả những người Việt Nam yêu nước ở
+            mọi giai cấp, tầng lớp, ngành nghề, giới, lứa tuổi; đồng bào các dân tộc; đồng bào các tôn giáo; các đảng phái… ở trong nước và ngoài nước.
+          </p>
 
-                    {/* PHẦN III: CƠ CHẾ CHUYỂN TIẾP */}
-                    <section>
-                        <h3>4. Cơ chế chuyển tiếp từ đối kháng sang không đối kháng</h3>
-                        <ul>
-                            <li><strong>Chuyên chính vô sản:</strong> Như <em>bước quá độ</em> nhằm thủ tiêu cơ sở tái sinh giai cấp bóc lột.</li>
-                            <li><strong>Phát triển toàn diện:</strong> Ưu tiên phát triển lực lượng sản xuất và thiết chế dân chủ xã hội chủ nghĩa, nâng cao dân trí.</li>
-                            <li><strong>Đấu tranh tiếp tục:</strong> Tiếp tục đấu tranh trên ba mặt trận kinh tế, chính trị, tư tưởng phù hợp điều kiện mới.</li>
-                        </ul>
-                    </section>
+          <h2 id="who">“Nhân dân” được hiểu như thế nào?</h2>
+          <ul>
+            <li><strong>Nghĩa cụ thể:</strong> những con người Việt Nam cụ thể trong đời sống hằng ngày.</li>
+            <li><strong>Nghĩa tập hợp:</strong> đông đảo quần chúng nhân dân như một cộng đồng xã hội.</li>
+          </ul>
 
-                    <h3>5. Thách thức và giới hạn</h3>
-                    <p>
-                        •	<strong>Quá trình lâu dài:</strong> Sự xóa bỏ giai cấp không diễn ra ngay lập tức mà là một quá trình lâu dài, phức tạp.
-                    </p>
-                    <p>
-                        •	<strong>Mâu thuẫn mới:</strong> Mâu thuẫn vẫn tồn tại, nhưng chuyển từ mâu thuẫn đối kháng sang mâu thuẫn không đối kháng (ví dụ: mâu thuẫn giữa nhu cầu vật chất, tinh thần ngày càng tăng của con người với trình độ sản xuất còn hạn chế).
-                    </p>
+          <div className="quote-section">
+            <blockquote>
+              <p>
+                “Ai có tài, có đức, có sức, có lòng phụng sự Tổ quốc và phục vụ nhân dân thì ta đoàn kết với họ”.
+              </p>
+              <cite>
+                — Hồ Chí Minh •{' '}
+                <a
+                  href="https://www.tapchicongsan.org.vn/media-story/-/asset_publisher/V8hhp4dK31Gf/content/dai-doan-ket-toan-dan-toc-coi-nguon-cua-y-chi-niem-tin-suc-manh-de-xay-dung-bao-ve-to-quoc-trong-ky-nguyen-moi"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  tapchicongsan.org.vn
+                </a>
+              </cite>
+            </blockquote>
+          </div>
 
-                    {/* PHẦN IV: VIỄN CẢNH TƯƠNG LAI */}
-                    <section>
-                        <h3>6. Lịch sử sau khi đối kháng giai cấp chấm dứt</h3>
-                        <p>
-                            •	<strong>Không phải kết thúc lịch sử:</strong> Đấu tranh giai cấp không phải hiện tượng vĩnh viễn; khi cơ sở kinh tế của đối kháng bị thủ tiêu, lịch sử không dừng lại mà chuyển động bởi các mâu thuẫn <em>không đối kháng</em> và bởi sáng tạo hợp tác của cộng đồng.
-                        </p>
-                        <div className="callout success">
-                            <strong>Viễn cảnh:</strong> "thời tiền sử" khép lại; con người làm chủ điều kiện sống của chính mình, mở ra kỉ nguyên nhân văn hơn về mục tiêu và phương thức phát triển.
-                        </div>
-                        <p>
-                            •	<strong>Động lực mới:</strong> Lịch sử bước sang một giai đoạn phát triển mới, nhân văn hơn, nơi động lực không còn là sự xung đột mà là sự hợp tác và sáng tạo.
-                        </p>
-                    </section>
+          <h2>Video tham khảo (nguồn chính thống)</h2>
+          <p>
+            Các video sau minh họa “ai là lực lượng của khối đại đoàn kết” trong đời sống xã hội (cộng đồng, dân tộc, già làng, tổ dân phố…).
+          </p>
+          <ul>
+            <li>
+              VTV: “Ngày hội đại đoàn kết tại Thái Bình” —{' '}
+              <a href="https://vtv.vn/video/ngay-hoi-dai-doan-ket-tai-thai-binh-20394.htm" target="_blank" rel="noreferrer">vtv.vn</a>
+            </li>
+            <li>
+              VTV4: “Ngày hội Đại đoàn kết toàn dân tộc Hà Nội” —{' '}
+              <a href="https://vtv4.vtv.vn/video/ban-tin-tieng-viet/-20259.html" target="_blank" rel="noreferrer">vtv4.vtv.vn</a>
+            </li>
+            <li>
+              VTV4: “Già làng chung sức xây dựng khối đại đoàn kết” —{' '}
+              <a href="https://vtv4.vtv.vn/video/ban-tin-tieng-viet/-71512.html" target="_blank" rel="noreferrer">vtv4.vtv.vn</a>
+            </li>
+          </ul>
 
-                    {/* PHẦN V: TÀI LIỆU THAM KHẢO */}
-                    <h3>7. Trích dẫn từ các nhà triết học:</h3>
-                    <div className="quote-section">
-                        <blockquote>
-                            <p>"Trong xã hội cộng sản, nơi không ai có một lĩnh vực hoạt động riêng biệt mà ai cũng có thể hoàn thiện mình trong bất cứ ngành nào mình muốn."</p>
-                            <cite>— Karl Marx và Friedrich Engels, Hệ tư tưởng Đức (1845)</cite>
-                        </blockquote>
-                        
-                        <blockquote>
-                            <p>"Từ mỗi người theo khả năng của mình, cho mỗi người theo nhu cầu của mình."</p>
-                            <cite>— Karl Marx, Phê phán cương lĩnh Gotha (1875)</cite>
-                        </blockquote>
+          <h2 id="principle">Nguyên tắc trong quá trình tập hợp lực lượng</h2>
+          <p>
+            Trong xây dựng khối đại đoàn kết toàn dân tộc, cần đứng vững trên lập trường giai cấp công nhân, giải quyết hài hòa quan hệ giữa giai cấp và
+            dân tộc để tập hợp lực lượng — <strong>không bỏ sót</strong> lực lượng nào, miễn là họ trung thành, sẵn sàng phục vụ Tổ quốc và không phản bội
+            quyền lợi của nhân dân.
+          </p>
 
-                        <blockquote>
-                            <p>"Khi nhà nước cuối cùng thực sự trở thành đại diện của toàn xã hội, thì chính việc đó làm cho nhà nước trở thành thừa thãi."</p>
-                            <cite>— Friedrich Engels, Chủ nghĩa xã hội không tưởng và chủ nghĩa xã hội khoa học (1880)</cite>
-                        </blockquote>
-
-                        <blockquote>
-                            <p>"Giai cấp vô sản sẽ sử dụng quyền thống trị chính trị của mình để dần dần tước đoạt tất cả tư bản khỏi tầng lớp tư sản."</p>
-                            <cite>— Karl Marx và Friedrich Engels, Tuyên ngôn của Đảng Cộng sản (1848)</cite>
-                        </blockquote>
-                    </div>
-
-                    <h3>8. Video học thuật:</h3>
-                    <div className="video-section">
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/vEVTFCI59c8" 
-                                title="Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 1" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Khả năng của xã hội không còn đối kháng giai cấp</p>
-                        </div>
-                        
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/Z9VYY6vxkFA" 
-                                title="Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 2" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Mô hình xã hội không còn đối kháng giai cấp</p>
-                        </div>
-                        
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/IdQ-To9Xgm8" 
-                                title="Xã Hội Tương Lai - khả năng & giới hạn của xã hội không còn đối kháng giai cấp 3" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Giới hạn của xã hội không còn đối kháng giai cấp</p>
-                        </div>
-                    </div>
-
-                    <h3>9. Ví dụ về các nỗ lực xây dựng xã hội mới:</h3>
-                    <p>
-                        •	<strong>Giai đoạn xã hội chủ nghĩa:</strong> "Từ mỗi người theo khả năng, cho mỗi người theo lao động" - Còn tồn tại sự khác biệt về thu nhập dựa trên năng suất lao động.
-                    </p>
-                    <p>
-                        •	<strong>Giai đoạn cộng sản chủ nghĩa:</strong> "Từ mỗi người theo khả năng, cho mỗi người theo nhu cầu" - Sản xuất phong phú, mọi người được đáp ứng đầy đủ nhu cầu vật chất và tinh thần.
-                    </p>
-                    <p>
-                        •	<strong>Đặc điểm của xã hội không giai cấp:</strong>
-                        <br />
-                        +	Sở hữu công cộng về tư liệu sản xuất
-                        <br />
-                        +	Không có sự bóc lột con người bởi con người
-                        <br />
-                        +	Sự phát triển toàn diện và tự do của mỗi cá nhân
-                        <br />
-                        +	Hợp tác quốc tế thay thế cạnh tranh thù địch
-                    </p>
-
-                    <h3>10. Ví dụ về các nỗ lực xây dựng xã hội mới:</h3>
-                    <p>
-                        •	<strong>Liên Xô (1922-1991):</strong> Thí nghiệm đầu tiên xây dựng xã hội xã hội chủ nghĩa trên quy mô lớn, đạt được nhiều thành tựu về công nghiệp hóa và giáo dục.
-                    </p>
-                    <p>
-                        •	<strong>Trung Quốc hiện đại:</strong> Mô hình "xã hội chủ nghĩa thị trường" kết hợp giữa kế hoạch hóa nhà nước và cơ chế thị trường.
-                    </p>
-                    <p>
-                        •	<strong>Cuba:</strong> Duy trì hệ thống y tế và giáo dục miễn phí cho toàn dân dù trong điều kiện cấm vận.
-                    </p>
-
-                    {/* NEW: History beyond antagonism */}
-                    <section>
-                        <h3>11. Lịch sử sau khi đối kháng giai cấp chấm dứt</h3>
-                        <p>
-                            • Đấu tranh giai cấp không phải hiện tượng vĩnh viễn; khi cơ sở kinh tế của đối kháng bị thủ tiêu, lịch sử không dừng lại mà chuyển động bởi các mâu thuẫn <em>không đối kháng</em> (con người–tự nhiên, cái mới–cái cũ, nhu cầu vô hạn–nguồn lực hữu hạn) và bởi sáng tạo hợp tác của cộng đồng.
-                        </p>
-                        <div className="callout success">
-                            <strong>Viễn cảnh:</strong> "thời tiền sử" khép lại; con người làm chủ điều kiện sống của chính mình, mở ra kỉ nguyên nhân văn hơn về mục tiêu và phương thức phát triển.
-                        </div>
-                    </section>
-
-                    {/* NEW: Transition mechanics */}
-                    <section>
-                        <h3>12. Cơ chế chuyển tiếp: từ đối kháng → không đối kháng</h3>
-                        <ul>
-                            <li>Chuyên chính vô sản như <em>bước quá độ</em> nhằm thủ tiêu cơ sở tái sinh giai cấp bóc lột.</li>
-                            <li>Ưu tiên phát triển lực lượng sản xuất và thiết chế dân chủ xã hội chủ nghĩa, nâng cao dân trí.</li>
-                            <li>Tiếp tục đấu tranh trên ba mặt trận: kinh tế, chính trị, tư tưởng phù hợp điều kiện mới.</li>
-                        </ul>
-                    </section>
-                </div>
-            </main>
+          <div className="callout">
+            <strong>Tiếp theo</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              Xem thêm: <a href="/foundation">Nền tảng & “hạt nhân” của khối đại đoàn kết</a>.
+            </p>
+          </div>
         </div>
-    );
+      </main>
+    </div>
+  );
 };
 
-export default Future;
+export default Forces;

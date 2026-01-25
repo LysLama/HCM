@@ -1,35 +1,34 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import '../../styles/Content.css';
-import theoryImg from '../../assets/img/theory.jpg';
-import roleImg from '../../assets/img/role.jpg';
-import futureImg from '../../assets/img/future.jpg';
-import conclusionImg from '../../assets/img/conclusion.jpg';
+import theoryImg from '../../assets/img/strategic-role.jpg';
+import roleImg from '../../assets/img/hochiminh1.jpg';
+import futureImg from '../../assets/img/dai_doan_ket.jpg';
+import conclusionImg from '../../assets/img/mit_tinh_0.jpg';
 
-// Chapter 2 focus (EN)
 const sectionsEn = [
   {
-    id: 'chapter2/money/en',
-    title: '1) Money',
-    description: 'Origins, nature, and functions of money in a commodity economy.',
+    id: 'strategic-role/en',
+    title: 'Strategic role',
+    description: 'Great national unity is a long-term strategy that determines revolutionary success.',
     img: theoryImg,
   },
   {
-    id: 'chapter2/services/en',
-    title: '2) Services & Exchange Relations',
-    description: 'Services and special exchange relations for factors beyond ordinary goods.',
+    id: 'primary-task/en',
+    title: 'Primary objective & task',
+    description: 'Great unity is not only a slogan but also a long-term objective and the Party’s foremost task.',
     img: roleImg,
   },
   {
-    id: 'chapter2/market-concepts/en',
-    title: '3) Market: Concepts & Roles',
-    description: 'Definition, classification, and roles of markets in the economy.',
+    id: 'forces/en',
+    title: 'Forces of the unity bloc',
+    description: 'The subjects of unity include the entire people—across classes, religions, ethnicities, and communities at home and abroad.',
     img: futureImg,
   },
   {
-    id: 'chapter2/market-economy/en',
-    title: '4) Market Economy',
-    description: 'Core features and key laws of the market economy; role of the state.',
+    id: 'foundation/en',
+    title: 'Foundation & “core factor”',
+    description: 'Foundation: workers–peasants–intelligentsia; core factor: unity within the Party to strengthen unity in society.',
     img: conclusionImg,
   },
 ];
@@ -54,7 +53,7 @@ export default function ContentEn() {
 
   return (
     <main id="main-content" className="content-container">
-      <h1 className="content-main-title">Chapter 2: Goods, Money, Services, Markets, and the Market Economy</h1>
+      <h1 className="content-main-title">Overview: Ho Chi Minh Thought on Great National Unity</h1>
       <div className="content-grid" ref={gridRef}>
         {sectionsEn.map(section => (
           <Link to={`/${section.id}`} key={section.id} className="content-card-link">

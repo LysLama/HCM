@@ -1,281 +1,136 @@
-import React, { useEffect, useRef } from "react";
-import "../styles/Section.css";
-import section2Image from "../assets/img/theory.jpg";
+import React from 'react';
+import '../styles/Section.css';
+import sectionImage from '../assets/img/strategic-role.jpg';
 
-const Theory = () => {
-    const tableRef = useRef(null);
+// Strategic role of great national unity (VI)
+const StrategicRole = () => {
+  return (
+    <div className="page-container">
+      <header className="section-hero section-hero--no-zoom" style={{ backgroundImage: `url(${sectionImage})` }}>
+        <div className="hero-overlay" />
+        <h1 className="section-hero-title">Vai trò chiến lược của đại đoàn kết toàn dân tộc</h1>
+      </header>
 
-    // Add touch + pointer drag horizontal scroll support on mobile
-    useEffect(() => {
-        const el = tableRef.current;
-        if (!el) return;
+      <main className="section-main-content">
+        <nav className="anchor-nav" aria-label="Mục lục trang">
+          <a href="#strategic">Ý nghĩa chiến lược</a>
+          <a href="#truths">Luận điểm then chốt</a>
+          <a href="#poem">Kết tinh</a>
+        </nav>
 
-        let isDown = false;
-        let startX = 0;
-        let startY = 0;
-        let scrollLeft = 0;
+        <div className="content-text">
+          <h2 id="strategic">Đại đoàn kết là vấn đề chiến lược, quyết định thành công của cách mạng</h2>
+          <p>
+            Trong tư tưởng Hồ Chí Minh, <strong>đại đoàn kết toàn dân tộc</strong> là chiến lược lâu dài, nhất quán của cách mạng Việt Nam. Chính sách và
+            phương pháp tập hợp lực lượng có thể điều chỉnh theo từng giai đoạn, từng đối tượng; nhưng <strong>chủ trương đại đoàn kết</strong> là nhân tố
+            quyết định sự thành bại.
+          </p>
 
-        const onPointerDown = (e) => {
-            // Only left mouse or primary touch
-            isDown = true;
-            el.classList.add('is-dragging');
-            startX = ('touches' in e ? e.touches[0].pageX : e.pageX);
-            startY = ('touches' in e ? e.touches[0].pageY : e.pageY);
-            scrollLeft = el.scrollLeft;
-        };
-        const onPointerMove = (e) => {
-            if (!isDown) return;
-            const x = ('touches' in e ? e.touches[0].pageX : e.pageX);
-            const y = ('touches' in e ? e.touches[0].pageY : e.pageY);
-            const dx = x - startX;
-            const dy = y - startY;
-            // Only treat as horizontal drag if horizontal intent stronger
-            if (Math.abs(dx) > Math.abs(dy) * 1.15) {
-                e.preventDefault(); // Prevent page gesture
-                el.scrollLeft = scrollLeft - dx;
-            }
-        };
-        const endDrag = () => {
-            isDown = false;
-            el.classList.remove('is-dragging');
-        };
+          <div className="quote-section">
+            <blockquote>
+              <p>
+                “Sử dạy cho ta bài học này: Lúc nào dân ta đoàn kết muôn người như một thì nước ta độc lập, tự do. Trái lại lúc nào dân ta không đoàn kết
+                thì bị nước ngoài xâm lấn”.
+              </p>
+              <cite>
+                — Hồ Chí Minh •{' '}
+                <a
+                  href="https://baochinhphu.vn/ho-chi-minh-voi-tu-tuong-xuyen-suot-ve-doan-ket-102260203.htm"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  baochinhphu.vn
+                </a>
+              </cite>
+            </blockquote>
+          </div>
 
-        // Event listeners (pointer + touch fallback for older browsers)
-        el.addEventListener('mousedown', onPointerDown, { passive: true });
-        el.addEventListener('touchstart', onPointerDown, { passive: true });
-        window.addEventListener('mousemove', onPointerMove, { passive: false });
-        window.addEventListener('touchmove', onPointerMove, { passive: false });
-        window.addEventListener('mouseup', endDrag, { passive: true });
-        window.addEventListener('touchend', endDrag, { passive: true });
-        window.addEventListener('touchcancel', endDrag, { passive: true });
+          <h2 id="truths">Những luận điểm mang tính chân lý về sức mạnh đoàn kết</h2>
+          <ul>
+            <li>“Đoàn kết là sức mạnh của chúng ta”.</li>
+            <li>“Đoàn kết là một lực lượng vô địch… để khắc phục khó khăn, giành lấy thắng lợi”.</li>
+            <li>“Đoàn kết là sức mạnh, đoàn kết là thắng lợi”.</li>
+            <li>“Đoàn kết là sức mạnh, là then chốt của thành công”.</li>
+            <li>
+              “Bây giờ còn một điểm rất quan trọng, cũng là điểm mẹ… Đó là đoàn kết”.
+            </li>
+          </ul>
 
-        return () => {
-            el.removeEventListener('mousedown', onPointerDown);
-            el.removeEventListener('touchstart', onPointerDown);
-            window.removeEventListener('mousemove', onPointerMove);
-            window.removeEventListener('touchmove', onPointerMove);
-            window.removeEventListener('mouseup', endDrag);
-            window.removeEventListener('touchend', endDrag);
-            window.removeEventListener('touchcancel', endDrag);
-        };
-    }, []);
+          <div className="callout info">
+            <strong>Gợi ý đọc nhanh</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              Khi nói “điểm mẹ”, Hồ Chí Minh nhấn mạnh: nếu làm tốt đoàn kết, sẽ tạo ra nhiều kết quả tốt trong mọi công việc.
+            </p>
+          </div>
 
-    return (
-        <div className="page-container">
-            {/* Phần Hero */}
-            <header 
-                className="section-hero" 
-                style={{ backgroundImage: `url(${section2Image})` }}
-            >
-                <div className="hero-overlay"></div>
-                <h1 className="section-hero-title">Lý Thuyết Mác – Lênin về Giai Cấp và Đấu Tranh Giai Cấp</h1>
-            </header>
+          <h2 id="poem">Kết tinh tư tưởng</h2>
+          <p style={{ whiteSpace: 'pre-line' }}>
+            Đoàn kết, đoàn kết, đại đoàn kết\nThành công, thành công, đại thành công
+          </p>
 
-            {/* Phần nội dung chính của trang */}
-            <main className="section-main-content">
-                <div className="content-text">
-                    {/* PHẦN I: KHÁI NIỆM CƠ BẢN */}
-                    <h3>1. Khái niệm về giai cấp</h3>
-                    <p>
-                        •	Theo Mác – Lênin: giai cấp là những tập đoàn người to lớn trong xã hội, khác nhau về địa vị trong hệ thống sản xuất, về quan hệ đối với tư liệu sản xuất, vai trò trong tổ chức lao động xã hội và phương thức, khối lượng thu nhập mà họ thu được (Giáo trình Triết học Mác – Lênin, 2019, tr. 181).
-                    </p>
-                    
-                    {/* Trích dẫn định nghĩa chi tiết của Lênin */}
-                    <div className="quote-section">
-                        <blockquote>
-                            <p>
-                                "Được gọi là giai cấp, là những tập đoàn người to lớn, khác nhau về địa vị của họ trong một hệ thống sản xuất xã hội nhất định..., về quan hệ của họ đối với những tư liệu sản xuất, về vai trò của họ trong tổ chức lao động xã hội, và do đó khác nhau về cách thức hưởng thụ phần của cải xã hội..."
-                            </p>
-                            <cite>— V.I. Lênin, <em>Sáng kiến vĩ đại</em></cite>
-                        </blockquote>
-                    </div>
+          <div className="callout info">
+            <strong>Nguồn câu khẩu hiệu</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              Bối cảnh và tư liệu về câu “Đoàn kết, đoàn kết, đại đoàn kết…” có thể tham khảo tại{' '}
+              <a href="https://mattran.org.vn/hoat-dong/ngay-2541961-tai-dai-hoi-dai-bieu-mat-tran-to-quoc-viet-nam-lan-thu-ii-bac-ho-can-dan-doan-ket-doan-ket-dai-doan-ket-43601.html" target="_blank" rel="noreferrer">
+                mattran.org.vn
+              </a>{' '}
+              và{' '}
+              <a href="https://www.qdnd.vn/tu-lieu-ho-so/ngay-nay-nam-xua/ngay-25-4-1961-bac-ho-can-dan-doan-ket-doan-ket-dai-doan-ket-692103" target="_blank" rel="noreferrer">
+                qdnd.vn
+              </a>.
+            </p>
+          </div>
 
-                        {/* Điều kiện / Nguyên nhân sinh ra giai cấp (thay thế theo yêu cầu) */}
-                        <h3>2. Điều kiện/Nguyên nhân sinh ra giai cấp</h3>
-                        <ul className="bullet-list">
-                            <li><strong>Nguyên nhân sâu xa:</strong> Xuất hiện <strong>sản phẩm dư thừa</strong> do năng suất lao động tăng → có khả năng <strong>chiếm đoạt</strong> phần dư.</li>
-                            <li><strong>Nguyên nhân trực tiếp:</strong> <strong>Chế độ tư hữu về tư liệu sản xuất</strong> được xác lập → phân hoá lợi ích, hình thành các giai cấp đối lập.</li>
-                        </ul>
-                        <div className="note-block">
-                            <blockquote>
-                                <p><strong>Lưu ý:</strong> <strong>Phân công lao động xã hội</strong> (đặc biệt trí óc – chân tay) là yếu tố <strong>thúc đẩy</strong> sự phân hoá nhưng <em>không</em> phải nguyên nhân quyết định.</p>
-                            </blockquote>
-                        </div>
+          <div className="quote-section">
+            <blockquote>
+              <p>“Bây giờ còn một điểm rất quan trọng, cũng là điểm mẹ… Đó là đoàn kết”.</p>
+              <cite>
+                — Hồ Chí Minh •{' '}
+                <a
+                  href="https://tapchicongsan.org.vn/media-story/-/asset_publisher/V8hhp4dK31Gf/content/suc-manh-cua-doan-ket"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  tapchicongsan.org.vn
+                </a>
+              </cite>
+            </blockquote>
+          </div>
 
-                        <h3>3. Phân loại giai cấp</h3>
-                        <ul className="bullet-list">
-                            <li><strong>Giai cấp cơ bản:</strong> Quy định mâu thuẫn cơ bản của <strong>một hình thái kinh tế–xã hội</strong>, gắn trực tiếp với <strong>quan hệ sở hữu</strong> và <strong>địa vị</strong> trong sản xuất.</li>
-                            <li><strong>Giai cấp không cơ bản (trung gian):</strong> Tầng lớp ở <strong>giữa</strong>, không quyết định mâu thuẫn cơ bản nhưng có ảnh hưởng xã hội–chính trị nhất định.</li>
-                        </ul>
+          <h2>Video tham khảo (nguồn chính thống)</h2>
+          <p>
+            Ưu tiên <strong>link/nhúng từ trang gốc</strong> để đảm bảo bản quyền và tính xác thực.
+          </p>
+          <ul>
+            <li>
+              VTV: “Đại đoàn kết – Đại thành công” —{' '}
+              <a href="https://vtv.vn/video/doan-ket-734021.htm" target="_blank" rel="noreferrer">vtv.vn</a>
+            </li>
+            <li>
+              VTV: “Sức mạnh của lòng dân và tinh thần đại đoàn kết dân tộc” —{' '}
+              <a href="https://vtv.vn/video/suc-manh-cua-long-dan-va-tinh-than-dai-doan-ket-518604.htm" target="_blank" rel="noreferrer">vtv.vn</a>
+            </li>
+            <li>
+              Nhân Dân (chuyên trang multimedia): “Chủ tịch Hồ Chí Minh và tư tưởng đại đoàn kết toàn dân tộc” —{' '}
+              <a href="https://hochiminh.nhandan.vn/video-chu-tich-ho-chi-minh-va-tu-tuong-dai-doan-ket-toan-dan-toc-1932.html" target="_blank" rel="noreferrer">hochiminh.nhandan.vn</a>
+            </li>
+            <li>
+              Mặt trận Tổ quốc VN (thư viện video): “Đại đoàn kết – Cội nguồn sức mạnh dân tộc” —{' '}
+              <a href="https://mattran.org.vn/thu-vien-video/phim-tai-lieu-dai-doan-ket-coi-nguon-suc-manh-dan-toc-57380.html" target="_blank" rel="noreferrer">mattran.org.vn</a>
+            </li>
+          </ul>
 
-                        <h4>Ví dụ theo các hình thái</h4>
-                        <div className="table-hint">Kéo ngang bảng để xem đầy đủ →</div>
-                        <div className="responsive-table" ref={tableRef} role="region" aria-label="Bảng ví dụ giai cấp theo các hình thái" tabIndex="0" data-scroll="horizontal">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>Hình thái</th>
-                                        <th>Giai cấp <strong>cơ bản</strong></th>
-                                        <th>Giai cấp <strong>không cơ bản / trung gian</strong> (ví dụ)</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td><strong>Chiếm hữu nô lệ</strong></td>
-                                        <td><strong>Chủ nô ↔ Nô lệ</strong></td>
-                                        <td>Thợ thủ công tự do, thương nhân</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Phong kiến</strong></td>
-                                        <td><strong>Địa chủ/Lãnh chúa ↔ Nông dân lệ thuộc</strong></td>
-                                        <td>Thợ thủ công, thương nhân, quan lại, tăng lữ, trí thức</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Tư bản chủ nghĩa</strong></td>
-                                        <td><strong>Tư sản ↔ Vô sản (công nhân làm thuê)</strong></td>
-                                        <td>Tiểu tư sản, nông dân, chủ nhỏ, viên chức, trí thức</td>
-                                    </tr>
-                                    <tr>
-                                        <td><strong>Thời kỳ quá độ lên CNXH</strong></td>
-                                        <td><strong>Công nhân ↔ Nông dân</strong> <em>(không đối kháng)</em></td>
-                                        <td>Trí thức và các tầng lớp lao động khác</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-
-                        <h3>4. Liên minh giai cấp</h3>
-                        <ul className="bullet-list">
-                            <li><strong>Khái niệm:</strong> Sự phối hợp hành động giữa các giai cấp/tầng lớp có <strong>lợi ích căn bản tương đồng</strong> trong một giai đoạn lịch sử.</li>
-                            <li><strong>Mục tiêu:</strong> Tập hợp lực lượng để <strong>giải quyết mâu thuẫn cơ bản</strong> (lật đổ giai cấp thống trị cũ, xây dựng chế độ mới; trong CNXH là xây dựng và bảo vệ chế độ).</li>
-                            <li><strong>Nguyên tắc:</strong> Cùng mục tiêu chung; tôn trọng lợi ích chính đáng của các bên; <strong>hạt nhân lãnh đạo là giai cấp công nhân</strong>; linh hoạt theo từng thời kỳ.</li>
-                            <li><strong>Ví dụ tiêu biểu:</strong> <strong>Liên minh công–nông–trí</strong> (nền tảng chính trị của nhà nước xã hội chủ nghĩa); mặt trận dân tộc thống nhất trong cách mạng dân tộc–dân chủ.</li>
-                        </ul>
-                        {/* Kết thúc cụm nội dung mới */}
-
-                    <h3>5. Đấu tranh giai cấp - Bản chất và đặc điểm</h3>
-                    <p>
-                        •	<strong>Tính tất yếu:</strong> Đấu tranh giai cấp là tất yếu, do sự đối lập về lợi ích căn bản không thể điều hòa được giữa các giai cấp (Giáo trình Triết học Mác – Lênin, 2019, tr. 187).
-                    </p>
-                    <p>
-                        •	<strong>Định nghĩa:</strong> Đấu tranh giai cấp là cuộc đấu tranh của các tập đoàn người to lớn có lợi ích căn bản đối lập nhau trong một phương thức sản xuất xã hội nhất định.
-                    </p>
-                    <p>
-                        •	<strong>Thực chất:</strong> Cuộc đấu tranh của quần chúng lao động bị áp bức, bốc lột chống lại giai cấp áp bức, bốc lột nhằm lật đổ ách thống trị của chúng.
-                    </p>
-
-                    <h3>6. Các hình thức biểu hiện của đấu tranh giai cấp</h3>
-                    <p>Đấu tranh giai cấp biểu hiện ở ba lĩnh vực chính:</p>
-                    <ul>
-                        <li><strong>Kinh tế:</strong> Tranh chấp về tư liệu sản xuất, điều kiện lao động, phân phối sản phẩm.</li>
-                        <li><strong>Chính trị:</strong> Đấu tranh giành, giữ và sử dụng quyền lực nhà nước.</li>
-                        <li><strong>Tư tưởng – văn hóa:</strong> Bảo vệ hệ tư tưởng của giai cấp thống trị hoặc phản kháng.</li>
-                    </ul>
-
-                    {/* PHẦN II: CÁC NGUYÊN TẮC LÝ THUYẾT CỦA MARX */}
-                    <section>
-                        <h3>7. Ba điểm then chốt của Marx (1852)</h3>
-                        <p>Marx đã tổng kết ba nguyên tắc cơ bản về giai cấp và đấu tranh giai cấp:</p>
-                        <ol>
-                            <li><strong>Tính lịch sử:</strong> Sự tồn tại của các giai cấp gắn với các giai đoạn phát triển nhất định của sản xuất.</li>
-                            <li><strong>Mục tiêu cách mạng:</strong> Đấu tranh giai cấp tất yếu dẫn tới chuyên chính vô sản.</li>
-                            <li><strong>Viễn cảnh tương lai:</strong> Chuyên chính vô sản chỉ là bước quá độ đi tới xã hội không còn giai cấp.</li>
-                        </ol>
-                        <div className="callout info">
-                            <strong>Điểm mấu chốt:</strong> Giai cấp là hiện tượng lịch sử; mục tiêu tối hậu không phải là thay một giai cấp thống trị bằng một giai cấp khác, mà là tạo điều kiện để thủ tiêu mọi đối kháng giai cấp.
-                        </div>
-                    </section>
-
-                    {/* PHẦN III: TRÍCH DẪN KINH ĐIỂN */}
-                    <h3>8. Trích dẫn từ các nhà triết học:</h3>
-                    <div className="quote-section">
-                        <blockquote>
-                            <p>"Lịch sử của tất cả các xã hội hiện có cho đến nay là lịch sử của cuộc đấu tranh giai cấp."</p>
-                            <cite>— Karl Marx và Friedrich Engels, Tuyên ngôn của Đảng Cộng sản (1848)</cite>
-                        </blockquote>
-                        
-                        <blockquote>
-                            <p>"Giai cấp vô sản không có gì để mất ngoài xiềng xích của mình. Họ có cả một thế giới để giành lấy."</p>
-                            <cite>— Karl Marx và Friedrich Engels, Tuyên ngôn của Đảng Cộng sản (1848)</cite>
-                        </blockquote>
-
-                        <blockquote>
-                            <p>"Nhà nước là một bộ máy đặc biệt để trấn áp, là bộ máy để một giai cấp này trấn áp giai cấp khác."</p>
-                            <cite>— V.I. Lenin, Nhà nước và cách mạng (1917)</cite>
-                        </blockquote>
-                    </div>
-
-                    {/* PHẦN IV: TÀI LIỆU THAM KHẢO */}
-                    <h3>9. Video học thuật:</h3>
-                    <div className="video-section">
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/GL4o_umfVWM" 
-                                title="Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 1" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp</p>
-                        </div>
-                        
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/v0PE6y-fybA" 
-                                title="Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 2" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Phân tích khái niệm giai cấp trong triết học Mác-Lênin</p>
-                        </div>
-                        
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/rMwMJCqCKhc" 
-                                title="Lý thuyết Nền Tảng - khái niệm giai cấp & đấu tranh giai cấp 3" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Đấu tranh giai cấp trong xã hội hiện đại</p>
-                        </div>
-                        
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/qVr_qV9nRB8" 
-                                title="Phân tích định nghĩa giai cấp của Lênin" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Phân tích định nghĩa giai cấp của Lênin và ví dụ minh họa</p>
-                        </div>
-                    </div>
-
-                    {/* PHẦN V: VÍ DỤ LỊCH SỬ */}
-                    <h3>10. Ví dụ thực tiễn trong lịch sử</h3>
-                    <p>
-                        •	<strong>Cách mạng Pháp 1789:</strong> Cuộc đấu tranh của giai cấp tư sản chống lại quý tộc phong kiến, mở ra kỷ nguyên tư bản chủ nghĩa ở châu Âu.
-                    </p>
-                    <p>
-                        •	<strong>Cách mạng Tháng Mười Nga 1917:</strong> Giai cấp vô sản lật đổ chế độ tư bản, thiết lập nhà nước xã hội chủ nghĩa đầu tiên trên thế giới.
-                    </p>
-                    <p>
-                        •	<strong>Phong trào công nhân thế kỷ 19-20:</strong> Đấu tranh cho quyền lợi của người lao động, giờ làm việc 8 tiếng, bảo hiểm xã hội.
-                    </p>
-                </div>
-            </main>
+          <div className="callout">
+            <strong>Tiếp theo</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              Xem thêm: <a href="/primary-task">Đại đoàn kết là mục tiêu, nhiệm vụ hàng đầu</a>.
+            </p>
+          </div>
         </div>
-    );
+      </main>
+    </div>
+  );
 };
 
-export default Theory;
+export default StrategicRole;

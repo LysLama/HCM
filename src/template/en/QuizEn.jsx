@@ -21,8 +21,8 @@ export default function QuizEn() {
   if (!started) return (
     <main className="quiz-page">
       <div className="quiz-intro">
-        <h1>Philosophy Review Quiz</h1>
-        <p>This quiz reinforces key concepts about class, struggle, historical role and future perspectives.</p>
+        <h1>Review Quiz: Great National Unity</h1>
+        <p>This quiz reinforces key points in Ho Chi Minh Thought on great national unity.</p>
         <button onClick={begin} className="quiz-button start-button">Start</button>
       </div>
     </main>

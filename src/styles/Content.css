@@ -1,22 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=Story+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 
 .content-container {
-    padding: 20px 20px;
+    padding: 40px 24px;
     width: 100%;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, rgba(255, 250, 240, 0.65) 0%, rgba(255, 243, 217, 0.85) 45%, rgba(255, 251, 236, 0.65) 100%);
+}
+
+.content-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(120deg, rgba(185, 28, 28, 0.08), transparent 55%),
+        radial-gradient(circle at 20% 20%, rgba(217, 119, 6, 0.08), transparent 45%),
+        radial-gradient(circle at 80% 10%, rgba(185, 28, 28, 0.06), transparent 35%);
+    pointer-events: none;
 }
 
 .content-main-title {
-    font-family: 'Lobster', cursive;
-    font-size: 3.5rem; /* Tăng từ 3rem lên 3.5rem */
-    color: #333;
+    font-family: 'Merriweather', serif;
+    font-size: clamp(2.2rem, 3vw + 1rem, 3.3rem);
+    color: #2a1b17;
     margin-bottom: 20px;
     text-align: center;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .content-main-title::after {
@@ -24,7 +38,7 @@
     display: block;
     width: 100px; /* Chiều rộng của gạch chân */
     height: 3px; /* Độ dày của gạch chân */
-    background-color: #b10000;
+    background: linear-gradient(90deg, #b91c1c, #f59e0b, #b91c1c);
     margin: 15px auto 0; /* Căn giữa và tạo khoảng cách với tiêu đề */
 }
 
@@ -68,12 +82,16 @@
 }
 
 .content-card {
-    text-align: center;
+    text-align: left;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     height: 100%;
     gap: 12px; /* Keep text and image visually close */
+    background: linear-gradient(135deg, rgba(255, 248, 236, 0.96), rgba(255, 241, 221, 0.92));
+    border-radius: 14px;
+    border: 1px solid rgba(185, 28, 28, 0.18);
+    box-shadow: 0 10px 24px rgba(44, 30, 20, 0.14);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -84,6 +102,7 @@
 
 .content-card:hover {
     transform: translateY(-10px);
+    box-shadow: 0 16px 30px rgba(44, 30, 20, 0.18);
 }
 
 /* Điều chỉnh hiệu ứng hover cho các thẻ đã được di chuyển */
@@ -92,7 +111,7 @@
 }
 
 .content-card-img {
-    border-radius: 10px;
+    border-radius: 12px 12px 0 0;
     width: 100%;
     height: 200px;
     object-fit: cover;
@@ -100,7 +119,7 @@
 }
 
 .content-card-body {
-    padding: 25px;
+    padding: 22px 24px 26px;
     display: flex;
     flex-direction: column;
     /* Don't stretch the text area to avoid pushing image too far down */
@@ -108,18 +127,19 @@
 }
 
 .content-card-title {
-    font-family: 'Story Script', cursive;
-    font-size: 2rem;
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
     margin: 0 0 15px 0;
-    color: #b10000;
+    color: #b91c1c;
+    letter-spacing: 0.3px;
 }
 
 .content-card-description {
-    color: #333;
-    font-family: "Darker Grotesque", sans-serif;
-    font-size: 1.2rem;
+    color: #2b2521;
+    font-family: 'Merriweather', serif;
+    font-size: 1.05rem;
     font-weight: 400;
-    line-height: 1.6;
+    line-height: 1.7;
     margin: 0;
     flex-grow: 1;
 }

@@ -3,34 +3,34 @@ import { Link } from 'react-router-dom';
 import '../styles/Content.css';
 
 // Import hình ảnh cho mỗi mục
-import lyThuyetImg from '../assets/img/theory.jpg';
-import vaiTroImg from '../assets/img/role.jpg';
-import xaHoiImg from '../assets/img/future.jpg';
-import ketLuanImg from '../assets/img/conclusion.jpg';
+import lyThuyetImg from '../assets/img/strategic-role.jpg';
+import vaiTroImg from '../assets/img/hochiminh1.jpg';
+import xaHoiImg from '../assets/img/dai_doan_ket.jpg';
+import ketLuanImg from '../assets/img/mit_tinh_0.jpg';
 
 const sections = [
     {
-        id: 'chapter2/money',
-        title: '1) Tiền tệ',
-        description: 'Nguồn gốc, bản chất và các chức năng của tiền trong kinh tế hàng hoá.',
+        id: 'strategic-role',
+        title: 'Vai trò chiến lược',
+        description: 'Đại đoàn kết là vấn đề chiến lược, quyết định thành công của cách mạng.',
         img: lyThuyetImg,
     },
     {
-        id: 'chapter2/services',
-        title: '2) Dịch vụ & quan hệ trao đổi',
-        description: 'Dịch vụ và các quan hệ trao đổi với một số yếu tố khác hàng hoá hiện nay.',
+        id: 'primary-task',
+        title: 'Mục tiêu & nhiệm vụ hàng đầu',
+        description: 'Đại đoàn kết là mục tiêu lâu dài và nhiệm vụ hàng đầu của cách mạng.',
         img: vaiTroImg,
     },
     {
-        id: 'chapter2/market-concepts',
-        title: '3) Thị trường: khái niệm & vai trò',
-        description: 'Khái niệm, phân loại và vai trò của thị trường trong nền kinh tế.',
+        id: 'forces',
+        title: 'Lực lượng của khối đại đoàn kết',
+        description: 'Chủ thể đại đoàn kết: toàn dân, mọi giai cấp/tầng lớp, dân tộc, tôn giáo…',
         img: xaHoiImg,
     },
     {
-        id: 'chapter2/market-economy',
-        title: '4) Nền kinh tế thị trường',
-        description: 'Đặc trưng và một số quy luật chủ yếu của nền kinh tế thị trường.',
+        id: 'foundation',
+        title: 'Nền tảng & “hạt nhân”',
+        description: 'Nền tảng CN–ND–TT; “hạt nhân” là đoàn kết trong Đảng để đoàn kết toàn dân.',
         img: ketLuanImg,
     },
 ];
@@ -71,7 +71,7 @@ const Content = () => {
 
     return (
         <main id="main-content" className="content-container">
-            <h1 className="content-main-title">Chương 2: Hàng hóa, thị trường và vai trò của các chủ thể</h1>
+            <h1 className="content-main-title">Tổng quan: Tư tưởng Hồ Chí Minh về đại đoàn kết toàn dân tộc</h1>
             <div className="content-grid" ref={gridRef}>
                 {sections.map((section) => (
                     <Link to={`/${section.id}`} key={section.id} className="content-card-link">

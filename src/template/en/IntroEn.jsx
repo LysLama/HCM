@@ -21,14 +21,24 @@ const IntroEn = () => {
 
   return (
     <section id="introduction" className="intro-section-container" ref={cardsContainerRef}>
-      <h1 className="intro-section-title">Chapter 2 Overview</h1>
+      <h1 className="intro-section-title">Topic introduction</h1>
 
       <div className="intro-card">
-        <h2>Scope & Structure</h2>
+        <h2>Scope & structure</h2>
         <div className="intro-section-content">
           <p>
-            Focus shifted to <strong>Chapter 2: Goods, Markets and Roles of Market Participants</strong>. Part I introduces Marx’s theory of <em>commodity production and the commodity</em>. Part II covers <em>markets and the market economy</em>.
+            This site focuses on <strong>Ho Chi Minh Thought on great national unity</strong>, organized around two main axes:
+            <strong> (1) the role</strong> and <strong>(2) the forces and foundation</strong> of the great national unity bloc.
           </p>
+          <div className="quote-section">
+            <blockquote>
+              <p>
+                “History teaches us this lesson: When our people are united as one, our country will gain independence and freedom. Conversely, when our
+                people are not united, we will be invaded by foreign powers.”
+              </p>
+              <cite>— Ho Chi Minh</cite>
+            </blockquote>
+          </div>
         </div>
       </div>
 
@@ -36,9 +46,9 @@ const IntroEn = () => {
         <h2>Learning Goals</h2>
         <div className="intro-section-content">
           <ul>
-            <li><strong>Systematize key concepts:</strong> Goods, money, services, and special exchange relations.</li>
-            <li><strong>Discuss market roles:</strong> Signals, allocation, competition, and integration.</li>
-            <li><strong>Bridge theory and practice:</strong> From value and price to financial instruments and policy.</li>
+            <li><strong>Understand the core claims:</strong> Unity is a long-term strategy and a decisive factor for revolutionary success.</li>
+            <li><strong>Master the structure:</strong> Strategic role → primary objective/task → forces → foundation and the “core factor”.</li>
+            <li><strong>Connect to practice:</strong> Identify how to strengthen social consensus and mobilize national strength today.</li>
           </ul>
         </div>
       </div>
@@ -47,11 +57,11 @@ const IntroEn = () => {
         <h2>Quick Access</h2>
         <div className="intro-section-content">
           <ul>
-            <li><a href="/chapter2/money/en">1) Money</a></li>
-            <li><a href="/chapter2/services/en">2) Services & Exchange Relations</a></li>
-            <li><a href="/chapter2/market-concepts/en">3) Market: Concepts & Roles</a></li>
-            <li><a href="/chapter2/market-economy/en">4) Market Economy</a></li>
-            <li><a href="/knowledge/en">Chapter 2 • Knowledge Hub</a></li>
+            <li><a href="/overview/en">Overview</a></li>
+            <li><a href="/methods/en">Methods</a></li>
+            <li><a href="/front/en">Front</a></li>
+            <li><a href="/resources/en">Resources</a></li>
+            <li><a href="/quiz/en">Quiz</a></li>
           </ul>
         </div>
       </div>

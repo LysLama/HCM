@@ -31,6 +31,10 @@
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 a {
   font-weight: 500;
   color: var(--primary-red);
@@ -44,7 +48,7 @@ a:hover {
 
 body {
   margin: 0;
-  background-image: url('/src/assets/img/background.jpg'); /* <-- THAY ĐỔI ĐƯỜNG DẪN TỚI ẢNH CỦA BẠN */
+  background-image: url('/src/assets/img/bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

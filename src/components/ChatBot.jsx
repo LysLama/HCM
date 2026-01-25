@@ -16,6 +16,7 @@ const ChatBot = () => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [apiStatus, setApiStatus] = useState('online'); // 'online', 'offline', 'testing', 'rate-limited'
   const [retryAfterSec, setRetryAfterSec] = useState(null);
+  const [lockBodyScroll, setLockBodyScroll] = useState(false);
   const messagesEndRef = useRef(null);
   const inFlightRef = useRef(new Map()); // dedupe theo userMessage
   const lastRequestTimeRef = useRef(0); // throttle requests
@@ -26,6 +27,19 @@ const ChatBot = () => {
 
   const location = useLocation();
   const isEn = location.pathname.endsWith('/en') || location.pathname.includes('/en/');
+
+  // Only lock body scroll on narrow/mobile screens (desktop users should still be able to scroll the page)
+  useEffect(() => {
+    const mql = window.matchMedia('(max-width: 768px)');
+    const update = () => setLockBodyScroll(mql.matches);
+    update();
+    if (mql.addEventListener) mql.addEventListener('change', update);
+    else mql.addListener(update);
+    return () => {
+      if (mql.removeEventListener) mql.removeEventListener('change', update);
+      else mql.removeListener(update);
+    };
+  }, []);
 
   // Helpers for localization
   const t = {
@@ -312,10 +326,10 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
     setIsOpen(!isOpen);
   };
 
-  // Lock body scroll when chat open (mobile friendly) while allowing internal chat scroll
+  // Lock body scroll only on mobile (keep desktop page scroll working)
   useEffect(() => {
     let scrollY = 0;
-    if (isOpen) {
+    if (isOpen && lockBodyScroll) {
       scrollY = window.scrollY;
       document.body.dataset.chatbotScrollY = String(scrollY);
       document.body.classList.add('chatbot-scroll-locked');
@@ -343,7 +357,7 @@ Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ thông 
         window.scrollTo(0, y);
       }
     };
-  }, [isOpen]);
+  }, [isOpen, lockBodyScroll]);
 
   // Clear chat
   const clearChat = () => {

@@ -15,8 +15,8 @@ const Hero = () => {
   return (
     <header id='home' className="main-header">
       <div className="header-content">
-        <h1>Chương 2: Hàng hóa, Thị trường và Vai trò Chủ thể</h1>
-        <p>I. Lý luận về sản xuất hàng hóa – II. Thị trường và nền kinh tế thị trường</p>
+        <h1>Tư tưởng Hồ Chí Minh về Đại đoàn kết Toàn dân tộc</h1>
+        <p>Vai trò chiến lược • Mục tiêu & nhiệm vụ • Lực lượng • Nền tảng</p>
       </div>
       <a 
         href="#introduction" 

@@ -1,58 +1,99 @@
 import React from 'react';
 import '../../styles/Section.css';
-import roleImg from '../../assets/img/role.jpg';
+import sectionImage from '../../assets/img/hochiminh1.jpg';
 
-export default function RoleEn() {
+// Primary objective and foremost task (EN)
+const PrimaryTaskEn = () => {
   return (
     <div className="page-container">
-      <header className="section-hero" style={{ backgroundImage: `url(${roleImg})` }}>
-        <div className="hero-overlay"></div>
-        <h1 className="section-hero-title">Historical Role of Class Struggle</h1>
+      <header className="section-hero" style={{ backgroundImage: `url(${sectionImage})` }}>
+        <div className="hero-overlay" />
+        <h1 className="section-hero-title">Great unity as the primary objective and task</h1>
       </header>
+
       <main className="section-main-content">
+        <nav className="anchor-nav" aria-label="Page outline">
+          <a href="#objective">Long-term objective</a>
+          <a href="#party">Party’s foremost task</a>
+          <a href="#masses">Cause of the masses</a>
+        </nav>
+
         <div className="content-text">
-          <h3>1. Driver of historical development</h3>
-          <p>• "The history of all hitherto existing society is the history of class struggles." — Manifesto (1848).</p>
-          <p>• Struggle propels transitions among socio‑economic formations: slavery → feudalism → capitalism → socialism.</p>
+          <h2 id="objective">Not only a slogan — a long-term objective</h2>
+          <p>
+            For Ho Chi Minh, great national unity is not merely a strategic slogan but also a <strong>long-term objective</strong> of the revolution. Since the
+            Party is the leading force, great unity must be identified as the Party’s <strong>foremost task</strong> and carried out across guidelines,
+            viewpoints, policies, and practical activities.
+          </p>
 
-          <h3>2. Dual impact</h3>
-          <p>• <strong>Progressive:</strong> Breaks obsolete relations, liberates productive forces.</p>
-          <p>• <strong>Costly:</strong> Entails conflict, dislocation, suffering.</p>
-
-          <h3>3. Synthesis</h3>
-          <p>Class struggle is a direct motive force but not the only one; technology, scientific progress and cooperation also matter.</p>
-
-          <h3>4. Classic quotations</h3>
+          <h2 id="party">“Unity of the entire people, service to the Fatherland”</h2>
           <div className="quote-section">
-            <blockquote><p>"Philosophers have only interpreted the world... the point is to change it."</p><cite>— Marx, Theses on Feuerbach (1845)</cite></blockquote>
-            <blockquote><p>"It is not the consciousness of men that determines their being, but their social being..."</p><cite>— Marx, 1859 Preface</cite></blockquote>
-            <blockquote><p>"Revolution is the festival of the oppressed."</p><cite>— Lenin, 1917</cite></blockquote>
-            <blockquote><p>"Force is the midwife of every old society pregnant with a new one."</p><cite>— Marx, Capital I</cite></blockquote>
+            <blockquote>
+              <p>
+                “The purpose of the Vietnam Workers’ Party can be summed up in eight words: UNITY OF THE ENTIRE PEOPLE, SERVICE TO THE FATHERLAND.”
+              </p>
+              <cite>
+                — Ho Chi Minh (March 3, 1951) •{' '}
+                <a
+                  href="https://hochiminh.vn/book/tac-pham-ve-ho-chi-minh/tac-pham-trong-nuoc/bac-ho-voi-dai-hoi-dang-nxb-chinh-tri-quoc-gia-ha-noi-2006-284"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  hochiminh.vn
+                </a>
+                {' '}•{' '}
+                <a
+                  href="https://www.tapchicongsan.org.vn/web/guest/chinh-tri-xay-dung-dang/-/2018/816747/lanh-tu-ho-chi-minh---nha-sang-tao-ly-luan-cach-mang.aspx"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  tapchicongsan.org.vn
+                </a>
+              </cite>
+            </blockquote>
           </div>
 
-            <h3>5. Academic videos</h3>
-            <div className="video-section">
-              <div className="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/uvpJKFsxCmc" title="Historical Role 1" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                <p className="video-caption">Struggle as developmental engine</p>
-              </div>
-              <div className="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/sv_CMemPvwo" title="Historical Role 2" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                <p className="video-caption">Social transformation via conflict</p>
-              </div>
-              <div className="video-container">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/OvErzcaDhg0" title="Historical Role 3" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                <p className="video-caption">Historical impacts</p>
-              </div>
-            </div>
+          <h2 id="masses">The revolution is the cause of the masses</h2>
+          <ul>
+            <li>The revolution is the cause of the masses, carried out by the masses and for the masses.</li>
+            <li>Great unity is an objective requirement of revolutionary struggle and an objective demand of the people’s self-liberation.</li>
+            <li>Without unity, the people themselves would fail in the struggle for their own interests.</li>
+          </ul>
 
-            <h3>6. Historical cases</h3>
-            <p><strong>Spartacus rebellion:</strong> Challenged Roman slave system.</p>
-            <p><strong>German Peasants' War (1524–1525):</strong> Early anti‑feudal movement.</p>
-            <p><strong>Paris Commune (1871):</strong> First proletarian political experiment.</p>
-            <p><strong>Chinese Revolution (1949):</strong> Agrarian‑worker alliance forging a new state.</p>
+          <div className="callout info">
+            <strong>Organized strength</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              The Party must awaken, unite, and guide the masses—transforming spontaneous demands into conscious, organized reality within the unity bloc—so
+              as to create combined strength for national independence, people’s freedom, and human happiness.
+            </p>
+          </div>
+
+          <div className="callout">
+            <strong>Next</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              See also: <a href="/forces/en">Forces of the great national unity bloc</a>.
+            </p>
+          </div>
+
+          <h2>Video sources (official pages)</h2>
+          <ul>
+            <li>
+              VNA/Vietnammedia: “Phát huy sức mạnh đại đoàn kết toàn dân tộc theo tư tưởng Hồ Chí Minh” —{' '}
+              <a href="https://vietnammedia.vnanet.vn/video/phat-huy-suc-manh-dai-doan-ket-toan-dan-toc-theo-tu-tuong-ho-chi-minh-121171.htm" target="_blank" rel="noreferrer">vietnammedia.vnanet.vn</a>
+            </li>
+            <li>
+              VTV: “Tiếp tục phát huy sức mạnh đại đoàn kết” —{' '}
+              <a href="https://vtv.vn/video/tiep-tuc-phat-huy-suc-manh-dai-doan-ket-700844.htm" target="_blank" rel="noreferrer">vtv.vn</a>
+            </li>
+            <li>
+              VTV: “Tây Nguyên hôm nay: Phát huy sức mạnh đại đoàn kết toàn dân tộc” —{' '}
+              <a href="https://vtv.vn/video/tay-nguyen-hom-nay-phat-huy-suc-manh-dai-doan-ket-toan-dan-toc-699053.htm" target="_blank" rel="noreferrer">vtv.vn</a>
+            </li>
+          </ul>
         </div>
       </main>
     </div>
   );
-}
+};
+
+export default PrimaryTaskEn;

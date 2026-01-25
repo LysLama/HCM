@@ -1,92 +1,48 @@
-export const quizData = [
-  {
-    question: "Theo C. Mác, hàng hóa có hai thuộc tính cơ bản là gì?",
-    options: ["Giá cả & chi phí sản xuất", "Giá trị sử dụng & giá trị", "Doanh thu & lợi nhuận", "Cung & cầu"],
-    correctAnswer: "Giá trị sử dụng & giá trị",
-    explanation: "Hàng hóa vừa có công dụng (giá trị sử dụng), vừa kết tinh lao động xã hội (giá trị)."
-  },
-  {
-    question: "Chức năng nào dưới đây KHÔNG thuộc 5 chức năng kinh điển của tiền?",
-    options: ["Thước đo giá trị", "Phương tiện lưu thông", "Phương tiện đầu tư sinh lời", "Phương tiện thanh toán"],
-    correctAnswer: "Phương tiện đầu tư sinh lời",
-    explanation: "5 chức năng: thước đo giá trị, phương tiện lưu thông, cất trữ, thanh toán, tiền tệ thế giới."
-  },
-  {
-    question: "Theo công thức M = (P × Q) / V: nếu P=120, Q=800, V=40 thì M bằng bao nhiêu?",
-    options: ["1.600", "2.400", "3.200", "4.800"],
-    correctAnswer: "2.400",
-    explanation: "M = (120×800)/40 = 96.000/40 = 2.400 (đơn vị tiền)."
-  },
-  {
-    question: "Phát biểu ĐÚNG về dịch vụ là:",
-    options: [
-      "Có thể lưu kho như hàng hóa vật thể",
-      "Sản xuất và tiêu dùng thường diễn ra đồng thời",
-      "Không cần lao động xã hội",
-      "Luôn đồng nhất về chất lượng giữa các lần cung ứng"
-    ],
-    correctAnswer: "Sản xuất và tiêu dùng thường diễn ra đồng thời",
-    explanation: "Dịch vụ vô hình, khó lưu kho; sản xuất–tiêu dùng gắn liền thời điểm."
-  },
-  {
-    question: "Trong giao dịch đất đai, thực chất các bên trao đổi điều gì?",
-    options: [
-      "Đất đai như một hàng hóa vật thể",
-      "Quyền sở hữu đất tuyệt đối",
-      "Dịch vụ môi giới đi kèm",
-      "Quyền sử dụng đất (thời hạn, mục đích, chuyển nhượng…)"
-    ],
-    correctAnswer: "Quyền sử dụng đất (thời hạn, mục đích, chuyển nhượng…)",
-    explanation: "Tính “hàng hóa” nằm ở quyền sử dụng chứ không phải bản thân đất."
-  },
-  {
-    question: "Theo Mác, khái niệm “tư bản giả” mô tả đúng nhất là:",
-    options: [
-      "Máy móc và nhà xưởng dùng trong sản xuất",
-      "Hàng hóa tiêu dùng lâu bền",
-      "Giấy tờ có giá biểu thị quyền đòi thu nhập tương lai (cổ phiếu, trái phiếu…)",
-      "Tiền vàng dùng làm thước đo giá trị"
-    ],
-    correctAnswer: "Giấy tờ có giá biểu thị quyền đòi thu nhập tương lai (cổ phiếu, trái phiếu…)",
-    explanation: "Chúng không trực tiếp vận động trong sản xuất như tư bản thực."
-  },
-  {
-    question: "Định nghĩa thị trường được hiểu đúng nhất là:",
-    options: [
-      "Chỉ nơi mua bán trực tiếp (chợ, siêu thị)",
-      "Chỉ quan hệ cung–cầu trên sàn chứng khoán",
-      "Tổng hòa các quan hệ kinh tế mua–bán nơi giá & lượng được hình thành",
-      "Chỉ giao dịch giữa các quốc gia"
-    ],
-    correctAnswer: "Tổng hòa các quan hệ kinh tế mua–bán nơi giá & lượng được hình thành",
-    explanation: "Bao gồm cả cấp độ cụ thể và trừu tượng (cung–cầu, giá cả)."
-  },
-  {
-    question: "Phát biểu nào phản ánh ĐÚNG đặc trưng của nền kinh tế thị trường hiện đại?",
-    options: [
-      "Nhà nước không can thiệp vào kinh tế",
-      "Giá cả chủ yếu do mệnh lệnh hành chính",
-      "Đa dạng chủ thể, cạnh tranh là động lực; Nhà nước điều tiết khuyết tật thị trường",
-      "Đóng cửa với thị trường quốc tế"
-    ],
-    correctAnswer: "Đa dạng chủ thể, cạnh tranh là động lực; Nhà nước điều tiết khuyết tật thị trường",
-    explanation: "Kinh tế thị trường có điều tiết (hỗn hợp) để sửa thất bại thị trường và ổn định vĩ mô."
-  },
-  {
-    question: "Theo quy luật giá trị và cạnh tranh nội bộ ngành: khi DN hạ giá trị cá biệt thấp hơn đối thủ, hệ quả điển hình là:",
-    options: [
-      "Giá trị thị trường tăng lên ngay",
-      "DN có siêu lợi nhuận ngắn hạn; giá trị thị trường dần giảm về mức thấp hơn",
-      "Tất cả doanh nghiệp đều có siêu lợi nhuận",
-      "Cầu xã hội đối với hàng hóa đó giảm"
-    ],
-    correctAnswer: "DN có siêu lợi nhuận ngắn hạn; giá trị thị trường dần giảm về mức thấp hơn",
-    explanation: "Cải tiến kỹ thuật kéo mặt bằng chi phí và giá trị thị trường xuống."
-  },
-  {
-    question: "Trong NGẮN HẠN, khi cầu một hàng hóa tăng đột ngột (cung chưa kịp điều chỉnh), giá cả thường:",
-    options: ["Bằng đúng giá trị", "Vượt lên trên giá trị", "Thấp hơn giá trị", "Không đổi"],
-    correctAnswer: "Vượt lên trên giá trị",
-    explanation: "Cầu > cung khiến giá cả vượt giá trị; dài hạn cung điều chỉnh kéo giá về quanh giá trị."
+import sourceQuiz from '../../SourceQuiz.txt?raw';
+
+const isSectionHeader = (line) => /^\d+(?:\.\d+)+\.\s+/.test(line);
+
+const parseQuizSource = (raw) => {
+  const lines = raw.split(/\r?\n/);
+  const questions = [];
+  let current = null;
+
+  const pushCurrent = () => {
+    if (current && current.question && current.options.length) {
+      questions.push(current);
+    }
+  };
+
+  for (const rawLine of lines) {
+    const line = rawLine.trim();
+    if (!line) continue;
+    if (isSectionHeader(line)) continue;
+
+    const questionMatch = line.match(/^(\d+)\.\s+(.*)$/);
+    if (questionMatch) {
+      pushCurrent();
+      current = {
+        question: questionMatch[2].trim(),
+        options: [],
+        correctAnswer: '',
+        explanation: ''
+      };
+      continue;
+    }
+
+    const cleaned = line.replace(/^\*\s*/, '');
+    const optionMatch = cleaned.match(/^([A-D])\.\s*(.+)$/);
+    if (optionMatch && current) {
+      const optionText = optionMatch[2].trim();
+      current.options.push(optionText);
+      if (line.startsWith('*')) {
+        current.correctAnswer = optionText;
+      }
+    }
   }
-];
+
+  pushCurrent();
+  return questions;
+};
+
+export const quizData = parseQuizSource(sourceQuiz);

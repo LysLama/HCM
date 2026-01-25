@@ -1,34 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Marck+Script&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
 
-.hero-section h1 {
-  font-size: clamp(2.2rem, 5.2vw + 1rem, 4.375rem); /* ~70px max */
-  margin-bottom: 20px;
-  font-weight: 700;
-  background: linear-gradient(90deg, #ffedd5, #fde68a, #ffedd5);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  text-shadow: 0 2px 18px rgba(0,0,0,0.5);
-  letter-spacing: 1px;
-  line-height: 1.08;
-}
-@media (max-width: 880px) {
-  .hero-section { padding: 90px 24px 70px; }
-  .hero-section p { font-size: clamp(15px, 1.9vw + .25rem, 18px); }
-}
-
-@media (max-width: 640px) {
-  .hero-section { padding: 86px 20px 70px; }
-  .hero-section h1 { letter-spacing: .5px; }
-  .hero-section p { font-size: clamp(15px, 2.4vw + .2rem, 17px); }
-}
-
-@media (max-width: 480px) {
-  .hero-section { padding: 78px 18px 64px; }
-  .hero-section h1 { font-size: clamp(2rem, 8vw, 2.75rem); }
-  .hero-section p { font-size: clamp(14px, 3vw + .25rem, 16px); }
-}
 /* (Removed duplicate @import lines that caused PostCSS ordering error) */
 
 .main-header {
@@ -40,23 +11,38 @@
   text-align: center;
   color: white;
   /* Bạn có thể thay đổi URL hình ảnh này thành hình ảnh của riêng bạn */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../assets/img/poster.png');
+  background-image:
+    radial-gradient(circle at 30% 20%, rgba(0, 0, 0, 0.25), transparent 45%),
+    linear-gradient(rgba(12, 6, 4, 0.7), rgba(12, 6, 4, 0.75)),
+    url('../assets/img/home.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: top center;
+}
+
+.main-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.03), rgba(0, 0, 0, 0.35));
+  pointer-events: none;
 }
 
 .header-content {
   max-width: 900px;
   padding: 1rem;
+  position: relative;
+  z-index: 1;
 }
 
 .main-header h1 {
-  font-family: "Anton", sans-serif;
-  font-size: clamp(2.4rem, 5.2vw + 1rem, 4.25rem);
-  font-weight: 400;
+  font-family: "Merriweather", serif;
+  font-size: clamp(2.4rem, 5vw + 1rem, 4.1rem);
+  font-weight: 700;
   font-style: normal;
   margin-bottom: 1rem;
   line-height: 1.15;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
 
   /* --- Bắt đầu CSS cho hiệu ứng xuất hiện --- */
   
@@ -69,31 +55,19 @@
 }
 
 .main-header p {
-  font-family: 'Bad Script', cursive;
-  font-size: 1.2rem;
-  opacity: 0.85;
-  font-style: italic;
-
-  /* --- Bắt đầu CSS cho hiệu ứng gõ chữ --- */
-
-  /* Đảm bảo văn bản không bị xuống dòng khi hiệu ứng chạy */
+  font-family: 'Merriweather', serif;
+  font-size: 1.05rem;
+  opacity: 0.9;
+  font-style: normal;
+  letter-spacing: 0.4px;
+  display: inline-block;
   white-space: nowrap;
-
-  /* Ẩn phần văn bản chưa được "gõ" ra */
   overflow: hidden;
-
-  /* Tạo con trỏ nhấp nháy ở cuối dòng */
-  border-right: 3px solid rgba(255, 255, 255, 0.75);
-
-  /* Đặt lại chiều rộng ban đầu để animation hoạt động */
+  border-right: 3px solid rgba(255, 255, 255, 0.7);
   width: 0;
-
-  /* Áp dụng các animation */
-  /* 1. 'typing': Tăng chiều rộng từ 0 đến 100% trong 4 giây, chia thành 71 bước (số ký tự) */
-  /* 2. 'blink-caret': Làm cho con trỏ nhấp nháy vô hạn */
   animation:
-    typing 4s steps(71, end) forwards,
-    blink-caret .75s step-end infinite;
+    typing 3.6s steps(60, end) forwards,
+    blink-caret 0.75s step-end infinite;
 }
 
 .scroll-down-arrow {
@@ -119,30 +93,6 @@
   }
 }
 
-/* Định nghĩa keyframes cho hiệu ứng gõ chữ */
-@keyframes typing {
-  from {
-    width: 0
-  }
-
-  to {
-    width: 100%
-  }
-}
-
-/* Định nghĩa keyframes cho con trỏ nhấp nháy */
-@keyframes blink-caret {
-
-  from,
-  to {
-    border-color: transparent
-  }
-
-  50% {
-    border-color: rgba(255, 255, 255, 0.75);
-  }
-}
-
 /* Định nghĩa keyframes cho hiệu ứng nháy trỏ scroll */
 @keyframes bounce {
 
@@ -161,6 +111,16 @@
   60% {
     transform: translateX(-50%) translateY(-10px);
   }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: rgba(255, 255, 255, 0.7); }
 }
 
 /* Responsive design for smaller screens */

@@ -1,131 +1,103 @@
-import React from "react";
-import "../styles/Section.css";
-import section3Image from "../assets/img/role.jpg";
+import React from 'react';
+import '../styles/Section.css';
+import sectionImage from '../assets/img/hochiminh1.jpg';
 
-const Role = () => {
-    return (
-        <div className="page-container">
-            {/* Phần Hero */}
-            <header 
-                className="section-hero" 
-                style={{ backgroundImage: `url(${section3Image})` }}
-            >
-                <div className="hero-overlay"></div>
-                <h1 className="section-hero-title">Vai Trò Lịch Sử của Đấu Tranh Giai Cấp</h1>
-            </header>
+// Primary objective and foremost task (VI)
+const PrimaryTask = () => {
+  return (
+    <div className="page-container">
+      <header className="section-hero" style={{ backgroundImage: `url(${sectionImage})` }}>
+        <div className="hero-overlay" />
+        <h1 className="section-hero-title">Đại đoàn kết là mục tiêu, nhiệm vụ hàng đầu</h1>
+      </header>
 
-            {/* Phần nội dung chính của trang */}
-            <main className="section-main-content">
-                <div className="content-text">
-                    <h3>1. Động lực phát triển của lịch sử xã hội có giai cấp: </h3>
-                    <p>
-                        •	Mác và Ăngghen khẳng định: “Lịch sử của tất cả các xã hội từ trước tới nay là lịch sử đấu tranh giai cấp” (Tuyên ngôn của Đảng Cộng sản, 1848, Marxists.org).
-                    </p>
-                    <p>
-                        •	Đấu tranh giai cấp là động lực trực tiếp thúc đẩy sự thay thế các hình thái kinh tế – xã hội. Ví dụ:
-                        <br />
-                        +	Đấu tranh nô lệ – chủ nô → suy vong xã hội chiếm hữu nô lệ.
-                        <br />
-                        +	Đấu tranh nông dân – địa chủ phong kiến → làm tan rã chế độ phong kiến.
-                        <br />
-                        +	Đấu tranh vô sản – tư sản → dẫn đến sự ra đời của xã hội cộng sản chủ nghĩa.
-                    </p>
-                    <h3>2. Tác động hai mặt: </h3>
-                    <p>
-                        •	Tích cực: Thúc đẩy tiến bộ xã hội, mở đường cho hình thái kinh tế – xã hội cao hơn (Giáo trình Triết học Mác – Lênin, 2019, tr. 189).
-                    </p>
-                    <p>
-                        •	Tiêu cực: gắn liền với xung đột, chiến tranh, sự hy sinh, đau khổ của nhân loại.
-                    </p>
-                    <h3>3. Tổng quát: </h3>
-                    <p>Trong các xã hội có đối kháng giai cấp, đấu tranh giai cấp là động lực trực tiếp của lịch sử. Tuy nhiên, đó không phải là động lực duy nhất. Bên cạnh nó, còn có sự phát triển của lực lượng sản xuất, tiến bộ khoa học – kỹ thuật và nhu cầu hợp tác, giao lưu xã hội cũng góp phần quan trọng vào sự phát triển lịch sử (Giáo trình Triết học Mác – Lênin, 2019, tr. 190).
-                    </p>
+      <main className="section-main-content">
+        <nav className="anchor-nav" aria-label="Mục lục trang">
+          <a href="#objective">Mục tiêu lâu dài</a>
+          <a href="#party">Nhiệm vụ của Đảng</a>
+          <a href="#masses">Sự nghiệp quần chúng</a>
+        </nav>
 
-                    {/* PHẦN V: TRÍCH DẪN VÀ VÍ DỤ */}
-                    <h3>4. Trích dẫn từ các nhà triết học:</h3>
-                    <div className="quote-section">
-                        <blockquote>
-                            <p>"Triết học chỉ giải thích thế giới theo những cách khác nhau, vấn đề là phải biến đổi nó."</p>
-                            <cite>— Karl Marx, Luận cương về Feuerbach (1845)</cite>
-                        </blockquote>
-                        
-                        <blockquote>
-                            <p>"Không phải ý thức của con người quyết định sự tồn tại của họ, trái lại, chính sự tồn tại xã hội của họ quyết định ý thức của họ."</p>
-                            <cite>— Karl Marx, Góp phần phê phán kinh tế chính trị học (1859)</cite>
-                        </blockquote>
+        <div className="content-text">
+          <h2 id="objective">Không chỉ khẩu hiệu — mà là mục tiêu lâu dài</h2>
+          <p>
+            Đối với Hồ Chí Minh, đại đoàn kết không chỉ là khẩu hiệu chiến lược mà còn là <strong>mục tiêu lâu dài</strong> của cách mạng. Vì Đảng là lực
+            lượng lãnh đạo cách mạng Việt Nam, nên đại đoàn kết toàn dân tộc tất yếu phải được xác định là <strong>nhiệm vụ hàng đầu</strong>.
+          </p>
 
-                        <blockquote>
-                            <p>"Cách mạng là lễ hội của người bị áp bức và bị bóc lột."</p>
-                            <cite>— V.I. Lenin, Những bài học của cách mạng (1917)</cite>
-                        </blockquote>
+          <h2 id="party">Đoàn kết toàn dân — phụng sự Tổ quốc</h2>
+          <div className="quote-section">
+            <blockquote>
+              <p>“Mục đích của Đảng Lao động Việt Nam có thể gộp trong 8 chữ là: ĐOÀN KẾT TOÀN DÂN, PHỤNG SỰ TỔ QUỐC”.</p>
+              <cite>
+                — Hồ Chí Minh (3/3/1951) •{' '}
+                <a
+                  href="https://hochiminh.vn/book/tac-pham-ve-ho-chi-minh/tac-pham-trong-nuoc/bac-ho-voi-dai-hoi-dang-nxb-chinh-tri-quoc-gia-ha-noi-2006-284"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  hochiminh.vn
+                </a>
+                {' '}•{' '}
+                <a
+                  href="https://www.tapchicongsan.org.vn/web/guest/chinh-tri-xay-dung-dang/-/2018/816747/lanh-tu-ho-chi-minh---nha-sang-tao-ly-luan-cach-mang.aspx"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  tapchicongsan.org.vn
+                </a>
+              </cite>
+            </blockquote>
+          </div>
 
-                        <blockquote>
-                            <p>"Bạo lực là người đỡ đẻ của mọi xã hội cũ khi mang thai một xã hội mới."</p>
-                            <cite>— Karl Marx, Tư bản luận, tập I</cite>
-                        </blockquote>
-                    </div>
+          <h2>Video tham khảo (nguồn chính thống)</h2>
+          <p>
+            Dưới đây là các video có thể <strong>link/nhúng từ trang gốc</strong> để minh họa tính thời sự và tính tổ chức của nhiệm vụ đại đoàn kết.
+          </p>
+          <ul>
+            <li>
+              TTXVN/Vietnammedia: “Phát huy sức mạnh đại đoàn kết toàn dân tộc theo tư tưởng Hồ Chí Minh” —{' '}
+              <a href="https://vietnammedia.vnanet.vn/video/phat-huy-suc-manh-dai-doan-ket-toan-dan-toc-theo-tu-tuong-ho-chi-minh-121171.htm" target="_blank" rel="noreferrer">vietnammedia.vnanet.vn</a>
+            </li>
+            <li>
+              VTV: “Tiếp tục phát huy sức mạnh đại đoàn kết” —{' '}
+              <a href="https://vtv.vn/video/tiep-tuc-phat-huy-suc-manh-dai-doan-ket-700844.htm" target="_blank" rel="noreferrer">vtv.vn</a>
+            </li>
+            <li>
+              VTV: “Tây Nguyên hôm nay: Phát huy sức mạnh đại đoàn kết toàn dân tộc” —{' '}
+              <a href="https://vtv.vn/video/tay-nguyen-hom-nay-phat-huy-suc-manh-dai-doan-ket-toan-dan-toc-699053.htm" target="_blank" rel="noreferrer">vtv.vn</a>
+            </li>
+          </ul>
 
-                    <h3>5. Video học thuật:</h3>
-                    <div className="video-section">
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/uvpJKFsxCmc" 
-                                title="Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 1" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Đấu tranh giai cấp như động lực phát triển xã hội</p>
-                        </div>
-                        
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/sv_CMemPvwo" 
-                                title="Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 2" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Biến đổi xã hội thông qua đấu tranh giai cấp</p>
-                        </div>
-                        
-                        <div className="video-container">
-                            <iframe 
-                                width="560" 
-                                height="315" 
-                                src="https://www.youtube.com/embed/OvErzcaDhg0" 
-                                title="Vai Trò Lịch Sử - đấu tranh giai cấp như động lực phát triển xã hội 3" 
-                                frameBorder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                                allowFullScreen>
-                            </iframe>
-                            <p className="video-caption">Ảnh hưởng của đấu tranh giai cấp đến quá trình lịch sử</p>
-                        </div>
-                    </div>
+          <h2 id="masses">Cách mạng là sự nghiệp của quần chúng</h2>
+          <ul>
+            <li>Cách mạng là sự nghiệp của quần chúng, do quần chúng và vì quần chúng.</li>
+            <li>
+              Đại đoàn kết là yêu cầu khách quan của sự nghiệp cách mạng và là đòi hỏi khách quan của quần chúng trong cuộc đấu tranh tự giải phóng.
+            </li>
+            <li>
+              Nếu không đoàn kết, chính quần chúng sẽ thất bại trong cuộc đấu tranh vì lợi ích của chính mình.
+            </li>
+          </ul>
 
-                    <h3>6. Ví dụ lịch sử cụ thể:</h3>
-                    <p>
-                        •	<strong>Khởi nghĩa nô lệ Spartacus (73-71 TCN):</strong> Cuộc đấu tranh của nô lệ La Mã chống lại chế độ nô lệ, mặc dù thất bại nhưng đã làm rung chuyển nền móng của đế chế La Mã.
-                    </p>
-                    <p>
-                        •	<strong>Cuộc khởi nghĩa nông dân Đức (1524-1525):</strong> Dẫn đầu bởi Thomas Münzer, đánh dấu sự khởi đầu của cuộc đấu tranh chống chế độ phong kiến ở châu Âu.
-                    </p>
-                    <p>
-                        •	<strong>Commune Paris (1871):</strong> Lần đầu tiên trong lịch sử, giai cấp vô sản nắm quyền chính trị, dù chỉ trong 72 ngày nhưng đã để lại những bài học quý giá cho phong trào cách mạng thế giới.
-                    </p>
-                    <p>
-                        •	<strong>Cách mạng Trung Quốc (1949):</strong> Cuộc đấu tranh của nông dân và công nhân Trung Quốc dưới sự lãnh đạo của Đảng Cộng sản, thành lập nước Cộng hòa Nhân dân Trung Hoa.
-                    </p>
+          <div className="callout info">
+            <strong>Trách nhiệm tổ chức</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              Đảng phải có sứ mệnh thức tỉnh, tập hợp, hướng dẫn quần chúng — chuyển nhu cầu tự phát thành yêu cầu tự giác, có tổ chức — tạo sức mạnh tổng
+              hợp trong đấu tranh vì độc lập dân tộc, tự do cho nhân dân và hạnh phúc cho con người.
+            </p>
+          </div>
 
-
-                </div>
-            </main>
+          <div className="callout">
+            <strong>Tiếp theo</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              Xem thêm: <a href="/forces">Lực lượng của khối đại đoàn kết toàn dân tộc</a>.
+            </p>
+          </div>
         </div>
-    );
+      </main>
+    </div>
+  );
 };
 
-export default Role;
+export default PrimaryTask;

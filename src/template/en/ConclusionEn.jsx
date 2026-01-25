@@ -1,149 +1,108 @@
 import React from 'react';
 import '../../styles/Section.css';
-import conclusionImg from '../../assets/img/conclusion.jpg';
+import sectionImage from '../../assets/img/mit_tinh_0.jpg';
 
-// New analytical conclusion mirroring Vietnamese structure; only closing quotes retained.
-export default function ConclusionEn() {
+// Foundation and “core factor” of the great unity bloc (EN)
+const FoundationEn = () => {
   return (
     <div className="page-container">
-      <header
-        className="section-hero"
-        style={{ backgroundImage: `url(${conclusionImg})` }}
-      >
-        <div className="hero-overlay"></div>
-        <h1 className="section-hero-title">Conclusion</h1>
+      <header className="section-hero" style={{ backgroundImage: `url(${sectionImage})` }}>
+        <div className="hero-overlay" />
+        <h1 className="section-hero-title">Foundation & the “core factor” of unity</h1>
       </header>
+
       <main className="section-main-content">
+        <nav className="anchor-nav" aria-label="Page outline">
+          <a href="#foundation">Identifying the foundation</a>
+          <a href="#base">Workers–peasants–intelligentsia</a>
+          <a href="#core">Unity within the Party</a>
+        </nav>
+
         <div className="content-text">
-          {/* 1. Historical possibility of ending antagonistic class struggle */}
-          <section>
-            <h2>1. Historical possibility of transcending antagonistic class conflict</h2>
-            <p>
-              Marx and Engels treated <em>class struggle</em> not as an eternal law but
-              as a historically bounded form of social contradiction bound to
-              private property and structural divergence of fundamental interests.
-              When the conditions that reproduce antagonism (private appropriation
-              of decisive means of production, alienated labour, political
-              oppression) are progressively dismantled, the <strong>antagonistic</strong> form
-              can recede, giving way to predominantly <strong>non‑antagonistic</strong>
-              developmental tensions.
-            </p>
-            <ul>
-              <li><strong>Material premise:</strong> Productivity high enough to relax absolute scarcity constraints broadly.</li>
-              <li><strong>Social premise:</strong> Expansion of social/community ownership of major productive assets; contraction of privileges rooted in ownership of others' labour.</li>
-              <li><strong>Political premise:</strong> Transformation of the state from coercive class instrument toward coordinating public institution.</li>
-              <li><strong>Cultural premise:</strong> Generalized education, scientific literacy, civic competence and cooperative creative capacity.</li>
-            </ul>
-            <p>
-              Under such convergence, class struggle does not vanish from memory;
-              it loses inevitability as the perpetual lever of systemic change.
-              Transitional society opens capacity to manage contradictions through
-              democratic, scientific and socialist rule‑of‑law mediation.
-            </p>
-          </section>
+          <h2 id="foundation">Build from a solid foundation</h2>
+          <p>
+            To build the great national unity bloc, it is necessary to identify its foundation clearly. With a solid foundation, the bloc can expand to
+            unite other social strata.
+          </p>
 
-            {/* 2. Does history stop? */}
-          <section>
-            <h2>2. Does history end?</h2>
-            <p>
-              The attenuation of antagonistic class forms does not spell an “end of
-              history”; instead it inaugurates a qualitatively new <strong>phase</strong> in which
-              humanity deliberately restructures its conditions of existence at a
-              planetary scale.
-            </p>
-            <p>Emergent axial dynamics likely include:</p>
-            <ol>
-              <li><strong>Human ↔ Nature:</strong> Regulating material–energy metabolism sustainably; repairing ruptures induced by capital’s logic.</li>
-              <li><strong>Knowledge ↔ Innovation:</strong> Tension between techno‑scientific potential and lagging ethical / legal organizational forms.</li>
-              <li><strong>Progressive ↔ Backward:</strong> Regional/social developmental gaps and the mandate that “no one is left behind.”</li>
-              <li><strong>Infinite needs ↔ Finite resources:</strong> Driving circular economy, product life‑cycle redesign and sufficiency cultures.</li>
-            </ol>
-            <p>
-              Thus history shifts emphasis: from rupturing antagonistic property
-              relations toward optimizing socio‑ecological‑innovative coordination
-              to expand human capability.
-            </p>
-          </section>
-
-          {/* 3. Transforming drivers */}
-          <section>
-            <h2>3. Transforming developmental drivers</h2>
-            <p>
-              As negating, conflictual drivers recede, constructive motors rise:
-            </p>
-            <ul>
-              <li><strong>Scientific–technological innovation</strong> as accelerator of productivity and liberation of labour time.</li>
-              <li><strong>Open knowledge cooperation</strong> (research networks, libre software, shared data) compressing idea‑to‑application cycles.</li>
-              <li><strong>Quality‑of‑life elevation</strong>: preventive health, lifelong learning, mental well‑being expanding human capital reproduction.</li>
-              <li><strong>Planetary responsibility</strong>: climate stability, biodiversity, ecological security as core performance metrics.</li>
-              <li><strong>Cultural–aesthetic creativity</strong>: enlarging spaces of meaning, identity and non‑coercive social cohesion.</li>
-            </ul>
-            <p>
-              These drivers reconfigure contradictions into collaborative
-              “problems‑to‑solve,” reducing the social cost of antagonism.
-            </p>
-          </section>
-
-          {/* 4. Methodological implications */}
-          <section>
-            <h2>4. Current methodological implications</h2>
-            <ul>
-              <li><strong>Research:</strong> Model coupled economic–ecological–knowledge contradictions to map emergent structural dynamics.</li>
-              <li><strong>Policy:</strong> Design allocation mechanisms grounded in data transparency, co‑creation and adaptive feedback.</li>
-              <li><strong>Political education:</strong> Shift from one‑way transmission to empowerment of critical, participatory and co‑design capacities.</li>
-              <li><strong>Social alliances:</strong> Extend beyond worker–peasant blocs to include knowledge workers, technical strata and creative labour in digital–green economies.</li>
-            </ul>
-          </section>
-
-          {/* 5. Post-class transformed contradictions */}
-          <section>
-            <h2>5. Transformed contradictions after class antagonism recedes</h2>
-            <p>
-              After antagonistic classes are abolished, social contradictions do not
-              disappear; they <em>mutate</em> into new, largely non‑antagonistic forms that
-              act as developmental drivers at a higher level of social organization.
-            </p>
-            <p>Representative axes:</p>
-            <ul>
-              <li><strong>Human ↔ Nature:</strong> Reorganizing material–energy exchange on sustainable metabolic foundations.</li>
-              <li><strong>Individual ↔ Community:</strong> Harmonizing creative autonomy with social responsibility.</li>
-              <li><strong>Science & Technology ↔ Society & Ethics:</strong> Governing application of breakthroughs under humanistic normative frameworks.</li>
-              <li><strong>Nation – People ↔ Globalization:</strong> Aligning developmental interests with collective obligations to global challenges.</li>
-              <li><strong>Material ↔ Spiritual within the person:</strong> Balancing material needs, meaning, identity and psycho‑emotional well‑being.</li>
-            </ul>
-            <p>
-              These evolving contradictions substitute for the earlier historic role
-              of antagonistic class struggle, structuring new cooperative–innovative
-              dynamics of social progress.
-            </p>
-          </section>
-
-          {/* 6. Synthesizing message */}
-          <section>
-            <h2>6. Synthesizing message</h2>
-            <p>
-              The aim is not “struggle for struggle’s sake” but the social enabling
-              of conditions wherein each person’s capability can flourish freely in
-              the free flourishing of all. Antagonistic class struggle is a
-              necessary yet finite historical lever unlocking this qualitative
-              transition.
-            </p>
-          </section>
-
-          {/* 7. Closing quotations (retained) */}
-          <section className="quote-section">
-            <h2>7. Closing quotations</h2>
+          <div className="quote-section">
             <blockquote>
-              <p>"Class struggle is a crucial direct motor — but never the only one."</p>
-              <cite>— Synthesized from classics</cite>
+              <p>
+                “Great unity means first and foremost uniting the vast majority of the people, and the vast majority of the people are workers, peasants,
+                and other working people. This is the foundation of great unity. It is like the foundation of a house or the roots of a tree. But once
+                there is a solid foundation and strong roots, it is still necessary to unite other social strata.”
+              </p>
+              <cite>
+                — Ho Chi Minh •{' '}
+                <a
+                  href="https://hochiminh.vn/tu-tuong-dao-duc-ho-chi-minh/nghien-cuu-tu-tuong-dao-duc-ho-chi-minh/dai-doan-ket-toan-dan-toc-la-nguon-suc-manh-vo-song-8602"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  hochiminh.vn
+                </a>
+              </cite>
             </blockquote>
+          </div>
+
+          <h2 id="base">Foundation: workers, peasants, and the intelligentsia</h2>
+          <p>
+            According to Ho Chi Minh, the foundational forces of the unity bloc are the working class, the peasantry, and the intelligentsia. The stronger
+            and more consolidated this foundation becomes, the broader the unity bloc can expand.
+          </p>
+
+          <h2 id="core">The “core factor”: unity within the Party</h2>
+          <p>
+            Special attention must be paid to the “core” factor—unity and solidarity within the Party—because this is the condition for unity in society at
+            large. The stronger the Party’s unity, the stronger national unity becomes.
+          </p>
+
+          <div className="quote-section">
             <blockquote>
-              <p>"The free development of each is the condition for the free development of all."</p>
-              <cite>— Manifesto</cite>
+              <p>“Preserve the Party’s unity as you would preserve the pupil of your eye.”</p>
+              <cite>
+                — Ho Chi Minh •{' '}
+                <a
+                  href="https://baochinhphu.vn/doan-ket-la-coi-nguon-suc-manh-cua-dang-10259069.htm"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  baochinhphu.vn
+                </a>
+              </cite>
             </blockquote>
-          </section>
+          </div>
+
+          <div className="callout info">
+            <strong>Short takeaway</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              Party unity, national unity, and the close bond between the Party and the people create internal strength to overcome challenges and advance
+              toward victory.
+            </p>
+          </div>
+
+          <div className="callout">
+            <strong>Continue</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              Explore: <a href="/methods/en">Methods</a> • <a href="/applications/en">Applications</a> • <a href="/front/en">Front</a>.
+            </p>
+          </div>
+
+          <h2>Video sources (official pages)</h2>
+          <ul>
+            <li>
+              VTV: “Tư tưởng đại đoàn kết trong Di chúc của Chủ tịch Hồ Chí Minh” —{' '}
+              <a href="https://vtv.vn/video/bac-ho-691869.htm" target="_blank" rel="noreferrer">vtv.vn</a>
+            </li>
+            <li>
+              VTV4: “Sức mạnh đại đoàn kết dưới sự lãnh đạo của Đảng” —{' '}
+              <a href="https://vtv4.vtv.vn/video/ban-tin-tieng-viet/-69699.html" target="_blank" rel="noreferrer">vtv4.vtv.vn</a>
+            </li>
+          </ul>
         </div>
       </main>
     </div>
   );
-}
+};
+
+export default FoundationEn;

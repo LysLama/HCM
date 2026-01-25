@@ -1,151 +1,138 @@
 import React from 'react';
 import '../../styles/Section.css';
-import theoryImg from '../../assets/img/theory.jpg';
+import sectionImage from '../../assets/img/theory.jpg';
 
-export default function TheoryEn() {
+// Strategic role of great national unity (EN)
+const StrategicRoleEn = () => {
   return (
     <div className="page-container">
-      <header className="section-hero" style={{ backgroundImage: `url(${theoryImg})` }}>
-        <div className="hero-overlay"></div>
-        <h1 className="section-hero-title">Marxist–Leninist Theory of Class & Class Struggle</h1>
+      <header className="section-hero section-hero--no-zoom" style={{ backgroundImage: `url(${sectionImage})` }}>
+        <div className="hero-overlay" />
+        <h1 className="section-hero-title">The strategic role of great national unity</h1>
       </header>
+
       <main className="section-main-content">
+        <nav className="anchor-nav" aria-label="Page outline">
+          <a href="#strategic">Strategic significance</a>
+          <a href="#truths">Key principles</a>
+          <a href="#poem">Conclusion</a>
+        </nav>
+
         <div className="content-text">
-          <h3>1. Concept of class</h3>
+          <h2 id="strategic">Great national unity determines revolutionary success</h2>
           <p>
-            • According to Marxism–Leninism, classes are large groups of people differing by their position within a definite system of social production, their relation to the means of production, their role in the social organization of labour, and the mode and share of the social wealth they obtain.
+            In Ho Chi Minh’s thought, <strong>great national unity</strong> is a long-term and consistent strategy of the Vietnamese revolution. Policies and
+            methods of mobilization may be adjusted across stages and groups, but the line of great unity must never change because it is decisive for
+            success or failure.
           </p>
+
           <div className="quote-section">
             <blockquote>
-              <p>"Classes are large groups of people differing by their place in a historically determined system of social production... and therefore differing by the share of social wealth they obtain."</p>
-              <cite>— V.I. Lenin, <em>Great Initiative</em></cite>
+              <p>
+                “History teaches us this lesson: When our people are united as one, our country will gain independence and freedom. Conversely, when our
+                people are not united, we will be invaded by foreign powers.”
+              </p>
+              <cite>
+                — Ho Chi Minh •{' '}
+                <a
+                  href="https://baochinhphu.vn/ho-chi-minh-voi-tu-tuong-xuyen-suot-ve-doan-ket-102260203.htm"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  baochinhphu.vn
+                </a>
+              </cite>
             </blockquote>
           </div>
-          {/* New Sections: Conditions / Classification / Alliance */}
-          <h3>2. Conditions / origins of classes</h3>
-          <ul className="bullet-list">
-            <li><strong>Underlying (deep) cause:</strong> Rising labour productivity generates a <strong>surplus product</strong> → possibility of <strong>appropriating</strong> the portion produced by others.</li>
-            <li><strong>Direct cause:</strong> Establishment of <strong>private ownership of the means of production</strong> → divergence of interests and formation of opposed class positions.</li>
-          </ul>
-          <div className="note-block">
-            <blockquote>
-              <p><strong>Note:</strong> The <strong>social division of labour</strong> (especially mental vs. manual) <em>accelerates</em> stratification but is <em>not</em> the decisive cause by itself.</p>
-            </blockquote>
-          </div>
 
-          <h3>3. Classification of classes</h3>
-          <ul className="bullet-list">
-            <li><strong>Basic (fundamental) classes:</strong> Shape the core contradiction of a given <strong>socio‑economic formation</strong>; directly tied to <strong>ownership relations</strong> and <strong>position</strong> in production.</li>
-            <li><strong>Non‑basic / intermediate classes (strata):</strong> Middle layers; do not define the fundamental contradiction yet exert socio‑political influence.</li>
-          </ul>
-          <h4>Examples by formation</h4>
-          <div className="responsive-table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Formation</th>
-                  <th><strong>Basic classes</strong></th>
-                  <th><strong>Non‑basic / intermediate</strong> (examples)</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><strong>Slave-owning</strong></td>
-                  <td><strong>Slave owners ↔ Slaves</strong></td>
-                  <td>Free artisans, merchants</td>
-                </tr>
-                <tr>
-                  <td><strong>Feudal</strong></td>
-                  <td><strong>Landlords / Feudal lords ↔ Serf peasants</strong></td>
-                  <td>Artisans, traders, officials, clergy, scholars</td>
-                </tr>
-                <tr>
-                  <td><strong>Capitalist</strong></td>
-                  <td><strong>Bourgeoisie ↔ Proletariat (wage workers)</strong></td>
-                  <td>Petty bourgeois, peasants, small proprietors, salaried staff, intelligentsia</td>
-                </tr>
-                <tr>
-                  <td><strong>Transition to socialism</strong></td>
-                  <td><strong>Working class ↔ Peasantry</strong> <em>(non‑antagonistic)</em></td>
-                  <td>Intelligentsia and other labouring strata</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h3>4. Class alliance</h3>
-          <ul className="bullet-list">
-            <li><strong>Concept:</strong> Coordinated action among classes / strata sharing <strong>fundamentally convergent interests</strong> in a historical phase.</li>
-            <li><strong>Purpose:</strong> Concentrate forces to <strong>resolve the fundamental contradiction</strong> (overthrow the old ruling class, build a new order; under socialism: construction & defense).</li>
-            <li><strong>Principles:</strong> Shared strategic goal; respect legitimate interests; <strong>working-class leadership core</strong>; tactical flexibility.</li>
-            <li><strong>Typical example:</strong> <strong>Worker–peasant–intelligentsia alliance</strong> (political foundation of the socialist state); broad national united front in national–democratic revolutions.</li>
-          </ul>
-
-          <h3>5. Nature of class struggle</h3>
-          <p>• <strong>Inevitability:</strong> Rooted in irreconcilable interests between exploiting and exploited classes.</p>
-          <p>• <strong>Definition:</strong> Struggle among large social groups whose fundamental interests oppose within a given mode of production.</p>
-          <p>• <strong>Essence:</strong> The organized resistance of oppressed labouring masses against exploiting classes.</p>
-
-          <h3>6. Main forms</h3>
+          <h2 id="truths">Truth-like principles on the strength of unity</h2>
           <ul>
-            <li><strong>Economic:</strong> Wages, conditions, ownership and distribution.</li>
-            <li><strong>Political:</strong> Seizing and using state power.</li>
-            <li><strong>Ideological–cultural:</strong> Defending or challenging dominant worldviews.</li>
+            <li>“Unity is our strength.”</li>
+            <li>“Unity is an invincible force enabling us to overcome difficulties and achieve victory.”</li>
+            <li>“Unity is strength; unity is victory.”</li>
+            <li>“Unity is strength and the key to success.”</li>
+            <li>
+              “There is now one very important point, which is also the fundamental point… That point is unity.”
+            </li>
           </ul>
 
-          <section>
-            <h3>7. Marx’s three key theses (1852)</h3>
-            <ol>
-              <li><strong>Historical character:</strong> Classes arise and vanish with productive epochs.</li>
-              <li><strong>Revolutionary objective:</strong> Struggle tends toward proletarian political rule.</li>
-              <li><strong>Future perspective:</strong> That rule is a transition toward a classless society.</li>
-            </ol>
-            <div className="callout info">
-              <strong>Key idea:</strong> Ultimate goal is not replacing one ruling class with another but abolishing the conditions reproducing class antagonism.
-            </div>
-          </section>
+          <div className="callout info">
+            <strong>Quick note</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              The “fundamental point” emphasizes that effective unity generates many positive outcomes across all work.
+            </p>
+          </div>
 
-          <h3>8. Classic quotations</h3>
+          <h2 id="poem">A concise conclusion</h2>
+          <p style={{ whiteSpace: 'pre-line' }}>
+            Unity, unity, great unity\nSuccess, success, great success
+          </p>
+
+          <div className="callout info">
+            <strong>Source notes</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              For background and context on “Unity, unity, great unity…”, see{' '}
+              <a href="https://mattran.org.vn/hoat-dong/ngay-2541961-tai-dai-hoi-dai-bieu-mat-tran-to-quoc-viet-nam-lan-thu-ii-bac-ho-can-dan-doan-ket-doan-ket-dai-doan-ket-43601.html" target="_blank" rel="noreferrer">
+                mattran.org.vn
+              </a>{' '}
+              and{' '}
+              <a href="https://www.qdnd.vn/tu-lieu-ho-so/ngay-nay-nam-xua/ngay-25-4-1961-bac-ho-can-dan-doan-ket-doan-ket-dai-doan-ket-692103" target="_blank" rel="noreferrer">
+                qdnd.vn
+              </a>.
+            </p>
+          </div>
+
           <div className="quote-section">
             <blockquote>
-              <p>"The history of all hitherto existing society is the history of class struggles."</p>
-              <cite>— Marx & Engels, Communist Manifesto (1848)</cite>
-            </blockquote>
-            <blockquote>
-              <p>"Workers of the world have nothing to lose but their chains."</p>
-              <cite>— Marx & Engels, Communist Manifesto (1848)</cite>
-            </blockquote>
-            <blockquote>
-              <p>"The state is a special organization of force: an organization of violence for the suppression of some class."</p>
-              <cite>— V.I. Lenin, State and Revolution (1917)</cite>
+              <p>
+                “There is now one very important point, which is also the fundamental point… That point is unity.”
+              </p>
+              <cite>
+                — Ho Chi Minh •{' '}
+                <a
+                  href="https://tapchicongsan.org.vn/media-story/-/asset_publisher/V8hhp4dK31Gf/content/suc-manh-cua-doan-ket"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  tapchicongsan.org.vn
+                </a>
+              </cite>
             </blockquote>
           </div>
 
-          <h3>9. Academic videos</h3>
-          <div className="video-section">
-            <div className="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/GL4o_umfVWM" title="Foundational Theory 1" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-              <p className="video-caption">Foundational concepts of class & struggle</p>
-            </div>
-            <div className="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/v0PE6y-fybA" title="Foundational Theory 2" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-              <p className="video-caption">Defining class in Marxist philosophy</p>
-            </div>
-            <div className="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/rMwMJCqCKhc" title="Foundational Theory 3" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-              <p className="video-caption">Modern relevance of class struggle</p>
-            </div>
-            <div className="video-container">
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/qVr_qV9nRB8" title="Lenin Definition" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-              <p className="video-caption">Lenin’s definition analyzed</p>
-            </div>
+          <h2>Video sources (official pages)</h2>
+          <p>
+            For copyright and authenticity, the safest approach is to <strong>link/embed the original official pages</strong>.
+          </p>
+          <ul>
+            <li>
+              VTV: “Đại đoàn kết – Đại thành công” —{' '}
+              <a href="https://vtv.vn/video/doan-ket-734021.htm" target="_blank" rel="noreferrer">vtv.vn</a>
+            </li>
+            <li>
+              VTV: “Sức mạnh của lòng dân và tinh thần đại đoàn kết dân tộc” —{' '}
+              <a href="https://vtv.vn/video/suc-manh-cua-long-dan-va-tinh-than-dai-doan-ket-518604.htm" target="_blank" rel="noreferrer">vtv.vn</a>
+            </li>
+            <li>
+              Nhan Dan special page: “Chủ tịch Hồ Chí Minh và tư tưởng đại đoàn kết toàn dân tộc” —{' '}
+              <a href="https://hochiminh.nhandan.vn/video-chu-tich-ho-chi-minh-va-tu-tuong-dai-doan-ket-toan-dan-toc-1932.html" target="_blank" rel="noreferrer">hochiminh.nhandan.vn</a>
+            </li>
+            <li>
+              Vietnam Fatherland Front video library: “Đại đoàn kết – Cội nguồn sức mạnh dân tộc” —{' '}
+              <a href="https://mattran.org.vn/thu-vien-video/phim-tai-lieu-dai-doan-ket-coi-nguon-suc-manh-dan-toc-57380.html" target="_blank" rel="noreferrer">mattran.org.vn</a>
+            </li>
+          </ul>
+
+          <div className="callout">
+            <strong>Next</strong>
+            <p style={{ margin: '6px 0 0' }}>
+              See also: <a href="/primary-task/en">Great unity as the primary objective and task</a>.
+            </p>
           </div>
-          <h3>10. Historical examples</h3>
-          <p><strong>French Revolution (1789):</strong> Bourgeoisie vs. feudal aristocracy.</p>
-          <p><strong>October Revolution (1917):</strong> Proletariat seizes power, establishing first socialist state.</p>
-          <p><strong>19th–20th c. labour movements:</strong> 8‑hour day, social insurance gains.</p>
         </div>
       </main>
     </div>
   );
-}
+};
+
+export default StrategicRoleEn;

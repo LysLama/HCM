@@ -15,8 +15,8 @@ const HeroEn = () => {
   return (
     <header id='home' className="main-header">
       <div className="header-content">
-        <h1>Chapter 2: Goods, Markets and Roles of Market Participants</h1>
-        <p>I. Theory of commodity production — II. Markets and the market economy</p>
+        <h1>Ho Chi Minh Thought on Great National Unity</h1>
+        <p>Strategic role • Primary objective & task • Forces • Foundation</p>
       </div>
       <a
         href="#introduction"

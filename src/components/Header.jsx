@@ -35,25 +35,29 @@ const Header = () => {
       <div className={`mobile-nav-overlay ${open ? 'visible' : ''}`} onClick={closeMenu} />
       <div className="header-inner">
         <div className="logo-text">
-          <NavLink to={buildPath('/') + '#home'} onClick={closeMenu}>Triết Học</NavLink>
+          <NavLink to={buildPath('/') + '#home'} onClick={closeMenu}>{t('Tư tưởng Hồ Chí Minh', 'Ho Chi Minh Thought')}</NavLink>
         </div>
-        <LanguageToggle />
-        <button
-          className={`hamburger ${open ? 'is-active' : ''}`}
-          aria-label={t('Mở điều hướng', 'Toggle navigation')}
-          aria-expanded={open}
-          onClick={() => setOpen(o => !o)}
-        >
-          <span />
-          <span />
-          <span />
-        </button>
+        <div className="header-actions">
+          <LanguageToggle />
+          <button
+            className={`hamburger ${open ? 'is-active' : ''}`}
+            aria-label={t('Mở điều hướng', 'Toggle navigation')}
+            aria-expanded={open}
+            onClick={() => setOpen(o => !o)}
+          >
+            <span />
+            <span />
+            <span />
+          </button>
+        </div>
         <nav className={`main-nav ${open ? 'open' : ''}`}>
           <ul>
             <li><NavLink onClick={closeMenu} to={buildPath('/') + '#home'}>{t('Trang chủ', 'Home')}</NavLink></li>
             <li><Link onClick={closeMenu} to={buildPath('/') + '#introduction'}>{t('Giới thiệu', 'Introduction')}</Link></li>
-            <li><NavLink onClick={closeMenu} to={buildPath('/content')}>{t('Nội dung', 'Content')}</NavLink></li>
-            <li><NavLink onClick={closeMenu} to={buildPath('/knowledge')}>{t('Tri thức & Thị trường', 'Knowledge & Market')}</NavLink></li>
+            <li><NavLink onClick={closeMenu} to={buildPath('/overview')}>{t('Tổng quan', 'Overview')}</NavLink></li>
+            <li><NavLink onClick={closeMenu} to={buildPath('/methods')}>{t('Phương pháp', 'Methods')}</NavLink></li>
+            <li><NavLink onClick={closeMenu} to={buildPath('/front')}>{t('Mặt trận', 'Front')}</NavLink></li>
+            <li><NavLink onClick={closeMenu} to={buildPath('/resources')}>{t('Tài liệu', 'Resources')}</NavLink></li>
             <li><NavLink onClick={closeMenu} to={buildPath('/quiz')}>{t('Ôn tập', 'Quiz')}</NavLink></li>
           </ul>
         </nav>
