@@ -122,6 +122,17 @@ const Resources = () => {
 
           <h3>Video (nguồn báo/đài chính thống) — đã chọn lọc theo từng phần</h3>
 
+          <h2>Một vài hình ảnh về khối đại đoàn kết dân tộc</h2>
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/LUtvlHZQ_hw"
+              title="Một vài hình ảnh về khối đại đoàn kết dân tộc"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+            <div className="video-caption">Một vài hình ảnh về khối đại đoàn kết dân tộc</div>
+          </div>
+
           <h4>Vai trò chiến lược</h4>
           <ul>
             <li><a href="https://vtv.vn/video/doan-ket-734021.htm" target="_blank" rel="noreferrer">VTV: “Đại đoàn kết – Đại thành công”</a></li>

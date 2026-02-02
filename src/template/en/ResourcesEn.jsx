@@ -125,6 +125,16 @@ const ResourcesEn = () => {
           </ul>
 
           <h3>Video (official pages) — curated and mapped</h3>
+          <h2>A few images about the great national solidarity bloc</h2>
+          <div className="video-container">
+            <iframe
+              src="https://www.youtube.com/embed/LUtvlHZQ_hw"
+              title="A few images about the great national solidarity bloc"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+            <div className="video-caption">A few images about the great national solidarity bloc</div>
+          </div>
           <p>
             Many official outlets restrict copying/reposting; the safest approach is to <strong>link/embed the original official pages</strong> with proper
             attribution.
